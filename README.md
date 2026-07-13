@@ -14,9 +14,11 @@ python -m http.server 8000
 
 然后访问 <http://localhost:8000/>。
 
-题解来源位于 `source/PuzzleCat-Solutions.md`，本地提交统计位于 `source/puzzle-metadata.json`。运行构建脚本后会生成：
+题解来源位于 `source/PuzzleCat-Solutions.md`，本地提交统计位于 `source/puzzle-metadata.json`，原题地址位于 `source/puzzle-links.json`。运行构建脚本后会生成：
 
 - `index.html`：主页与 289 题搜索索引；
 - `puzzles/*.html`：289 个独立题解页面；
 - `sitemap.xml`：GitHub Pages 页面索引；
 - `assets/`：共享样式与交互脚本。
+
+每个独立题解页均包含指向 PuzzleCat 原题的外部链接。

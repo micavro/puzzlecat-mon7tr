@@ -11,6 +11,7 @@ import markdown
 ROOT = Path(__file__).resolve().parent
 SOURCE = ROOT / "source" / "PuzzleCat-Solutions.md"
 METADATA = ROOT / "source" / "puzzle-metadata.json"
+PUZZLE_LINKS = ROOT / "source" / "puzzle-links.json"
 PUZZLE_DIR = ROOT / "puzzles"
 SITE_URL = "https://micavro.github.io/puzzlecat-mon7tr"
 
@@ -23,7 +24,11 @@ def render_markdown(text: str) -> str:
     )
 
 
-def parse_source(text: str, metadata: dict[str, dict]) -> tuple[str, list[dict[str, str | int]]]:
+def parse_source(
+    text: str,
+    metadata: dict[str, dict],
+    puzzle_links: dict[str, str],
+) -> tuple[str, list[dict[str, str | int]]]:
     intro = text.split("## 题目索引", 1)[0].strip()
     solution_text = text.split("## 逐题题解", 1)[1]
     starts = list(
@@ -51,6 +56,7 @@ def parse_source(text: str, metadata: dict[str, dict]) -> tuple[str, list[dict[s
                 "answer": answer,
                 "html": render_markdown(content),
                 "incorrect": int(outcome.get("incorrect", 0)),
+                "original_url": puzzle_links.get(puzzle_id, f"https://puzzle.cat/puzzles/{puzzle_id}"),
             }
         )
 
@@ -147,6 +153,7 @@ def build_puzzle_page(
     title = str(puzzle["title"])
     answer = str(puzzle["answer"])
     incorrect = int(puzzle["incorrect"])
+    original_url = str(puzzle["original_url"])
 
     previous_link = (
         f'<a class="sequence-link previous" href="{previous["slug"]}.html"><span>← 上一题</span><strong>{html.escape(str(previous["title"]))}</strong></a>'
@@ -168,7 +175,10 @@ def build_puzzle_page(
       <header class="detail-hero">
         <div class="detail-kicker"><span>{number:03d} / 289</span><code>{puzzle_id}</code></div>
         <h1>{html.escape(title)}</h1>
-        <div class="answer-panel"><span>最终答案</span><strong>{html.escape(answer)}</strong></div>
+        <div class="detail-actions">
+          <div class="answer-panel"><span>最终答案</span><strong>{html.escape(answer)}</strong></div>
+          <a class="source-button" href="{html.escape(original_url, quote=True)}" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
+        </div>
         <dl class="local-metadata">
           <div><dt>本地结果</dt><dd>correct</dd></div>
           <div><dt>错误提交</dt><dd>{incorrect}</dd></div>
@@ -195,7 +205,12 @@ def build_sitemap(puzzles: list[dict[str, str | int]]) -> str:
 
 def main() -> None:
     metadata = json.loads(METADATA.read_text(encoding="utf-8"))
-    intro_html, puzzles = parse_source(SOURCE.read_text(encoding="utf-8"), metadata)
+    puzzle_links = json.loads(PUZZLE_LINKS.read_text(encoding="utf-8"))
+    intro_html, puzzles = parse_source(
+        SOURCE.read_text(encoding="utf-8"),
+        metadata,
+        puzzle_links,
+    )
     for index, puzzle in enumerate(puzzles, 1):
         puzzle["slug"] = f"{index:03d}-{puzzle['id']}"
     ROOT.joinpath("index.html").write_text(build_index(intro_html, puzzles), encoding="utf-8")
