@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="〖棱镜谜〗见微知著（4Rs9OF2B）的独立题解与验证。">
+  <meta name="theme-color" content="#f5f1e8">
+  <title>〖棱镜谜〗见微知著 · PuzzleCat 题解</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body class="detail-page">
+  <header class="topbar">
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <div class="top-actions">
+    <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
+    <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
+  </div>
+</header>
+  <main class="detail-main">
+    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>072</span></nav>
+    <article class="solution-document">
+      <header class="detail-hero">
+        <div class="detail-kicker"><span>072 / 289</span><code>4Rs9OF2B</code></div>
+        <h1>〖棱镜谜〗见微知著</h1>
+        <div class="answer-panel"><span>最终答案</span><strong>OBSERVATION</strong></div>
+        <dl class="local-metadata">
+          <div><dt>本地结果</dt><dd>correct</dd></div>
+          <div><dt>错误提交</dt><dd>0</dd></div>
+          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
+        </dl>
+      </header>
+      <div class="detail-content"><h3>题面要点</h3>
+<p>题面给出 11 个两字“微”片段，以及 11 条指向较长名句、书名或作品名的“著”描述。</p>
+<h3>我的解法</h3>
+<p>先把片段补回完整文本，例如 <code>底两→海底两万里</code>、<code>态分→正态分布</code>、<code>变符→奇变偶不变，符号看象限</code>、<code>我三→假如给我三天光明</code>、<code>吐葡→吃葡萄不吐葡萄皮</code>；其余可补成 <code>你想活出怎样的人生、白雪歌送武判官归京、燕雀安知鸿鹄之志、陪你度过漫长岁月</code> 等。按描述顺序，数出每个两字片段在完整文本之前和之后各有多少字，把两个数当作 5×5 Polybius 方阵坐标，得到 <code>34 12 43 15 42 51 11 44 24 34 33</code>。</p>
+<h3>验证</h3>
+<p>按 I/J 合并的标准 Polybius 方阵解码，恰为 <code>OBSERVATION</code>；含义“观察”也呼应“见微知著”。</p></div>
+    </article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="071-ASMTwX1Q.html"><span>← 上一题</span><strong>〖星谜001〗漏墨</strong></a><a class="sequence-link next" href="073-ut8C56DT.html"><span>下一题 →</span><strong>〖鼠鼠谜〗加特零</strong></a></nav>
+    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
+    <footer><p>PuzzleCat 独立题解 · 〖棱镜谜〗见微知著</p><a href="#top">返回顶部 ↑</a></footer>
+  </main>
+  <script src="../assets/app.js"></script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 # puzzlecat-mon7tr
 
-PuzzleCat 289 道独立题解的静态网页版本。
+PuzzleCat 289 道独立题解的静态网页版本。主页提供搜索索引，`puzzles/` 中每道题拥有独立 HTML 页面与稳定 URL。
 
 在线访问：<https://micavro.github.io/puzzlecat-mon7tr/>
 
@@ -14,4 +14,9 @@ python -m http.server 8000
 
 然后访问 <http://localhost:8000/>。
 
-题解来源位于 `source/PuzzleCat-Solutions.md`。生成后的 `index.html`、`assets/styles.css` 和 `assets/app.js` 可直接由 GitHub Pages 托管。
+题解来源位于 `source/PuzzleCat-Solutions.md`，本地提交统计位于 `source/puzzle-metadata.json`。运行构建脚本后会生成：
+
+- `index.html`：主页与 289 题搜索索引；
+- `puzzles/*.html`：289 个独立题解页面；
+- `sitemap.xml`：GitHub Pages 页面索引；
+- `assets/`：共享样式与交互脚本。

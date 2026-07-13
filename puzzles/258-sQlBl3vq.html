@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="西行漫记（sQlBl3vq）的独立题解与验证。">
+  <meta name="theme-color" content="#f5f1e8">
+  <title>西行漫记 · PuzzleCat 题解</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body class="detail-page">
+  <header class="topbar">
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <div class="top-actions">
+    <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
+    <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
+  </div>
+</header>
+  <main class="detail-main">
+    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>258</span></nav>
+    <article class="solution-document">
+      <header class="detail-hero">
+        <div class="detail-kicker"><span>258 / 289</span><code>sQlBl3vq</code></div>
+        <h1>西行漫记</h1>
+        <div class="answer-panel"><span>最终答案</span><strong>LONGEST HIGHWAY</strong></div>
+        <dl class="local-metadata">
+          <div><dt>本地结果</dt><dd>correct</dd></div>
+          <div><dt>错误提交</dt><dd>4</dd></div>
+          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
+        </dl>
+      </header>
+      <div class="detail-content"><h3>题面要点</h3>
+<p>十天向西的游记沿连云港至新疆路线展开；编号段落有的 1 句、有的 5 句，文中夹杂大量真伪事实，住宿段落分隔每天。</p>
+<h3>我的解法</h3>
+<p>先把 1 句段落视作摩斯长划、5 句段落视作点，每晚住宿分字母，十天解得指令 <code>MISTAKE BIN</code>。再对每个五句段落逐句判真伪，真记 1、假记 0，五位二进制按 1–26 转字母。十四组依次给出 <code>LONGEST HIGHWAY</code>。明线城市基本沿 G30 连霍高速，验证其“中国最长高速”主题，但路线名不是提交串。</p>
+<h3>验证</h3>
+<p><code>红星照耀中国、连霍高速、连霍高速公路、LONGEST IN CHINA</code> 四次判错；复核全部十四组后 <code>LONGEST HIGHWAY</code> 正确。</p></div>
+    </article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="257-P8Le2esI.html"><span>← 上一题</span><strong>蛙谜1 篮球赛得分情况</strong></a><a class="sequence-link next" href="259-I9CLNP39.html"><span>下一题 →</span><strong>观星思人</strong></a></nav>
+    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
+    <footer><p>PuzzleCat 独立题解 · 西行漫记</p><a href="#top">返回顶部 ↑</a></footer>
+  </main>
+  <script src="../assets/app.js"></script>
+</body>
+</html>

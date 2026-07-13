@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Find the Answer Ⅲ（GEFbeioV）的独立题解与验证。">
+  <meta name="theme-color" content="#f5f1e8">
+  <title>Find the Answer Ⅲ · PuzzleCat 题解</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body class="detail-page">
+  <header class="topbar">
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <div class="top-actions">
+    <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
+    <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
+  </div>
+</header>
+  <main class="detail-main">
+    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>029</span></nav>
+    <article class="solution-document">
+      <header class="detail-hero">
+        <div class="detail-kicker"><span>029 / 289</span><code>GEFbeioV</code></div>
+        <h1>Find the Answer Ⅲ</h1>
+        <div class="answer-panel"><span>最终答案</span><strong>FOLIAGE</strong></div>
+        <dl class="local-metadata">
+          <div><dt>本地结果</dt><dd>correct</dd></div>
+          <div><dt>错误提交</dt><dd>1</dd></div>
+          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
+        </dl>
+      </header>
+      <div class="detail-content"><h3>题面要点</h3>
+<p>SVG 中被遮挡的字符串长度为 <code>6.3/7/8</code>，对应当前网址 <code>puzzle.cat/puzzles/GEFbeioV</code>；藤蔓穿过其中若干字符。</p>
+<h3>我的解法</h3>
+<p>将网址字符按原位置还原，沿浅绿色、通向问号的藤蔓依次读取所有交点，得到大小写混合的 <code>F o l i a G E</code>，忽略 ID 自带大小写即 <code>FOLIAGE</code>。深色带叶藤蔓另读出 <code>LEAVES</code>，作为同义校验。最初只取终点得到 F 是误读，正确机制是读取整条路径的交点。</p>
+<h3>验证</h3>
+<p><code>F</code> 被判 incorrect；<code>FOLIAGE</code> 随后 correct，且另一条藤蔓的 <code>LEAVES</code> 与之语义一致。</p></div>
+    </article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="028-xo5D8t6h.html"><span>← 上一题</span><strong>Find the Answer Ⅱ</strong></a><a class="sequence-link next" href="030-sqHBl3vq.html"><span>下一题 →</span><strong>Finding Dragon&#x27;s Pearl (tanlige)</strong></a></nav>
+    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
+    <footer><p>PuzzleCat 独立题解 · Find the Answer Ⅲ</p><a href="#top">返回顶部 ↑</a></footer>
+  </main>
+  <script src="../assets/app.js"></script>
+</body>
+</html>

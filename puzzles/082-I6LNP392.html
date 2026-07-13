@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="不是省油的灯（I6LNP392）的独立题解与验证。">
+  <meta name="theme-color" content="#f5f1e8">
+  <title>不是省油的灯 · PuzzleCat 题解</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body class="detail-page">
+  <header class="topbar">
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <div class="top-actions">
+    <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
+    <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
+  </div>
+</header>
+  <main class="detail-main">
+    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>082</span></nav>
+    <article class="solution-document">
+      <header class="detail-hero">
+        <div class="detail-kicker"><span>082 / 289</span><code>I6LNP392</code></div>
+        <h1>不是省油的灯</h1>
+        <div class="answer-panel"><span>最终答案</span><strong>INCINERATION</strong></div>
+        <dl class="local-metadata">
+          <div><dt>本地结果</dt><dd>correct</dd></div>
+          <div><dt>错误提交</dt><dd>0</dd></div>
+          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
+        </dl>
+      </header>
+      <div class="detail-content"><h3>题面要点</h3>
+<p>题面是 7×7 Akari 数织，白格内带字母；需满足灯泡照明、数字邻灯数和灯泡互不相见等标准规则。</p>
+<h3>我的解法</h3>
+<p>本地约束求解器找到唯一灯泡布局。按行读取灯泡所在格的字母得到 <code>BURN ADJACENT</code>，即“烧掉相邻格”。删除灯泡格及其正交相邻白格后，再按行读取剩余字母，得到 <code>INCINERATION</code>。</p>
+<h3>验证</h3>
+<p>唯一 Akari 解先产出明确操作指令，再产出最终词；<code>INCINERATION</code> 首次提交正确。</p></div>
+    </article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="081-pPS2nNtD.html"><span>← 上一题</span><strong>不是中文 Cryptic</strong></a><a class="sequence-link next" href="083-9kkWHnxJ.html"><span>下一题 →</span><strong>两种木棍</strong></a></nav>
+    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
+    <footer><p>PuzzleCat 独立题解 · 不是省油的灯</p><a href="#top">返回顶部 ↑</a></footer>
+  </main>
+  <script src="../assets/app.js"></script>
+</body>
+</html>

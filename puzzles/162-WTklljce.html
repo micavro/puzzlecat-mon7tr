@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="成词成对（WTklljce）的独立题解与验证。">
+  <meta name="theme-color" content="#f5f1e8">
+  <title>成词成对 · PuzzleCat 题解</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body class="detail-page">
+  <header class="topbar">
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <div class="top-actions">
+    <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
+    <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
+  </div>
+</header>
+  <main class="detail-main">
+    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>162</span></nav>
+    <article class="solution-document">
+      <header class="detail-hero">
+        <div class="detail-kicker"><span>162 / 289</span><code>WTklljce</code></div>
+        <h1>成词成对</h1>
+        <div class="answer-panel"><span>最终答案</span><strong>LAYOUT</strong></div>
+        <dl class="local-metadata">
+          <div><dt>本地结果</dt><dd>correct</dd></div>
+          <div><dt>错误提交</dt><dd>0</dd></div>
+          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
+        </dl>
+      </header>
+      <div class="detail-content"><h3>题面要点</h3>
+<p>六对五字母词之间各有统一 Caesar 位移，题末另给 <code>(6)</code>。</p>
+<h3>我的解法</h3>
+<p>各对位移量依次为 6、21、19、9、15、14，例如 <code>FUNNY+6=LATTE</code>、<code>KNEED-5=FIZZY</code>。把正位移量按 A1Z26 读成 <code>FUSION</code>，该词提交后获 intermediate。再按题末 <code>(6)</code> 对 <code>FUSION</code> 整体 Caesar +6，得到 <code>LAYOUT</code>。</p>
+<h3>验证</h3>
+<p><code>FUSION</code> 为 intermediate，<code>LAYOUT</code> correct；两层均使用同一位移机制。</p></div>
+    </article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="161-o0tmNtwx.html"><span>← 上一题</span><strong>怀旧数学</strong></a><a class="sequence-link next" href="163-iS6RTMow.html"><span>下一题 →</span><strong>成语与反义词</strong></a></nav>
+    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
+    <footer><p>PuzzleCat 独立题解 · 成词成对</p><a href="#top">返回顶部 ↑</a></footer>
+  </main>
+  <script src="../assets/app.js"></script>
+</body>
+</html>

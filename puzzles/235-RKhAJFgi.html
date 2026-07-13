@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="神鲸谜 007（RKhAJFgi）的独立题解与验证。">
+  <meta name="theme-color" content="#f5f1e8">
+  <title>神鲸谜 007 · PuzzleCat 题解</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body class="detail-page">
+  <header class="topbar">
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <div class="top-actions">
+    <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
+    <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
+  </div>
+</header>
+  <main class="detail-main">
+    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>235</span></nav>
+    <article class="solution-document">
+      <header class="detail-hero">
+        <div class="detail-kicker"><span>235 / 289</span><code>RKhAJFgi</code></div>
+        <h1>神鲸谜 007</h1>
+        <div class="answer-panel"><span>最终答案</span><strong>乙炔基</strong></div>
+        <dl class="local-metadata">
+          <div><dt>本地结果</dt><dd>correct</dd></div>
+          <div><dt>错误提交</dt><dd>0</dd></div>
+          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
+        </dl>
+      </header>
+      <div class="detail-content"><h3>题面要点</h3>
+<p>Wordle 风格两行分别为 <code>一 去 二 三 里</code> 与 <code>CACHE</code>，颜色给出字符存在性和位置限制；答案是三个汉字。</p>
+<h3>我的解法</h3>
+<p>隐藏五格包含 <code>一、三、C、C、H</code>：首位固定为一，三不在第 4 位，两枚 C 不在第 1/3 位，H 不在第 4 位。唯一有明确意义的排列是 <code>一 C 三 C H</code>，把“一”看作单键、三看作三键，即结构式 <code>—C≡CH</code>。这是 ethynyl group，中文为 <code>乙炔基</code>。</p>
+<h3>验证</h3>
+<p>结构式满足全部 Wordle 位置约束和三字枚举；首次提交 correct。</p></div>
+    </article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="234-gbq6lhr6.html"><span>← 上一题</span><strong>神鲸谜 003</strong></a><a class="sequence-link next" href="236-Zeipgd2S.html"><span>下一题 →</span><strong>福尔摩斯</strong></a></nav>
+    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
+    <footer><p>PuzzleCat 独立题解 · 神鲸谜 007</p><a href="#top">返回顶部 ↑</a></footer>
+  </main>
+  <script src="../assets/app.js"></script>
+</body>
+</html>

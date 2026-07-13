@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="月照纱窗（无限版）（gCN6lhr6）的独立题解与验证。">
+  <meta name="theme-color" content="#f5f1e8">
+  <title>月照纱窗（无限版） · PuzzleCat 题解</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body class="detail-page">
+  <header class="topbar">
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <div class="top-actions">
+    <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
+    <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
+  </div>
+</header>
+  <main class="detail-main">
+    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>204</span></nav>
+    <article class="solution-document">
+      <header class="detail-hero">
+        <div class="detail-kicker"><span>204 / 289</span><code>gCN6lhr6</code></div>
+        <h1>月照纱窗（无限版）</h1>
+        <div class="answer-panel"><span>最终答案</span><strong>我是月照纱窗传奇</strong></div>
+        <dl class="local-metadata">
+          <div><dt>本地结果</dt><dd>correct</dd></div>
+          <div><dt>错误提交</dt><dd>0</dd></div>
+          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
+        </dl>
+      </header>
+      <div class="detail-content"><h3>题面要点</h3>
+<p>这是交互式版本：根据汉字封闭区域的黑白图恢复诗句，累计答对十轮后显示外层提交答案。</p>
+<h3>我的解法</h3>
+<p>检查本地归档的交互脚本，确认 <code>PASS_THRESHOLD=10</code>。胜利文字以整数数组保存，运行脚本自身的异或解码公式后，前缀数组得到“恭喜通关！提交答案：”，答案数组得到 <code>我是月照纱窗传奇</code>。</p>
+<h3>验证</h3>
+<p>该字符串只在十轮通关分支由 <code>victoryMessage()</code> 拼出，明确位于“提交答案：”之后，因此不是某一轮诗句而是外层答案。</p></div>
+    </article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="203-q9SUKLri.html"><span>← 上一题</span><strong>月照纱窗1</strong></a><a class="sequence-link next" href="205-IWfLNP39.html"><span>下一题 →</span><strong>本题设有中间答案验证</strong></a></nav>
+    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
+    <footer><p>PuzzleCat 独立题解 · 月照纱窗（无限版）</p><a href="#top">返回顶部 ↑</a></footer>
+  </main>
+  <script src="../assets/app.js"></script>
+</body>
+</html>

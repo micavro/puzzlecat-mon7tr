@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="负负得……（9AlWHnxJ）的独立题解与验证。">
+  <meta name="theme-color" content="#f5f1e8">
+  <title>负负得…… · PuzzleCat 题解</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body class="detail-page">
+  <header class="topbar">
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <div class="top-actions">
+    <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
+    <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
+  </div>
+</header>
+  <main class="detail-main">
+    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>266</span></nav>
+    <article class="solution-document">
+      <header class="detail-hero">
+        <div class="detail-kicker"><span>266 / 289</span><code>9AlWHnxJ</code></div>
+        <h1>负负得……</h1>
+        <div class="answer-panel"><span>最终答案</span><strong>LINEAR</strong></div>
+        <dl class="local-metadata">
+          <div><dt>本地结果</dt><dd>correct</dd></div>
+          <div><dt>错误提交</dt><dd>0</dd></div>
+          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
+        </dl>
+      </header>
+      <div class="detail-content"><h3>题面要点</h3>
+<p>六个字/符号各连续“取反”两次，再把终点译成指定长度英文并按索引取字母。</p>
+<h3>我的解法</h3>
+<p>“反”是找反义词，但中间词有另一义项，所以第二次不回原点：<code>浓→淡→咸</code>，SALTY 取第 3 位 L；<code>胜→负→正</code>，POSITIVE 第 6 位 I；<code>亲→疏→密</code>，DENSE 第 3 位 N；<code>熟→生→死</code>，DEATH 第 2 位 E。前四位严格得到 <code>LINE</code>。本地日志没有重建“商”和 <code>|</code> 的两条完整链，只记录它们按同法补出 A、R，结合数学题名形成 <code>LINEAR</code>。</p>
+<h3>验证</h3>
+<p>本地日志仅能完整确认前四位 <code>LINE</code>，末两位主要由成词与主题闭合；<code>LINEAR</code> 首投获得 correct，错误 0 次。</p></div>
+    </article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="265-TkqKhwRH.html"><span>← 上一题</span><strong>课文两景</strong></a><a class="sequence-link next" href="267-IUdLNP39.html"><span>下一题 →</span><strong>贪婪与高尚</strong></a></nav>
+    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
+    <footer><p>PuzzleCat 独立题解 · 负负得……</p><a href="#top">返回顶部 ↑</a></footer>
+  </main>
+  <script src="../assets/app.js"></script>
+</body>
+</html>

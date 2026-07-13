@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="来自地球的礼物（zEbG691D）的独立题解与验证。">
+  <meta name="theme-color" content="#f5f1e8">
+  <title>来自地球的礼物 · PuzzleCat 题解</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body class="detail-page">
+  <header class="topbar">
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <div class="top-actions">
+    <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
+    <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
+  </div>
+</header>
+  <main class="detail-main">
+    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>206</span></nav>
+    <article class="solution-document">
+      <header class="detail-hero">
+        <div class="detail-kicker"><span>206 / 289</span><code>zEbG691D</code></div>
+        <h1>来自地球的礼物</h1>
+        <div class="answer-panel"><span>最终答案</span><strong>REMOTE CONTROLLED CAR</strong></div>
+        <dl class="local-metadata">
+          <div><dt>本地结果</dt><dd>correct</dd></div>
+          <div><dt>错误提交</dt><dd>2</dd></div>
+          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
+        </dl>
+      </header>
+      <div class="detail-content"><h3>题面要点</h3>
+<p>月球上的女孩收到来自地球的礼物。题面给出一个不走斜线的 10×10 英文词搜和各类别、长度清单，称 16 件礼物中只出现了 15 件。</p>
+<h3>我的解法</h3>
+<p>我逐类在网格中找到 <code>SWING、SLIDE、BASKETBALL、SKATEBOARD、WATER GUN、GLOBE、CRAYON、BALLOON、CRT TV、TENT、PARASOL、CAMPFIRE、FLOWER、SANDCASTLE、BUG NET</code>。划去这 15 项后，剩余字母按行读为 <code>PRAGMATA</code>，说明题面背景对应游戏《PRAGMATA》。最初我误把 <code>BUG NET</code> 当缺失礼物；服务器否定后，重新对照本地日志中已确认的 16 件地球记忆收藏品，发现真正未在词搜中出现的是 RC Car。中间反馈给出 <code>(6 10 3)</code> / <code>(2 3)</code>，将其展开为 <code>REMOTE CONTROLLED CAR</code> / <code>RC CAR</code>。</p>
+<h3>验证</h3>
+<p>15 个词完整覆盖清单，余字 <code>PRAGMATA</code> 校验作品背景；枚举精确吻合 <code>REMOTE(6) CONTROLLED(10) CAR(3)</code>。该答案提交正确。</p></div>
+    </article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="205-IWfLNP39.html"><span>← 上一题</span><strong>本题设有中间答案验证</strong></a><a class="sequence-link next" href="207-bYF5uOJW.html"><span>下一题 →</span><strong>极简键盘</strong></a></nav>
+    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
+    <footer><p>PuzzleCat 独立题解 · 来自地球的礼物</p><a href="#top">返回顶部 ↑</a></footer>
+  </main>
+  <script src="../assets/app.js"></script>
+</body>
+</html>

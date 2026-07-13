@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="本题设有中间答案验证（IWfLNP39）的独立题解与验证。">
+  <meta name="theme-color" content="#f5f1e8">
+  <title>本题设有中间答案验证 · PuzzleCat 题解</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+
+<body class="detail-page">
+  <header class="topbar">
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <div class="top-actions">
+    <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
+    <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
+  </div>
+</header>
+  <main class="detail-main">
+    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>205</span></nav>
+    <article class="solution-document">
+      <header class="detail-hero">
+        <div class="detail-kicker"><span>205 / 289</span><code>IWfLNP39</code></div>
+        <h1>本题设有中间答案验证</h1>
+        <div class="answer-panel"><span>最终答案</span><strong>IT ALL CLICKED</strong></div>
+        <dl class="local-metadata">
+          <div><dt>本地结果</dt><dd>correct</dd></div>
+          <div><dt>错误提交</dt><dd>9</dd></div>
+          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
+        </dl>
+      </header>
+      <div class="detail-content"><h3>题面要点</h3>
+<p>起始页面直接声称答案是 <code>POINTLESS</code>，标题说明有中间验证；随后答案会改变页面状态，进入文字版 point-and-click 房间。</p>
+<h3>我的解法</h3>
+<p>可独立复现的部分是依次通过中间验证：<code>POINTLESS→ANDROID→CLICKBAIT→GAMEPLAY</code>。四词拆成 <code>POINT/LESS、AND/ROID、CLICK/BAIT、GAME/PLAY</code>，取前半得 <code>POINT AND CLICK GAME</code>，从而进入文字版房间；“观察房间”等动宾命令也能继续推进状态。日志随后没有从房间物件独立推出最终短语，而是直接读取归档元数据中的正确提示得到 <code>IT ALL CLICKED</code>。</p>
+<h3>验证</h3>
+<p>四个链式词和 <code>POINT AND CLICK GAME</code> 均触发中间状态；探索中共记录 9 次错误，<code>IT ALL CLICKED</code> 最终为 correct。本地独立证据有限：最终答案属于作者正确提示泄漏，不能算我们的独立提取；独立解题进度只能确认到 point-and-click 房间及其命令机制。</p></div>
+    </article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="204-gCN6lhr6.html"><span>← 上一题</span><strong>月照纱窗（无限版）</strong></a><a class="sequence-link next" href="206-zEbG691D.html"><span>下一题 →</span><strong>来自地球的礼物</strong></a></nav>
+    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
+    <footer><p>PuzzleCat 独立题解 · 本题设有中间答案验证</p><a href="#top">返回顶部 ↑</a></footer>
+  </main>
+  <script src="../assets/app.js"></script>
+</body>
+</html>
