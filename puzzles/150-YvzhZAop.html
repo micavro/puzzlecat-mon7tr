@@ -3,46 +3,86 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="巧填幻方（YvzhZAop）的独立题解与验证。">
+  <meta name="description" content="巧填幻方（YvzhZAop）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>巧填幻方 · PuzzleCat 题解</title>
+  <title>巧填幻方 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>150</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>150 / 289</span><code>YvzhZAop</code></div>
-        <h1>巧填幻方</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>NEUTRAL</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/YvzhZAop" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>热身数字用“反复相乘各位直到一位数”；主体先是以 2 的幂表示的 19 格幻方，再是把“和”添两笔改成“积”的 4×4 乘法幻方。</p>
-<h3>我的解法</h3>
-<p>热身得心形=3、星形=2。把第一盘数字取以 2 为底的指数，解出标准 1–19 幻方，并确定方形值 4、三角形值 8。第二盘要求每行列和主对角线乘积相同，解得完整方阵，其中彩色格按光谱顺序为 <code>14,5,21,20,18,1,12</code>。A1Z26 转成 <code>N E U T R A L</code>。</p>
-<h3>验证</h3>
-<p>第一盘所有直线指数和为 38，第二盘各行列乘积均为 7560；<code>NEUTRAL</code> 提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="149-d1uF4LbF.html"><span>← 上一题</span><strong>展览墙</strong></a><a class="sequence-link next" href="151-6Cnd5dzE.html"><span>下一题 →</span><strong>巧填方格</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 巧填幻方</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>150</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">150 / 289</span><code>YvzhZAop</code></div>
+      <h1>巧填幻方</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/YvzhZAop" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/150-YvzhZAop.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>巧填幻方 - solve log</h1>
+<ul>
+<li>Puzzle ID: <code>YvzhZAop</code></li>
+<li>Owner: <code>codex-sub-b-20260712</code></li>
+<li>Claim time: 2026-07-12T07:02:00.449Z</li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Hidden warm-up text: <code>48-&gt;6, 57-&gt;5, 66-&gt;8, 227-&gt;6</code>, then asks for <code>311-&gt;heart, 736-&gt;star</code>.</li>
+<li>The warm-up function repeatedly multiplies decimal digits until one digit remains: <code>48-&gt;32-&gt;6</code>, <code>57-&gt;35-&gt;15-&gt;5</code>, <code>66-&gt;36-&gt;18-&gt;8</code>, <code>227-&gt;28-&gt;16-&gt;6</code>.</li>
+<li>Therefore <code>heart=3</code> and <code>star=2</code>.</li>
+<li>The first diagram is the normal order-3 magic hexagon. Its printed values are powers of two; taking base-2 exponents gives distinct integers 1 through 19, with every straight line summing to 38.</li>
+<li>The flavor says to add two strokes to one character in the standard rule. Adding two strokes inside <code>和</code> changes <code>数字和</code> (sum) to <code>数字积</code> (product), so the second board is a multiplicative 4x4 magic square.</li>
+</ul>
+<h2>Reasoning</h2>
+<ul>
+<li>Solving the magic hexagon with the printed exponent clues gives:</li>
+</ul>
+<pre><code class="language-text">      10 12 16
+    13  4  2 19
+  15  8  5  7  3
+    14  6  1 17
+       9 11 18
+</code></pre>
+<ul>
+<li>The square marker is at exponent 2, hence <code>square=2^2=4</code>; the triangle is at exponent 3, hence <code>triangle=2^3=8</code>.</li>
+<li>For the 4x4 product square, write the unknown cells by rows as <code>A, B, C, D, E, F, G, H</code>. Comparing rows, columns, and diagonals gives <code>A*E=20</code>, <code>A*B=18</code>; distinctness and the already used value 2 force <code>A=1</code>, so <code>B=18</code>, <code>E=20</code>. The remaining equations force <code>C=12</code>, <code>D=5</code>, <code>F=9</code>, <code>G=21</code>, <code>H=14</code>.</li>
+<li>The completed square is:</li>
+</ul>
+<pre><code class="language-text"> 1 35 18 12
+27  8  5  7
+20  9 21  2
+14  3  4 45
+</code></pre>
+<ul>
+<li>Every row, column, and main diagonal has product 7560, and all 16 entries are distinct positive integers.</li>
+<li>Reading the colored cells in spectral order red, orange, yellow, green, blue, indigo/cyan, violet gives values <code>14,5,21,20,18,1,12</code>; A1Z26 yields <code>N E U T R A L</code>.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ul>
+<li><code>NEUTRAL</code> - unique, supported by the complete product-square solution and rainbow-order extraction.</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>NEUTRAL</code> - correct (<code>恭喜你，回答正确！</code>), submitted 2026-07-12T07:06:34.516Z.</li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Submit only a candidate implied by the reconstructed magic-square constraints and extraction.</li>
+<li>Stop at 20 incorrect submissions, or earlier as <code>cannot_do</code> when evidence no longer distinguishes candidates.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="149-d1uF4LbF.html"><span>← 上一份日志</span><strong>展览墙</strong></a><a class="sequence-link next" href="151-6Cnd5dzE.html"><span>下一份日志 →</span><strong>巧填方格</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>巧填幻方 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

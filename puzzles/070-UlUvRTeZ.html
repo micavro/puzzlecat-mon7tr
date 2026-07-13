@@ -3,46 +3,303 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="〖NbH₂谜〗未植数（UlUvRTeZ）的独立题解与验证。">
+  <meta name="description" content="〖NbH₂谜〗未植数（UlUvRTeZ）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>〖NbH₂谜〗未植数 · PuzzleCat 题解</title>
+  <title>〖NbH₂谜〗未植数 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>070</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>070 / 289</span><code>UlUvRTeZ</code></div>
-        <h1>〖NbH₂谜〗未植数</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>交叉相乘</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/UlUvRTeZ" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>7</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>题面用同一个黄色 <code>X/×</code> 图形连接三种语境：“使豌豆×”“给作业打×”“将两式×”。标题“未植数”双关“未知数”，风味文字又同时提到植物、数学和“全错了”。</p>
-<h3>我的解法</h3>
-<p>我起初把色块误读成笔画数与算术关系，先后尝试了 <code>47/5</code>、<code>灰飞烟灭</code> 等候选。后来本地提示明确指出黄色部分是“一个符号的多种含义”，于是改为按语境读 <code>×</code>：豌豆进行“杂交”，作业上“打叉”，两式“相乘”。题目不是要符号本身，而是要依次抽出三个语境词中由 <code>×</code> 承担的部分：<code>交 + 叉 + 相乘</code>。</p>
-<h3>验证</h3>
-<p>三个短语都自然完整，标题与风味文字也分别校验未知数、植物杂交、错号和乘号。提交 <code>交叉相乘</code> 正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="069-5t7uzMeL.html"><span>← 上一题</span><strong>〖NbH₂谜〗Wordle</strong></a><a class="sequence-link next" href="071-ASMTwX1Q.html"><span>下一题 →</span><strong>〖星谜001〗漏墨</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 〖NbH₂谜〗未植数</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>070</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">070 / 289</span><code>UlUvRTeZ</code></div>
+      <h1>〖NbH₂谜〗未植数</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/UlUvRTeZ" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/070-UlUvRTeZ.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve Log: UlUvRTeZ</h1>
+<ul>
+<li>Title: <code>【NbH₂谜】未植数</code></li>
+<li>Draw: <code>tmp/practice-draw.json</code> (<code>2026-07-11T21:31:01.9377657Z</code>)</li>
+<li>Solver: child agent coordinated by root</li>
+<li>Submission limit: 20 incorrect answers</li>
+<li>Started: <code>2026-07-12</code> (Asia/Shanghai)</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Puzzle and one resource archived locally.</li>
+</ul>
+<h2>Attempts</h2>
+<ol>
+<li><code>47/5</code> - incorrect. The server returned <code>回答错误，请再试一次</code>.
+   Evidence: <code>submissions/2026-07-11T21-51-42-376Z/submission.json</code>.</li>
+<li><code>灰飞烟灭</code> - incorrect. The server returned <code>回答错误，请再试一次</code>.
+   Evidence: <code>submissions/2026-07-11T21-54-45-266Z/submission.json</code>.</li>
+</ol>
+<h2>Image Transcription</h2>
+<ul>
+<li>Title decodes to <code>【NbH2谜】未植数</code>, a deliberate plant pun on <code>未知数</code>.</li>
+<li>Flavor decodes to <code>我草、我数学怎么全错了！</code>; <code>草</code> reinforces the plant/grass wordplay while the second half reinforces the arithmetic layer.</li>
+<li>The image contains three incomplete phrases connected by a pale-yellow route through coloured blocks:
+  1. <code>使豌豆 ____</code>
+  2. <code>给作业打 _</code>
+  3. <code>将两式 __</code></li>
+<li>The natural, grammar-complete fills are uniquely strong:
+  1. <code>使豌豆茁壮成长</code>
+  2. <code>给作业打分</code>
+  3. <code>将两式相减</code></li>
+<li>The final answer area contains four question marks, suggesting a four-character Chinese result.</li>
+</ul>
+<h2>Current Mechanism Analysis</h2>
+<ul>
+<li><code>茁壮成长</code> is an intentional four-character intermediate, not yet a safe final answer. The image continues from its four blocks through the clues <code>分</code> and <code>相减</code> before reaching the answer arrow.</li>
+<li>The blocks are colour-linked across stages. In the <code>茁壮成长</code> stage there is one grey block and a three-layer green/cyan/yellow block; the next stage is a green/yellow split block; the last stage is a cyan block beside a new blue block. This almost certainly specifies which pieces are grouped, divided, retained, or subtracted.</li>
+<li>Plausible readings tested include stroke counts, pinyin cancellation (notably <code>壮</code> = <code>zhuang</code> and <code>长</code> = <code>zhang</code>), character-component subtraction, and treating the green/yellow block as a fraction. None yet gives a complete, self-validating four-character result.</li>
+<li>The picture is not merely asking for the erased phrase: its connector explicitly proceeds through the second and third operations. Therefore do not submit <code>茁壮成长</code> without further evidence.</li>
+</ul>
+<h2>Hint Recommendation</h2>
+<ul>
+<li>The archive shows one unpurchased clueless-tier hint, ID <code>9VVWHnxJ</code>, costing the account's one available hint point.</li>
+<li>Because the linguistic fills are secure and only the graphical operation is ambiguous, this is a high-value place to use that hint if the coordinator permits it.</li>
+<li>Incorrect submissions remain <code>0 / 20</code>; this agent has not submitted anything.</li>
+</ul>
+<h2>Corrected Solve: Stroke Counts and Fractions</h2>
+<p>The earlier <code>茁壮成长</code> completion was attractive but wrong. The grey first block and the downstream arithmetic make the intended completion much more specific:</p>
+<ol>
+<li><code>使豌豆灰飞烟灭</code>.</li>
+<li>The four coloured blocks therefore stand for <code>灰 / 飞 / 烟 / 灭</code>.</li>
+<li>Their simplified-Chinese stroke counts are:
+   - <code>灰 = 6</code>
+   - <code>飞 = 3</code>
+   - <code>烟 = 10</code>
+   - <code>灭 = 5</code></li>
+<li>At the next node, the green <code>飞</code> block is placed over the yellow <code>灭</code> block beside <code>给作业打</code>. Completing the phrase as <code>给作业打分</code> tells us to read it as the score/fraction <code>3/5</code>.</li>
+<li>At the last node, the cyan <code>烟</code> block (<code>10</code>) is placed to the left of the newly produced fraction beside <code>将两式</code>. Completing <code>将两式相减</code> instructs left-minus-right:</li>
+</ol>
+<pre><code class="language-text">10 - 3/5 = 50/5 - 3/5 = 47/5
+</code></pre>
+<ol start="6">
+<li>The endpoint contains exactly four question-mark slots, matching the four-character string <code>47/5</code>.</li>
+</ol>
+<h3>Candidate</h3>
+<ul>
+<li>Candidate answer: <code>47/5</code></li>
+<li>Confidence: <code>0.97</code> (very high).</li>
+<li>Self-checks: every colour used by the yellow route has a role; <code>灰</code> anchors the idiom, <code>飞/灭</code> form the clued fraction, <code>烟</code> supplies 10 to the clued subtraction, and the output length matches exactly.</li>
+<li>This agent did not submit. The coordinator should submit serially.</li>
+</ul>
+<h2><code>47/5</code> Rejected; Arithmetic-Mean Mechanism</h2>
+<ul>
+<li>The coordinator submitted <code>47/5</code>; the server returned <code>incorrect</code>. Incorrect submissions are now <code>1 / 20</code>.</li>
+<li>The failed interpretation treated <code>分</code> as a division sign and ignored the grey character's role. Re-reading the graph as relations between <strong>stroke-count averages</strong> resolves both problems.</li>
+</ul>
+<h3>Reconstructed Fill</h3>
+<ol>
+<li>The obscured heading is naturally <code>平均数的妙用</code>: "a clever use of arithmetic means". This states the operation used by the coloured graph.</li>
+<li>The first sentence is <code>使豌豆灰飞烟灭</code>. The grey block directly clues the first character <code>灰</code>; the other three coloured positions are to be recovered.</li>
+<li><code>给作业打分</code> supplies the character <code>分</code>.</li>
+<li><code>将两式相减</code> supplies the characters <code>相</code> and <code>减</code>.</li>
+</ol>
+<h3>Stroke-Count Checks</h3>
+<p>Using standard simplified-Chinese stroke counts:</p>
+<pre><code class="language-text">飞 = 3 strokes
+分 = 4 strokes
+灭 = 5 strokes
+
+相 = 9 strokes
+烟 = 10 strokes
+减 = 11 strokes
+</code></pre>
+<ul>
+<li>The green/yellow combined node beside <code>给作业打分</code> places <code>分</code> between the green and yellow unknowns. Its stroke count is their arithmetic mean: <code>(3 + 5) / 2 = 4</code>, recovering <code>飞 / 分 / 灭</code> as the consecutive 3-4-5 chain.</li>
+<li>The lower two-character fill <code>相减</code> has stroke counts 9 and 11. Their arithmetic mean is <code>(9 + 11) / 2 = 10</code>, recovering the cyan intermediate character <code>烟</code>.</li>
+<li>Together with the directly colour-clued <code>灰</code>, the four-character result is <code>灰飞烟灭</code>.</li>
+<li>This reading uses the heading's <code>平均数</code>, both auxiliary phrases, the grey colour clue, both coloured relations, and the four answer slots. It does not leave <code>灰</code> or any downstream node unused.</li>
+</ul>
+<h3>Revised Candidate</h3>
+<ul>
+<li>Candidate answer: <code>灰飞烟灭</code></li>
+<li>Confidence: <code>0.96</code> (very high).</li>
+<li>Submission recommendation: submit this next; this agent has not submitted it.</li>
+</ul>
+<h2><code>灰飞烟灭</code> Rejected; Correct the Plant Sentence</h2>
+<ul>
+<li>The coordinator submitted <code>灰飞烟灭</code>; the server returned <code>incorrect</code>. Incorrect submissions are now <code>2 / 20</code>.</li>
+<li>This shows that <code>灰飞烟灭</code> is an intentionally wrong intermediate produced by taking the picture's "math homework" too literally, not the final four-character answer.</li>
+</ul>
+<h3>Semantic Correction</h3>
+<ul>
+<li>The fixed prefix is <code>使豌豆</code>. The natural completion is unambiguously <code>茁壮成长</code>, not <code>灰飞烟灭</code>.</li>
+<li>This directly activates both halves of the title <code>未植数</code>: it is a pun on <code>未知数</code>, while <code>植</code> tells us the unknown numbers belong to the plant/growth phrase.</li>
+<li>The flavor <code>我草、我数学怎么全错了！</code> says that the displayed/intermediate mathematics is wrong and must be corrected. <code>草</code> independently reinforces the plant reading.</li>
+</ul>
+<h3>Four Numeric Slots</h3>
+<ul>
+<li>The endpoint has four separate question-mark slots. Rather than returning the four characters themselves, read the standard simplified-Chinese stroke count of each corrected character:</li>
+</ul>
+<pre><code class="language-text">茁 = 8  (艹 3 + 出 5)
+壮 = 6
+成 = 6
+长 = 4
+</code></pre>
+<ul>
+<li>The resulting four-digit <code>未植数</code> is <code>8664</code>.</li>
+<li>This also explains why a four-character idiom was rejected: the puzzle asks for the <strong>numbers</strong> associated with the corrected four-character plant phrase.</li>
+</ul>
+<h3>Third Candidate</h3>
+<ul>
+<li>Candidate answer: <code>8664</code></li>
+<li>Confidence: <code>0.88</code> (high, but below the previous candidate because the exact graphical arithmetic that generates the deliberately wrong intermediate is still somewhat under-clued).</li>
+<li>This agent has not submitted it. Recommended next controlled submission: <code>8664</code>.</li>
+</ul>
+<h2>Server Falsification</h2>
+<ul>
+<li>The coordinator submitted <code>47/5</code>; the server rejected it.</li>
+<li>Incorrect submissions: <code>2 / 20</code>.</li>
+<li>The stroke-count/fraction interpretation may still describe an intermediate, but <code>47/5</code> is not the accepted final answer. Recheck the grey <code>灰</code> value, the direction/operands of the final operation, and the required representation at the four endpoint slots before another submission.</li>
+</ul>
+<h3>Average-stroke interpretation</h3>
+<ul>
+<li>A second interpretation treated <code>分</code> (4 strokes) as the average of <code>飞</code> (3) and <code>灭</code> (5), and <code>烟</code> (10) as the average of <code>相</code> (9) and <code>减</code> (11).</li>
+<li>This gives the pictured erroneous phrase <code>使豌豆灰飞烟灭</code>, but the server also rejected <code>灰飞烟灭</code>.</li>
+<li>Therefore this four-character phrase is another intermediate/error state, not the final answer. The flavor's complaint that the mathematics is all wrong and the natural plant completion <code>茁壮成长</code> must be considered in the next step.</li>
+</ul>
+<h2>Fourth Round: Compare the Wrong and Correct Plant Phrases</h2>
+<p>The three rejected answers isolate the missing final operation. The picture deliberately supplies two different four-character completions for <code>使豌豆</code>:</p>
+<ul>
+<li>the visually/math-produced but semantically wrong phrase <code>灰飞烟灭</code>;</li>
+<li>the natural plant result <code>茁壮成长</code>.</li>
+</ul>
+<p><code>给作业打</code> is completed by <code>分</code>, instructing us to score the characters. In the established arithmetic layer, the score is the standard simplified-Chinese stroke count:</p>
+<pre><code class="language-text">wrong:   灰  飞  烟  灭  =  6, 3, 10, 5
+correct: 茁  壮  成  长  =  8, 6,  6, 4
+</code></pre>
+<p><code>将两式</code> is completed by <code>相减</code>, so subtract the two four-term expressions position by position. The magnitudes of their differences are:</p>
+<pre><code class="language-text">|8 - 6|, |6 - 3|, |6 - 10|, |4 - 5| = 2, 3, 4, 1
+</code></pre>
+<p>This uses every textual clue and resolves why both <code>灰飞烟灭</code> and the raw corrected stroke string <code>8664</code> were rejected: they are the two expressions/inputs, while the four endpoint question marks are the four extracted differences. The flavor <code>我草、我数学怎么全错了！</code> supplies both the plant correction and the fact that the displayed phrase is the wrong expression.</p>
+<h3>Candidate</h3>
+<ul>
+<li>Candidate answer: <code>2341</code></li>
+<li>Confidence: <code>0.96</code> (very high).</li>
+<li>Sign audit: <code>correct - wrong</code> gives <code>2,3,-4,-1</code>, while the opposite order gives <code>-2,-3,4,1</code>. The diagram does not specify an operand order and each endpoint is a single slot, so the intended representation is the absolute per-position difference <code>2341</code>. PuzzleCat also strips punctuation during answer normalization, making minus-sign variants indistinguishable at submission time.</li>
+<li>This agent did not submit. The coordinator should submit serially.</li>
+</ul>
+<h2><code>2341</code> Rejected; Separate the Arithmetic Intermediate from the Final Correction</h2>
+<ul>
+<li>The coordinator submitted <code>2341</code>; the server returned <code>incorrect</code>.</li>
+<li>Incorrect submissions are now <code>4 / 20</code>.</li>
+<li>The attractive permutation of absolute stroke-count differences was an over-extraction. The graphic never explicitly places the natural phrase's stroke-count vector into the arithmetic route, so subtracting <code>8664</code> from <code>63105</code> added an unsupported second equation.</li>
+</ul>
+<h3>Re-read of the route</h3>
+<p>The color route is better understood as constructing or checking the deliberately wrong sentence:</p>
+<ol>
+<li>The pictured completion is <code>使豌豆灰飞烟灭</code>.</li>
+<li>Stroke counts give <code>灰/飞/烟/灭 = 6/3/10/5</code>.</li>
+<li><code>给作业打分</code> and <code>将两式相减</code>, together with the grouped colored nodes, explain the arithmetic/stroke relationships inside that wrong phrase. They do not necessarily ask for another subtraction against the corrected phrase.</li>
+<li>The flavor says the mathematics/result is entirely wrong (<code>全错了</code>) and also points to a plant (<code>我草</code>). The title <code>未植数</code> adds the plant/unknown-number pun.</li>
+<li>Therefore the four endpoint question marks most naturally ask for the semantic correction of the four-character error: <code>使豌豆茁壮成长</code>.</li>
+</ol>
+<h3>Candidate ranking after four rejections</h3>
+<ol>
+<li><code>茁壮成长</code> - confidence <code>0.88</code>. Exact four-character correction, strongest collocation after <code>使豌豆</code>, matches the plant hints and explains why <code>灰飞烟灭</code> is intentionally an intermediate.</li>
+<li><code>生根发芽</code> - confidence <code>0.28</code>. Also a plausible four-character plant result, but less directly contrasts with the displayed four-character idiom and lacks the unusually neat <code>8,6,6,4</code> stroke vector already highlighted by the puzzle.</li>
+<li><code>平均数</code> / <code>笔画数</code> - confidence <code>0.15</code>. Plausible missing heading text (<code>...的妙用</code>) but neither matches the four endpoint slots, and both describe the mechanism rather than the requested result.</li>
+<li><code>绝对差值</code> - confidence <code>0.08</code>. Four characters and related to the failed difference idea, but the rejection of <code>2341</code> removes its only concrete extraction support.</li>
+</ol>
+<ul>
+<li>Recommended next controlled submission: <code>茁壮成长</code>.</li>
+<li>This agent did not submit.</li>
+</ul>
+<h2><code>茁壮成长</code> Rejected; Read the Four Unknown Numbers Directly</h2>
+<ul>
+<li>The coordinator submitted <code>茁壮成长</code>; the server returned <code>incorrect</code>.</li>
+<li>Incorrect submissions are now <code>5 / 20</code>.</li>
+<li>This falsifies the semantic-correction endpoint. The plant reading remains flavor support for recognizing that <code>使豌豆灰飞烟灭</code> is deliberately absurd, but it does not replace the pictured variables.</li>
+</ul>
+<h3>Direct variable solution</h3>
+<p>The four endpoint question marks correspond to the four colored unknown-number positions in <code>灰飞烟灭</code>, not necessarily four single digits. Standard simplified-Chinese stroke counts give:</p>
+<pre><code class="language-text">灰 = 6
+飞 = 3
+烟 = 10
+灭 = 5
+</code></pre>
+<p>The downstream phrases are consistency checks based on arithmetic means:</p>
+<pre><code class="language-text">飞(3) and 灭(5) average to 分(4): 给作业打分
+相(9) and 减(11) average to 烟(10): 将两式相减
+</code></pre>
+<p>This explains the grouped green/yellow node, the cyan node between the <code>相/减</code> values, the heading's likely <code>平均数的妙用</code>, and the title pun <code>未植数/未知数</code>. It also explains every rejection so far: <code>灰飞烟灭</code> supplies the labels, while the checker wants the numerical values themselves; <code>8664</code>, <code>2341</code>, and <code>茁壮成长</code> introduced an unsupported semantic-correction vector.</p>
+<h3>Revised candidate</h3>
+<ul>
+<li>Displayed four-number sequence: <code>6 3 10 5</code>.</li>
+<li>Submission string after PuzzleCat's space/punctuation normalization: <code>63105</code>.</li>
+<li>Confidence: <code>0.98</code> (very high).</li>
+<li>This agent did not submit. The coordinator should submit serially.</li>
+</ul>
+<h2><code>63105</code> Rejected; Purchased Hint Reveals a Polysemous Symbol</h2>
+<ul>
+<li>The coordinator submitted <code>63105</code>; the server returned <code>incorrect</code>.</li>
+<li>Incorrect submissions are now <code>6 / 20</code>.</li>
+<li>The account's one hint point was spent. The unlocked hint says: <code>图中的黄色部分是一个符号，题面内容是此符号可能的几个含义。ft有与符号有关的提示。</code></li>
+<li>This explicitly falsifies the entire stroke-count/average-number route. The colored compositions are semantic scenes/usages, not arithmetic equations whose character strokes must be evaluated.</li>
+</ul>
+<h3>Symbol identification</h3>
+<p>The symbol is <code>×</code>, equivalently the letter/symbol <code>X</code>. It has an exact reading in every context:</p>
+<pre><code class="language-text">使豌豆 ×     -&gt; 使豌豆杂交 (cross peas)
+给作业打 ×   -&gt; 给作业打叉/判错 (mark homework wrong)
+将两式 ×     -&gt; 将两式相乘 (multiply two expressions)
+</code></pre>
+<p>The title and flavor independently reinforce the same symbol:</p>
+<ul>
+<li><code>未植数</code> puns on <code>未知数</code>, conventionally represented by <code>x</code>; <code>植</code> also supports the pea/crossbreeding scene.</li>
+<li><code>我草</code> supplies the plant/cross context and can also evoke censorship with an <code>X</code>.</li>
+<li><code>我数学怎么全错了</code> combines the mathematical multiplication sign with the wrong-answer cross mark.</li>
+</ul>
+<p>The four endpoint question marks are generic answer placeholders, not a reliable four-character enumeration. The purchased hint asks us to identify the shared symbol behind its possible meanings, so the direct answer should be the symbol itself.</p>
+<h3>New candidate ranking</h3>
+<ol>
+<li><code>X</code> - confidence <code>0.93</code>. ASCII submission form for the shared <code>×/x</code> symbol; most likely checker representation because punctuation normalization could discard the typographic multiplication sign.</li>
+<li><code>未知数</code> - confidence <code>0.55</code>. The title's explicit fourth meaning of <code>x</code>, but the hint asks for the symbol rather than one of its meanings.</li>
+<li><code>叉号</code> - confidence <code>0.25</code>. Chinese name for one usage, but it loses the unknown-variable and multiplication readings.</li>
+<li><code>乘号</code> - confidence <code>0.18</code>. Likewise only one of the pictured meanings.</li>
+</ol>
+<ul>
+<li>Recommended next controlled submission: <code>X</code>.</li>
+<li>This agent did not submit.</li>
+</ul>
+<h2>Accepted Answer</h2>
+<ul>
+<li>The coordinator submitted <code>交叉相乘</code>; the server returned <code>correct</code>.</li>
+<li>Final answer: <code>交叉相乘</code>.</li>
+<li>Incorrect submissions before acceptance: <code>7 / 20</code>.</li>
+<li>The account's one hint point was spent on the symbol hint; remaining balance: <code>0</code>.</li>
+<li>Evidence: <code>submissions/2026-07-12T03-40-25-678Z/submission.json</code>.</li>
+</ul>
+<h3>Confirmed extraction</h3>
+<p>The yellow symbol is <code>X/×</code>. Read the context-specific Chinese word contributed by each of the three usages in order:</p>
+<pre><code class="language-text">使豌豆杂交  -&gt; 交
+给作业打叉  -&gt; 叉
+将两式相乘  -&gt; 相乘
+</code></pre>
+<p>Concatenating them gives <code>交 + 叉 + 相乘 = 交叉相乘</code>. The flavor simultaneously points to plants/crossbreeding, mathematics/multiplication, and wrong/cross marks. The title's <code>未植数/未知数</code> pun supplies another association with <code>x</code>.</p>
+<h3>Lesson</h3>
+<ul>
+<li>When a hint says the same symbol has several meanings, extract the distinct context word from each usage before submitting the symbol itself.</li>
+<li>Do not promote visual grouping into numerical operations without an explicit numerical anchor; the stroke-count route produced several internally elegant but entirely unsupported candidates.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="069-5t7uzMeL.html"><span>← 上一份日志</span><strong>〖NbH₂谜〗Wordle</strong></a><a class="sequence-link next" href="071-ASMTwX1Q.html"><span>下一份日志 →</span><strong>〖星谜001〗漏墨</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>〖NbH₂谜〗未植数 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

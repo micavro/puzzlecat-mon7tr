@@ -3,46 +3,74 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="我解谜 I puzzIe.（JY3goAEX）的独立题解与验证。">
+  <meta name="description" content="我解谜 I puzzIe.（JY3goAEX）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>我解谜 I puzzIe. · PuzzleCat 题解</title>
+  <title>我解谜 I puzzIe. · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>170</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>170 / 289</span><code>JY3goAEX</code></div>
-        <h1>我解谜 I puzzIe.</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>9</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/JY3goAEX" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>英文句子故意混用大写 I 与小写 l，要求告诉 IRIS 字母 I 的数量；标题本身也含同样机关。</p>
-<h3>我的解法</h3>
-<p>只数正文中真正的大写 I，可数到 7；<code>THlS、lS、lRIS</code> 开头等是小写 l 诱饵。提交 7 后提示“好像漏了哪里”，于是把标题也计入：标题里独立的 <code>I</code> 与 <code>puzzIe</code> 中的 I 共 2 个，总数 <code>7+2=9</code>。</p>
-<h3>验证</h3>
-<p><code>7</code> 获 intermediate 提示，<code>9</code> correct。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="169-ZmApgd2S.html"><span>← 上一题</span><strong>我解谜</strong></a><a class="sequence-link next" href="171-eyFoQPLb.html"><span>下一题 →</span><strong>才不是汽水谜！(二)</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 我解谜 I puzzIe.</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>170</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">170 / 289</span><code>JY3goAEX</code></div>
+      <h1>我解谜 I puzzIe.</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/JY3goAEX" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/170-JY3goAEX.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: JY3goAEX</h1>
+<h2>Coordination</h2>
+<ul>
+<li>Owner: <code>codex-sub-c-20260712</code></li>
+<li>Title: <code>我解谜 I puzzIe.</code></li>
+<li>Incorrect submissions: 0</li>
+<li>Status: solved</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>The English text is: <code>THlS lS my FIRST puzzIe. You wanna soIve IT? TelI lRIS the number of I.</code></li>
+<li>The puzzle deliberately mixes uppercase <code>I</code> and lowercase <code>l</code>, which are visual homoglyphs in many fonts.</li>
+<li>Flavor: <code>你看到了我，你看到的我……</code></li>
+<li>Wrong answers have no cooldown.</li>
+</ul>
+<h2>Reasoning</h2>
+<p>Counting actual uppercase <code>I</code> characters in the English puzzle sentence gives seven:</p>
+<ol>
+<li><code>FIRST</code></li>
+<li><code>puzzIe</code></li>
+<li><code>soIve</code></li>
+<li><code>IT</code></li>
+<li><code>TelI</code></li>
+<li>the internal <code>I</code> in <code>lRIS</code></li>
+<li>the final standalone <code>I</code></li>
+</ol>
+<p>The apparent I-like glyphs in <code>THlS</code>, <code>lS</code>, and the first character of <code>lRIS</code> are lowercase <code>l</code>, so they are decoys.</p>
+<p>Submitting <code>7</code> produced the custom milestone <code>好像漏了哪里……</code>, confirming that the sentence-only count is intended but incomplete. The title <code>我解谜 I puzzIe.</code> contributes two additional uppercase <code>I</code> characters: the standalone <code>I</code> and the substituted <code>I</code> in <code>puzzIe</code>. The complete count is therefore <code>7 + 2 = 9</code>.</p>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>9</code> - full-page count after the milestone explicitly indicates an omitted location.</li>
+<li><code>7</code> - sentence-only count, confirmed as an intermediate.</li>
+<li><code>10</code> - counts both uppercase <code>I</code> and lowercase <code>l</code> in the sentence, contradicting the request for actual <code>I</code> characters.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>7</code> -&gt; intermediate: <code>好像漏了哪里……</code>.</li>
+<li><code>9</code> -&gt; correct.</li>
+</ul>
+<h2>Final answer</h2>
+<p><code>9</code></p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="169-ZmApgd2S.html"><span>← 上一份日志</span><strong>我解谜</strong></a><a class="sequence-link next" href="171-eyFoQPLb.html"><span>下一份日志 →</span><strong>才不是汽水谜！(二)</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>我解谜 I puzzIe. · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

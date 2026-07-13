@@ -3,46 +3,72 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="自我治疗（IH5LNP39）的独立题解与验证。">
+  <meta name="description" content="自我治疗（IH5LNP39）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>自我治疗 · PuzzleCat 题解</title>
+  <title>自我治疗 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>245</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>245 / 289</span><code>IH5LNP39</code></div>
-        <h1>自我治疗</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>血炎症</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/IH5LNP39" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>flavor 突出“以撒”，三个“病号”数字对应《以撒的结合》收藏品 ID，图像和字格长度帮助确定中文物品名。</p>
-<h3>我的解法</h3>
-<p>157 对应两字物品“嗜血”，编号格取“血”；459 对应三字“鼻窦炎”，取“炎”；368 对应三字“溢泪症”，取“症”。按 1、2、3 顺序拼接。</p>
-<h3>验证</h3>
-<p>三个 ID、图像效果和名称长度相互吻合，提取为 <code>血炎症</code>；首投正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="244-9AAWHnxJ.html"><span>← 上一题</span><strong>老地方（微恐）</strong></a><a class="sequence-link next" href="246-SMkj2oe3.html"><span>下一题 →</span><strong>节日快乐</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 自我治疗</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>245</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">245 / 289</span><code>IH5LNP39</code></div>
+      <h1>自我治疗</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/IH5LNP39" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/245-IH5LNP39.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve Log: IH5LNP39</h1>
+<ul>
+<li>Owner: <code>chat2-w1-20260712</code></li>
+<li>Title: 自我治疗</li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0</li>
+</ul>
+<h2>Evidence</h2>
+<ul>
+<li>Archived successfully on 2026-07-12; one resource was downloaded.</li>
+<li>The flavor text bolds <code>以撒</code>, identifying the theme as the game <code>以撒的结合</code> (<code>The Binding of Isaac</code>).</li>
+<li>The three <code>病号</code> values are collectible item IDs rather than medical patient numbers. Public Chinese item tables give:</li>
+<li>Item 157: <code>嗜血</code> (<code>Bloody Lust</code>). The image shows the red/bloody effect, and the two answer cells match the two-character Chinese name. Extraction 1 is its final character <code>血</code>.</li>
+<li>Item 459: <code>鼻窦炎</code> (<code>Sinus Infection</code>). The image shows the green booger-tear effect, and the three cells match the name. Extraction 2 is <code>炎</code>.</li>
+<li>Item 368: <code>溢泪症</code> (<code>Epiphora</code>). The image shows tears, and the three cells match the name. Extraction 3 is <code>症</code>.</li>
+<li>Reading the numbered cells in order gives <code>血炎症</code>.</li>
+<li>Submission <code>血炎症</code> returned HTTP 200 with verdict <code>correct</code> and message <code>恭喜你，回答正确！</code>.</li>
+</ul>
+<h2>Reasoning</h2>
+<ul>
+<li>Interpret each number as a Binding of Isaac collectible ID, fill its standard Chinese item name, and take the colored numbered cell.</li>
+<li>The resulting characters are <code>血</code>, <code>炎</code>, and <code>症</code>, yielding the answer <code>血炎症</code>.</li>
+</ul>
+<h2>Candidate Ranking</h2>
+<ul>
+<li>
+<ol>
+<li><code>血炎症</code> - exact extraction from all three independently verified item IDs; submitted and accepted.</li>
+</ol>
+</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>血炎症</code> - correct (0 prior/incorrect attempts).</li>
+</ul>
+<h2>Stopping Criteria</h2>
+<ul>
+<li>Stopped after the first submission was accepted.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="244-9AAWHnxJ.html"><span>← 上一份日志</span><strong>老地方（微恐）</strong></a><a class="sequence-link next" href="246-SMkj2oe3.html"><span>下一份日志 →</span><strong>节日快乐</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>自我治疗 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

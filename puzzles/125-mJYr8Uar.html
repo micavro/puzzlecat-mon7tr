@@ -3,46 +3,58 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="和同开珎（mJYr8Uar）的独立题解与验证。">
+  <meta name="description" content="和同开珎（mJYr8Uar）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>和同开珎 · PuzzleCat 题解</title>
+  <title>和同开珎 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>125</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>125 / 289</span><code>mJYr8Uar</code></div>
-        <h1>和同开珎</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>京</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/mJYr8Uar" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>4</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>和同开珎式四向组词题，四周是方向图标，连接箭头决定中心字在前还是在后。</p>
-<h3>我的解法</h3>
-<p>早期把图标当英文箭头，尝试 <code>TURN、ARROW、SHIFT</code> 均不成立。把它们改读为中文方位，四臂要求组成北京、南京、东京、京东；共同中心字只能是 <code>京</code>，而箭头方向正好决定“方位+京”或“京+东”的顺序。</p>
-<h3>验证</h3>
-<p><code>TURN、ARROW、SHIFT</code> 被拒，<code>京</code> correct；四个组合均为常见地名/词名。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="124-hv41SWQP.html"><span>← 上一题</span><strong>启动</strong></a><a class="sequence-link next" href="126-XPtkPIap.html"><span>下一题 →</span><strong>和同谜</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 和同开珎</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>125</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">125 / 289</span><code>mJYr8Uar</code></div>
+      <h1>和同开珎</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/mJYr8Uar" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/125-mJYr8Uar.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>mJYr8Uar — 和同开珎</h1>
+<h2>Status</h2>
+<ul>
+<li>Original owner: <code>codex-sub-g-20260712</code></li>
+<li>Takeover owner: <code>codex-root-b-20260712</code> (previous lease expired)</li>
+<li>State: correct</li>
+<li>Incorrect submissions: 4</li>
+</ul>
+<h2>Reasoning</h2>
+<ul>
+<li>This is a Wadōkaichin-style central word puzzle. Read the four outer key icons as UP, DOWN, RIGHT, RIGHT.</li>
+<li>Connector arrow direction specifies concatenation order: top/left/right point into the center, while the bottom connection points out from the center.</li>
+<li>Center <code>TURN</code> gives UPTURN, DOWNTURN, RIGHT TURN, and TURN RIGHT, all valid phrases.</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li>Pending: <code>TURN</code>; previous worker's mechanism is complete and independently reviewable.</li>
+<li><code>TURN</code> — incorrect twice (once by original worker, once after takeover; duplicate was only discovered from the archived submission history).</li>
+<li>Reassessment: all four outer glyphs are boxed arrow icons, so the shared center word may be <code>ARROW</code>: UP ARROW, DOWN ARROW, RIGHT ARROW, and ARROW RIGHT (the connector direction controls order). Candidate <code>ARROW</code>.</li>
+<li><code>ARROW</code> — incorrect。</li>
+<li>Exact four-arm solution: <code>SHIFT</code> gives <code>UPSHIFT</code>, <code>DOWNSHIFT</code>, <code>RIGHT SHIFT</code>, and <code>SHIFT RIGHT</code>; all four are standard expressions, and the boxed arrows reinforce the keyboard/shift theme.</li>
+<li><code>SHIFT</code> — incorrect。</li>
+<li>Final mechanism correction: the compass icon signals Chinese cardinal directions, not English arrow names. Top=北, left=南, right/bottom=东. Center <code>京</code> yields 北京、南京、东京、京东, with connector directions exactly determining order.</li>
+<li><code>京</code> — correct。</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="124-hv41SWQP.html"><span>← 上一份日志</span><strong>启动</strong></a><a class="sequence-link next" href="126-XPtkPIap.html"><span>下一份日志 →</span><strong>和同谜</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>和同开珎 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

@@ -3,46 +3,78 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="又是三个词？（OA2iZO0v）的独立题解与验证。">
+  <meta name="description" content="又是三个词？（OA2iZO0v）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>又是三个词？ · PuzzleCat 题解</title>
+  <title>又是三个词？ · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>115</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>115 / 289</span><code>OA2iZO0v</code></div>
-        <h1>又是三个词？</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>BLUEPRINT</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/OA2iZO0v" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>2</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>题面列出 18 个 what3words 英文三词地址，左右成对；把同一坐标切换为中文三词后，会形成中文谜面和索引提示。</p>
-<h3>我的解法</h3>
-<p>逐对解读：前三行提取成 <code>高品质</code>，中间两行成 <code>送别</code>，后四行成 <code>数控机床</code>。例如 <code>典故.音乐.两人→高山流水</code> 配“最小正整数”取“高”；<code>冬天.传递.火种→雪中送炭</code> 配“三迁”取“送”；<code>模仿.吹奏.乐器→滥竽充数</code> 配“四宝”取“数”。合成中文地址 <code>高品质.送别.数控机床</code>，该格对应的英文三词为 <code>submit.answer.blueprint</code>。</p>
-<h3>验证</h3>
-<p>三段中文均由同一“左边解短语、右边给索引”的规则产生，回译后的英文地址直接给提交指令和 <code>BLUEPRINT</code>。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="114-pej2nNtD.html"><span>← 上一题</span><strong>历史谜（二）</strong></a><a class="sequence-link next" href="116-ikmRTMow.html"><span>下一题 →</span><strong>友人的来信</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 又是三个词？</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>115</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">115 / 289</span><code>OA2iZO0v</code></div>
+      <h1>又是三个词？</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/OA2iZO0v" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/115-OA2iZO0v.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: OA2iZO0v</h1>
+<h2>Coordination</h2>
+<ul>
+<li>Owner: <code>codex-sub-c-20260712</code></li>
+<li>Title: <code>又是三个词？</code></li>
+<li>Existing archive inspected; archive was not repeated.</li>
+<li>Incorrect submissions: 2</li>
+<li>Status: solved</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>The table contains 18 English what3words addresses, split into two columns and row groups of 3, 2, and 4.</li>
+<li>Flavor: <code>无处不在的坐标们，是否也会将中英谜题尽数索引？</code></li>
+<li>Direct access to <code>what3words.com</code> returned CloudFront 403, but the official <code>map.what3words.com</code> mirror exposed coordinates in <code>__NEXT_DATA__</code>.</li>
+<li>Requesting each coordinate from the mirror with the <code>zh_si</code> locale yielded a Chinese three-word address. The Chinese addresses form short clues rather than arbitrary locations.</li>
+</ul>
+<h2>Derivation</h2>
+<p>Each row's left Chinese address clues a phrase. The right Chinese address gives its index, except where the clue explicitly says no number or to use the phrase's own number.</p>
+<ol>
+<li><code>典故.音乐.两人</code> -&gt; <code>高山流水</code>; <code>最小.正的.整数</code> -&gt; 1; extract <code>高</code>.</li>
+<li><code>道德.成绩.也好</code> -&gt; <code>品学兼优</code>; <code>很多.作文.相同</code> -&gt; <code>千篇一律</code> -&gt; 1; extract <code>品</code>.</li>
+<li><code>合并.杉木.杉木</code> -&gt; <code>木质</code>; <code>多少.老虎.力量</code> -&gt; <code>九牛二虎之力</code> -&gt; 2; extract <code>质</code>.</li>
+</ol>
+<p>The first group is <code>高品质</code>.</p>
+<ol start="4">
+<li><code>冬天.传递.火种</code> -&gt; <code>雪中送炭</code>; <code>搬家.搬家.搬家</code> -&gt; <code>孟母三迁</code> -&gt; 3; extract <code>送</code>.</li>
+<li><code>额外.单个.方块</code> -&gt; <code>别具一格</code>; <code>使用.本身.索引</code> says to use the phrase's own <code>一</code> -&gt; 1; extract <code>别</code>.</li>
+</ol>
+<p>The second group is <code>送别</code>.</p>
+<ol start="6">
+<li><code>模仿.吹奏.乐器</code> -&gt; <code>滥竽充数</code>; <code>笔墨.纸张.砚台</code> -&gt; <code>文房四宝</code> -&gt; 4; extract <code>数</code>.</li>
+<li><code>手提.空子.字谜</code> is the character construction <code>扌 + 空 = 控</code>; <code>这次.没有.数字</code> says there is no index.</li>
+<li><code>突然.想到.方法</code> -&gt; <code>灵机一动</code>; <code>最小.素质.数字</code> (smallest prime number) -&gt; 2; extract <code>机</code>.</li>
+<li><code>一起.睡眠.区别</code> -&gt; <code>同床异梦</code>; <code>人类.眼睛.数量</code> -&gt; 2; extract <code>床</code>.</li>
+</ol>
+<p>The third group is <code>数控机床</code>.</p>
+<p>The resulting Chinese what3words address is <code>高品质.送别.数控机床</code>. It resolves to <code>(36.311408, -111.521837)</code>. Converting that square back to English gives <code>submit.answer.blueprint</code>, which instructs the final answer <code>BLUEPRINT</code>.</p>
+<h2>Submissions</h2>
+<ul>
+<li><code>WHAT3WORDS</code> -&gt; incorrect, generic response.</li>
+<li><code>39.818362,163.818152</code> -&gt; incorrect, generic response.</li>
+<li><code>BLUEPRINT</code> -&gt; correct.</li>
+</ul>
+<h2>Final answer</h2>
+<p><code>BLUEPRINT</code></p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="114-pej2nNtD.html"><span>← 上一份日志</span><strong>历史谜（二）</strong></a><a class="sequence-link next" href="116-ikmRTMow.html"><span>下一份日志 →</span><strong>友人的来信</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>又是三个词？ · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

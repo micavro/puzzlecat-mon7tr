@@ -3,46 +3,67 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="和和同同（7WSIxIpP）的独立题解与验证。">
+  <meta name="description" content="和和同同（7WSIxIpP）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>和和同同 · PuzzleCat 题解</title>
+  <title>和和同同 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>127</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>127 / 289</span><code>7WSIxIpP</code></div>
-        <h1>和和同同</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>动力</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/7WSIxIpP" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>两个中心框各连向四个汉字，要求找能与该组所有字组成词的共同字，答案为两字。</p>
-<h3>我的解法</h3>
-<p>第一组 <code>弹、应、暴、冲</code> 后都可接“力”：弹力、应力、暴力、冲力。第二组 <code>运、机、移、变</code> 后都可接“动”：运动、机动、移动、变动。得到“力、动”两个材料，按自然词序组成 <code>动力</code>。</p>
-<h3>验证</h3>
-<p>八个二字词都成立；<code>动力</code> 是由两答案字构成的正常双字词，反序“力动”不成立。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="126-XPtkPIap.html"><span>← 上一题</span><strong>和同谜</strong></a><a class="sequence-link next" href="128-yBIzg7XA.html"><span>下一题 →</span><strong>哈基谜（二）</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 和和同同</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>127</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">127 / 289</span><code>7WSIxIpP</code></div>
+      <h1>和和同同</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/7WSIxIpP" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/127-7WSIxIpP.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: 和和同同 (<code>7WSIxIpP</code>)</h1>
+<p>Owner: <code>lane-b-20260712</code></p>
+<h2>Status</h2>
+<p>Solved with a mechanism-backed candidate. This lane made no submissions. Incorrect count: 0.</p>
+<h2>FPA compliance</h2>
+<ul>
+<li>Solved from the archived image and ordinary Chinese vocabulary.</li>
+<li>No search for an existing answer, solution, original puzzle, or WeChat source was performed.</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>The image contains two numbered center boxes. Each box points to four surrounding Chinese characters.</li>
+<li>Box 1 surrounds: <code>弹</code>, <code>应</code>, <code>暴</code>, <code>冲</code>.</li>
+<li>Box 2 surrounds: <code>运</code>, <code>机</code>, <code>移</code>, <code>变</code>.</li>
+<li>The flavor says possible arrow misalignment and uneven character sizes are not part of the puzzle.</li>
+<li>The text below the image is <code>（二）</code>, naturally an enumeration specifying a two-character answer.</li>
+</ul>
+<h2>Reasoning</h2>
+<p>Find the character that can be appended to every surrounding character in each group:</p>
+<pre><code class="language-text">弹力  应力  暴力  冲力  -&gt; box 1 = 力
+运动  机动  移动  变动  -&gt; box 2 = 动
+</code></pre>
+<p>The title <code>和和同同</code> describes this repeated common-character operation. The two recovered characters must form the enumerated two-character answer. The standard word is <code>动力</code>, so box 2 precedes box 1 in the final answer.</p>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>动力</code> - high confidence. Both source characters are uniquely mechanism-derived, it is the only ordinary two-character word made from them, and it satisfies the <code>(二)</code> enumeration.</li>
+<li><code>力动</code> - rejected. It merely follows visual box numbering and is not an ordinary answer word; the numbers identify the two groups rather than impose final reading order.</li>
+</ol>
+<h2>Submission history</h2>
+<ul>
+<li>None from this lane. Incorrect count: 0.</li>
+</ul>
+<h2>Stopping criteria</h2>
+<p>Report <code>动力</code> and the complete common-suffix mechanism to the root worker. Do not archive, submit, resolve, or claim another puzzle from this lane.</p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="126-XPtkPIap.html"><span>← 上一份日志</span><strong>和同谜</strong></a><a class="sequence-link next" href="128-yBIzg7XA.html"><span>下一份日志 →</span><strong>哈基谜（二）</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>和和同同 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

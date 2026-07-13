@@ -3,46 +3,105 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="#wall2 机器人合体（AxmTwX1Q）的独立题解与验证。">
+  <meta name="description" content="#wall2 机器人合体（AxmTwX1Q）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>#wall2 机器人合体 · PuzzleCat 题解</title>
+  <title>#wall2 机器人合体 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>003</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>003 / 289</span><code>AxmTwX1Q</code></div>
-        <h1>#wall2 机器人合体</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>TARS</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/AxmTwX1Q" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>2</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>四幅影视机器人图片各配一个带连字符的名称模板，并用问号标出提取位；风味文字提示“合体的顺序有调整”。</p>
-<h3>我的解法</h3>
-<p>按模板识别四个机器人：<code>K-2SO</code> 取 <code>S</code>，<code>T-800</code> 取 <code>T</code>，<code>WALL-E</code> 取 <code>A</code>，<code>R2-D2</code> 取 <code>R</code>。自上而下得到 <code>STAR</code>，再依题意调整组合顺序，重排成《星际穿越》的机器人 <code>TARS</code>。此前把第一幅误认成 Sonny 会得到错误字母，模板中的连字符和长度正好用于纠错。</p>
-<h3>验证</h3>
-<p>四个名称与模板逐字符吻合，<code>STAR → TARS</code> 也解释了“顺序有调整”。<code>TARS</code> 提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="002-TpQKhwRH.html"><span>← 上一题</span><strong>#wall1 O(∩_∩)O</strong></a><a class="sequence-link next" href="004-qlZUKLri.html"><span>下一题 →</span><strong>#wall3 OOTD</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · #wall2 机器人合体</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>003</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">003 / 289</span><code>AxmTwX1Q</code></div>
+      <h1>#wall2 机器人合体</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/AxmTwX1Q" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/003-AxmTwX1Q.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve Log: AxmTwX1Q</h1>
+<h2>Puzzle</h2>
+<ul>
+<li>Title: <code>#wall2 机器人合体</code></li>
+<li>Randomly selected from 496 published, locally unarchived puzzles with at least five solves.</li>
+<li>Flavor: <code>影视中的著名机器人，注意合体的顺序有调整</code></li>
+<li>Answer policy: no cooldown.</li>
+<li>Hard stop: 20 incorrect submissions.</li>
+</ul>
+<h2>Transcription</h2>
+<p>The four pictures and printed patterns, top to bottom, are:</p>
+<ol>
+<li>K-2SO from <em>Rogue One</em>: <code>_ - _ ? _</code></li>
+<li>A Terminator endoskeleton: <code>? - _ _ _</code></li>
+<li>WALL-E: <code>_ ? _ _ - _</code></li>
+<li>R2-D2: <code>? _ - _ _</code></li>
+</ol>
+<p>The bottom line is <code>???? ----&gt; ???? (ans)</code>.</p>
+<h2>Analysis</h2>
+<h3>2026-07-12 initial pass</h3>
+<ul>
+<li>The initial image identification was partly wrong:</li>
+<li>The first robot was initially mistaken for Sonny. Its punctuation pattern does not fit <code>SONNY</code>.</li>
+<li><code>T-800</code> has one letter, a hyphen, and three digits; the marked first character is <code>T</code>.</li>
+<li><code>WALL-E</code> has four letters, a hyphen, and one letter; the marked second character is <code>A</code>.</li>
+<li><code>R2-D2</code> has two characters, a hyphen, and two characters; the marked first character is <code>R</code>.</li>
+<li>In displayed order, the extracted characters are therefore <code>NTAR</code>.</li>
+<li>The flavor explicitly says the combining order is adjusted, so the next step is likely a four-character permutation. <code>NTAR</code> can be rearranged to <code>TRAN</code>, which strongly evokes the start of <code>TRANSFORM</code> / <code>TRANSFORMER</code>, but this is not yet a complete explanation of the bottom <code>???? -&gt; ????</code> notation.</li>
+<li>No answer submitted yet. A candidate will not be promoted until the order adjustment or the four-to-four transformation is independently explained.</li>
+</ul>
+<h3>2026-07-12 series check and candidate</h3>
+<ul>
+<li>The same author's <code>#wall1</code> and <code>#wall3</code> are short lateral/wordplay puzzles rather than multi-stage hunt puzzles. This supports reading the bottom arrow literally and not inventing a separate cipher.</li>
+<li>The four marked characters combine in display order to <code>NTAR</code>. Applying the flavor's explicit order adjustment gives <code>TRAN</code>.</li>
+<li><code>TRAN</code> is the distinctive opening of <code>TRANSFORMER</code>, matching the film-robot theme, while the bottom arrow itself represents the act of transforming <code>NTAR</code> into <code>TRAN</code>.</li>
+<li>Submission candidate: <code>TRAN</code>.</li>
+<li>Confidence: <code>0.88</code>.</li>
+</ul>
+<h2>Attempts</h2>
+<ol>
+<li><code>TRAN</code> - incorrect (<code>1 / 20</code>). This was based on the incorrect first-image identification <code>SONNY</code>.</li>
+<li><code>变形金刚</code> - incorrect (<code>2 / 20</code>). This expanded the same incorrect intermediate and should not have been attempted before rechecking the image.</li>
+</ol>
+<h2>Post-attempt revision</h2>
+<ul>
+<li>The failed <code>TRAN</code> submission shows that the rearranged four-letter fragment is not itself accepted.</li>
+<li><code>TRAN</code> naturally expands to <code>TRANSFORMER</code>, exactly the film-robot class clued by the title and flavor.</li>
+<li>The four question marks on the answer side can represent the four Chinese characters <code>变形金刚</code>, the standard Chinese name of <em>Transformers</em>.</li>
+<li>Revised candidate: <code>变形金刚</code>.</li>
+<li>Confidence: <code>0.96</code>.</li>
+</ul>
+<h2>Image correction and resolved mechanism</h2>
+<ul>
+<li>On inspection at original resolution, the first robot is K-2SO from <em>Rogue One</em>, not Sonny from <em>I, Robot</em>.</li>
+<li>Its printed pattern <code>_ - _ ? _</code> matches <code>K-2SO</code> exactly, and the question-mark position extracts <code>S</code>.</li>
+<li>The correct top-to-bottom extraction is therefore:</li>
+<li><code>K-2SO</code> -&gt; <code>S</code></li>
+<li><code>T-800</code> -&gt; <code>T</code></li>
+<li><code>WALL-E</code> -&gt; <code>A</code></li>
+<li><code>R2-D2</code> -&gt; <code>R</code></li>
+<li>These spell <code>STAR</code>. Adjusting the order as instructed produces <code>TARS</code>, the famous robot from <em>Interstellar</em>.</li>
+<li>This is a complete four-letter-to-four-letter transformation and explains every clue without expansion or abbreviation.</li>
+<li>Revised candidate: <code>TARS</code>.</li>
+<li>Confidence: <code>0.99</code>.</li>
+</ul>
+<h2>Result</h2>
+<ul>
+<li><code>TARS</code> was accepted.</li>
+<li>Final incorrect count: <code>2 / 20</code>.</li>
+<li>Evidence: <code>submissions/2026-07-12T04-48-11-489Z/submission.json</code>.</li>
+<li>Lesson: validate a pictured character against the supplied name length and punctuation before extracting. Visual resemblance alone caused both wrong submissions here; <code>K-2SO</code> was immediately forced by <code>_ - _ ? _</code>, whereas <code>SONNY</code> was incompatible with the hyphen.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="002-TpQKhwRH.html"><span>← 上一份日志</span><strong>#wall1 O(∩_∩)O</strong></a><a class="sequence-link next" href="004-qlZUKLri.html"><span>下一份日志 →</span><strong>#wall3 OOTD</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>#wall2 机器人合体 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

@@ -3,46 +3,55 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="字的奥秘（KBXEjGSH）的独立题解与验证。">
+  <meta name="description" content="字的奥秘（KBXEjGSH）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>字的奥秘 · PuzzleCat 题解</title>
+  <title>字的奥秘 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>143</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>143 / 289</span><code>KBXEjGSH</code></div>
-        <h1>字的奥秘</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>拾</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/KBXEjGSH" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>1</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>英文单词被分块并改变相对位置；先把词义译成汉字，再让汉字部件按英文块的位置作同样重排。</p>
-<h3>我的解法</h3>
-<p>例子 <code>LE|AF</code> 是 LEAF=叶，叶可拆“口+十”；图中两块上下换位后，部件也换成“十在口上”，得“古”。<code>LET|TER</code> 是 LETTER=信，交换两块对应把“亻+言”换成“讠+人”，得“认”。末题 <code>TA|KE</code> 是 TAKE=拿，即“合+手”；按图把代表手的部分移到左边成扌、合放右边，组成 <code>拾</code>。</p>
-<h3>验证</h3>
-<p>三题遵循相同的“英文分块位置→汉字部件位置”规则；直接翻译的“拿”被拒，而重排后的 <code>拾</code> 正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="142-EQxtl1dT.html"><span>← 上一题</span><strong>字母重组</strong></a><a class="sequence-link next" href="144-PmEe2esI.html"><span>下一题 →</span><strong>字谜三则</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 字的奥秘</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>143</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">143 / 289</span><code>KBXEjGSH</code></div>
+      <h1>字的奥秘</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/KBXEjGSH" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/143-KBXEjGSH.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log — KBXEjGSH《字的奥秘》</h1>
+<ul>
+<li>Owner: <code>codex-root-b-20260712</code></li>
+<li>Claimed: 2026-07-13T05:07:07.265Z</li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 1 / 50</li>
+</ul>
+<h2>Observations / reasoning</h2>
+<ul>
+<li>已完成归档，开始分析。</li>
+<li>左侧均由英文字母重排/排布后识别词义：中行 <code>TERLET</code> 可重排为 <code>LETTER</code>，右侧“认”提示识字/认字；末行四字母为 <code>TAKE</code> 的二维乱序。</li>
+<li>题目要求单个汉字，<code>TAKE</code> 最直接对应“拿”，且与“认”同为对英文词义的单字汉译，首候选 <code>拿</code>。</li>
+<li>首投后重构出完整机制：<code>LE|AF</code> 翻译为“叶”（口+十），图中 AF 位于 LE 上方，因此把十移到口上得到“古”；<code>LET|TER</code> 翻译为“信”（亻+言），两块对调后成为“认”（讠+人）。</li>
+<li><code>TA|KE</code> 翻译为“拿”（合在手上）；图中 KE 竖排在左、TA 竖排在右，因此把“手”移到左旁（扌）、“合”放右，得到“拾”。确定候选 <code>拾</code>。</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li>Candidate: <code>拿</code>。</li>
+<li><code>拿</code> — incorrect。</li>
+<li>Candidate: <code>拾</code>（部件位置机制完整）。</li>
+<li><code>拾</code> — correct。</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="142-EQxtl1dT.html"><span>← 上一份日志</span><strong>字母重组</strong></a><a class="sequence-link next" href="144-PmEe2esI.html"><span>下一份日志 →</span><strong>字谜三则</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>字的奥秘 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

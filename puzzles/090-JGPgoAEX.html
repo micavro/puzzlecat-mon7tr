@@ -3,46 +3,79 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="九个梦魇（JGPgoAEX）的独立题解与验证。">
+  <meta name="description" content="九个梦魇（JGPgoAEX）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>九个梦魇 · PuzzleCat 题解</title>
+  <title>九个梦魇 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>090</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>090 / 289</span><code>JGPgoAEX</code></div>
-        <h1>九个梦魇</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>史</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/JGPgoAEX" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>6</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>两行九格使用重复颜色和一个已写出的 <code>物</code>，红格标出待答字符；标题提示有九个对象。</p>
-<h3>我的解法</h3>
-<p>正确结构是九门学校科目按列组成两字词：<code>语文、数学、英语、物理、化学、生物、历史、政治、地理</code>。重复颜色分别校验重复的“语、学、理”，<code>物</code> 也同时出现在“物理”和“生物”。题目采用的次序把第七列设为“历史”，红格对应其中的 <code>史</code>。</p>
-<h3>验证</h3>
-<p>多次错误候选排除了把图形当英文梦魇移位、以及把第七科理解为政治等分支；<code>史</code> 提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="089-odqmNtwx.html"><span>← 上一题</span><strong>串联珍珠</strong></a><a class="sequence-link next" href="091-RDqAJFgi.html"><span>下一题 →</span><strong>二进制晶格</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 九个梦魇</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>090</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">090 / 289</span><code>JGPgoAEX</code></div>
+      <h1>九个梦魇</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/JGPgoAEX" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/090-JGPgoAEX.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve Log: JGPgoAEX</h1>
+<ul>
+<li>Title: <code>九个梦魇</code></li>
+<li>Owner: <code>chat2-root-20260712</code></li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 6</li>
+</ul>
+<h2>Reasoning</h2>
+<ul>
+<li>Each row has nine positions. The title supplies the top-row English word
+  <code>NIGHTMARE</code> (nine letters).</li>
+<li>The distinctive magenta cell and the green <code>物</code> cell reappear in the bottom
+  row exactly two positions to the right. This aligns bottom positions 3-9
+  with top positions 1-7, i.e. <code>NIGHTMA</code>.</li>
+<li>The bottom row is therefore <code>MYNIGHTMA</code>; together the overlap reads
+  <code>MY NIGHTMARE</code>, consistent with the frightened flavor.</li>
+<li>The red question cell is bottom position 7, the <code>T</code> of <code>MYNIGHTMA</code>.</li>
+</ul>
+<h2>Candidate</h2>
+<ul>
+<li><code>T</code>: incorrect.</li>
+<li>Correct column reading: the two rows form nine two-character school subjects:
+  <code>语文 / 数学 / 英语 / 物理 / 化学 / 生物 / 政治 / 历史 / 地理</code>.</li>
+<li>Repeated colors verify the repeated characters: magenta=<code>语</code>, yellow=<code>学</code>,
+  blue=<code>理</code>, while green explicitly shows <code>物</code> in both <code>物理</code> and <code>生物</code>.</li>
+<li>The red target is the second character of column 7, <code>政治</code>, so it is <code>治</code>.</li>
+<li><code>治</code>: incorrect, indicating the site expects the complete decoded subject,
+  not only the character inside the red extraction cell. Candidate: <code>政治</code>.</li>
+<li><code>政治</code>: incorrect. The modern school-subject abbreviation in this nine-course
+  list is <code>道法</code> (<code>道德与法治</code>), not the older label <code>政治</code>; the highlighted
+  second character is therefore <code>法</code>.</li>
+<li><code>法</code>: incorrect. As with the rejected single <code>治</code>, the expected granularity
+  is likely the full course name. A <code>道法</code> submission command did not acquire
+  the global lock and was not sent. The official name whose first/last letters
+  occupy the two cells is <code>道德与法治</code>.</li>
+<li><code>道德与法治</code>: incorrect. Because the nine-column set includes the separate
+  high-school sciences physics, chemistry, and biology, the formal seventh
+  subject is <code>思想政治</code>; its first/last characters are <code>思</code> and <code>治</code>.</li>
+<li><code>思想政治</code>: incorrect. The matrix does not otherwise fix the order of the
+  final humanities. The author evidently uses <code>语数英物化生史政地</code>, making
+  column 7 <code>历史</code>; the highlighted second character is <code>史</code>.</li>
+</ul>
+<h2>Result</h2>
+<ul>
+<li>Submitted <code>史</code>: correct.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="089-odqmNtwx.html"><span>← 上一份日志</span><strong>串联珍珠</strong></a><a class="sequence-link next" href="091-RDqAJFgi.html"><span>下一份日志 →</span><strong>二进制晶格</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>九个梦魇 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

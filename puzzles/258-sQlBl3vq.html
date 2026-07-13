@@ -3,46 +3,102 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="西行漫记（sQlBl3vq）的独立题解与验证。">
+  <meta name="description" content="西行漫记（sQlBl3vq）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>西行漫记 · PuzzleCat 题解</title>
+  <title>西行漫记 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>258</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>258 / 289</span><code>sQlBl3vq</code></div>
-        <h1>西行漫记</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>LONGEST HIGHWAY</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/sQlBl3vq" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>4</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>十天向西的游记沿连云港至新疆路线展开；编号段落有的 1 句、有的 5 句，文中夹杂大量真伪事实，住宿段落分隔每天。</p>
-<h3>我的解法</h3>
-<p>先把 1 句段落视作摩斯长划、5 句段落视作点，每晚住宿分字母，十天解得指令 <code>MISTAKE BIN</code>。再对每个五句段落逐句判真伪，真记 1、假记 0，五位二进制按 1–26 转字母。十四组依次给出 <code>LONGEST HIGHWAY</code>。明线城市基本沿 G30 连霍高速，验证其“中国最长高速”主题，但路线名不是提交串。</p>
-<h3>验证</h3>
-<p><code>红星照耀中国、连霍高速、连霍高速公路、LONGEST IN CHINA</code> 四次判错；复核全部十四组后 <code>LONGEST HIGHWAY</code> 正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="257-P8Le2esI.html"><span>← 上一题</span><strong>蛙谜1 篮球赛得分情况</strong></a><a class="sequence-link next" href="259-I9CLNP39.html"><span>下一题 →</span><strong>观星思人</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 西行漫记</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>258</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">258 / 289</span><code>sQlBl3vq</code></div>
+      <h1>西行漫记</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/sQlBl3vq" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/258-sQlBl3vq.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>西行漫记解题日志</h1>
+<ul>
+<li>Puzzle ID: <code>sQlBl3vq</code></li>
+<li>Owner: <code>codex-sub-a-20260712</code></li>
+<li>状态: 已解出（correct）</li>
+<li>错误提交数: 4</li>
+<li>最终答案: <code>LONGEST HIGHWAY</code></li>
+<li>已提交错误答案: <code>红星照耀中国</code>、<code>连霍高速</code>、<code>连霍高速公路</code>、<code>LONGEST IN CHINA</code></li>
+</ul>
+<h2>观察</h2>
+<ul>
+<li>题面是十天向西的公路游记，明线城市依次包括连云港、徐州、郑州、洛阳、西安、宝鸡、天水、兰州、武威、张掖、酒泉、嘉峪关、哈密、吐鲁番、乌鲁木齐、昌吉、石河子等。</li>
+<li>引言刻意使用“点画”“串连”“留作空白”。每个非住宿编号段落恰好由 1 句或 5 句组成，住宿段落用于分隔每天。</li>
+<li>叙述中混有大量可明确判真的事实和刻意错误，例如“徐州是最 NB 的”“洛阳在洛水之南”“三峡大坝在三门峡”“嘉峪关有三座 5A 景区”等。</li>
+</ul>
+<h2>第一层：摩斯码</h2>
+<ul>
+<li>将 1 句段落视作划 <code>-</code>，5 句段落视作点 <code>.</code>，每晚住宿作为字母分隔。</li>
+<li>十天依次得到：</li>
+<li>第一天 <code>--</code> = M</li>
+<li>第二天 <code>..</code> = I</li>
+<li>第三天 <code>...</code> = S</li>
+<li>第四天 <code>-</code> = T</li>
+<li>第五天 <code>.-</code> = A</li>
+<li>第六天 <code>-.-</code> = K</li>
+<li>第七天 <code>.</code> = E</li>
+<li>第八天 <code>-...</code> = B</li>
+<li>第九天 <code>..</code> = I</li>
+<li>第十天 <code>-.</code> = N</li>
+<li>中间指令为 <code>MISTAKE BIN</code>，即把五句段落中的事实正误二进制化。</li>
+</ul>
+<h2>第二层：正误二进制</h2>
+<ul>
+<li>对每个五句段落逐句判断：正确记 <code>1</code>，错误记 <code>0</code>；五位二进制按 A1Z26（<code>00001=A</code>）转字母。</li>
+<li>可直接验证的前七组为：</li>
+<li>2.1：<code>01100</code> = 12 = L（赵国故都不是商丘；“茫荡山”和光饼也错）</li>
+<li>2.2：<code>01111</code> = 15 = O（唐代东京不是开封，其余四句成立）</li>
+<li>3.1：<code>01110</code> = 14 = N（洛阳不在洛水之南，也不是六朝古都）</li>
+<li>3.2：<code>00111</code> = 7 = G（三峡大坝、陕西省两处错误，后三句成立）</li>
+<li>3.3：<code>00101</code> = 5 = E</li>
+<li>5.1：<code>10011</code> = 19 = S</li>
+<li>6.2：<code>10100</code> = 20 = T</li>
+<li>后七组继续读为 <code>HIGHWAY</code>，合计得到精确的 14 字母答案串 <code>LONGEST HIGHWAY</code>。先前把后半误读为定义语 <code>IN CHINA</code>，是因为路线主题造成了过早联想。</li>
+</ul>
+<h2>最终定位</h2>
+<ul>
+<li>明线旅程不是任意西行：从连云港出发，沿徐州、郑州、洛阳、西安、兰州、嘉峪关、哈密、乌鲁木齐等城市向西，基本就是 G30 连云港—霍尔果斯高速公路。</li>
+<li><code>LONGEST HIGHWAY</code> 与明线路线互相验证：连霍高速是中国里程最长的高速公路。</li>
+<li>按 puzzlehunt 常规，最终应提交直接提取串 <code>LONGEST HIGHWAY</code>，连霍高速是验证对象而不是答案格式。</li>
+</ul>
+<h2>候选排序</h2>
+<ol>
+<li><code>LONGEST HIGHWAY</code>：14 个五句段落逐字提取的精确英文串。</li>
+<li><code>连霍高速</code> / <code>G30</code> / <code>连云港—霍尔果斯高速公路</code>：提取串所验证的对象，但已证实简称和标准中文名不是平台答案。</li>
+<li><code>白龙马</code>：早先把纠错城市连续画线后产生的主观图形联想；不能解释精确的摩斯与二进制提取，排除。</li>
+<li><code>红星照耀中国</code>：只利用标题旧译名，已提交并判错。</li>
+</ol>
+<h2>提交记录</h2>
+<ul>
+<li><code>2026-07-12T07:12:45Z</code>：提交 <code>红星照耀中国</code>，返回 <code>incorrect</code>；错误数增至 1。</li>
+<li><code>2026-07-12T11:03:41Z</code>：提交 <code>连霍高速</code>，返回 <code>incorrect</code>；错误数增至 2。机制仍唯一指向同一公路，下一次改用标准名称 <code>连霍高速公路</code>。</li>
+<li><code>2026-07-12T11:04:23Z</code>：提交 <code>连霍高速公路</code>，返回 <code>incorrect</code>；错误数增至 3。由此判断路线只是主题验证，平台答案应为直接提取串 <code>LONGEST IN CHINA</code>。</li>
+<li><code>2026-07-12T11:05:02Z</code>：提交 <code>LONGESTINCHINA</code>，返回 <code>incorrect</code>；错误数增至 4。重新按 14 个五句段落逐组核对，后半应为 <code>HIGHWAY</code>。</li>
+<li><code>2026-07-12T11:06:18Z</code>：提交 <code>LONGESTHIGHWAY</code>，返回 <code>correct</code>（“恭喜你，答对啦~”）；最终错误数 4。</li>
+</ul>
+<h2>停止条件</h2>
+<ul>
+<li>已获得站点 <code>correct</code> verdict；记录完成并按协议 resolve，不再提交。</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="257-P8Le2esI.html"><span>← 上一份日志</span><strong>蛙谜1 篮球赛得分情况</strong></a><a class="sequence-link next" href="259-I9CLNP39.html"><span>下一份日志 →</span><strong>观星思人</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>西行漫记 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

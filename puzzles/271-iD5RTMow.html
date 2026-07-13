@@ -3,46 +3,109 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="跳马2（iD5RTMow）的独立题解与验证。">
+  <meta name="description" content="跳马2（iD5RTMow）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>跳马2 · PuzzleCat 题解</title>
+  <title>跳马2 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>271</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>271 / 289</span><code>iD5RTMow</code></div>
-        <h1>跳马2</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>CLAY PIPES</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/iD5RTMow" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>9×9 棋盘要求放 14 枚互不攻击的马，使每格有马或被马攻击；三枚马固定，黑格禁放。棋盘同时是英文填字，马所在格用于抽取。</p>
-<h3>我的解法</h3>
-<p>对独立支配集条件做穷举，得到唯一 14 马布局。横向填入 <code>SIDCAESAR、QUINTUPLE、UNSELFISH、INCIVIL、RELIGIOSO、ROADWAY、EPISCOPE、LIMEWATER、SMILE</code>，并由竖向 <code>SQUIRREL、DISCLAIM、REHIRE</code> 交叉验证。按行优先读取所有马格，得到 <code>ANSISCLAYPIPES</code>，分词为 <code>ANS IS CLAY PIPES</code>。</p>
-<h3>验证</h3>
-<p>马布局唯一，填字可交叉核对，抽取直接声明答案；本地正确清单确认 <code>CLAY PIPES</code>。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="270-GBdbeioV.html"><span>← 上一题</span><strong>跳舞的小人</strong></a><a class="sequence-link next" href="272-ogImNtwx.html"><span>下一题 →</span><strong>这不是数独，这是英独！</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 跳马2</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>271</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">271 / 289</span><code>iD5RTMow</code></div>
+      <h1>跳马2</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/iD5RTMow" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/271-iD5RTMow.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve Log: iD5RTMow</h1>
+<h2>Puzzle</h2>
+<ul>
+<li>Title: <code>跳马2</code></li>
+<li>Owner: <code>route-a-20260712</code></li>
+<li>Status: solved locally; not submitted</li>
+<li>Incorrect count: 0</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>The board is 9 by 9.</li>
+<li>Every square must either contain a knight or be attacked by one knight move.</li>
+<li>No two knights may attack each other.</li>
+<li>Green fixed knights are at <code>r1c5</code>, <code>r3c2</code>, and <code>r3c8</code>; 11 more knights must be placed, for 14 total.</li>
+<li>Black cells cannot contain knights.</li>
+<li>The English crossword rows and selected columns provide letters for extraction. The prefilled first column reads <code>SQUIRREL</code>, confirming vertical clue 1.</li>
+</ul>
+<h2>Knight placement</h2>
+<p>An exhaustive independent-dominating-set search gives exactly one placement of 14 knights under the stated constraints.</p>
+<p>Fixed green knights:</p>
+<ul>
+<li><code>r1c5</code>, <code>r3c2</code>, <code>r3c8</code></li>
+</ul>
+<p>Additional 11 knights:</p>
+<ul>
+<li><code>r3c3</code>, <code>r3c7</code></li>
+<li><code>r4c3</code>, <code>r4c7</code></li>
+<li><code>r6c3</code>, <code>r6c7</code></li>
+<li><code>r7c2</code>, <code>r7c3</code>, <code>r7c7</code>, <code>r7c8</code></li>
+<li><code>r9c5</code></li>
+</ul>
+<p>Combined row-major coordinates:</p>
+<p><code>r1c5; r3c2,c3,c7,c8; r4c3,c7; r6c3,c7; r7c2,c3,c7,c8; r9c5</code></p>
+<h2>Crossword fill</h2>
+<p>Across answers needed for the extraction are:</p>
+<ol>
+<li><code>SID CAESAR</code> - an American comedian (<code>SIDCAESAR</code>)</li>
+<li><code>QUINTUPLE</code> - fivefold</li>
+<li><code>UNSELFISH</code> - a noble quality</li>
+<li><code>INCIVIL</code> - uncivilized</li>
+<li><code>RELIGIOSO</code> - religious, Italian</li>
+<li><code>ROADWAY</code> - road</li>
+<li><code>EPISCOPE</code> - reflecting projector</li>
+<li><code>LIMEWATER</code> - limewater</li>
+<li><code>SMILE</code> - smile</li>
+</ol>
+<p>Cross-checks include:</p>
+<ul>
+<li>Column 1, rows 1-8: <code>SQUIRREL</code> = 松鼠.</li>
+<li>Column 3, rows 1-8: <code>DISCLAIM</code> = 放弃.</li>
+<li>The remaining supplied vertical clue is <code>REHIRE</code> = 重新雇用 and is consistent with the intended obscured/selected column letters.</li>
+</ul>
+<h2>Extraction</h2>
+<p>Read the letters in all 14 knight cells in row-major order:</p>
+<ul>
+<li><code>r1c5</code>: <code>A</code> from <code>SIDCAESAR</code></li>
+<li><code>r3c2,c3,c7,c8</code>: <code>NSIS</code> from <code>UNSELFISH</code></li>
+<li><code>r4c3,c7</code>: <code>CL</code> from <code>INCIVIL</code></li>
+<li><code>r6c3,c7</code>: <code>AY</code> from <code>ROADWAY</code></li>
+<li><code>r7c2,c3,c7,c8</code>: <code>PIPE</code> from <code>EPISCOPE</code></li>
+<li><code>r9c5</code>: <code>S</code> from <code>SMILE</code></li>
+</ul>
+<p>This spells:</p>
+<p><code>ANSISCLAYPIPES</code> -&gt; <code>ANS IS CLAY PIPES</code></p>
+<p>Therefore the final answer is <code>CLAY PIPES</code>.</p>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>CLAY PIPES</code> - confidence 0.995. The knight layout is unique, the crossword entries are cross-checked, and the extracted text explicitly states the answer.</li>
+</ol>
+<h2>Submission history</h2>
+<ul>
+<li>No submissions.</li>
+<li>Incorrect count: 0.</li>
+</ul>
+<h2>Recommendation</h2>
+<p>Submit <code>CLAY PIPES</code>.</p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="270-GBdbeioV.html"><span>← 上一份日志</span><strong>跳舞的小人</strong></a><a class="sequence-link next" href="272-ogImNtwx.html"><span>下一份日志 →</span><strong>这不是数独，这是英独！</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>跳马2 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

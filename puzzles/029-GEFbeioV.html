@@ -3,46 +3,58 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Find the Answer Ⅲ（GEFbeioV）的独立题解与验证。">
+  <meta name="description" content="Find the Answer Ⅲ（GEFbeioV）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>Find the Answer Ⅲ · PuzzleCat 题解</title>
+  <title>Find the Answer Ⅲ · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>029</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>029 / 289</span><code>GEFbeioV</code></div>
-        <h1>Find the Answer Ⅲ</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>FOLIAGE</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/GEFbeioV" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>1</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>SVG 中被遮挡的字符串长度为 <code>6.3/7/8</code>，对应当前网址 <code>puzzle.cat/puzzles/GEFbeioV</code>；藤蔓穿过其中若干字符。</p>
-<h3>我的解法</h3>
-<p>将网址字符按原位置还原，沿浅绿色、通向问号的藤蔓依次读取所有交点，得到大小写混合的 <code>F o l i a G E</code>，忽略 ID 自带大小写即 <code>FOLIAGE</code>。深色带叶藤蔓另读出 <code>LEAVES</code>，作为同义校验。最初只取终点得到 F 是误读，正确机制是读取整条路径的交点。</p>
-<h3>验证</h3>
-<p><code>F</code> 被判 incorrect；<code>FOLIAGE</code> 随后 correct，且另一条藤蔓的 <code>LEAVES</code> 与之语义一致。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="028-xo5D8t6h.html"><span>← 上一题</span><strong>Find the Answer Ⅱ</strong></a><a class="sequence-link next" href="030-sqHBl3vq.html"><span>下一题 →</span><strong>Finding Dragon&#x27;s Pearl (tanlige)</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · Find the Answer Ⅲ</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>029</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">029 / 289</span><code>GEFbeioV</code></div>
+      <h1>Find the Answer Ⅲ</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/GEFbeioV" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/029-GEFbeioV.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log — GEFbeioV《Find the Answer Ⅲ》</h1>
+<ul>
+<li>Owner: <code>codex-root-b-20260712</code></li>
+<li>Claimed: 2026-07-12T11:41:56.109Z</li>
+<li>Archived: 2026-07-12T11:43Z</li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0 / 20</li>
+</ul>
+<h2>Observations and mechanism</h2>
+<ul>
+<li>The SVG displays a redacted string with lengths <code>6.3/7/8</code>, exactly matching the current puzzle URL <code>puzzle.cat/puzzles/GEFbeioV</code>.</li>
+<li>The pale green vine ending at the question mark has its other endpoint at SVG coordinate <code>(788, 222)</code>, directly inside the third redacted character of the final eight-character segment.</li>
+<li>The final segment is the puzzle ID <code>GEFbeioV</code>; its third character is <strong>F</strong>. The darker leaf-bearing vine is a visual distractor/alternate trace.</li>
+</ul>
+<h2>Candidate ranking / submissions</h2>
+<ul>
+<li>Geometric path sampling against the reconstructed URL gives:</li>
+<li>dark leaf-bearing path, SVG-forward intersections: <code>l e a V e s</code> → <strong>LEAVES</strong>;</li>
+<li>pale question-mark path, SVG-forward intersections: <code>F o l i a G E</code> → <strong>FOLIAGE</strong>.</li>
+<li>The mixed capitalization comes only from the case-sensitive puzzle ID; read case-insensitively as ordinary words.</li>
+<li>Submission 1: <code>F</code> → incorrect. This falsified the endpoint-only reading and established that every intersection on the pale path must be read.</li>
+<li>Leading candidate: <strong>FOLIAGE</strong>, now very high confidence; the dark route independently spells the semantically related LEAVES and validates direction/order.</li>
+<li>Submission 2: <code>FOLIAGE</code> → HTTP 200, server-confirmed correct (“恭喜你，回答正确！”).</li>
+<li>Final incorrect count: 1; stopping on correct verdict.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="028-xo5D8t6h.html"><span>← 上一份日志</span><strong>Find the Answer Ⅱ</strong></a><a class="sequence-link next" href="030-sqHBl3vq.html"><span>下一份日志 →</span><strong>Finding Dragon&#x27;s Pearl (tanlige)</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>Find the Answer Ⅲ · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

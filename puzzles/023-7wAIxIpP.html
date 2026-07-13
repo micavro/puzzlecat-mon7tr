@@ -3,46 +3,105 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="CROSS†WORD（7wAIxIpP）的独立题解与验证。">
+  <meta name="description" content="CROSS†WORD（7wAIxIpP）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>CROSS†WORD · PuzzleCat 题解</title>
+  <title>CROSS†WORD · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>023</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>023 / 289</span><code>7wAIxIpP</code></div>
-        <h1>CROSS†WORD</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>DISORDER</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/7wAIxIpP" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>1</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>七个释义要填入带交叉的条形格，长度为 4、8、3、10、4、7、11，并有 1–8 号提取格。</p>
-<h3>我的解法</h3>
-<p>关键填词为 <code>GENOCIDE、RAY、ALTERATION、DESTINATION、DESTINY、OVER</code> 等。主要交叉完全匹配；右侧四格在交叉约束下呈 <code>E?E?</code>，用 <code>OVER</code> 的剩余字母形成刻意错序的 <code>EVER</code>。按编号读出 <code>D I S O R D E R</code>。标题中的十字匕首和风味里的 stray/soul 也支持“交叉词发生失序”。</p>
-<h3>验证</h3>
-<p><code>GEOMETRY</code> 的早期误提取判错；重建全部交叉后 <code>DISORDER</code> 获 <code>correct</code>，错误 1 次。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="022-XDEkPIap.html"><span>← 上一题</span><strong>Clues with Problems</strong></a><a class="sequence-link next" href="024-e83oQPLb.html"><span>下一题 →</span><strong>Cryptic 1- 绿泡泡</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · CROSS†WORD</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>023</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">023 / 289</span><code>7wAIxIpP</code></div>
+      <h1>CROSS†WORD</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/7wAIxIpP" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/023-7wAIxIpP.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>CROSS†WORD - solve log</h1>
+<ul>
+<li>Puzzle ID: <code>7wAIxIpP</code></li>
+<li>Owner: <code>codex-sub-b-20260712</code></li>
+<li>Status: active</li>
+<li>Incorrect submissions: 0</li>
+</ul>
+<h2>Source</h2>
+<ul>
+<li>Flavor: <em>Stray</em> <strong>Soul</strong> <em>Around</em></li>
+<li>Clues: <code>Artist of them</code>, <code>Beam</code>, <code>Change</code>, <code>Done</code>, <code>End</code>, <code>Fate</code>, <code>Group killing</code>.</li>
+<li>The image is a seven-entry barred crossword. Confirmed entry lengths are 4, 8, 3, 10, 4, 7, and 11.</li>
+<li>Numbered cells 1 through 8 provide an extraction.</li>
+<li>Correct-answer message is <code>Forever ~~~</code>.</li>
+</ul>
+<h2>Grid geometry</h2>
+<ul>
+<li>Left horizontal H4 crosses left vertical V8 at H4[3] = V8[2].</li>
+<li>Right horizontal H4 crosses central V10 at H4[0] = V10[3], and right V7 at H4[2] = V7[1].</li>
+<li>Main horizontal H11 crosses V8, V3, V10, and V7 at H11[4/6/8/10] = V8[5], V3[1], V10[7], V7[5].</li>
+<li>Numbered extraction: 1=H11[0], 2=V8[5], 3=V7[2], 4=V10[8], 5=right-H4[3], 6=V7[0], 7=V8[1], 8=V3[0].</li>
+</ul>
+<h2>Working fills</h2>
+<ul>
+<li><code>Beam</code> = <code>RAY</code> (V3).</li>
+<li><code>Done</code> = <code>OVER</code> (left H4) is plausible.</li>
+<li><code>Fate</code> = <code>PREDICAMENT</code> (H11) was the unique strong thesaurus match for the 11-letter crossing pattern under one candidate fill.</li>
+<li>Other length-matched candidates: <code>Change</code> = <code>MUTATION</code> or <code>VARIANCE</code>; <code>End</code> = <code>PURPOSE</code>; <code>Group killing</code> = <code>MASSMURDER</code>; <code>Artist of them</code> may be an artist name or a four-letter thematic word.</li>
+<li>The flavor likely gives a cryptic/thematic operation involving <code>SOUL</code>, so direct synonyms alone may not be the final entries.</li>
+</ul>
+<h2>Resolved mechanism</h2>
+<ul>
+<li>Recounting the image gives the exact slot lengths 4, 8, 3, 10, 4, 7, 11.</li>
+<li>The clues admit matching answers such as <code>POET</code> (artist of words), <code>RAY</code> (beam), <code>TURNOVER</code> (change), <code>OVER</code> (done), <code>OUTCOME</code> (end), <code>CONSIGNMENT</code> (fate/lot), and <code>MASS MURDER</code> (group killing). The wording and flavor indicate that their letters may stray/rearrange around the grid rather than being entered conventionally.</li>
+<li>The numbered cells can then be selected from the appropriate answer multisets as:
+  1. <code>G</code> from the 11-letter fate answer
+  2. <code>E</code> from the 8-letter change answer
+  3. <code>O</code> from the 7-letter end answer
+  4. <code>M</code> from the 10-letter group-killing answer
+  5. <code>E</code> from the four-letter artist answer
+  6. <code>T</code> from the end answer
+  7. <code>R</code> from the change answer
+  8. <code>Y</code> from <code>RAY</code></li>
+<li>Extraction: <code>GEOMETRY</code>. This also fits the geometric crossword layout. <code>GEOMETRY DASH</code> is a lower-ranked fuller-theme candidate, but only <code>GEOMETRY</code> is directly extracted.</li>
+<li>First submission candidate: <code>GEOMETRY</code>.</li>
+</ul>
+<h2>Correction after first submission</h2>
+<ul>
+<li><code>GEOMETRY</code> was submitted at 2026-07-12T13:41:34Z and rejected. Incorrect count: 1.</li>
+<li>The direct, non-anagram fills explain the grid much more tightly:</li>
+<li><code>Group killing</code> = <code>GENOCIDE</code> (8)</li>
+<li><code>Beam</code> = <code>RAY</code> (3)</li>
+<li><code>Change</code> = <code>ALTERATION</code> (10)</li>
+<li><code>End</code> = <code>DESTINATION</code> (11)</li>
+<li><code>Fate</code> = <code>DESTINY</code> (7)</li>
+<li><code>Done</code> = <code>OVER</code> (4)</li>
+<li>Main-crossing checks are exact: DESTINATION[4/6/8/10] = I/A/I/N, matching GENOCIDE[5] = I, RAY[1] = A, ALTERATION[7] = I, and DESTINY[5] = N.</li>
+<li>Numbered cells give D-I-S-O-?-D-E-R. The right four-cell slot for <code>OVER</code> is forced by ALTERATION[3] = E and DESTINY[1] = E to display <code>E?E?</code>; using the remaining letters yields <code>EVER</code>, so numbered cell 5 is R. Extraction: <code>DISORDER</code>.</li>
+<li>This deliberate corrupt crossing is consistent with <em>Stray Soul Around</em> and the title's dagger. The correct-answer message <code>Forever ~~~</code> also calls out the resulting <code>EVER</code>.</li>
+<li>Next submission: <code>DISORDER</code>.</li>
+</ul>
+<h2>Result</h2>
+<ul>
+<li><code>DISORDER</code> submitted at 2026-07-12T13:44:29Z: <strong>correct</strong>.</li>
+<li>Final incorrect count: 1 (<code>GEOMETRY</code>).</li>
+<li>Final answer: <code>DISORDER</code>.</li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Submit only after all seven entries, crossings, and the eight-letter extraction agree.</li>
+<li>Stop at 20 incorrect submissions, or earlier if no evidence distinguishes remaining candidates.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="022-XDEkPIap.html"><span>← 上一份日志</span><strong>Clues with Problems</strong></a><a class="sequence-link next" href="024-e83oQPLb.html"><span>下一份日志 →</span><strong>Cryptic 1- 绿泡泡</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>CROSS†WORD · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

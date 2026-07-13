@@ -3,46 +3,72 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="福尔摩斯（Zeipgd2S）的独立题解与验证。">
+  <meta name="description" content="福尔摩斯（Zeipgd2S）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>福尔摩斯 · PuzzleCat 题解</title>
+  <title>福尔摩斯 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>236</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>236 / 289</span><code>Zeipgd2S</code></div>
-        <h1>福尔摩斯</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>HOUSE</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/Zeipgd2S" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>1</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>五行看似普通的文字中混入圆点、间隔号、横线和下划线，题名及“怎么看、雨点”等措辞提示观察标点。</p>
-<h3>我的解法</h3>
-<p>把每行的点划读作摩斯码：第一行三个间隔号加句号为 <code>....=H</code>；第二行三个横线为 <code>---=O</code>；第三行为 <code>..-=U</code>；第四行为 <code>...=S</code>；第五行的字面“点”给 <code>.=E</code>。合成 <code>HOUSE</code>。</p>
-<h3>验证</h3>
-<p>初读漏掉一个间隔号得到的 <code>SOS</code> 被判错；完整五行摩斯码给 <code>HOUSE</code>，提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="235-RKhAJFgi.html"><span>← 上一题</span><strong>神鲸谜 007</strong></a><a class="sequence-link next" href="237-stNBl3vq.html"><span>下一题 →</span><strong>秘密单词本</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 福尔摩斯</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>236</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">236 / 289</span><code>Zeipgd2S</code></div>
+      <h1>福尔摩斯</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/Zeipgd2S" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/236-Zeipgd2S.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log — 福尔摩斯</h1>
+<ul>
+<li>Puzzle ID: <code>Zeipgd2S</code></li>
+<li>Owner: <code>codex-sub-m-20260712</code></li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 1</li>
+</ul>
+<h2>Observations and reasoning</h2>
+<ul>
+<li>Archived locally; independent solve only.</li>
+<li>The prose is camouflage around Morse punctuation. My first pass missed the interpunct between <code>夏洛克•福尔摩斯</code>: line 1 has three interpuncts plus the final period, <code>....</code> = H (not S). Line 2 has three dash/underscore separators, <code>---</code> = O. Line 3 has two dot-like punctuation marks followed by a dash, <code>..-</code> = U. Line 4 ends in <code>...</code> = S. Line 5's literal <code>点</code> supplies <code>.</code> = E.</li>
+<li>Thus the five lines spell <code>HOUSE</code>, with lines 3 (<code>怎么看—用眼睛看</code>) and 5 (<code>雨点</code>) also hinting to look at dots visually.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ul>
+<li>
+<ol>
+<li><code>HOUSE</code> — complete five-line Morse extraction <code>.... / --- / ..- / ... / .</code>.</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li><code>SOS</code> — rejected first-pass result caused by overlooking the third interpunct in line 1 and ignoring lines 3/5 as data.</li>
+</ol>
+</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>SOS</code> — incorrect (attempt 1).</li>
+<li><code>HOUSE</code> — correct (attempt 2).</li>
+</ul>
+<h2>Final classification</h2>
+<ul>
+<li><code>correct</code>, answer <code>HOUSE</code>, incorrect count 1.</li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Resolve on confirmed verdict; stop if evidence cannot distinguish a candidate; maximum 20 incorrect.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="235-RKhAJFgi.html"><span>← 上一份日志</span><strong>神鲸谜 007</strong></a><a class="sequence-link next" href="237-stNBl3vq.html"><span>下一份日志 →</span><strong>秘密单词本</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>福尔摩斯 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

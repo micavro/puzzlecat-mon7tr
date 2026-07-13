@@ -3,46 +3,66 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="友人的来信（ikmRTMow）的独立题解与验证。">
+  <meta name="description" content="友人的来信（ikmRTMow）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>友人的来信 · PuzzleCat 题解</title>
+  <title>友人的来信 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>116</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>116 / 289</span><code>ikmRTMow</code></div>
-        <h1>友人的来信</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>SCHOLAR</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/ikmRTMow" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>2</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>七道英文线索带彩色格；彩虹色顺序先能提取中间答案，风味描述一位知识渊博的朋友。</p>
-<h3>我的解法</h3>
-<p>彩格按红橙黄绿青蓝紫读出 <code>A LETTER</code>，并通过中间验证。继续看每道线索最直接答案的首字母：Shift/字符、see 的同音、HANGAR、OK、LIGHT、A 等级、RULER，得到 <code>S C H O L A R</code>。它也正是“知识渊博者”。</p>
-<h3>验证</h3>
-<p><code>A LETTER</code> 为中间答案；<code>A</code>、<code>PARCELS</code> 各判错，<code>SCHOLAR</code> 正确，共 2 次错误。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="115-OA2iZO0v.html"><span>← 上一题</span><strong>又是三个词？</strong></a><a class="sequence-link next" href="117-baG5uOJW.html"><span>下一题 →</span><strong>双日凌空（一）</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 友人的来信</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>116</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">116 / 289</span><code>ikmRTMow</code></div>
+      <h1>友人的来信</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/ikmRTMow" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/116-ikmRTMow.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log — ikmRTMow《友人的来信》</h1>
+<ul>
+<li>Owner: <code>codex-root-b-20260712</code></li>
+<li>Claimed: 2026-07-12T19:09:47.964Z</li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 2 / 20</li>
+</ul>
+<h2>Observations / reasoning</h2>
+<ul>
+<li>独立填出关键答案：3=<code>AIRPORT</code>，4=<code>CORRECT</code>，5=<code>LIGHT</code>，6=<code>EXCELLENT</code>，7=<code>RULE</code>；2 为 see 的同音词并在蓝格给 <code>E</code>，1 的紫格由交叉确定为 <code>R</code>。</li>
+<li>彩色格按彩虹顺序红、橙、黄、绿、青、蓝、紫读取：</li>
+<li>红：AIRPORT 首字母 <code>A</code></li>
+<li>橙：LIGHT 首字母 <code>L</code></li>
+<li>黄：RULE 末字母 <code>E</code></li>
+<li>绿：LIGHT 末字母 <code>T</code></li>
+<li>青：CORRECT 末字母 <code>T</code></li>
+<li>蓝：<code>E</code></li>
+<li>紫：<code>R</code></li>
+<li>拼成 <code>A LETTER</code>，与《友人的来信》及风味完全对应。</li>
+<li>Candidate: <code>A LETTER</code>。</li>
+<li><code>A LETTER</code> 返回 intermediate“中间答案正确”，不计错误。该短语可重读为“A 是一个字母”，因此二次答案最自然是单字母 <code>A</code>。</li>
+<li>单字母 <code>A</code> 被排除。七个完整填词为 <code>PERCENT / SEA / AIRPORT / CORRECT / LIGHT / EXCELLENT / RULE</code>，首字母依次为 <code>PSACLER</code>，恰能唯一重排成邮件主题词 <code>PARCELS</code>。</li>
+<li>中间提示 <code>A LETTER</code> 同时提示“邮件/信件”语义与“取一个字母”，故最终候选 <code>PARCELS</code>。</li>
+<li><code>PARCELS</code> 被排除。二次提取应取每道线索最直接答案的首字母：1=<code>S...</code>（Shift/键盘字符），2=<code>C</code>（see 同音），3=<code>HANGAR</code>，4=<code>OK</code>，5=<code>LIGHT</code>，6=<code>A</code>（最佳等级），7=<code>RULER</code>，得到 <code>SCHOLAR</code>。</li>
+<li><code>SCHOLAR</code> 精确对应 flavor 中“知识渊博的好友”，是比邮件主题 anagram 更强的唯一闭合。</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>A LETTER</code> -&gt; intermediate（中间答案正确，不计错误）。</li>
+<li><code>A</code> -&gt; incorrect (1)。</li>
+<li><code>PARCELS</code> -&gt; incorrect (2)。</li>
+<li><code>SCHOLAR</code> -&gt; correct。</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="115-OA2iZO0v.html"><span>← 上一份日志</span><strong>又是三个词？</strong></a><a class="sequence-link next" href="117-baG5uOJW.html"><span>下一份日志 →</span><strong>双日凌空（一）</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>友人的来信 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

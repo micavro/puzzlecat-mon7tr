@@ -3,46 +3,70 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="字母重组（EQxtl1dT）的独立题解与验证。">
+  <meta name="description" content="字母重组（EQxtl1dT）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>字母重组 · PuzzleCat 题解</title>
+  <title>字母重组 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>142</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>142 / 289</span><code>EQxtl1dT</code></div>
-        <h1>字母重组</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>AGAINST</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/EQxtl1dT" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>五组左右线索各产出两个英文片段，括号给片段长度；拼接后的七字母都需重组为同一个词。</p>
-<h3>我的解法</h3>
-<p>五组分别构成 <code>AA+STING</code>、<code>TAIGA+NS</code>、<code>INSTAGRAM-MR=INSTAGA</code>、<code>GAIN+SAT</code>、<code>AG+STAIN</code>。这些结果 <code>AASTING、TAIGANS、INSTAGA、GAINSAT、AGSTAIN</code> 的字母多重集完全相同，都是 A、A、G、I、N、S、T，可统一重排成 <code>AGAINST</code>。</p>
-<h3>验证</h3>
-<p>五条独立线索都给出同一组七个字母；<code>AGAINST</code> 首次提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="141-mzEr8Uar.html"><span>← 上一题</span><strong>字母谜</strong></a><a class="sequence-link next" href="143-KBXEjGSH.html"><span>下一题 →</span><strong>字的奥秘</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 字母重组</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>142</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">142 / 289</span><code>EQxtl1dT</code></div>
+      <h1>字母重组</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/EQxtl1dT" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/142-EQxtl1dT.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>EQxtl1dT 字母重组 — solve log</h1>
+<ul>
+<li>Owner: <code>codex-sub-g-20260712</code></li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Parenthetical numbers are fragment lengths; the five left/right pairings are forced by totals of 7: <code>2+5</code>, <code>5+2</code>, <code>-2+9</code>, <code>4+3</code>, <code>2+5</code>.</li>
+<li>The ten clued intermediates and pairings are:
+  1. 平分账单 = <code>AA</code> (Chinese “AA制”) + insect behavior = <code>STING</code> → <code>AASTING</code>.
+  2. Biome = <code>TAIGA</code> + magnetic poles = <code>NS</code> → <code>TAIGANS</code>.
+  3. <code>-先生</code> = remove <code>MR</code> from social app <code>INSTAGRAM</code> → <code>INSTAGA</code>.
+  4. 一份耕耘/收获 = <code>GAIN</code> + weekday <code>SAT</code> → <code>GAINSAT</code>.
+  5. Silver = <code>AG</code> + give color = <code>STAIN</code> → <code>AGSTAIN</code>.</li>
+<li>Every resulting seven-letter multiset is exactly an anagram of <code>AGAINST</code> (A,A,G,I,N,S,T). This realizes the flavor’s “five different ways” and validates all ten intermediates.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>AGAINST</code> — uniquely common seven-letter word obtained identically from all five independently clued pairings.</li>
+<li>No alternative survives all five letter-multiset checks.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>AGAINST</code> — correct (HTTP 200, 2026-07-12T11:48:31.458Z).</li>
+</ul>
+<h2>Resolution</h2>
+<ul>
+<li>Final answer: <code>AGAINST</code></li>
+<li>Incorrect count: 0</li>
+<li>Outcome: <code>correct</code></li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Require a constrained anagram/extraction before submission.</li>
+<li>End as <code>correct</code>, evidentially exhausted <code>cannot_do</code>, or <code>wrong_20</code> after exactly 20 incorrect submissions.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="141-mzEr8Uar.html"><span>← 上一份日志</span><strong>字母谜</strong></a><a class="sequence-link next" href="143-KBXEjGSH.html"><span>下一份日志 →</span><strong>字的奥秘</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>字母重组 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

@@ -3,46 +3,105 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="旅行前也要先填饱肚子呀……（cSyHRhJe）的独立题解与验证。">
+  <meta name="description" content="旅行前也要先填饱肚子呀……（cSyHRhJe）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>旅行前也要先填饱肚子呀…… · PuzzleCat 题解</title>
+  <title>旅行前也要先填饱肚子呀…… · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>188</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>188 / 289</span><code>cSyHRhJe</code></div>
-        <h1>旅行前也要先填饱肚子呀……</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>CHANGI</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/cSyHRhJe" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>1</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>六段文字描述一条新加坡路线，每段含地点和索引。第一轮会得到与“吃饭/旅行”都有关系的中间词，随后要改用地铁信息重解。</p>
-<h3>我的解法</h3>
-<p>第一轮从天福宫附近文字、Collyer Quay、Jubilee Bridge、War Memorial Park、Changi Exhibition Centre、Loyang 等名称按 <code>1,2,3,1,3,倒数4</code> 取字，得到 <code>SUBWAY</code>；站点提示乘地铁继续。再把各段的线路方向词与数字读成新加坡 MRT 站码：<code>CC17 Caldecott、NE6 Dhoby Ghaut、NS18 Braddell、DT11 Newton、TE28 Siglap、EW3 Simei</code>。复用同一索引，取 <code>C,H,A,N,G,I</code>。</p>
-<h3>验证</h3>
-<p>第一阶段 <code>SUBWAY</code> 同时呼应三明治店和地铁；第二阶段六个站名按原索引精确拼出 <code>CHANGI</code>，最终正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="187-p0e2nNtD.html"><span>← 上一题</span><strong>旅立ち</strong></a><a class="sequence-link next" href="189-qOpUKLri.html"><span>下一题 →</span><strong>无需多言</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 旅行前也要先填饱肚子呀……</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>188</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">188 / 289</span><code>cSyHRhJe</code></div>
+      <h1>旅行前也要先填饱肚子呀……</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/cSyHRhJe" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/188-cSyHRhJe.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: cSyHRhJe</h1>
+<h2>Coordination</h2>
+<ul>
+<li>Owner: <code>codex-sub-c-20260712</code></li>
+<li>Title: 旅行前也要先填饱肚子呀...</li>
+<li>Claimed: 2026-07-12T06:51:59.708Z</li>
+<li>Archived successfully through <code>npm run work -- archive</code>.</li>
+<li>Incorrect submissions: 1</li>
+<li>Status: correct</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Tags: 图寻, Hunt.</li>
+<li>Archive reports no separately downloaded resources; inspect embedded page content and screenshot.</li>
+<li>The six numbered paragraphs describe one continuous route in Singapore.</li>
+<li>Public reference checks identify the key names and descriptions:</li>
+<li>Thian Hock Keng Temple (天福宫), whose famous plaque reads <code>波靖南溟</code>, matches paragraph 1.</li>
+<li>Collyer Quay is officially a Singapore CBD road and its Chinese name is <code>哥烈码头</code>, matching paragraph 2's <code>...码头</code> road full of offices.</li>
+<li>Merlion Park contains the water-spouting lion-head/fish-tail composite creature.</li>
+<li>Jubilee Bridge is the pedestrian bridge immediately north of the Merlion route.</li>
+<li>War Memorial Park contains the conspicuous white Civilian War Memorial columns.</li>
+<li>Changi Exhibition Centre is the convention venue on Singapore's far eastern coast.</li>
+<li>Loyang is a Singapore subzone served by Loyang Avenue; its name means <code>brass</code> or <code>tray</code> in Malay, exactly matching paragraph 6.</li>
+</ul>
+<h2>Reasoning and candidates</h2>
+<ul>
+<li>Following the stated indices gives:
+  1. The wording by the green rubbish-bin icon at the temple starts with <code>S</code>.
+  2. <code>Collyer Quay</code>, second letter of the final word <code>Quay</code> -&gt; <code>U</code>.
+  3. <code>Jubilee Bridge</code>, third letter -&gt; <code>B</code>.
+  4. <code>War Memorial Park</code>, first letter -&gt; <code>W</code>.
+  5. <code>Changi Exhibition Centre</code>, third letter -&gt; <code>A</code>.
+  6. <code>Loyang</code>, fourth letter from the end -&gt; <code>Y</code>.</li>
+<li>Extraction: <code>SUBWAY</code>.</li>
+<li>The title confirms the intended double meaning: Subway provides food before taking a subway for travel.</li>
+<li>Candidate ranking:
+  1. <code>SUBWAY</code> — overwhelming; exact six-letter extraction plus title double meaning.
+  2. <code>SANDWICH</code> — thematic only and does not match the indexed letters; rejected.</li>
+<li><code>SUBWAY</code> was accepted as an intermediate answer. The site message was: <code>加油！乘坐地铁旅行没准会更方便。</code></li>
+<li>This directs a second stage rather than counting as an incorrect answer.</li>
+<li>The conspicuously unused wording in paragraph 5 places a man named <code>汤姆逊</code> (Thomson) at the city's <code>东岸</code> (East Coast). In Singapore subway context this exactly names the <code>Thomson-East Coast Line</code>.</li>
+<li>Second-stage ranking:
+  1. <code>CHANGI</code> — exact MRT-code extraction described below.
+  2. <code>THOMSON EAST COAST LINE</code> — rejected by submission; it accounts for only one paragraph's line clue, not the complete second-stage mechanism.</li>
+<li>The intermediate instruction means to reinterpret one line-direction phrase and one number in each paragraph as a Singapore MRT station code:
+  1. <code>非常圆</code> (Circle) + 17 -&gt; <code>CC17 Caldecott</code>.
+  2. <code>东北</code> (North East) + about 6 intersections -&gt; <code>NE6 Dhoby Ghaut</code>.
+  3. <code>南北</code> (North South) + age 18 -&gt; <code>NS18 Braddell</code>.
+  4. <code>回到了城里</code> (Downtown) + the number after ten (<code>下个十字</code>) -&gt; <code>DT11 Newton</code>.
+  5. <code>汤姆逊</code> + <code>东岸</code> (Thomson-East Coast) + 28 minutes -&gt; <code>TE28 Siglap</code>.
+  6. <code>东张西望</code> (East West) + 3 miles -&gt; <code>EW3 Simei</code>.</li>
+<li>Reuse the first-stage extraction indices <code>1, 2, 3, 1, 3, reverse 4</code> on these station names:</li>
+<li>Caldecott[1] = C</li>
+<li>Dhoby Ghaut[2] = H</li>
+<li>Braddell[3] = A</li>
+<li>Newton[1] = N</li>
+<li>Siglap[3] = G</li>
+<li>Simei[reverse 4] = I</li>
+<li>Final extraction: <code>CHANGI</code>.</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>SUBWAY</code> -&gt; intermediate (not incorrect): <code>加油！乘坐地铁旅行没准会更方便。</code></li>
+<li><code>THOMSON EAST COAST LINE</code> -&gt; incorrect. Incorrect count: 1. The direct phrase construction was insufficient and is rejected; do not enumerate alternate line-name spelling variants.</li>
+<li><code>CHANGI</code> -&gt; correct. Final incorrect count: 1.</li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Submit only candidates supported by a recovered identification/extraction mechanism.</li>
+<li>Stop at 20 incorrect submissions, or earlier as <code>cannot_do</code> if archived/public evidence cannot distinguish candidates.</li>
+<li>Stopped because <code>CHANGI</code> received a correct verdict; no further submissions are needed.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="187-p0e2nNtD.html"><span>← 上一份日志</span><strong>旅立ち</strong></a><a class="sequence-link next" href="189-qOpUKLri.html"><span>下一份日志 →</span><strong>无需多言</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>旅行前也要先填饱肚子呀…… · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

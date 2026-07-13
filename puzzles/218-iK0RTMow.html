@@ -3,46 +3,107 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="汽水谜（四）（iK0RTMow）的独立题解与验证。">
+  <meta name="description" content="汽水谜（四）（iK0RTMow）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>汽水谜（四） · PuzzleCat 题解</title>
+  <title>汽水谜（四） · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>218</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>218 / 289</span><code>iK0RTMow</code></div>
-        <h1>汽水谜（四）</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>新年快乐</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/iK0RTMow" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>题面以 A–L 代替汉字/音节，用汽水品牌、公司、传说动物、球队和餐厅建立重叠词链，询问 <code>EBID</code>。</p>
-<h3>我的解法</h3>
-<p><code>ABC=美年达</code>、<code>CA=达美</code>、<code>CAD=达美乐</code>，得 A=美、B=年、C=达、D=乐。<code>EFG=新奇士</code>、<code>FAH=奇美拉</code>，得 E=新、F=奇、G=士。KFC 是 <code>快餐厅</code>，确定 I=快；球队/地名链也作旁证。代入 <code>EBID</code> 得 <code>新+年+快+乐</code>。</p>
-<h3>验证</h3>
-<p>品牌与专名的重叠逐字一致，结果为自然固定短语。本地日志未执行提交；本批清单列为 correct，本地日志仅能确认答案机制为 <code>新年快乐</code>。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="217-RkTAJFgi.html"><span>← 上一题</span><strong>汽水谜（六）</strong></a><a class="sequence-link next" href="219-79kIxIpP.html"><span>下一题 →</span><strong>洋</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 汽水谜（四）</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>218</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">218 / 289</span><code>iK0RTMow</code></div>
+      <h1>汽水谜（四）</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/iK0RTMow" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/218-iK0RTMow.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: 汽水谜（四） (<code>iK0RTMow</code>)</h1>
+<p>Owner: <code>lane-b-20260712</code></p>
+<h2>Status</h2>
+<p>Solved locally with high confidence. Proposed answer: <code>新年快乐</code>.</p>
+<p>Incorrect count: 0. This lane made no submissions and did not archive, resolve,
+or claim another puzzle.</p>
+<h2>FPA compliance</h2>
+<ul>
+<li>Solved from the archived clue and general knowledge of brands, companies,
+  mythical creatures, and sports teams.</li>
+<li>No search for an existing answer, solution, original puzzle, or WeChat source
+  was performed.</li>
+</ul>
+<h2>Chain</h2>
+<p>The symbols stand for Chinese character/sound units shared between the named
+entities.</p>
+<h3>Soda and company chain</h3>
+<pre><code class="language-text">ABC = 美年达        (Mirinda, a soda)
+CA  = 达美          (Delta; an airline serves soda, but rarely Mirinda)
+CAD = 达美乐        (Domino's, which serves/delivers soda)
+</code></pre>
+<p>Therefore:</p>
+<pre><code class="language-text">A = 美
+B = 年
+C = 达
+D = 乐
+</code></pre>
+<h3>Second soda and creature chain</h3>
+<pre><code class="language-text">EFG = 新奇士        (Sunkist soda, like Mirinda commonly orange-flavored)
+FAH = 奇美拉        (Chimera, a legendary creature)
+</code></pre>
+<p>Therefore:</p>
+<pre><code class="language-text">E = 新
+F = 奇
+G = 士
+H = 拉
+</code></pre>
+<h3>Sports and restaurant checks</h3>
+<p><code>(KF)G</code> points to the Cleveland Cavaliers, <code>（克利夫兰骑）士</code>; the <code>F</code> unit is
+the homophonically equivalent <code>骑</code> here and <code>G=士</code>. The same basketball league
+contains:</p>
+<pre><code class="language-text">IJ = 快船          (the Clippers)
+LA = 北美          (North America)
+</code></pre>
+<p>This establishes <code>I=快</code> and is consistent with the clue's broad location
+wording. Independently, literal KFC is a <code>快餐厅</code>, confirming <code>I=快</code> without
+depending on the awkward parenthesization of the Cavaliers clue. Soda-company
+sponsorship of basketball supports the intended sport.</p>
+<h2>Extraction</h2>
+<p>Substitute the established values into the requested <code>EBID</code>:</p>
+<pre><code class="language-text">E B I D
+新 年 快 乐
+</code></pre>
+<p>Therefore the answer is:</p>
+<pre><code class="language-text">新年快乐
+</code></pre>
+<p>The result is a highly natural fixed four-character phrase and uses values
+obtained independently from three parts of the chain.</p>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>新年快乐</code> - high confidence. Exact <code>E+B+I+D</code>, with each component fixed by
+   the brand/company and restaurant clues; the result is a standard phrase.</li>
+<li>No meaningful runner-up. Changing any component would break at least one
+   exact proper-name overlap (<code>美年达/达美/达美乐</code> or <code>新奇士/奇美拉</code>).</li>
+</ol>
+<h2>Submission history</h2>
+<ul>
+<li>None. The archived attempts endpoint reports zero attempts.</li>
+</ul>
+<p>Incorrect count: 0.</p>
+<h2>Stopping criteria</h2>
+<p>The requested four symbols resolve to a unique ordinary phrase and the proper-
+name chain cross-checks all required components. Report <code>新年快乐</code> to the root
+worker; do not submit or change puzzle state from this lane.</p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="217-RkTAJFgi.html"><span>← 上一份日志</span><strong>汽水谜（六）</strong></a><a class="sequence-link next" href="219-79kIxIpP.html"><span>下一份日志 →</span><strong>洋</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>汽水谜（四） · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

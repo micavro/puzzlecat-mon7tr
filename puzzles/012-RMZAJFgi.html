@@ -3,46 +3,77 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="[旧题] bitop（RMZAJFgi）的独立题解与验证。">
+  <meta name="description" content="[旧题] bitop（RMZAJFgi）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>[旧题] bitop · PuzzleCat 题解</title>
+  <title>[旧题] bitop · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>012</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>012 / 289</span><code>RMZAJFgi</code></div>
-        <h1>[旧题] bitop</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>QUBIT</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/RMZAJFgi" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>图片以字形位图做 NOT、AND、OR 操作；五个子题答案会通过中间反馈依次给出最终答案字母。</p>
-<h3>我的解法</h3>
-<p>例题 <code>NOTE</code> 解析为 <code>NOT E</code>，<code>STANDBY</code> 解析为 <code>ST AND BY</code>。同理五题分别为 <code>C OR N=CORN</code>、<code>NOT(M OR E)=NOTMORE</code>、<code>AB AND ON=ABANDON</code>、<code>H OR R OR S=HORRORS</code>、<code>L AND F OR M=LANDFORM</code>。提交前三个子答案后，站点依次返回最终第 1–3 位 <code>Q、U、B</code>。结合 bitop/量子位主题，五字母答案唯一补成 <code>QUBIT</code>。</p>
-<h3>验证</h3>
-<p>所有位图操作都能按单词内部的运算符切分重现；三个中间字母和主题共同锁定 <code>QUBIT</code>，零错通过。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="011-ixJRTMow.html"><span>← 上一题</span><strong>[回放]花卉培育回放</strong></a><a class="sequence-link next" href="013-AkhTwX1Q.html"><span>下一题 →</span><strong>A Cryptic</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · [旧题] bitop</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>012</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">012 / 289</span><code>RMZAJFgi</code></div>
+      <h1>[旧题] bitop</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/RMZAJFgi" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/012-RMZAJFgi.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: RMZAJFgi</h1>
+<ul>
+<li>Owner: <code>recover-w1-20260712</code></li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0</li>
+<li>Answer policy: fixed 1-minute cooldown; stop at 20 incorrect submissions.</li>
+<li>FPA check: no FPA tag. Tags recover as approximately <code>一枚</code>, <code>英文</code>, <code>猜规则</code>.</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Title: <code>[旧题] bitop</code>.</li>
+<li>The flavor text says this was a group from a daily puzzle collection published in May 2025. In the original, each sub-puzzle was judged separately; here, submitting an answer believed correct for any sub-puzzle yields one character of the final answer.</li>
+<li>Seven images are present: two worked examples (<code>note</code>, <code>standby</code>) and five target items (<code>corn</code>, <code>notmore</code>, <code>abandon</code>, <code>horrors</code>, <code>landform</code>).</li>
+</ul>
+<h2>Reasoning</h2>
+<ul>
+<li><code>bitop</code> means bitmap/bitwise operations on glyphs. The operation name is embedded between operand letters in the answer word.</li>
+<li>Worked example <code>NOTE</code> parses as <code>NOT E</code>: the image is a white lowercase <code>e</code> on a black background, i.e. bitmap inversion.</li>
+<li>Worked example <code>STANDBY</code> parses as <code>ST AND BY</code>: pairwise bitmap intersection of the two-letter strings produces the two displayed fragmentary glyphs.</li>
+<li>Target 1 parses as <code>C OR N</code> = <code>CORN</code>; the displayed glyph is the bitmap union of <code>c</code> and <code>n</code>.</li>
+<li>Target 2 parses as <code>NOT (M OR E)</code> = <code>NOTMORE</code>; its inverted black/white rendering matches NOT applied to a union.</li>
+<li>Target 3 parses as <code>AB AND ON</code> = <code>ABANDON</code>; the two output glyphs are pairwise intersections (<code>a</code> AND <code>o</code>, <code>b</code> AND <code>n</code>).</li>
+<li>Target 4 parses as <code>H OR R OR S</code> = <code>HORRORS</code>; the single glyph is the union of <code>h</code>, <code>r</code>, and <code>s</code>.</li>
+<li>Target 5 parses as <code>L AND F OR M</code> = <code>LANDFORM</code>; the single glyph results from the indicated left-to-right bit operations.</li>
+<li>The flavor explicitly says a sub-puzzle answer should be submitted to obtain one position of the final answer. Therefore these five words are validator keys, not necessarily the final answer.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>CORN</code>, <code>NOTMORE</code>, <code>ABANDON</code>, <code>HORRORS</code>, <code>LANDFORM</code> — exact target sub-answers, to query validator feedback.</li>
+<li><code>QUBIT</code> — after the first three validator messages give <code>QUB__</code>, this is the strongly determined five-letter thematic final answer (a quantum bit), matching title and bit-operation theme. Submit next.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>CORN</code> — <strong>intermediate</strong>, message: <code>答案的第一位为 Q。</code> Final answer position 1 = <code>Q</code>; incorrect count remains 0.</li>
+<li><code>NOTMORE</code> — <strong>intermediate</strong>, message: <code>答案的第二位为 U。</code> Final answer position 2 = <code>U</code>; incorrect count remains 0.</li>
+<li><code>ABANDON</code> — <strong>intermediate</strong>, message: <code>答案的第三位为 B。</code> Final answer position 3 = <code>B</code>; incorrect count remains 0.</li>
+<li><code>QUBIT</code> — <strong>correct</strong>, site message: <code>恭喜你，回答正确！</code>; incorrect count 0.</li>
+</ul>
+<h2>Final</h2>
+<ul>
+<li>Answer: <code>QUBIT</code></li>
+<li>Incorrect count: 0</li>
+<li>Stopping criterion: correct verdict received.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="011-ixJRTMow.html"><span>← 上一份日志</span><strong>[回放]花卉培育回放</strong></a><a class="sequence-link next" href="013-AkhTwX1Q.html"><span>下一份日志 →</span><strong>A Cryptic</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>[旧题] bitop · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

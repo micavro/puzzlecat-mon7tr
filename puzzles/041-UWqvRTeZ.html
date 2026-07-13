@@ -3,46 +3,68 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="pqqp（UWqvRTeZ）的独立题解与验证。">
+  <meta name="description" content="pqqp（UWqvRTeZ）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>pqqp · PuzzleCat 题解</title>
+  <title>pqqp · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>041</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>041 / 289</span><code>UWqvRTeZ</code></div>
-        <h1>pqqp</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>PAIRED</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/UWqvRTeZ" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>图片中的物体由成对镜像轮廓组成，填词格带有重复编号。</p>
-<h3>我的解法</h3>
-<p>耳机填 <code>EARPHONES</code>，编号给出 <code>5=E,2=A,4=R,1=P</code>；剪切物填 <code>SCISSORS</code>，给出 <code>3=I</code> 并复核 <code>4=R</code>。按 1–5 已得 <code>PAIRE</code>，结合题名和所有成对物体，剩余编号 6 必为 D，组成 <code>PAIRED</code>。</p>
-<h3>验证</h3>
-<p>重复编号字母一致，主题也直接定义答案；<code>PAIRED</code> 首投正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="040-XMskPIap.html"><span>← 上一题</span><strong>Phigryptics</strong></a><a class="sequence-link next" href="042-atMstzDO.html"><span>下一题 →</span><strong>puzzle.cat</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · pqqp</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>041</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">041 / 289</span><code>UWqvRTeZ</code></div>
+      <h1>pqqp</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/UWqvRTeZ" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/041-UWqvRTeZ.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log — pqqp</h1>
+<ul>
+<li>Puzzle ID: <code>UWqvRTeZ</code></li>
+<li>Owner: <code>codex-sub-m-20260712</code></li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0</li>
+<li>FPA/FPA2026: no answer/official solution/公众号解析/discussion lookup; independent derivation only.</li>
+</ul>
+<h2>Observations and reasoning</h2>
+<ul>
+<li>Archived locally; beginning statement inspection.</li>
+<li>The pictured <code>p/q</code> shapes are objects made from paired mirrored loops. Top clue (music at two ear pieces) fills <code>EARPHONES</code> (9): numbered slots give 5=E, 2=A, 4=R, 1=P (and the repeated 5 at position 8 confirms E).</li>
+<li>The <code>(to break)</code> clue with the cutting object fills <code>SCISSORS</code> (8): numbered position 3=I and position 4=R, confirming 4.</li>
+<li>Reading numbered letters in numeric order now gives <code>1..5 = PAIRE</code>. The only thematic six-letter completion, matching the paired/mirrored <code>pqqp</code> title and every object, is <code>PAIRED</code>, so the remaining unique number 6 in the middle clue must be D. This does not require a solution lookup.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ul>
+<li>
+<ol>
+<li><code>PAIRED</code> — direct numbered extraction <code>1=P,2=A,3=I,4=R,5=E,6=D</code>, with repeated labels cross-checking letters.</li>
+</ol>
+</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>PAIRED</code> — correct (first submission).</li>
+</ul>
+<h2>Final classification</h2>
+<ul>
+<li><code>correct</code>, answer <code>PAIRED</code>, incorrect count 0.</li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Resolve on confirmed verdict; stop if evidence cannot distinguish a candidate; maximum 20 incorrect.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="040-XMskPIap.html"><span>← 上一份日志</span><strong>Phigryptics</strong></a><a class="sequence-link next" href="042-atMstzDO.html"><span>下一份日志 →</span><strong>puzzle.cat</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>pqqp · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

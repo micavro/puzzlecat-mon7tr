@@ -3,46 +3,122 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="病历乱神（x8hD8t6h）的独立题解与验证。">
+  <meta name="description" content="病历乱神（x8hD8t6h）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>病历乱神 · PuzzleCat 题解</title>
+  <title>病历乱神 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>231</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>231 / 289</span><code>x8hD8t6h</code></div>
-        <h1>病历乱神</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>UNUSUAL TREATMENT</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/x8hD8t6h" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>十六条“病历”影射四大名著中的人物事件，每条带索引，需要做两轮拼音抽取。</p>
-<h3>我的解法</h3>
-<p>先识别鲁智深、诸葛亮、孙悟空、林冲、潘金莲、贾探春、黑熊精、刘备、公孙胜、庞统、唐僧、太白金星、石秀、曹操、张飞、司马昭，并按索引取其无空格拼音，得到 <code>IN WHICH LOCATIONS</code>。这要求改取对应事件地点：野猪林、七星坛、八卦炉、山神庙、狮子楼、秋爽斋、洛迦山、檀溪、二仙山、落凤坡、盘丝洞、天庭、大名府、宛城、长坂桥、铁笼山。用同一索引再取拼音，得到 <code>UNUSUAL TREATMENT</code>。</p>
-<h3>验证</h3>
-<p>第一轮形成清晰英文指令，第二轮形成完整答案；首次提交 correct。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="230-HjG44RZL.html"><span>← 上一题</span><strong>留空</strong></a><a class="sequence-link next" href="232-cO8HRhJe.html"><span>下一题 →</span><strong>百合谜 01</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 病历乱神</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>231</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">231 / 289</span><code>x8hD8t6h</code></div>
+      <h1>病历乱神</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/x8hD8t6h" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/231-x8hD8t6h.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>病历乱神 - solve log</h1>
+<ul>
+<li>Puzzle ID: <code>x8hD8t6h</code></li>
+<li>Owner: <code>codex-sub-b-20260712</code></li>
+<li>Status: active</li>
+<li>Incorrect submissions: 0</li>
+</ul>
+<h2>Mechanism</h2>
+<ul>
+<li>The 16 clinical descriptions disguise famous episodes and characters from the Four Great Classical Novels.</li>
+<li>Apply each symptom index to the uppercase, spaceless pinyin/romanization of the patient name (including a stated epithet where needed).</li>
+</ul>
+<h2>Patient identifications and first extraction</h2>
+<ol>
+<li>鲁智深 / <code>LUZHISHEN</code>, index 5 = I (wild-boar forest rescue).</li>
+<li>诸葛亮 / <code>ZHUGELIANG</code>, index 9 = N (borrowing the east wind).</li>
+<li>孙悟空 / <code>SUNWUKONG</code>, index 4 = W (49 days in Laozi's furnace).</li>
+<li>林冲 / <code>LINCHONG</code>, index 5 = H (snowy-night revenge at the temple).</li>
+<li>潘金莲 / <code>PANJINLIAN</code>, index 8 = I (Wu Song revenge / Lion Restaurant episode).</li>
+<li>贾探春 / <code>JIATANCHUN</code>, index 7 = C (slaps Wang Shanbao's wife during the raid).</li>
+<li>黑熊精 / <code>HEIXIONGJING</code>, index 1 = H (cassock thief subdued by Guanyin).</li>
+<li>刘备 / <code>LIUBEI</code>, index 1 = L (Dilu leaps the Tan Stream).</li>
+<li>公孙胜 / <code>GONGSUNSHENG</code>, index 2 = O (retires to Erxian Mountain with Luo Zhenren).</li>
+<li>凤雏庞统 / <code>FENGCHUPANGTONG</code>, index 5 = C (dies at Luofeng Slope).</li>
+<li>唐僧 / <code>TANGSENG</code>, index 2 = A (bound in the spider cave).</li>
+<li>太白金星 / <code>TAIBAIJINXING</code>, index 1 = T (twice proposes placating Sun Wukong with office).</li>
+<li>石秀 / <code>SHIXIU</code>, index 3 = I (jumps from a tavern to raid the execution ground).</li>
+<li>曹操 / <code>CAOCAO</code>, index 6 = O (Wancheng defeat; Cao Ang and Dian Wei die).</li>
+<li>张飞 / <code>ZHANGFEI</code>, index 4 = N (roar at Changban Bridge).</li>
+<li>司马昭 / <code>SIMAZHAO</code>, index 1 = S (trapped without water at Iron Cage Mountain).</li>
+</ol>
+<ul>
+<li>Extraction: <code>IN WHICH LOCATIONS</code>.</li>
+<li>This instructs a second stage using the specific places named/implied by each episode.</li>
+</ul>
+<h2>Candidate event locations</h2>
+<ol>
+<li>野猪林</li>
+<li>七星坛</li>
+<li>八卦炉</li>
+<li>山神庙（或草料场）</li>
+<li>狮子楼</li>
+<li>秋爽斋（抄检大观园）</li>
+<li>黑风山 / 黑风洞</li>
+<li>檀溪</li>
+<li>二仙山</li>
+<li>落凤坡</li>
+<li>盘丝洞</li>
+<li>天庭 / 凌霄宝殿</li>
+<li>大名府</li>
+<li>宛城</li>
+<li>长坂桥</li>
+<li>铁笼山</li>
+</ol>
+<h2>Second extraction</h2>
+<p>Apply the same symptom indices to the spaceless pinyin of the episode locations:</p>
+<ol>
+<li><code>YEZHULIN</code>[5] = U</li>
+<li><code>QIXINGTAN</code>[9] = N</li>
+<li><code>BAGUALU</code>[4] = U</li>
+<li><code>SHANSHENMIAO</code>[5] = S</li>
+<li><code>SHIZILOU</code>[8] = U</li>
+<li><code>QIUSHUANGZHAI</code>[7] = A</li>
+<li><code>LUOJIASHAN</code>[1] = L (the Guanyin sanctuary where the bear is taken to guard the mountain)</li>
+<li><code>TANXI</code>[1] = T</li>
+<li><code>ERXIANSHAN</code>[2] = R</li>
+<li><code>LUOFENGPO</code>[5] = E</li>
+<li><code>PANSIDONG</code>[2] = A</li>
+<li><code>TIANTING</code>[1] = T</li>
+<li><code>DAMINGFU</code>[3] = M</li>
+<li><code>WANCHENG</code>[6] = E</li>
+<li><code>CHANGBANQIAO</code>[4] = N</li>
+<li><code>TIELONGSHAN</code>[1] = T</li>
+</ol>
+<ul>
+<li>Final extraction: <code>UNUSUAL TREATMENT</code>.</li>
+<li>Submission candidate: <code>UNUSUAL TREATMENT</code>.</li>
+</ul>
+<h2>Result</h2>
+<ul>
+<li><code>UNUSUAL TREATMENT</code> submitted at 2026-07-12T13:56:23Z: <strong>correct</strong>.</li>
+<li>Final incorrect count: 0.</li>
+<li>Final answer: <code>UNUSUAL TREATMENT</code>.</li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Submit only after the second-stage location instruction yields a defensible final answer.</li>
+<li>Stop at 20 incorrect submissions, or earlier if evidence no longer distinguishes candidates.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="230-HjG44RZL.html"><span>← 上一份日志</span><strong>留空</strong></a><a class="sequence-link next" href="232-cO8HRhJe.html"><span>下一份日志 →</span><strong>百合谜 01</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>病历乱神 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

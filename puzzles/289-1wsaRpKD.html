@@ -3,46 +3,103 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="！？土土？！（1wsaRpKD）的独立题解与验证。">
+  <meta name="description" content="！？土土？！（1wsaRpKD）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>！？土土？！ · PuzzleCat 题解</title>
+  <title>！？土土？！ · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>289</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>289 / 289</span><code>1wsaRpKD</code></div>
-        <h1>！？土土？！</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>山脚下的泥土路和地里的铁</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/1wsaRpKD" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>A–H 各代表一个汉字，多条语义和组词约束确定字母映射，最后代入模板 <code>HGF的EBD和A里的C</code>。</p>
-<h3>我的解法</h3>
-<p>由“土地”和偏旁关系得 A=地、B=土；<code>AC</code> 是交通工具“地铁”，故 C=铁；类似交通工具行于 <code>CD=铁路</code>，故 D=路；<code>EB=泥土</code> 得 E=泥；<code>AF=地下</code> 且 <code>FB=下土</code>，得 F=下；<code>GF=脚下</code> 得 G=脚；<code>HG=山脚</code> 且 <code>HF=山下</code>，得 H=山。</p>
-<h3>验证</h3>
-<p>代入最终模板正好得到 <code>山脚下的泥土路和地里的铁</code>；八个字母都由至少一个组词约束使用，首投正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="288-Sepj2oe3.html"><span>← 上一题</span><strong>회전</strong></a><span class="sequence-link disabled"></span></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · ！？土土？！</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>289</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">289 / 289</span><code>1wsaRpKD</code></div>
+      <h1>！？土土？！</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/1wsaRpKD" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/289-1wsaRpKD.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: ！？土土？！ (<code>1wsaRpKD</code>)</h1>
+<p>Owner: <code>recover-w1-20260712</code></p>
+<h2>Mechanism</h2>
+<p>Each letter A-H stands for one Chinese character. The clues determine:</p>
+<table>
+<thead>
+<tr>
+<th>Letter</th>
+<th>Character</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>地</td>
+<td>A is a character with the B radical; later clues place A under feet and contain a metro.</td>
+</tr>
+<tr>
+<td>B</td>
+<td>土</td>
+<td><code>地</code> has 土 as its side/radical; <code>土地</code> is mostly made of soil. This is the letter explicitly representing “土”.</td>
+</tr>
+<tr>
+<td>C</td>
+<td>铁</td>
+<td><code>AC = 地铁</code>, a vehicle.</td>
+</tr>
+<tr>
+<td>D</td>
+<td>路</td>
+<td>A similar vehicle runs on <code>CD = 铁路</code>; there can be roads above the ground.</td>
+</tr>
+<tr>
+<td>E</td>
+<td>泥</td>
+<td><code>EB = 泥土</code>, another expression involving soil.</td>
+</tr>
+<tr>
+<td>F</td>
+<td>下</td>
+<td><code>AF = 地下</code> contains a metro; <code>FB = 下土</code> occurs in “汗滴禾下土”.</td>
+</tr>
+<tr>
+<td>G</td>
+<td>脚</td>
+<td><code>GF = 脚下</code>, where the ground is; feet frequently touch the ground, and muddy ground can make a foot sink.</td>
+</tr>
+<tr>
+<td>H</td>
+<td>山</td>
+<td>Mountains are formed by movement of the earth and are a great mass of soil; <code>HG = 山脚</code> and <code>HF = 山下</code> have approximately the same meaning.</td>
+</tr>
+</tbody>
+</table>
+<p>Substitute into the requested final string:</p>
+<p><code>HGF的EBD和A里的C</code></p>
+<p>becomes:</p>
+<p><code>山脚下的泥土路和地里的铁</code></p>
+<p>This is the requested grammatical sentence.</p>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>山脚下的泥土路和地里的铁</code> - exact substitution of all eight uniquely constrained characters.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>山脚下的泥土路和地里的铁</code> - correct (attempt 1).</li>
+</ul>
+<p>Incorrect count: 0.</p>
+<p>Stopping criterion met: accepted on the first submission.</p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="288-Sepj2oe3.html"><span>← 上一份日志</span><strong>회전</strong></a><span class="sequence-link disabled"></span></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>！？土土？！ · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

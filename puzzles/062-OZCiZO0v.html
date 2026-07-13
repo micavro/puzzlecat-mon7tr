@@ -3,46 +3,64 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="【鼠鼠谜】什么声音（OZCiZO0v）的独立题解与验证。">
+  <meta name="description" content="【鼠鼠谜】什么声音（OZCiZO0v）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>【鼠鼠谜】什么声音 · PuzzleCat 题解</title>
+  <title>【鼠鼠谜】什么声音 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>062</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>062 / 289</span><code>OZCiZO0v</code></div>
-        <h1>【鼠鼠谜】什么声音</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>STRING</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/OZCiZO0v" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>1</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>四行乐器词格被一条连续棕线穿过，右侧给常见弦数 <code>4,6,4,4</code>，答案为六字母。</p>
-<h3>我的解法</h3>
-<p>四行填 <code>BASS</code>、<code>GUITAR</code>、<code>VIOLIN</code>、<code>PIPA</code>，弦数分别正是 4、6、4、4。沿同一条棕色路径读取被覆盖的字母，依次为 <code>S-T-R-I-N-G</code>。</p>
-<h3>验证</h3>
-<p>乐器、弦数、题注双关和路径抽取全部一致；先前主题猜词 <code>SQUEAK</code> 被判错，<code>STRING</code> 提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="061-avmstzDO.html"><span>← 上一题</span><strong>【鼠鼠谜】五角星</strong></a><a class="sequence-link next" href="063-jmKZrexE.html"><span>下一题 →</span><strong>【鼠鼠谜】动物朋友</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 【鼠鼠谜】什么声音</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>062</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">062 / 289</span><code>OZCiZO0v</code></div>
+      <h1>【鼠鼠谜】什么声音</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/OZCiZO0v" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/062-OZCiZO0v.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: 【鼠鼠谜】什么声音</h1>
+<ul>
+<li>Puzzle ID: <code>OZCiZO0v</code></li>
+<li>Worker: <code>codex-sub-b-20260712</code></li>
+<li>Incorrect submissions: 1</li>
+</ul>
+<h2>Observations</h2>
+<p>The image asks for a six-letter English answer. Four rows contain outlined letter cells crossed by one continuous brown path. The note on the right says to use the most common count and gives <code>4, 6, 4, 4</code>.</p>
+<p>These counts are the usual string counts of the four row answers. The Chinese captions also distinguish the intended words by literal meaning or wordplay.</p>
+<h2>Fill and extraction</h2>
+<ol>
+<li><code>BASS</code> - commonly 4 strings; a bass fish is silent (<code>这个没声</code>). The brown path covers the final <code>S</code>.</li>
+<li><code>GUITAR</code> - commonly 6 strings and used for rock (<code>这个摇滚</code>). The path covers <code>G</code>, <code>T</code>, and <code>R</code>.</li>
+<li><code>VIOLIN</code> - commonly 4 strings and has no frets (<code>这个没品</code>, with <code>品</code> referring to frets). The path covers <code>N</code>.</li>
+<li><code>PIPA</code> - commonly 4 strings; the caption quotes <code>琵琶拨尽四弦悲</code>. The path covers <code>I</code>.</li>
+</ol>
+<p>Reading the covered letters in the direction of the single connected brown path gives:</p>
+<p><code>S -&gt; T -&gt; R -&gt; I -&gt; N -&gt; G</code></p>
+<p>Therefore the six-letter answer is <code>STRING</code>. This accounts for every cell crossed by the path, all four counts, the captions, the title's request for a sound-related answer, and the flavor <code>我看是……</code> directing attention to the visual path.</p>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>STRING</code> - exact full extraction; very high confidence.</li>
+<li>No secondary candidate remains after reconstructing all four rows.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>SQUEAK</code> -&gt; incorrect. Incorrect count: 1. This treated the mouse-series branding as the clue and did not use the grid.</li>
+<li><code>STRING</code> -&gt; correct. The serialized submission completed at <code>2026-07-12T18:12:25.019Z</code>; the artifact records attempt 2 and a correct verdict.</li>
+</ul>
+<h2>Stopping criteria</h2>
+<p>Solved. Atomically resolve as <code>correct</code> with 1 incorrect attempt and answer <code>STRING</code>.</p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="061-avmstzDO.html"><span>← 上一份日志</span><strong>【鼠鼠谜】五角星</strong></a><a class="sequence-link next" href="063-jmKZrexE.html"><span>下一份日志 →</span><strong>【鼠鼠谜】动物朋友</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>【鼠鼠谜】什么声音 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

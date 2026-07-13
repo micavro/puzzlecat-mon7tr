@@ -3,46 +3,143 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="只需枚举（GrbeioVN）的独立题解与验证。">
+  <meta name="description" content="只需枚举（GrbeioVN）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>只需枚举 · PuzzleCat 题解</title>
+  <title>只需枚举 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>122</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>122 / 289</span><code>GrbeioVN</code></div>
-        <h1>只需枚举</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>ENUMERATE</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/GrbeioVN" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>九行只保留英文句子的词长枚举和一个总字母索引；风味说“信息并不少”。</p>
-<h3>我的解法</h3>
-<p>词长分别锁定九句经典 pangram，例如 <code>THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG</code>、<code>PACK MY BOX WITH FIVE DOZEN LIQUOR JUGS</code>、<code>SPHINX OF BLACK QUARTZ, JUDGE MY VOW</code> 等。忽略空格标点后按每行首数字索引，九行依次得到 <code>E N U M E R A T E</code>。</p>
-<h3>验证</h3>
-<p>九个枚举都能恢复成完整 pangram，抽取结果又回扣标题；<code>ENUMERATE</code> 提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="121-y1Ezg7XA.html"><span>← 上一题</span><strong>古老迷宫游戏</strong></a><a class="sequence-link next" href="123-F1Myul5g.html"><span>下一题 →</span><strong>吃什么</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 只需枚举</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>122</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">122 / 289</span><code>GrbeioVN</code></div>
+      <h1>只需枚举</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/GrbeioVN" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/122-GrbeioVN.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve Log: 只需枚举</h1>
+<ul>
+<li>Owner: <code>recover-w1-20260712</code></li>
+<li>Puzzle ID: <code>GrbeioVN</code></li>
+<li>Status: Correct</li>
+<li>Incorrect submissions: 0</li>
+<li>FPA check: No FPA tag. Generic public pangram reference material was used only to verify standard sentences; no puzzle solution, discussion, spoiler, or hint was accessed.</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>The puzzle consists of nine entries shaped as <code>(N/word lengths)</code>.</li>
+<li>Flavor says only enumerations remain and claims the information is not sparse.</li>
+<li>Several length patterns immediately match famous English pangrams, especially <code>3 5 5 3 5 4 3 4 3</code> = <code>THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG</code>.</li>
+<li>The first number in each row is within the total number of letters in its pangram.</li>
+</ul>
+<h2>Reconstruction And Extraction</h2>
+<p>Spaces and punctuation are ignored when applying the leading index.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">Row</th>
+<th style="text-align: right;">N</th>
+<th>Enumeration</th>
+<th>Pangram</th>
+<th style="text-align: center;">Nth letter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">22</td>
+<td><code>4 5 4 5 2 3 5</code></td>
+<td><code>GLIB JOCKS QUIZ NYMPH TO VEX DWARF</code></td>
+<td style="text-align: center;">E</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">20</td>
+<td><code>3 7 4 7 6 3</code></td>
+<td><code>HOW QUICKLY DAFT JUMPING ZEBRAS VEX</code></td>
+<td style="text-align: center;">N</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">27</td>
+<td><code>8 4 2 3 6 2 6</code></td>
+<td><code>JACKDAWS LOVE MY BIG SPHINX OF QUARTZ</code></td>
+<td style="text-align: center;">U</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">5</td>
+<td><code>4 2 3 4 4 5 6 4</code></td>
+<td><code>PACK MY BOX WITH FIVE DOZEN LIQUOR JUGS</code></td>
+<td style="text-align: center;">M</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">16</td>
+<td><code>5 5 4 3 5 5</code></td>
+<td><code>QUICK NYMPH BUGS VEX FJORD WALTZ</code></td>
+<td style="text-align: center;">E</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">17</td>
+<td><code>6 2 5 6, 5 2 3</code></td>
+<td><code>SPHINX OF BLACK QUARTZ, JUDGE MY VOW</code></td>
+<td style="text-align: center;">R</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">17</td>
+<td><code>3 4 6 7 4 7</code></td>
+<td><code>THE FIVE BOXING WIZARDS JUMP QUICKLY</code></td>
+<td style="text-align: center;">A</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">1</td>
+<td><code>3 5 5 3 5 4 3 4 3</code></td>
+<td><code>THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG</code></td>
+<td style="text-align: center;">T</td>
+</tr>
+<tr>
+<td style="text-align: right;">9</td>
+<td style="text-align: right;">27</td>
+<td><code>5, 3 5, 3 5 4 3</code></td>
+<td><code>WALTZ, BAD NYMPH, FOR QUICK JIGS VEX</code></td>
+<td style="text-align: center;">E</td>
+</tr>
+</tbody>
+</table>
+<p>The extracted letters spell <code>ENUMERATE</code>, matching the title's wordplay and providing a complete check.</p>
+<h2>Candidate Ranking</h2>
+<ol>
+<li><code>ENUMERATE</code> - exact nine-letter extraction with every row independently reconstructed and title confirmation.</li>
+</ol>
+<h2>Submissions</h2>
+<ol>
+<li><code>ENUMERATE</code> - correct (<code>答案正确！</code>). Incorrect count remains 0.</li>
+</ol>
+<h2>Final Answer</h2>
+<p><code>ENUMERATE</code></p>
+<h2>Stopping Criteria</h2>
+<ul>
+<li>Resolve <code>correct</code> if <code>ENUMERATE</code> is accepted.</li>
+<li>If rejected, recheck punctuation/index conventions before any new candidate.</li>
+<li>Stop after 20 incorrect submissions or earlier if evidence becomes non-unique.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="121-y1Ezg7XA.html"><span>← 上一份日志</span><strong>古老迷宫游戏</strong></a><a class="sequence-link next" href="123-F1Myul5g.html"><span>下一份日志 →</span><strong>吃什么</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>只需枚举 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

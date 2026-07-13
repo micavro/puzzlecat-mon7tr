@@ -3,46 +3,68 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="7️⃣🔪（dCzF4LbF）的独立题解与验证。">
+  <meta name="description" content="7️⃣🔪（dCzF4LbF）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>7️⃣🔪 · PuzzleCat 题解</title>
+  <title>7️⃣🔪 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>009</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>009 / 289</span><code>dCzF4LbF</code></div>
-        <h1>7️⃣🔪</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>SEVER</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/dCzF4LbF" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>一把刀切过数字 7，下面有五个字母格，最后一格呈破损状。</p>
-<h3>我的解法</h3>
-<p>数字 7 的英文是 <code>SEVEN</code>，恰有五字母；刀的动作是 <code>SEVER</code>，也是五字母。图像表示用刀“切断” SEVEN，并让末字母所在的格子发生变化，得到 <code>SEVER</code>。</p>
-<h3>验证</h3>
-<p>字数、动作含义和末格破损全部吻合；<code>SEVER</code> 首投正确，错误 0 次。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="008-tqM7ji9S.html"><span>← 上一题</span><strong>21st Century Cryptic</strong></a><a class="sequence-link next" href="010-GtybeioV.html"><span>下一题 →</span><strong>[NbH2谜022]五色交辉</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 7️⃣🔪</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>009</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">009 / 289</span><code>dCzF4LbF</code></div>
+      <h1>7️⃣🔪</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/dCzF4LbF" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/009-dCzF4LbF.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: 7️⃣🔪</h1>
+<ul>
+<li>Puzzle ID: <code>dCzF4LbF</code></li>
+<li>Owner: <code>recover-w3-20260712</code></li>
+<li>Incorrect submissions: 0</li>
+<li>Status: correct</li>
+</ul>
+<h2>Prompt</h2>
+<ul>
+<li>Flavor: <code>众所周知，7️⃣ + 🔪 = ？</code></li>
+<li>The image shows a knife cutting through a large numeral 7.</li>
+<li>Caption: <code>用一个词来表示上图</code>.</li>
+<li>Five answer boxes are drawn; the final box has a cut/broken edge.</li>
+<li>The hint remains unpurchased.</li>
+</ul>
+<h2>Observations and reasoning</h2>
+<ol>
+<li>The numeral 7 gives the English word <code>SEVEN</code>, exactly five letters, matching the five boxes.</li>
+<li>The knife action is to <code>SEVER</code>, also exactly five letters and meaning to cut or separate.</li>
+<li>The rebus transformation is therefore <code>SEVEN</code> under a knife becoming <code>SEVER</code>: the number word is altered by the cutting action, with only its final letter changing.</li>
+<li>The broken edge on the fifth box reinforces that the final position of <code>SEVEN</code> is the affected one.</li>
+<li>Literal alternatives such as <code>CUT</code> do not fit the five-letter layout. Chinese idioms such as <code>七零八落</code> describe a damaged seven but do not fit the five boxes or the one-letter English wordplay.</li>
+</ol>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>SEVER</code> - exact five-letter action word and direct transformation from <code>SEVEN</code>.</li>
+<li><code>BREAK</code> - five letters and broadly describes damage, but lacks the seven/word transformation.</li>
+<li><code>七零八落</code> - visually plausible Chinese idiom, but conflicts with the five Latin-style boxes and the English pun.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>SEVER</code> - correct (attempt 1; 0 incorrect submissions).</li>
+</ul>
+<h2>Stopping criteria</h2>
+<p>The first candidate was accepted; no further submission is required.</p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="008-tqM7ji9S.html"><span>← 上一份日志</span><strong>21st Century Cryptic</strong></a><a class="sequence-link next" href="010-GtybeioV.html"><span>下一份日志 →</span><strong>[NbH2谜022]五色交辉</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>7️⃣🔪 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

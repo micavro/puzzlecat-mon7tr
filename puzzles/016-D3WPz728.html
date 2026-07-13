@@ -3,46 +3,65 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Animals in Grids（D3WPz728）的独立题解与验证。">
+  <meta name="description" content="Animals in Grids（D3WPz728）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>Animals in Grids · PuzzleCat 题解</title>
+  <title>Animals in Grids · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>016</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>016 / 289</span><code>D3WPz728</code></div>
-        <h1>Animals in Grids</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>ENGLISH</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/D3WPz728" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>七条英文线索各要求用一种传统字谜格变换得到动物名，括号给出抽取位置与词长。</p>
-<h3>我的解法</h3>
-<p>依次得到：<code>REED→DEER</code> 取 E，<code>MONKEY</code> 取 N，<code>CLOG→DOG</code> 取 G，<code>LEAF→FLEA</code> 取 L，<code>WIKI→KIWI</code> 取 I，<code>STALLION</code> 取 S，<code>HOGWARTS-S→HOGWART→WARTHOG</code> 取 H。七个抽取字母连成 <code>ENGLISH</code>。</p>
-<h3>验证</h3>
-<p>七行的动物词长和指定位置均吻合，提交 <code>ENGLISH</code> 为 correct。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="015-kxqS2WKJ.html"><span>← 上一题</span><strong>AB谜</strong></a><a class="sequence-link next" href="017-1EGaRpKD.html"><span>下一题 →</span><strong>Another Cryptic</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · Animals in Grids</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>016</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">016 / 289</span><code>D3WPz728</code></div>
+      <h1>Animals in Grids</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/D3WPz728" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/016-D3WPz728.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>D3WPz728 - Animals in Grids</h1>
+<p>Owner: <code>chat2-root-20260712</code></p>
+<h2>Observations</h2>
+<ul>
+<li>Seven English clues each name a traditional Chinese riddle-grid transformation and
+  request an animal. Parentheses give extraction index/animal length.</li>
+</ul>
+<h2>Reasoning</h2>
+<ul>
+<li>Pond grass <code>REED</code>, rolled curtain/reversal -&gt; <code>DEER</code>; take 2/4 = <code>E</code>.</li>
+<li>Mother's door key wordplay -&gt; <code>MONKEY</code>; take 3/6 = <code>N</code>.</li>
+<li>Sink drain <code>CLOG</code>, shrimp-antenna combination -&gt; <code>DOG</code>; take 3/3 = <code>G</code>.</li>
+<li>Book/tree part <code>LEAF</code>, going-downstairs rotation -&gt; <code>FLEA</code>; take 2/4 = <code>L</code>.</li>
+<li>Editable webpage <code>WIKI</code>, double-hook half swap -&gt; <code>KIWI</code>; take 4/4 = <code>I</code>.</li>
+<li>Stable clue/white-head wordplay -&gt; <code>STALLION</code>; take 1/8 = <code>S</code>.</li>
+<li><code>HOGWARTS</code> without S = <code>HOGWART</code>; swing half swap -&gt; <code>WARTHOG</code>;
+  take 5/7 = <code>H</code>.</li>
+<li>Extracted result: <code>ENGLISH</code>.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ul>
+<li><code>ENGLISH</code> - all seven indexed rows agree.</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>ENGLISH</code> - correct (<code>0 / 20</code> incorrect).</li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Resolve correct if <code>ENGLISH</code> is accepted.</li>
+</ul>
+<p>Resolved <code>correct</code> with answer <code>ENGLISH</code>.</p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="015-kxqS2WKJ.html"><span>← 上一份日志</span><strong>AB谜</strong></a><a class="sequence-link next" href="017-1EGaRpKD.html"><span>下一份日志 →</span><strong>Another Cryptic</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>Animals in Grids · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

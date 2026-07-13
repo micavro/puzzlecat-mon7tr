@@ -3,46 +3,61 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="小学生必背（ybfzg7XA）的独立题解与验证。">
+  <meta name="description" content="小学生必背（ybfzg7XA）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>小学生必背 · PuzzleCat 题解</title>
+  <title>小学生必背 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>148</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>148 / 289</span><code>ybfzg7XA</code></div>
-        <h1>小学生必背</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>9</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/ybfzg7XA" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>1</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>算式为“天−火=2、医−匪=10、消费−铁路=？”；标题说小学生必背。</p>
-<h3>我的解法</h3>
-<p>把词语替换成常用公共服务号码：天气预报 121、火警 119，差 2；急救 120、报警 110，差 10。消费者投诉为 12315，铁路客服为 12306，所以 <code>12315−12306=9</code>。</p>
-<h3>验证</h3>
-<p>同一“必背热线”规则解释全部三式；笔画误猜 <code>4</code> 判错，<code>9</code> 正确，共 1 次错误。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="147-yYszg7XA.html"><span>← 上一题</span><strong>宝可灯谜1</strong></a><a class="sequence-link next" href="149-d1uF4LbF.html"><span>下一题 →</span><strong>展览墙</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 小学生必背</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>148</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">148 / 289</span><code>ybfzg7XA</code></div>
+      <h1>小学生必背</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/ybfzg7XA" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/148-ybfzg7XA.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>ybfzg7XA - 小学生必背</h1>
+<p>Owner: <code>codex-root-20260712</code></p>
+<h2>Puzzle</h2>
+<p>The image gives three Chinese-character equations:</p>
+<ul>
+<li>天 - 火 = 2</li>
+<li>医 - 匪 = 10</li>
+<li>消费 - 铁路 = ?</li>
+</ul>
+<p>The title is “小学生必背”. The puzzle is an old Feigu Matrix item, originally dated 2017-07-16.</p>
+<h2>Work</h2>
+<ul>
+<li>Ordinary simplified-character stroke-count subtraction does not fit the examples: 天/火 are 4/4 strokes and 医/匪 are 7/10 strokes.</li>
+<li>Pinyin letter counts, alphabet sums, T9 sums/products, tones, radicals, and common-stroke multisets do not produce both 2 and 10.</li>
+<li>The typography suggests possible graphical subtraction/overlap. I extracted the original glyph masks and compared overlays. 天 can be thought of as leaving 二 after cancelling the lower person-like part against 火, but the same informal rule does not uniquely explain 医/匪 or determine the final expression.</li>
+<li>A low-confidence arithmetic candidate is <code>4</code>: 消(10)+费(9)=19 and 铁(10)+路(13)=23, whose absolute difference is 4. This does not explain the displayed examples and therefore is only a probe, not a solved mechanism.</li>
+<li>The closed mechanism is public-service telephone numbers, a set of numbers commonly memorized by schoolchildren:</li>
+<li>天 = weather forecast <code>121</code>; 火 = fire alarm <code>119</code>; <code>121 - 119 = 2</code>.</li>
+<li>医 = medical emergency <code>120</code>; 匪 = police alarm <code>110</code>; <code>120 - 110 = 10</code>.</li>
+<li>消费 = consumer complaint hotline <code>12315</code>; 铁路 = railway customer service <code>12306</code>; <code>12315 - 12306 = 9</code>.</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>4</code> - incorrect (low-confidence stroke-count probe; attempt 1).</li>
+<li><code>9</code> - correct, derived from the complete hotline-number mechanism.</li>
+</ul>
+<h2>Stop rule</h2>
+<p>Only candidates supported by a coherent rule or a strongly informative probe will be submitted. If the two examples remain underdetermined after those probes, resolve <code>cannot_do</code> rather than enumerate numbers.</p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="147-yYszg7XA.html"><span>← 上一份日志</span><strong>宝可灯谜1</strong></a><a class="sequence-link next" href="149-d1uF4LbF.html"><span>下一份日志 →</span><strong>展览墙</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>小学生必背 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

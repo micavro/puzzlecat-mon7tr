@@ -3,46 +3,112 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="相生相克（yC1zg7XA）的独立题解与验证。">
+  <meta name="description" content="相生相克（yC1zg7XA）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>相生相克 · PuzzleCat 题解</title>
+  <title>相生相克 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>233</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>233 / 289</span><code>yC1zg7XA</code></div>
-        <h1>相生相克</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>EARTH THEATER</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/yC1zg7XA" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>五条线索先识别一个五字母中间答案，再把字母按金木水火土分配，并沿相克、相生次序读取。</p>
-<h3>我的解法</h3>
-<p>线索识别《崩坏：星穹铁道》角色 <code>HERTA</code>，依题面金木水火土顺序映射为 <code>金=H、木=E、水=R、火=T、土=A</code>。从金出发沿相克循环 <code>金木土水火</code> 得 <code>HEART</code>；沿相生循环的反向 <code>金土火木水</code> 得 <code>HATER</code>。分别提交这两个中间词后，判题器返回两条带黑格的五行字符串；把两串黑格互补叠合，得到元素序列 <code>木土水火金火金木土火木水</code>。</p>
-<h3>验证</h3>
-<p>按同一五行映射转字母，序列为 <code>EARTH THEATER</code>；三次前置提交均被当作中间答案，最终串正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="232-cO8HRhJe.html"><span>← 上一题</span><strong>百合谜 01</strong></a><a class="sequence-link next" href="234-gbq6lhr6.html"><span>下一题 →</span><strong>神鲸谜 003</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 相生相克</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>233</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">233 / 289</span><code>yC1zg7XA</code></div>
+      <h1>相生相克</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/yC1zg7XA" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/233-yC1zg7XA.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>yC1zg7XA - 相生相克</h1>
+<ul>
+<li>Owner: <code>chat2-w2-20260712</code></li>
+<li>Status: solving</li>
+<li>Incorrect submissions: 0</li>
+<li>Stopping rule: submit only mechanism-supported values; stop at correct, evidence exhaustion, or 20 incorrect.</li>
+</ul>
+<h2>Identification</h2>
+<p>The five clues identify <code>黑塔</code> / <code>HERTA</code> from <em>Honkai: Star Rail</em>:</p>
+<ul>
+<li>The requested intermediate has five letters: <code>HERTA</code>.</li>
+<li>Herta is an ice-damage character.</li>
+<li>Her Chinese name is <code>黑塔</code>: <code>黑</code> contains <code>灬</code>, and <code>塔</code> contains <code>土</code>.</li>
+<li>Her puppet/body lore explains the return-to-youth clue, while her collection of curios explains the rare-object clue.</li>
+</ul>
+<p>Because the five statements are printed in the order <code>金、木、水、火、土</code>, they assign letters as follows:</p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Letter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>金</td>
+<td>H</td>
+</tr>
+<tr>
+<td>木</td>
+<td>E</td>
+</tr>
+<tr>
+<td>水</td>
+<td>R</td>
+</tr>
+<tr>
+<td>火</td>
+<td>T</td>
+</tr>
+<tr>
+<td>土</td>
+<td>A</td>
+</tr>
+</tbody>
+</table>
+<h2>Extraction</h2>
+<ul>
+<li>Start at metal and follow the forward overcoming cycle: <code>金克木、木克土、土克水、水克火、火克金</code>.</li>
+<li>Order: <code>金木土水火</code></li>
+<li>Letters: <code>H E A R T</code></li>
+<li>Result: <code>HEART</code></li>
+<li>Start at metal and follow the generating cycle in reverse. The forward generating cycle is <code>金生水、水生木、木生火、火生土、土生金</code>, so its reverse from metal is <code>金土火木水</code>.</li>
+<li>Letters: <code>H A T E R</code></li>
+<li>Result: <code>HATER</code></li>
+</ul>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>HERTA</code> - explicitly marked intermediate answer; submit first to obtain any checker milestone.</li>
+<li><code>HEART</code> / <code>HATER</code> - the two exact five-letter extractions requested by the final two blanks. Checker behavior will determine whether either alone or their combination is final.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>HERTA</code> - intermediate, checker message <code>金木水火土=HERTA</code>; incorrect count remains 0.</li>
+<li><code>HEART</code> - intermediate, checker message <code>木█水█金█金█土█木█</code>; mapped through <code>金木水火土=HERTA</code>, the visible element sequence gives <code>E R H H A E</code> and appears to be one half of a further interleaving.</li>
+<li><code>HATER</code> - intermediate, checker message <code>█土█火█火█木█火█水</code>; incorrect count remains 0.</li>
+</ul>
+<p>Overlaying the two checker strings at their black squares gives:</p>
+<p><code>木土水火金火金木土火木水</code></p>
+<p>Applying <code>金木水火土 = H E R T A</code> gives:</p>
+<p><code>E A R T H  T H E A T E R</code> = <code>EARTH THEATER</code>.</p>
+<p>Final candidate: <code>EARTH THEATER</code>.
+- <code>EARTH THEATER</code> - correct.</p>
+<h2>Resolution</h2>
+<ul>
+<li>Outcome: <code>correct</code></li>
+<li>Final answer: <code>EARTH THEATER</code></li>
+<li>Incorrect submissions: 0 (all three earlier submissions were accepted intermediates).</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="232-cO8HRhJe.html"><span>← 上一份日志</span><strong>百合谜 01</strong></a><a class="sequence-link next" href="234-gbq6lhr6.html"><span>下一份日志 →</span><strong>神鲸谜 003</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>相生相克 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

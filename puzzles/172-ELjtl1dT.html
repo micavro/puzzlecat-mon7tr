@@ -3,46 +3,56 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="才不是汽水谜！（一）（ELjtl1dT）的独立题解与验证。">
+  <meta name="description" content="才不是汽水谜！（一）（ELjtl1dT）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>才不是汽水谜！（一） · PuzzleCat 题解</title>
+  <title>才不是汽水谜！（一） · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>172</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>172 / 289</span><code>ELjtl1dT</code></div>
-        <h1>才不是汽水谜！（一）</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>坏</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/ELjtl1dT" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>题目让多组大写字母串在不同语境下读义：模式、光盘、扑克牌、英文物件等，最后落到 <code>BAD</code>，要求七画汉字。</p>
-<h3>我的解法</h3>
-<p>末串无需再拆字母，直接把英文形容词 <code>BAD</code> 翻译成中文。“坏”正是最直接译义，且笔画数为 7（土三画、不四画）。</p>
-<h3>验证</h3>
-<p>词义和七画条件同时唯一化 <code>坏</code>；首投正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="171-eyFoQPLb.html"><span>← 上一题</span><strong>才不是汽水谜！(二)</strong></a><a class="sequence-link next" href="173-EqZtl1dT.html"><span>下一题 →</span><strong>打字比赛</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 才不是汽水谜！（一）</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>172</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">172 / 289</span><code>ELjtl1dT</code></div>
+      <h1>才不是汽水谜！（一）</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/ELjtl1dT" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/172-ELjtl1dT.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log — ELjtl1dT《才不是汽水谜！（一）》</h1>
+<ul>
+<li>Owner: <code>codex-sub-aa-20260713</code></li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0</li>
+<li>Stopping limit: 50 evidence-based incorrect submissions</li>
+</ul>
+<h2>Observations and reasoning</h2>
+<ul>
+<li>The puzzle deliberately switches among several readings of capital-letter strings: <code>ABAC</code> as a formal pattern (while evoking 可口可乐), <code>CD</code> as a data-storage disc, <code>A</code> as ACE in a game, and <code>BED</code> as the English furniture word.</li>
+<li>The final <code>BAD</code> is therefore simply the English adjective “bad”. It asks what this describes/means and specifies a seven-stroke Chinese answer.</li>
+<li><code>坏</code> means “bad” and has seven strokes (土 3 + 不 4). It is the direct and uniquely constrained answer.</li>
+<li>Candidate: <code>坏</code>.</li>
+</ul>
+<h2>Submission history</h2>
+<ul>
+<li><code>坏</code> — correct: “恭喜你，回答正确！”.</li>
+</ul>
+<h2>Result</h2>
+<ul>
+<li>Final answer: <code>坏</code></li>
+<li>Incorrect submissions: 0</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="171-eyFoQPLb.html"><span>← 上一份日志</span><strong>才不是汽水谜！(二)</strong></a><a class="sequence-link next" href="173-EqZtl1dT.html"><span>下一份日志 →</span><strong>打字比赛</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>才不是汽水谜！（一） · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

@@ -3,46 +3,65 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="我是嘉豪（一）（WRKlljce）的独立题解与验证。">
+  <meta name="description" content="我是嘉豪（一）（WRKlljce）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>我是嘉豪（一） · PuzzleCat 题解</title>
+  <title>我是嘉豪（一） · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>166</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>166 / 289</span><code>WRKlljce</code></div>
-        <h1>我是嘉豪（一）</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>尹相杰</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/WRKlljce" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>线索描述早期说唱歌手、与女歌手合唱一首关于劳动者追求女子的歌、同年两次涉案，以及一首歌词重复结构为 <code>ABCDABEFAGHIJ</code> 的歌。</p>
-<h3>我的解法</h3>
-<p>《纤夫的爱》的男声演唱者是尹相杰，纤夫也正是所述劳动者。其歌曲《天不下雨天不刮风天上有太阳》逐字模式为：天A 不B 下C 雨D 天A 不B 刮E 风F 天A 上G 有H 太I 阳J，精确符合给定结构；同年两次涉毒的描述也相符。</p>
-<h3>验证</h3>
-<p>歌曲语义、逐字模式和人物经历共同锁定；首次提交 correct。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="165-D0iPz728.html"><span>← 上一题</span><strong>成语接龙</strong></a><a class="sequence-link next" href="167-EIStl1dT.html"><span>下一题 →</span><strong>我爱记歌词</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 我是嘉豪（一）</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>166</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">166 / 289</span><code>WRKlljce</code></div>
+      <h1>我是嘉豪（一）</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/WRKlljce" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/166-WRKlljce.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve Log: WRKlljce - 我是嘉豪（一）</h1>
+<ul>
+<li>Owner: <code>chat2-w3-20260712</code></li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0</li>
+<li>Stop rule: submit only mechanism-supported candidates; stop at 20 incorrect or earlier if archived evidence cannot distinguish candidates.</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Archive completed with no external resources; puzzle content is HTML/text.</li>
+<li>Clues ask for an early Chinese rap singer, a famous duet about a kind of laborer pursuing a woman, two crimes in the same year, and another song matching <code>ABCDABEFAGHIJ</code>.</li>
+</ul>
+<h2>Reasoning</h2>
+<ul>
+<li><code>尹相杰</code> and <code>于文华</code> famously performed <code>纤夫的爱</code>; a <code>纤夫</code> is the laborer referenced by the clue, and 尹相杰 sings the iconic refrain.</li>
+<li>尹相杰 was arrested twice for drug-related offenses in 2015, matching the same-year double-crime clue.</li>
+<li>His other representative song title <code>天不下雨天不刮风天上有太阳</code> has the exact equality pattern:</li>
+<li>天(A) 不(B) 下(C) 雨(D) 天(A) 不(B) 刮(E) 风(F) 天(A) 上(G) 有(H) 太(I) 阳(J)</li>
+<li>Therefore <code>ABCDABEFAGHIJ</code>.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ul>
+<li>
+<ol>
+<li><code>尹相杰</code> - every biographical, duet, semantic, and string-pattern clue matches exactly.</li>
+</ol>
+</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>尹相杰</code> - correct (<code>恭喜你，回答正确！</code>).</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="165-D0iPz728.html"><span>← 上一份日志</span><strong>成语接龙</strong></a><a class="sequence-link next" href="167-EIStl1dT.html"><span>下一份日志 →</span><strong>我爱记歌词</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>我是嘉豪（一） · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

@@ -3,46 +3,117 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="两面包夹芝士（Ca5fVTmL）的独立题解与验证。">
+  <meta name="description" content="两面包夹芝士（Ca5fVTmL）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>两面包夹芝士 · PuzzleCat 题解</title>
+  <title>两面包夹芝士 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>084</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>084 / 289</span><code>Ca5fVTmL</code></div>
-        <h1>两面包夹芝士</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>BACON</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/Ca5fVTmL" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>五个定义答案都由相同外层字母夹一个内部字符构成，风味问 “What's inside the BREAD?”，答案五字母。</p>
-<h3>我的解法</h3>
-<p>五项为 <code>A[O]A、B[B]B、D[N]D、E[C]E、R[A]R</code>。外层字母是 <code>A B D E R</code>，重排成 <code>BREAD</code> 后，按 B、R、E、A、D 顺序读取内部字符：<code>B A C O N</code>。</p>
-<h3>验证</h3>
-<p>排序键正是题面 BREAD，提取物又是面包夹馅；<code>BACON</code> 首投正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="083-9kkWHnxJ.html"><span>← 上一题</span><strong>两种木棍</strong></a><a class="sequence-link next" href="085-sU4Bl3vq.html"><span>下一题 →</span><strong>中专说唱高手</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 两面包夹芝士</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>084</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">084 / 289</span><code>Ca5fVTmL</code></div>
+      <h1>两面包夹芝士</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/Ca5fVTmL" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/084-Ca5fVTmL.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve Log: Ca5fVTmL</h1>
+<ul>
+<li>Title: <code>两面包夹芝士</code></li>
+<li>Draw: <code>tmp/practice-draw.json</code> (<code>2026-07-12T04:19:47.141Z</code>)</li>
+<li>Solver: child agent coordinated by root</li>
+<li>Submission limit: 20 incorrect answers</li>
+<li>Started: <code>2026-07-12</code> (Asia/Shanghai)</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Puzzle archived locally with no external resources.</li>
+<li>Flavor text: <code>What's inside the BREAD?</code></li>
+<li>There are five definition clues followed by <code>(5)</code>, indicating a five-letter final answer.</li>
+</ul>
+<h2>Clue solutions</h2>
+<table>
+<thead>
+<tr>
+<th>Given order</th>
+<th>Definition</th>
+<th>Answer</th>
+<th>Sandwich form</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>FNC Entertainment girl group</td>
+<td><code>AOA</code></td>
+<td><code>A[O]A</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td>North American nonprofit founded in 1912</td>
+<td><code>BBB</code> (Better Business Bureau)</td>
+<td><code>B[B]B</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td>TSR tabletop role-playing game</td>
+<td><code>D&amp;D</code>, also written <code>DnD</code></td>
+<td><code>D[N]D</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td>US computer-related major</td>
+<td><code>ECE</code> (Electrical and Computer Engineering)</td>
+<td><code>E[C]E</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td>Common compressed-file format</td>
+<td><code>RAR</code></td>
+<td><code>R[A]R</code></td>
+</tr>
+</tbody>
+</table>
+<h2>Reasoning</h2>
+<ol>
+<li>Every clue answer has identical outside letters, literally two matching pieces of "bread" around an inside character.</li>
+<li>The outside letters in the given order are <code>A B D E R</code>, an anagram of the flavor-text word <code>BREAD</code>.</li>
+<li>Reorder the clue answers by their outside letter to spell <code>B R E A D</code>.</li>
+<li>Read what is inside each reordered pair:
+   - <code>B[B]B</code> -&gt; <code>B</code>
+   - <code>R[A]R</code> -&gt; <code>A</code>
+   - <code>E[C]E</code> -&gt; <code>C</code>
+   - <code>A[O]A</code> -&gt; <code>O</code>
+   - <code>D[N]D</code> -&gt; <code>N</code></li>
+<li>The extraction gives <code>BACON</code>, a five-letter sandwich filling, matching <code>(5)</code> and the question <code>What's inside the BREAD?</code>.</li>
+</ol>
+<h2>Candidate</h2>
+<ul>
+<li><code>BACON</code> — confidence <code>0.99</code>.</li>
+<li>For clue 3, <code>D&amp;D</code> supplies the same center through its common <code>DnD</code> spelling/readout; the <code>N</code> represents "and" between the two <code>D</code>s.</li>
+</ul>
+<h2>Attempts</h2>
+<ul>
+<li><code>BACON</code> — correct. Evidence: <code>submissions/2026-07-12T04-23-04-746Z/submission.json</code>.</li>
+</ul>
+<h2>Outcome</h2>
+<ul>
+<li>Solved with answer <code>BACON</code> and no incorrect attempts (<code>0 / 20</code>).</li>
+<li>Key lesson: when clue answers share matching outer characters, use the requested outer-word order (<code>BREAD</code>) as a sorting key before extracting the centers. Treat symbols such as <code>&amp;</code> by their conventional letter-form abbreviation (<code>DnD</code>) when the extraction requires one character.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="083-9kkWHnxJ.html"><span>← 上一份日志</span><strong>两种木棍</strong></a><a class="sequence-link next" href="085-sU4Bl3vq.html"><span>下一份日志 →</span><strong>中专说唱高手</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>两面包夹芝士 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

@@ -3,46 +3,71 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="蛙谜1 篮球赛得分情况（P8Le2esI）的独立题解与验证。">
+  <meta name="description" content="蛙谜1 篮球赛得分情况（P8Le2esI）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>蛙谜1 篮球赛得分情况 · PuzzleCat 题解</title>
+  <title>蛙谜1 篮球赛得分情况 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>257</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>257 / 289</span><code>P8Le2esI</code></div>
-        <h1>蛙谜1 篮球赛得分情况</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>0</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/P8Le2esI" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>给出杰森=5、乔治=3、安德鲁=5，问大卫；中文名和“分”均标绿，提示从汉字本身计“分/点”。</p>
-<h3>我的解法</h3>
-<p>数中文姓名字形中的点状笔画：已有三例可按相同口径得到 5、3、5。目标“大卫”两字没有点笔画，因此得分为 0。</p>
-<h3>验证</h3>
-<p>规则利用了只标绿中文名而非英文名的版式，也解释了绿色“分”的双关；<code>0</code> 首投正确。个别字体中点笔画的归类会有差异，因此这一机制以题图所用字形为准。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="256-RSsAJFgi.html"><span>← 上一题</span><strong>蔚蓝谜</strong></a><a class="sequence-link next" href="258-sQlBl3vq.html"><span>下一题 →</span><strong>西行漫记</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 蛙谜1 篮球赛得分情况</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>257</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">257 / 289</span><code>P8Le2esI</code></div>
+      <h1>蛙谜1 篮球赛得分情况</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/P8Le2esI" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/257-P8Le2esI.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve Log: 蛙谜1 篮球赛得分情况</h1>
+<ul>
+<li>Owner: <code>recover-w1-20260712</code></li>
+<li>Puzzle ID: <code>P8Le2esI</code></li>
+<li>Status: Correct</li>
+<li>Incorrect submissions: 0</li>
+<li>FPA check: No FPA tag. No solution, spoiler, discussion, or paid hint lookup was used.</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>The puzzle gives <code>杰森 (Jason) = 5</code>, <code>乔治 (George) = 3</code>, <code>安德鲁 (Andrew) = 5</code>, and asks for <code>大卫 (David)</code>.</li>
+<li>Every Chinese name and every occurrence of <code>分</code> is green (<code>#00ff00</code>); English names are not highlighted.</li>
+<li>The flavor bolds <code>出</code>, but provides no other formatted data.</li>
+<li>The first unpurchased hint title is <code>为什么分字被标为绿色了？</code>, confirming that the green <code>分</code> is the main mechanism clue. No hint was purchased.</li>
+<li>There is a zero-width non-joiner after <code>George</code> in the HTML. It does not form a consistent numerical rule and is likely editor residue.</li>
+</ul>
+<h2>Reasoning</h2>
+<p>The highlighted Chinese names are the objects to score, while highlighted <code>分</code> can mean both score and division/decomposition. The most direct one-image mechanism is to count dot-like strokes (<code>点</code>) in the rendered Chinese names. It explains the conspicuous four-dot bottom of <code>杰</code> plus the transformed dot stroke in <code>森</code>, and the three-dot water radical in <code>治</code>; <code>安德鲁</code> contains the roof dot and the dot strokes of <code>心</code> inside <code>德</code> (with the font's short stroke accounting for the fifth).</p>
+<p>Under this rule, <code>大</code> and <code>卫</code> contain no standard dot strokes, so <code>大卫</code> scores <code>0</code>.</p>
+<p>Other tested hypotheses do not fit all three examples: English-name length, distinct letters, vowel counts, Scrabble values, stroke totals, pinyin/English edit distance, top-level IDS component counts, and simple colored-character counts.</p>
+<h2>Candidate Ranking</h2>
+<ol>
+<li><code>0</code> - strongest fit to the green <code>分</code> / Chinese point-stroke mechanism; both target characters have no dot strokes.</li>
+<li><code>2</code> - possible only if <code>分</code> means treating each target character as one indivisible component; weaker because the examples do not use a consistent IDS depth.</li>
+<li><code>1</code> - arises from several ad hoc averaging/component conventions but has no direct formatting support.</li>
+</ol>
+<h2>Submissions</h2>
+<ol>
+<li><code>0</code> - correct (<code>恭喜呱！</code>). Incorrect count remains 0.</li>
+</ol>
+<h2>Final Answer</h2>
+<p><code>0</code></p>
+<h2>Stopping Criteria</h2>
+<ul>
+<li>Resolve <code>correct</code> on an accepted mechanism-supported answer.</li>
+<li>If <code>0</code> is rejected, reassess the exact Chinese character decomposition rule before testing <code>2</code>; do not enumerate arbitrary digits.</li>
+<li>Stop after 20 incorrect submissions or earlier as <code>cannot_do</code> if the examples remain underdetermined.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="256-RSsAJFgi.html"><span>← 上一份日志</span><strong>蔚蓝谜</strong></a><a class="sequence-link next" href="258-sQlBl3vq.html"><span>下一份日志 →</span><strong>西行漫记</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>蛙谜1 篮球赛得分情况 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

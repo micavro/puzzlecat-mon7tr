@@ -3,46 +3,74 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="黑暗森林组织：序（O2YiZO0v）的独立题解与验证。">
+  <meta name="description" content="黑暗森林组织：序（O2YiZO0v）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>黑暗森林组织：序 · PuzzleCat 题解</title>
+  <title>黑暗森林组织：序 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>285</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>285 / 289</span><code>O2YiZO0v</code></div>
-        <h1>黑暗森林组织：序</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>VERMOUTH</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/O2YiZO0v" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>故事混合《黑暗森林》和《名侦探柯南》设定；蚂蚁依次探索墓碑上的八道刻痕，文字描述每道线条的拓扑形状。</p>
-<h3>我的解法</h3>
-<p>按描述复原字母：两斜线向下相交是 V；竖线带三横是 E；竖线、上环和斜腿是 R；尖锐折线是 M；封闭圆环是 O；两侧上升、底部圆弧是 U；竖线顶端横杆是 T；双竖中横是 H。八字母连成 <code>VERMOUTH</code>。</p>
-<h3>验证</h3>
-<p>每道刻痕唯一对应一个大写字母；所得词又是黑衣组织中莎朗的代号“Vermouth”，与墓碑和人物背景吻合。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="284-XxEkPIap.html"><span>← 上一题</span><strong>麻雀</strong></a><a class="sequence-link next" href="286-dfGF4LbF.html"><span>下一题 →</span><strong>미로</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 黑暗森林组织：序</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>285</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">285 / 289</span><code>O2YiZO0v</code></div>
+      <h1>黑暗森林组织：序</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/O2YiZO0v" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/285-O2YiZO0v.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>O2YiZO0v 黑暗森林组织：序 — solve log</h1>
+<ul>
+<li>Owner: <code>codex-sub-g-20260712</code></li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>The long story is a crossover parody of the opening of <em>The Dark Forest</em> and <em>Detective Conan</em>: characters include 乌丸莲耶, 黑泽阵 (Gin), and 莎朗.</li>
+<li>The “black solitary peak” is a tombstone. The ant successively explores eight incised grooves/letters, with a portrait in a round recess above them.</li>
+<li>Reconstructing each groove from the described topology yields:
+  1. Two diagonals meeting at the bottom: <code>V</code>.
+  2. Vertical with three horizontal branches: <code>E</code>.
+  3. Vertical, upper bowl/loop, diagonal lower leg: <code>R</code>.
+  4. One sharply zig-zagging stroke, endpoints level: <code>M</code>.
+  5. Smooth closed loop: <code>O</code>.
+  6. Rounded bottom with both sides rising: <code>U</code>.
+  7. Vertical ending at a two-sided top crossbar: <code>T</code>.
+  8. Two verticals joined by a horizontal: <code>H</code>.</li>
+<li>The inscription therefore reads <code>VERMOUTH</code>, the Black Organization codename of 莎朗·温亚德. The dialogue and memorial setting independently confirm that the grave belongs to her.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>VERMOUTH</code> — exact eight-letter groove reconstruction plus exact Conan identity/theme.</li>
+<li>No viable alternative: every letter is topologically constrained and the resulting codename is explicitly tied to 莎朗.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>VERMOUTH</code> — correct (HTTP 200, 2026-07-12T11:03:30.730Z).</li>
+</ul>
+<h2>Resolution</h2>
+<ul>
+<li>Final answer: <code>VERMOUTH</code></li>
+<li>Incorrect count: 0</li>
+<li>Outcome: <code>correct</code></li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Require a reproducible extraction or uniquely supported answer before submission.</li>
+<li>End as <code>correct</code>, evidentially exhausted <code>cannot_do</code>, or <code>wrong_20</code> after exactly 20 incorrect submissions.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="284-XxEkPIap.html"><span>← 上一份日志</span><strong>麻雀</strong></a><a class="sequence-link next" href="286-dfGF4LbF.html"><span>下一份日志 →</span><strong>미로</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>黑暗森林组织：序 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

@@ -3,46 +3,574 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="信达雅（XYkPIapg）的独立题解与验证。">
+  <meta name="description" content="信达雅（XYkPIapg）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>信达雅 · PuzzleCat 题解</title>
+  <title>信达雅 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>099</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>099 / 289</span><code>XYkPIapg</code></div>
-        <h1>信达雅</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>QUOD ERAT DEMONSTRANDUM</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/XYkPIapg" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>22</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>左栏是 11 条中文成语/俗语及索引，右栏是对应英文俗语的生硬直译和词长；两栏需先按语义配对。</p>
-<h3>我的解法</h3>
-<p>把右栏还原为 <code>YOU ONLY LIVE ONCE、ACTIONS SPEAK LOUDER THAN WORDS、YOU SCRATCH MY BACK...</code> 等英文俗语，并按对应中文条目的索引取字，依右栏顺序得到 <code>LATIN PHRASE</code>，提交后获提示继续。再为每组寻找对应的常见拉丁语表达，如 <code>CARPE DIEM、FACTA NON VERBA、QUID PRO QUO、MEMENTO MORI</code> 等，仍用原索引、按左栏顺序提取，得到 <code>EMPTY SQUARE</code>。空心方框 <code>□</code> 是证明末尾 Q.E.D. 的排印记号，而 Q.E.D. 展开正是拉丁短语 <code>QUOD ERAT DEMONSTRANDUM</code>。</p>
-<h3>验证</h3>
-<p>两次中间答案均被站点明确接受；<code>LATIN PHRASE</code> 与 <code>EMPTY SQUARE</code> 从文字和符号两路同时指向 Q.E.D.，最终需提交其完整拉丁展开式并通过。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="098-a7xstzDO.html"><span>← 上一题</span><strong>便携计数器</strong></a><a class="sequence-link next" href="100-GC3beioV.html"><span>下一题 →</span><strong>元素魔法</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 信达雅</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>099</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">099 / 289</span><code>XYkPIapg</code></div>
+      <h1>信达雅</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/XYkPIapg" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/099-XYkPIapg.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve Log: 信达雅 (XYkPIapg)</h1>
+<ul>
+<li>Owner: <code>route-a-20260712</code></li>
+<li>Status: Active; third extraction from phrase continuations under investigation</li>
+<li>Incorrect submissions: 22 / 50 (authoritative root count; local archive may be incomplete)</li>
+<li>Last updated: 2026-07-13 (Asia/Shanghai)</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>The left column contains 11 Chinese idioms/proverbs, each followed by an extraction index in square brackets.</li>
+<li>The right column contains awkward literal Chinese renderings of 11 familiar English sayings, with exact English word-length enumerations.</li>
+<li>The columns are not row-aligned. Matching them by meaning and indexing the English answers in the printed order of the right column gives the intermediate answer.</li>
+<li>Punctuation and spaces are ignored for all letter indexing.</li>
+</ul>
+<h2>First Extraction: Right Column</h2>
+<ol>
+<li><code>YOU ONLY LIVE ONCE</code> matches <code>及时行乐</code> [8] -&gt; <code>L</code>.</li>
+<li><code>ACTIONS SPEAK LOUDER THAN WORDS</code> matches <code>行胜于言</code> [11] -&gt; <code>A</code>.</li>
+<li><code>YOU SCRATCH MY BACK AND I'LL SCRATCH YOURS</code> matches <code>平等互惠</code> [8] -&gt; <code>T</code>.</li>
+<li><code>NEVER IN A MILLION YEARS</code> matches <code>钻火得冰</code> [13] -&gt; <code>I</code>.</li>
+<li><code>NO PAIN, NO GAIN</code> matches <code>苦尽甘来</code> [7] -&gt; <code>N</code>.</li>
+<li><code>PAIN IN THE NECK</code> matches <code>过街老鼠</code> [1] -&gt; <code>P</code>.</li>
+<li><code>DUST THOU ART, TO DUST RETURNEST</code> matches <code>人固有一死</code> [6] -&gt; <code>H</code>.</li>
+<li><code>COME HOME TO ROOST</code> matches <code>多行不义必自毙</code> [11] -&gt; <code>R</code>.</li>
+<li><code>VALEDICTORIAN</code> matches <code>名列前茅</code> [2] -&gt; <code>A</code>.</li>
+<li><code>WHAT'S DONE IS DONE</code> matches <code>木已成舟</code> [11] -&gt; <code>S</code>.</li>
+<li><code>NOBODY'S PERFECT</code> matches <code>人非圣贤</code> [9] -&gt; <code>E</code>.</li>
+</ol>
+<p>This spells <code>LATIN PHRASE</code>.</p>
+<h2>Intermediate Verdict</h2>
+<ul>
+<li><code>LATIN PHRASE</code> was accepted as an intermediate answer with feedback <code>Keep Going!</code>.</li>
+<li><code>Keep Going!</code> is an extraction instruction: continue each semantic chain from the Chinese idiom and English saying to a familiar Latin phrase. It is not text to translate into Latin.</li>
+<li>The bracketed indices still apply. For the second pass, read in the printed order of the left column.</li>
+</ul>
+<h2>Second Extraction: Left Column</h2>
+<ol>
+<li><code>苦尽甘来</code> / no pain, no gain -&gt; <code>PER ASPERA AD ASTRA</code> [7] -&gt; <code>E</code>.</li>
+<li><code>人非圣贤</code> / nobody's perfect -&gt; <code>ERRARE HUMANUM EST</code> [9] -&gt; <code>M</code>.</li>
+<li><code>过街老鼠</code> / pain in the neck -&gt; <code>PERSONA NON GRATA</code> [1] -&gt; <code>P</code>.</li>
+<li><code>人固有一死</code> / dust thou art -&gt; <code>MEMENTO MORI</code> [6] -&gt; <code>T</code>.</li>
+<li><code>多行不义必自毙</code> / come home to roost -&gt; <code>SIC SEMPER TYRANNIS</code> [11] -&gt; <code>Y</code>.</li>
+<li><code>木已成舟</code> / what's done is done -&gt; <code>ALEA IACTA EST</code> [11] -&gt; <code>S</code>.</li>
+<li><code>平等互惠</code> / you scratch my back... -&gt; <code>QUID PRO QUO</code> [8] -&gt; <code>Q</code>.</li>
+<li><code>名列前茅</code> / valedictorian -&gt; <code>SUMMA CUM LAUDE</code> [2] -&gt; <code>U</code>.</li>
+<li><code>钻火得冰</code> / never in a million years -&gt; <code>AD KALENDAS GRAECAS</code> [13] -&gt; <code>A</code>.</li>
+<li><code>行胜于言</code> / actions speak louder than words -&gt; <code>FACTA NON VERBA</code> [11] -&gt; <code>R</code>.</li>
+<li><code>及时行乐</code> / you only live once -&gt; <code>CARPE DIEM</code> [8] -&gt; <code>E</code>.</li>
+</ol>
+<p>This spells <code>EMPTY SQUARE</code>.</p>
+<h2>Second Intermediate Verdict</h2>
+<ul>
+<li><code>EMPTY SQUARE</code> was accepted as another intermediate answer with the same feedback, <code>Keep Going!</code>.</li>
+<li>It does not count as an incorrect submission. The incorrect count remains 2.</li>
+<li>Continuing cyclically from each indexed Latin letter produces an 11 x 11 square whose first column is <code>EMPTY SQUARE</code>:</li>
+</ul>
+<pre><code class="language-text">ERAADASTRAP
+MANUMESTERR
+PERSONANONG
+TOMORIMEMEN
+YRANNISSICS
+STALEAIACTA
+QUOQUIDPROQ
+UMMACUMLAUD
+AECASADKALE
+RBAFACTANON
+EMCARPEDIEM
+</code></pre>
+<ul>
+<li>The other columns, diagonals, perimeter continuation, and letters immediately before/after the indexed positions do not give another coherent instruction. They are just continuations of the source Latin phrases.</li>
+<li>The puzzle body itself contains no square glyph or square-grid asset. The only explicit square is the puzzle's configured correct-message glyph, <code>□</code>.</li>
+</ul>
+<h2>Rejected Sator-Square Branch</h2>
+<ul>
+<li><code>TOFU</code> was rejected. The missing-glyph interpretation of <code>EMPTY SQUARE</code> is falsified.</li>
+<li>Combining the intermediates as the famous Sator Square was also tested and rejected in both precise forms: the full phrase and the object name.</li>
+<li>The Sator branch was attractive because it is a Latin word square, but it has no mechanical connection to the 11 source groups.</li>
+<li>For reference, its standard SATOR-form layout is:</li>
+</ul>
+<pre><code class="language-text">SATOR
+AREPO
+TENET
+OPERA
+ROTAS
+</code></pre>
+<ul>
+<li>The earlier cyclic 11 x 11 continuation was checked for all five Sator words; none appear as straight-line entries.</li>
+</ul>
+<h2>Space-Preserving 11 x 11 Squares</h2>
+<ul>
+<li>The correct continuation is to keep going character-by-character from each indexed letter while preserving real word spaces as empty cells.</li>
+<li>The two layers must retain the printed order in which each intermediate was extracted:</li>
+<li>English sayings stay in right-column order, where their indexed first letters spell <code>LATIN PHRASE</code>.</li>
+<li>Latin phrases stay in left-column order, where their indexed first letters spell <code>EMPTY SQUARE</code>.</li>
+<li>Ignoring punctuation but retaining spaces, the Latin rows are below (<code>·</code> denotes an empty cell):</li>
+</ul>
+<pre><code class="language-text">ERA·AD·ASTR
+MANUM·ESTER
+PERSONA·NON
+TO·MORIMEME
+YRANNISSIC·
+STALEA·IACT
+QUOQUID·PRO
+UMMA·CUM·LA
+AECASAD·KAL
+RBAFACTA·NO
+EMCARPE·DIE
+</code></pre>
+<ul>
+<li>The English sayings in their own right-column order are:</li>
+</ul>
+<pre><code class="language-text">LIVE·ONCEYO
+AK·LOUDER·T
+TCH·MY·BACK
+ION·YEARSNE
+NO·GAINNO·P
+PAIN·IN·THE
+HOU·ART·TO·
+ROOSTCOME·H
+ALEDICTORIA
+S·DONEWHATS
+ERFECTNOBOD
+</code></pre>
+<ul>
+<li>The Latin first column still reads <code>EMPTY SQUARE</code>.</li>
+<li>The Latin-only empty-cell pattern has 13 visible cells in the first 11 raw characters (14 was an earlier counting slip); it does not form a stable recognizable glyph in either left- or right-column row order.</li>
+<li>Overlaying these two naturally ordered space masks gives exactly one cell that is empty in both squares: row 7, column 8.</li>
+<li>At that cell:</li>
+<li>Latin row 7 is <code>QUOQUID·PRO</code>, from <code>QUID PRO QUO</code>.</li>
+<li>English row 7 is <code>HOU·ART·TO·</code>, from <code>DUST THOU ART, TO DUST RETURNEST</code>.</li>
+<li>The earlier <code>(3,8)</code> result came from first reordering the English rows into semantic left-column order. That destroys the right-column order which generated the first intermediate. Its selected Latin answer <code>PERSONA NON GRATA</code> was rejected, corroborating that the aligned-by-meaning overlay was the wrong layer order.</li>
+<li>Order audit:</li>
+<li>Latin-left over English-right: one shared blank at <code>(7,8)</code>; this preserves both extraction orders.</li>
+<li>Latin-left over English-left: one shared blank at <code>(3,8)</code>; requires an unsupported English reorder and led to a rejected answer.</li>
+<li>Latin-right over English-right: one shared blank at <code>(6,8)</code>; requires an unsupported Latin reorder and selects the same rejected semantic pair.</li>
+<li>Latin-right over English-left: two shared blanks, so it is not unique.</li>
+<li>Directly submitting the Latin row <code>QUID PRO QUO</code> was rejected. The shared empty cell is therefore an extraction location, not a row selector.</li>
+</ul>
+<h2>Coordinate And Element Extraction</h2>
+<ul>
+<li>The unique shared empty cell is at row 7, column 8, giving the number <code>78</code>.</li>
+<li>Apply the repeated feedback literally once more: from the shared empty square, <code>Keep Going!</code> one cell to the right in both space-preserving rows:</li>
+</ul>
+<pre><code class="language-text">Latin-left:   QUOQUID·PRO
+                      ^
+English-right: HOU·ART·TO·
+                       ^
+</code></pre>
+<ul>
+<li>Immediately after the column-8 blank, the Latin layer contributes <code>P</code> and the English layer contributes <code>T</code>, giving the element symbol <code>Pt</code>.</li>
+<li><code>Pt</code> is platinum, whose atomic number is exactly <code>78</code>. Thus the coordinate and the two letters independently cross-check one another.</li>
+<li>Together <code>78</code> and <code>Pt</code> are exactly the number and symbol that fill platinum's square in the periodic table, providing a concrete interpretation of <code>EMPTY SQUARE</code>; the configured response glyph <code>□</code> matches that final cell motif.</li>
+<li>This also explains why neither the Latin row nor English row is itself the answer: the shared blank supplies <code>78</code>, and continuing right in both language layers supplies <code>Pt</code>.</li>
+</ul>
+<h2>Output-Language Audit</h2>
+<ul>
+<li><code>PLATINUM</code> and <code>PT</code> were both rejected. This does not falsify <code>78</code>/<code>Pt</code> as the mechanism because PuzzleCat normalization does not translate between an English element name, chemical symbol, atomic number, and Chinese element name.</li>
+<li>The configured normalization only lowercases, strips spaces/punctuation, converts fullwidth characters, and normalizes simplified/traditional Han variants.</li>
+<li>The puzzle starts in Chinese, is titled <code>信达雅</code>, and repeatedly moves through translations. After identifying <code>78</code> / <code>Pt</code>, continuing the translation chain back into the puzzle's source language gives the standard Chinese element name <code>铂</code> (traditional <code>鉑</code>, normalized equivalently by the site).</li>
+<li>This closes the language loop more cleanly than stopping at the English <code>PLATINUM</code> or the language-neutral symbol <code>Pt</code>.</li>
+<li>Coordinate reversal to <code>87</code> is weak: matrix coordinates were derived explicitly as row 7, column 8, and element 87 is francium (<code>Fr</code>), while no adjacent or cross-layer letters yield <code>F</code> and <code>R</code>.</li>
+</ul>
+<h2>Direction And Coordinate Verification</h2>
+<ul>
+<li>The naturally ordered matrices have exactly one common blank in the 11 x 11 window: one-based row 7, column 8.</li>
+<li>Latin row 7 is <code>QUOQUID·PRO</code>; column 8 is blank and the next character to the right is <code>P</code>.</li>
+<li>English-right row 7 is <code>HOU·ART·TO·</code>; column 8 is blank and the next character to the right is <code>T</code>.</li>
+<li>Reading right is forced by the normal direction of both phrases and by <code>Keep Going!</code>. Treating the blank as a character and moving one cell, or skipping the blank to the next non-space character, gives the same <code>P/T</code> result.</li>
+<li>Moving left instead gives <code>D/T</code> (<code>Dt</code>), which is not an element symbol and has no relationship to either 78 or 87.</li>
+<li>Reversing the coordinate to column-row <code>87</code> would imply francium (<code>Fr</code>), but no local continuation yields <code>F/R</code>. The simultaneous <code>78</code> and <code>Pt</code> agreement therefore strongly fixes the orientation.</li>
+<li><code>PLATINUM</code>, <code>PT</code>, and <code>铂</code> being rejected makes output formatting the remaining uncertainty; it does not create a competing directional mechanism.</li>
+</ul>
+<h2>Rejected Periodic-Table Branch</h2>
+<ul>
+<li><code>78</code> was also rejected, after <code>PLATINUM</code>, <code>PT</code>, and <code>铂</code>.</li>
+<li>Therefore the numerical coincidence between <code>(7,8)</code> and platinum's atomic number cannot be the intended terminal mechanism, even though the right-adjacent letters happened to give <code>P/T</code>.</li>
+<li>Do not continue with <code>铂金</code>, <code>第78号元素</code>, <code>元素周期表</code>, or coordinate reversal to 87 without new evidence.</li>
+</ul>
+<h2>Coordinate Labels And The Empty Cell</h2>
+<ul>
+<li>Treat the two accepted intermediates as the labels supplied by the two language layers at the unique coordinate <code>(7,8)</code>:</li>
+<li>Row 7 of <code>EMPTY SQUARE</code> is <code>Q</code>.</li>
+<li>Position 8 of <code>LATIN PHRASE</code> is <code>R</code>.</li>
+<li>The shared empty cell is a <code>S</code>pace, supplying <code>S</code>.</li>
+<li>Applying <code>Keep Going!</code> to the right of that shared space supplies <code>P</code> from the Latin row and <code>T</code> from the English row.</li>
+<li>These five independently sourced letters are exactly the consecutive sequence <code>P Q R S T</code>:</li>
+</ul>
+<pre><code class="language-text">Latin next letter       P
+EMPTY SQUARE[7]         Q
+LATIN PHRASE[8]         R
+shared space            S
+English next letter     T
+</code></pre>
+<ul>
+<li>This uses the coordinate, both intermediate labels, the common blank, and the rightward continuation. Unlike the periodic-table reading, no external reference is needed to determine the extracted string.</li>
+<li><code>PQRST</code> is also the conventional label sequence for the waves of one electrocardiogram cycle, but expanding it to a medical term would be a separate interpretive step not yet required by the mechanism.</li>
+</ul>
+<h2>Space-Matrix Construction Audit</h2>
+<ul>
+<li><code>PQRST</code> was rejected, forcing a review of the shared-empty-cell premise itself.</li>
+<li>The original extraction explicitly ignored spaces and punctuation. It defines a cyclic <strong>letter</strong> stream, but does not define spaces or punctuation as square cells.</li>
+<li>The claimed <code>(7,8)</code> overlap requires all of the following extra assumptions:</li>
+<li>choose an 11-character rather than 11-letter window solely because there are 11 rows;</li>
+<li>retain spaces as cells after previously ignoring them;</li>
+<li>discard punctuation as cells, including the comma explicitly shown by the enumeration in <code>DUST THOU ART, TO DUST RETURNEST</code>;</li>
+<li>overlay English-right order on Latin-left order without an explicit overlay instruction.</li>
+<li>If the enumerated comma is retained as a character, English row 7 is <code>HOU·ART,·TO</code> rather than <code>HOU·ART·TO·</code>, so <code>(7,8)</code> contains a comma and is not a common blank.</li>
+<li>Starting one character after the indexed letter also shifts every proposed blank coordinate. The common-cell result is therefore not invariant under plausible readings of <code>Keep Going!</code>.</li>
+<li>The exact Latin and English phrase identities remain well supported, but their word-boundary positions do not provide a sufficiently defined third extraction. The entire <code>(7,8)</code> / <code>Pt</code> / <code>PQRST</code> branch is now rejected as an overfit.</li>
+</ul>
+<h2>Direct Intermediate Recombination</h2>
+<ul>
+<li>The only invariant new information after the two accepted submissions is the pair of two-word intermediates:</li>
+</ul>
+<pre><code class="language-text">LATIN PHRASE
+EMPTY SQUARE
+</code></pre>
+<ul>
+<li>They have the same adjective-noun structure. Taking the meaningful modifier from the first and the meaningful object from the second gives the established term <code>LATIN SQUARE</code>.</li>
+<li>The opposite cross-combination, <code>EMPTY PHRASE</code>, is not an established object and would amount to a blank answer.</li>
+<li><code>LATIN SQUARE</code> also matches the puzzle's 11-item cyclic structure: the semantic matching permutation between left and right orders is one complete 11-cycle, which is compatible with generating a cyclic Latin square of order 11. This is corroboration, not an additional arbitrary space overlay.</li>
+<li>The configured correct-message glyph <code>□</code> directly reinforces <code>SQUARE</code>.</li>
+</ul>
+<h2>Rejected Recombination Branch</h2>
+<ul>
+<li><code>LATIN SQUARE</code> was rejected; simply crossing one word from each intermediate is not the final operation.</li>
+<li><code>TABULA RASA</code> was also rejected; a blank slate is only an associative paraphrase of <code>EMPTY SQUARE</code>, not its direct translation.</li>
+</ul>
+<h2>Translate The Second Intermediate</h2>
+<ul>
+<li>The accepted intermediates can instead be read as type plus text:</li>
+<li><code>LATIN PHRASE</code> specifies the required output language/type.</li>
+<li><code>EMPTY SQUARE</code> is the text to render as that Latin phrase.</li>
+<li>This differs from the rejected <code>PERGE</code>: the puzzle asks to translate the accepted second intermediate, not the feedback <code>Keep Going!</code>.</li>
+</ul>
+<h3>Grammar</h3>
+<ul>
+<li><code>quadrātum, -ī</code> is a second-declension neuter noun meaning a square or quadrate. Its nominative singular is <code>quadrātum</code>.</li>
+<li><code>vacuus, -a, -um</code> is a first/second-declension adjective meaning empty, vacant, or unoccupied. Agreement with neuter singular <code>quadrātum</code> requires <code>vacuum</code>.</li>
+<li>Thus <code>quadrātum vacuum</code> is fully agreed in gender, number, and case: neuter singular nominative. Neuter accusative has the same surface forms, but a standalone label normally uses the nominative.</li>
+<li>Classical Latin permits either adjective position, but the unmarked descriptive pattern is noun followed by adjective. Dictionary examples use the same order, such as <code>pōculum vacuum</code> (an empty cup); <code>terra ... vacua</code> likewise places the emptiness adjective after its noun.</li>
+<li><code>vacuum quadrātum</code> is grammatical but front-loads/emphasizes emptiness and mirrors English word order. It is weaker for a neutral naming phrase.</li>
+</ul>
+<h3>Lexical Alternatives</h3>
+<ul>
+<li><code>quadrātum inane</code> is grammatical, using <code>inānis, -e</code>, but <code>vacuus</code> is the more direct ordinary adjective for an unoccupied/empty object.</li>
+<li><code>forum vacuum</code> means an empty public or town square, not the geometric square shown by <code>□</code>.</li>
+<li><code>area vacua</code>, <code>locus vacuus</code>, and <code>spatium vacuum</code> mean empty area/place/space and lose the explicit square geometry.</li>
+<li><code>quadrum vacuum</code> is possible with the less usual synonym <code>quadrum</code>, but <code>quadrātum</code> is the standard transparent noun for a geometric square.</li>
+<li>Macrons are not required in submission; the site's normalization ignores case and spaces but does not perform Latin synonym matching.</li>
+</ul>
+<h2>Common Translation Resource Check</h2>
+<ul>
+<li><code>QUADRATUM VACUUM</code> was rejected. The direct-translation model may still be correct while the author's expected lexical order follows a common translation tool rather than neutral hand-composed Latin.</li>
+<li>Querying Google Translate's public translation endpoint from English to Latin gives a casing-sensitive result:</li>
+</ul>
+<pre><code class="language-text">EMPTY SQUARE  -&gt; VACUUM QUADRATUM
+empty square  -&gt; inanis quadrata
+</code></pre>
+<ul>
+<li>The accepted intermediate is displayed and submitted as exactly <code>EMPTY SQUARE</code> in all caps. Feeding that exact text into the most common translation resource therefore produces <code>VACUUM QUADRATUM</code> verbatim.</li>
+<li>This is not an ungrammatical machine artifact:</li>
+<li><code>quadrātum</code> is neuter nominative singular, "a square".</li>
+<li><code>vacuum</code> is the agreeing neuter nominative singular of <code>vacuus</code>.</li>
+<li>Latin permits the adjective before the noun; here it emphasizes the empty state and matches the translator's output order.</li>
+<li>Lowercase Google output <code>inanis quadrata</code> can also be parsed with feminine <code>quadrāta</code> as a substantivized square/figure and agreeing common-gender <code>inānis</code>, but it is not the result of the exact uppercase intermediate shown by the puzzle.</li>
+<li>The title and flavor deliberately foreground imperfect/literal translation, so reproducing a common translator's exact output is better grounded than silently correcting it to preferred noun-adjective prose order.</li>
+</ul>
+<h2>Casing Audit And Deterministic Non-Latin Alternative</h2>
+<ul>
+<li><code>VACUUM QUADRATUM</code> was rejected. The all-caps Google output was a casing artifact, not a stable semantic translation.</li>
+<li>PuzzleCat explicitly ignores answer case, and intermediate answers are conventionally displayed in capitals. Capitalization should therefore not be treated as part of the English phrase's meaning or as a control signal to the translator.</li>
+<li>A normal lowercase semantic query remains reproducible:</li>
+</ul>
+<pre><code class="language-text">Google Translate, English -&gt; Latin
+empty square -&gt; inanis quadrata
+</code></pre>
+<ul>
+<li><code>inānis quadrāta</code> is machine-like but morphologically defensible if <code>quadrāta</code> is treated as a feminine substantivized adjective with an implied feminine noun such as <code>figūra</code> or <code>area</code>; <code>inānis</code> is the agreeing feminine nominative singular form.</li>
+<li>This awkwardness fits a puzzle centered on literal and imperfect translation better than silently replacing the output with hand-edited <code>quadrātum vacuum</code>, which was already rejected.</li>
+<li>There is one separate deterministic English terminology branch: the exact glyph <code>□</code> has Unicode name <code>WHITE SQUARE</code> (U+25A1). The configured correct-message glyph is <code>□</code>, so <code>WHITE SQUARE</code> is a justified fallback if the lowercase translator output is rejected.</li>
+<li>Generic answers such as <code>BLANK</code>, <code>SPACE</code>, or <code>EMPTY CELL</code> remain unsupported because they are not the official name of the displayed glyph.</li>
+</ul>
+<h2>Multi-Level Hint Chain</h2>
+<ul>
+<li><code>INANIS QUADRATA</code> was rejected, eliminating direct translations of the words <code>EMPTY SQUARE</code>.</li>
+<li>The two intermediate responses both returned <code>Keep Going!</code>, so each can represent a stage rather than two fragments to combine immediately:
+  1. <code>LATIN PHRASE</code> specifies the eventual output language/type.
+  2. <code>EMPTY SQUARE</code> identifies a symbol/object, not yet the final source text.
+  3. The corresponding glyph is <code>□</code>, independently corroborated by the configured correct-message glyph.
+  4. Unicode's exact official name for <code>□</code> (U+25A1) is <code>WHITE SQUARE</code>.
+  5. Apply the earlier <code>LATIN PHRASE</code> instruction to that official name.</li>
+<li>Google Translate's normal lowercase English-to-Latin result is reproducible:</li>
+</ul>
+<pre><code class="language-text">white square -&gt; album quadratum
+</code></pre>
+<ul>
+<li>Grammar is sound: <code>album</code> is the neuter nominative singular of <code>albus</code> (white), agreeing with neuter nominative singular <code>quadrātum</code> (square).</li>
+<li><code>album quadratum</code> uses adjective-first order, which is permitted and is the exact common-resource output. Hand-edited <code>quadratum album</code> is grammatical but no longer reproduces the common translator.</li>
+<li>This chain uses both accepted intermediates and both <code>Keep Going!</code> prompts: the first tells the final language, while the second forces one more semantic lookup from <code>EMPTY SQUARE</code> to the standardized text <code>WHITE SQUARE</code> before translation.</li>
+</ul>
+<h2>Candidates</h2>
+<ol>
+<li><code>ALBUM QUADRATUM</code> - confidence 88%. Exact common-translator Latin output for the official Unicode name <code>WHITE SQUARE</code>, using both intermediate stages.</li>
+<li><code>QUADRATUM ALBUM</code> - confidence 8%. Grammatically neutral noun-adjective order, but not the exact common-resource output.</li>
+<li><code>WHITE SQUARE</code> - confidence 4%. Exact Unicode name, but stopping here leaves <code>LATIN PHRASE</code> unused as the requested output type.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>LATIN PHRASE</code> - intermediate, feedback <code>Keep Going!</code>; incorrect count remains 0.</li>
+<li><code>NEC VERBUM VERBO</code> - incorrect; incorrect count 1.</li>
+<li><code>PERGE</code> - incorrect; incorrect count 2. This disproves interpreting the intermediate feedback as an English phrase to translate directly.</li>
+<li><code>EMPTY SQUARE</code> - intermediate, feedback <code>Keep Going!</code>; incorrect count remains 2.</li>
+<li><code>TOFU</code> - incorrect; incorrect count 3. This disproves treating <code>EMPTY SQUARE</code> as a missing-glyph definition.</li>
+<li><code>SATOR AREPO TENET OPERA ROTAS</code> - incorrect; incorrect count 4.</li>
+<li><code>SATOR SQUARE</code> - incorrect; incorrect count 5.</li>
+<li><code>PERSONA NON GRATA</code> - incorrect; local archived incorrect count 6. The root reports an authoritative total of 8 after subsequent work; the two additional answer strings are not present in the current local submission snapshot.</li>
+<li><code>QUID PRO QUO</code> - incorrect; authoritative incorrect count 9. This disproves outputting the Latin row selected by the common blank.</li>
+<li><code>PLATINUM</code> - incorrect; incorrect count 10.</li>
+<li><code>PT</code> - incorrect; incorrect count 11.</li>
+<li><code>铂</code> - incorrect; incorrect count 12.</li>
+<li><code>78</code> - incorrect; incorrect count 13. This rejects the atomic-number output and the periodic-table branch as a terminal mechanism.</li>
+<li><code>PQRST</code> - incorrect; incorrect count 14. This rejects the coordinate-label/space-letter construction and triggers abandonment of the shared-empty-cell branch.</li>
+<li><code>LATIN SQUARE</code> - incorrect; incorrect count 15.</li>
+<li><code>TABULA RASA</code> - incorrect; incorrect count 16.</li>
+<li><code>QUADRATUM VACUUM</code> - incorrect; incorrect count 17. This falsifies the neutral noun-adjective order but not the exact translator-output model.</li>
+<li><code>VACUUM QUADRATUM</code> - incorrect; incorrect count 18. This falsifies treating the intermediate's display capitalization as a Google Translate control signal.</li>
+<li><code>INANIS QUADRATA</code> - incorrect; incorrect count 19. This eliminates directly translating the wording <code>EMPTY SQUARE</code>.</li>
+</ul>
+<h2>Stopping Criteria</h2>
+<ul>
+<li><code>ALBUM QUADRATUM</code> and <code>WHITE SQUARE</code> were both rejected. The Unicode-name and direct-translation branches are closed.</li>
+<li>Do not submit another answer without a deterministic extraction that produces coherent text.</li>
+</ul>
+<h2>Current Structural Audit</h2>
+<ul>
+<li>Authoritative incorrect count is 20. The local submission archive contains 19 incorrect verdicts plus the two accepted intermediates, so at least one incorrect answer is not represented locally.</li>
+<li>Verified intermediates remain:</li>
+<li><code>LATIN PHRASE</code> -&gt; <code>Keep Going!</code></li>
+<li><code>EMPTY SQUARE</code> -&gt; <code>Keep Going!</code></li>
+<li>The semantic matching permutation from printed left order to printed right order is <code>[5,11,6,7,8,10,3,9,4,2,1]</code>, a single 11-cycle:
+  <code>1 -&gt; 5 -&gt; 8 -&gt; 9 -&gt; 4 -&gt; 7 -&gt; 3 -&gt; 6 -&gt; 10 -&gt; 2 -&gt; 11 -&gt; 1</code>.</li>
+<li>The defensible literal reading of <code>Keep Going!</code> is to continue forward from each indexed Latin letter to actual word spaces. Punctuation must not be silently converted to an empty cell.</li>
+<li>Space-preserving 11-character Latin continuations (<code>.</code> denotes a real space):</li>
+</ul>
+<pre><code class="language-text">ERA.AD.ASTR
+MANUM.ESTER
+PERSONA.NON
+TO.MORIMEME
+YRANNISSIC.
+STALEA.IACT
+QUOQUID.PRO
+UMMA.CUM.LA
+AECASAD.KAL
+RBAFACTA.NO
+EMCARPE.DIE
+</code></pre>
+<ul>
+<li>Space coordinates in that square are <code>(1,4),(1,7),(2,6),(3,8),(4,3),(5,11),(6,7),(7,8),(8,5),(8,9),(9,8),(10,9),(11,8)</code>.</li>
+<li>The earlier unique-common-blank overlay at <code>(7,8)</code> is overfit: it depends on inconsistent punctuation handling and an unsupported overlay of different printed orders. Do not revive <code>(7,8)</code>, periodic-table, <code>PQRST</code>, Unicode, or direct-Latin-translation variants.</li>
+<li>Active tests are limited to structurally justified uses of the 11-cycle, all real phrase spaces modulo 11, and letters selected by those empty-cell masks.</li>
+</ul>
+<h2>Additional Rejection</h2>
+<ul>
+<li><code>WHITE SQUARE</code> - incorrect; authoritative incorrect count 20. This closes the Unicode-name branch.</li>
+</ul>
+<h2>Resumed Analysis: 2026-07-13</h2>
+<ul>
+<li>Extending every Latin phrase through one full real-space cycle and reducing offsets modulo 11 gives 21 distinct empty cells, not a coherent row-, column-, time-, or 11-cycle-order message.</li>
+<li>Using those Latin spaces as a mask over the semantically matched English continuations was tested with:</li>
+<li>raw characters and letters-only streams;</li>
+<li>first-space-only and all-space masks;</li>
+<li>left, right, reverse-right, column, time, and semantic-cycle traversals.</li>
+<li>None yields readable text. The first-window letters-only mask gives <code>ANTHUOHCIRSTE</code>; its suggestive anagrams are not backed by a route and must not be treated as extraction.</li>
+<li>Advancing through the semantic 11-cycle while advancing through grid columns, in both directions and from every starting row, also gives no coherent text.</li>
+<li>Perimeter and inward-spiral continuations of both the English and Latin 11 x 11 grids were checked. They preserve the accepted first-column messages but do not reveal a third instruction.</li>
+</ul>
+<h2>Unsubmitted Thematic Candidates</h2>
+<ol>
+<li><code>BLANK SPACE</code> - leading but unverified.
+   - It is the most idiomatic two-word paraphrase of the accepted clue <code>EMPTY SQUARE</code>.
+   - Replacing an awkward literal rendering with a familiar phrase repeats the puzzle's central translation operation and fits the title <code>信达雅</code>.
+   - The configured correct-message glyph <code>□</code> corroborates a blank space/cell, though it is not independent extraction evidence.
+   - This answer has not been submitted and should not be promoted unless the root worker accepts a semantic-clue final rather than requiring another grid extraction.</li>
+<li><code>METAPHRASE</code> - thematic, unverified.
+   - John Dryden, named explicitly in the flavor, used <em>metaphrase</em> for word-for-word translation.
+   - The awkward Chinese renderings and <code>谢谢你非常多，先生辜</code> are deliberate word-for-word calques.
+   - No deterministic use of <code>EMPTY SQUARE</code> currently selects this term.</li>
+<li><code>PARAPHRASE</code> - thematic, weaker.
+   - The Chinese idioms, English sayings, and Latin phrases preserve sense while changing wording, matching Dryden's <em>paraphrase</em> category.
+   - Again, no mechanical extraction selects it over <code>METAPHRASE</code>.</li>
+</ol>
+<p>No submission is recommended yet. If a semantic-clue answer is permitted, test <code>BLANK SPACE</code> before either Dryden term; otherwise continue searching for an explicit ordering of the Latin word-boundary cells.</p>
+<h2>Calque And Word-Boundary Audit</h2>
+<ul>
+<li>The strict, minimal action described by the second <code>Keep Going!</code> is not to wrap the phrases or overlay two independently ordered matrices. It is simply to advance from each indexed Latin letter until the next word boundary.</li>
+<li>All 11 rows deterministically reach an ordinary inter-word <strong>space</strong>. Attempts to read neighboring letters, distances, or the complete set of boundary coordinates do not produce language, so the common destination itself is the stable output.</li>
+<li><code>EMPTY SQUARE</code> is a precise word-for-word English gloss of Chinese <code>空格</code>:</li>
+<li><code>空</code> = empty;</li>
+<li><code>格</code> = cell/compartment, normally drawn as a square in a table or character grid.</li>
+<li>The English Wiktionary entry for <code>空格</code> defines it as <code>space; gap (between words or lines); empty cell (in a table)</code>, and in computing as a shortening of <code>空格键</code> (space bar). This independently unifies the two otherwise separate senses in the accepted intermediate: an empty grid square and a word space.</li>
+<li>The flavor gives the same reverse-calque instruction in miniature:</li>
+<li><code>谢谢你非常多</code> preserves English <code>thank you very much</code> word order instead of idiomatic Chinese;</li>
+<li><code>先生辜</code> preserves English <code>Mr. Gu</code> order instead of Chinese <code>辜先生</code>.</li>
+<li>Therefore the puzzle's repeated operation is to recover the idiomatic/source expression from an awkward word-for-word rendering. Applying it to <code>EMPTY SQUARE</code> gives Chinese <code>空格</code>, whose actual referent is the spaces reached by continuing through the Latin phrases.</li>
+<li>This also closes the language loop naturally: Chinese idioms -&gt; English sayings -&gt; Latin phrases -&gt; a Chinese lexical answer.</li>
+</ul>
+<h2>Revised Unsubmitted Candidates</h2>
+<ol>
+<li><code>空格</code> - strongest new candidate.
+   - It exactly accounts for both words of <code>EMPTY SQUARE</code>, the real word-boundary destination forced by <code>Keep Going!</code>, the Chinese title/flavor, and the correct-message glyph <code>□</code>.
+   - Unlike the discarded space matrices, this does not depend on a window size, punctuation deletion, overlay order, or route choice.</li>
+<li><code>SPACE</code> - English rendering of the same mechanism.
+   - Mechanically it names what every continuation reaches, but it does not close the source-language loop or preserve the <code>格</code>/square half of the intermediate as explicitly as <code>空格</code>.</li>
+<li><code>BLANK SPACE</code> - downgraded.
+   - It is an English synonym of the intermediate but lacks the exact Chinese morpheme correspondence and is not the standard concise translation of <code>空格</code>.</li>
+</ol>
+<p>The Dryden terms <code>METAPHRASE</code> and <code>PARAPHRASE</code> remain useful thematic descriptions, but the flavor's awkward syntax is fully explained by the reverse-calque operation and no extraction selects either term. They should not precede <code>空格</code>/<code>SPACE</code>.</p>
+<p>The complete 11-cycle is not sufficient evidence for a route: a uniformly random permutation of 11 items is a single cycle with probability <code>1/11</code>, and every mechanically natural cycle traversal tested above is nonlinguistic. Treat it as incidental unless another independent clue specifies how to use it.</p>
+<h2>Rejection: <code>空格</code></h2>
+<ul>
+<li>Root submitted <code>空格</code>; verdict was incorrect. Authoritative incorrect count is now 22.</li>
+<li>This closes the reverse-calque-to-Chinese terminal branch. The dictionary equivalence between <code>空格</code>, a word space, and an empty table cell remains thematically apt, but it is not the checker answer.</li>
+<li>Do not submit <code>SPACE</code>, <code>BLANK SPACE</code>, <code>WHITESPACE</code>, or <code>空格键</code> solely as lexical variants. A new mechanical extraction is required.</li>
+</ul>
+<h2>Non-Cyclic Continuation And Emptying Tests</h2>
+<ul>
+<li>Reading from each indexed Latin letter without wrapping gives the following stable suffixes to the end of the current word:</li>
+</ul>
+<pre><code class="language-text">ERA
+MANUM
+PERSONA
+TO
+YRANNIS
+ST
+QUO
+UMMA
+AECAS
+RBA
+EM
+</code></pre>
+<ul>
+<li>Reading instead to the end of the whole Latin phrase, with spaces removed, gives:</li>
+</ul>
+<pre><code class="language-text">ERAADASTRA
+MANUMEST
+PERSONANONGRATA
+TOMORI
+YRANNIS
+ST
+QUO
+UMMACUMLAUDE
+AECAS
+RBA
+EM
+</code></pre>
+<ul>
+<li>Left-aligning, right-aligning, or padding either set in an 11 x 11 square produces no readable boundary, diagonal, disappearance-order, or empty-cell extraction. The order in which phrase suffixes become empty is also nonlinguistic.</li>
+<li>Filling the padded empty cells with corresponding English continuation letters was tested. It merely reproduces recognizable suffixes of the source English sayings and gives no third message by rows or columns.</li>
+<li>Interpreting <code>EMPTY SQUARE</code> as an empty keyed 5 x 5 alphabet square was tested in both directions:</li>
+<li>key <code>LATIN PHRASE</code>, text <code>EMPTY SQUARE</code>;</li>
+<li>key <code>EMPTY SQUARE</code>, text <code>LATIN PHRASE</code>.</li>
+<li>Standard Playfair and Bifid encryption/decryption, including full-length and period-5 blocks with the usual I/J merge, produce no readable plaintext. Close this cipher-square branch unless a separate ciphertext or cipher name appears.</li>
+<li>Interpreting the square-bracket index <code>[n]</code> as an instruction to keep deleting letters until the phrase is empty was tested in two forms:</li>
+<li>sequential continuation after the indexed letter, which is just the already-audited rotated phrase stream;</li>
+<li>Josephus elimination using <code>[n]</code> as the step size.</li>
+<li>Josephus round 1 does reproduce <code>EMPTY SQUARE</code>, as it must because the first removed letter is the indexed letter. Subsequent rounds begin <code>TREMEERMAVI</code>, <code>SURMSTPCENM</code>, <code>SESEALOMAEA</code>, etc.; none is linguistic in left, right, reverse-right, cycle, or reverse-cycle order.</li>
+<li>Advancing the character offset while simultaneously traversing the semantic 11-cycle was tested for English-only, Latin-only, and alternating English/Latin streams, forward and backward, from every starting row. No result is linguistic.</li>
+</ul>
+<p>Conclusion: <code>Keep Going</code> does not support a continued-character, repeated-deletion, Josephus, keyed-square, or cycle-diagonal third extraction under standard rules.</p>
+<h2>Square-Bracket To Parenthesis Enumeration Audit</h2>
+<ul>
+<li>A bounded interpretation of <code>EMPTY SQUARE</code> is that the square-bracket indices <code>[n]</code> have been consumed, so the remaining explicit numerical data are the right-column word enumerations in round parentheses.</li>
+<li>For each semantic row, locating <code>[n]</code> in the original English enumeration uniquely gives these quantities:</li>
+<li>word number: <code>3,2,1,2,4,3,2,1,4,2,3</code>;</li>
+<li>position within that word: <code>1,2,1,2,1,2,5,2,5,4,1</code>;</li>
+<li>current word length: <code>2,7,4,4,5,2,7,13,7,5,4</code>;</li>
+<li>letters from the indexed letter through the word end: <code>2,6,4,3,5,1,3,12,3,2,4</code>;</li>
+<li>remaining word count: <code>2,1,4,5,1,2,7,1,2,4,2</code>.</li>
+<li>Direct A1Z26 readings of these sequences are nonlinguistic in semantic-left, printed-right, and 11-cycle orders.</li>
+<li>Using each sequence as a fresh rowwise index into the corresponding Latin phrase, at the indexed position or one character after it, was also tested in all three orders. Representative results include <code>RRPESEUSAAR</code>, <code>PRPESLPULTC</code>, <code>EHSEELOENAP</code>, <code>EESMEAIDKAP</code>, and <code>EESNSLOSDTA</code>; none is language.</li>
+<li>Treating <code>(word number, position in word)</code> as a coordinate and transferring it from the English saying to the corresponding Latin phrase produces only <code>AUPO.S.U...</code>; the empty/invalid rows do not form a mechanically ordered answer in left, right, or cycle order.</li>
+<li>Pairing each English enumeration number with the corresponding Latin word and taking that numbered letter produces dotted fragments such as <code>EEDR</code>, <code>.M</code>, <code>SOAS</code>, <code>EIMOE.</code>, <code>.PY.</code>, etc. Reversing the operation (Latin word lengths into English words) is likewise nonlinguistic.</li>
+</ul>
+<p>Conclusion: the explicit <code>[ ]</code> versus <code>( )</code> typography does not yield a third layer through the standard direct enumeration transfers. Close this mechanism unless a new instruction specifies a nonstandard aggregation.</p>
+<h2>Dryden Translation-Mode Audit</h2>
+<ul>
+<li>The flavor's use of <code>德莱顿先生</code> in a puzzle about translation is a strong, explicit allusion to John Dryden's ordered trichotomy:
+  1. <strong>metaphrase</strong> - word-for-word and line-by-line literal translation;
+  2. <strong>paraphrase</strong> - sense-for-sense translation, retaining the author's meaning without strictly following the words;
+  3. <strong>imitation</strong> - a much freer rendering that may vary from both the words and the sense, using only general hints from the original.</li>
+<li>The right-hand Chinese and the flavor's <code>谢谢你非常多，先生辜</code> clearly demonstrate <strong>metaphrase</strong>. They preserve English wording and word order even where idiomatic Chinese would differ (<code>thank you very much</code>, <code>Mr. Gu</code>).</li>
+<li>Replacing those calques with established Chinese sayings is at least <strong>paraphrase</strong>: the wording changes while the intended sense remains recognizable.</li>
+<li>The Latin sayings are sometimes freer cultural analogues, so <strong>imitation</strong> is thematically plausible. However, the distinction is not uniform enough to assign the entire Latin layer uniquely to Dryden's third category:</li>
+<li>close equivalents such as <code>ACTIONS SPEAK LOUDER THAN WORDS</code> -&gt; <code>FACTA NON VERBA</code>, <code>YOU ONLY LIVE ONCE</code> -&gt; <code>CARPE DIEM</code>, and <code>NOBODY'S PERFECT</code> -&gt; <code>ERRARE HUMANUM EST</code> remain sense-preserving paraphrases;</li>
+<li>loose matches such as <code>COME HOME TO ROOST</code> -&gt; <code>SIC SEMPER TYRANNIS</code>, <code>PAIN IN THE NECK</code> -&gt; <code>PERSONA NON GRATA</code>, and <code>VALEDICTORIAN</code> -&gt; <code>SUMMA CUM LAUDE</code> are more imitation-like;</li>
+<li>the Chinese idiom layer itself contains both close and loose analogues, so freedom does not increase in a mechanically consistent three-stage sequence.</li>
+<li><code>LATIN PHRASE</code> directly instructs the second semantic continuation, but neither it nor <code>EMPTY SQUARE</code> labels a Dryden category. The puzzle contains no drawn three-box sequence with a third empty position. Treating <code>EMPTY SQUARE</code> as that missing third slot would be an unsupported metaphor; the checker response glyph <code>□</code> is UI feedback, not a slot in the puzzle body.</li>
+<li>Therefore <strong>IMITATION</strong> is a plausible thematic completion of Dryden's list, but it is not uniquely selected by the two accepted intermediates or by a consistent row-by-row classification. <code>METAPHRASE</code> and <code>PARAPHRASE</code> describe real layers but are likewise not extracted answers.</li>
+</ul>
+<p>Conclusion: this finite flavor audit produces <strong>no submission candidate</strong>. Do not submit <code>IMITATION</code> without an additional explicit ordering or slot mechanism.</p>
+<h2>Public-Web Research: Q.E.D.</h2>
+<p>Non-interactive searches were run on 2026-07-13 without opening the PuzzleCat page:</p>
+<ul>
+<li>Exact puzzle ID: <code>"XYkPIapg"</code>.</li>
+<li>Title/platform and author combinations: <code>"信达雅" PuzzleCat</code>, <code>"信达雅" "Brightly_"</code>, and <code>"Brightly_" PuzzleCat</code>.</li>
+<li>Exact or near-exact flavor fragments: <code>"谢谢你非常多，先生辜"</code>, <code>"德莱顿先生" "成语和俗语"</code>, and <code>"德莱顿先生将向诸位解释它们的意思"</code>.</li>
+<li>Distinctive body/intermediate combinations: <code>"苦尽甘来" "人非圣贤" "过街老鼠" "钻火得冰"</code>, <code>"LATIN PHRASE" "EMPTY SQUARE"</code>, and <code>"EMPTY SQUARE" "Keep Going!" puzzle</code>.</li>
+<li>Site-restricted searches for GitHub, Gitee, Zhihu, Bilibili, Weibo, WeChat, and QQ Docs; direct GitHub issue/repository and Hacker News searches for the puzzle ID.</li>
+</ul>
+<p>No public discussion, hint, walkthrough, or answer record for this specific puzzle was found. Yahoo indexed only the PuzzleCat puzzle page for the exact ID; Brave, GitHub, and Hacker News had no relevant ID hit. Broad title searches returned unrelated translation-theory material.</p>
+<p>However, the exact combined-intermediate search produced a standard mathematical equivalence that was not previously tested:</p>
+<ul>
+<li>Wolfram MathWorld, <strong>Q.E.D.</strong>: <a href="https://mathworld.wolfram.com/QED.html">https://mathworld.wolfram.com/QED.html</a></li>
+<li><code>Q.E.D.</code> is an abbreviation of the Latin phrase <code>quod erat demonstrandum</code>.</li>
+<li>Symbols used as synonyms for Q.E.D. include a filled square, filled rectangle, or an <strong>empty square</strong>.</li>
+<li>Wikipedia, <strong>Q.E.D.</strong> and <strong>Tombstone (typography)</strong>, checked through the public MediaWiki API:</li>
+<li><a href="https://en.wikipedia.org/wiki/Q.E.D.">https://en.wikipedia.org/wiki/Q.E.D.</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Tombstone_(typography)">https://en.wikipedia.org/wiki/Tombstone_(typography)</a></li>
+<li>The end-of-proof/tombstone symbol may be <code>∎</code> or <code>□</code> and is used in place of <code>Q.E.D.</code>, the traditional abbreviation of <code>quod erat demonstrandum</code>.</li>
+<li>A hollow square (<code>\square</code> or <code>\Box</code>) is a standard form of this symbol.</li>
+</ul>
+<h3>Local Verification</h3>
+<p>The external fact exactly combines all stable local evidence:</p>
+<ol>
+<li><code>LATIN PHRASE</code> was accepted with <code>Keep Going!</code>.</li>
+<li>Continuing the semantic chains produced <code>EMPTY SQUARE</code>, also accepted with <code>Keep Going!</code>.</li>
+<li><code>QUOD ERAT DEMONSTRANDUM</code> is the Latin phrase conventionally abbreviated <code>Q.E.D.</code>.</li>
+<li>An empty/hollow square <code>□</code> is the typographical synonym that replaces <code>Q.E.D.</code> at the end of a proof.</li>
+<li>The puzzle's configured correct-message glyph is exactly <code>□</code>, independently confirming the intended symbol.</li>
+</ol>
+<p>This requires no arbitrary grid size, punctuation rule, translation choice, or external code. The two intermediates are parallel definitions of the same conventional answer:</p>
+<pre><code class="language-text">LATIN PHRASE  -&gt; QUOD ERAT DEMONSTRANDUM -&gt; Q.E.D.
+EMPTY SQUARE  ---------------------------&gt; Q.E.D.
+</code></pre>
+<h2>Recommended Submission</h2>
+<ol>
+<li><code>QED</code> - strongest candidate. It is the conventional name/abbreviation directly synonymous with the empty square; PuzzleCat strips punctuation, so <code>Q.E.D.</code> normalizes to <code>QED</code>.</li>
+<li><code>QUOD ERAT DEMONSTRANDUM</code> - submit only if <code>QED</code> is rejected. It is the expanded Latin phrase, but the square most directly replaces the abbreviation <code>Q.E.D.</code> rather than requiring the full expansion as the answer string.</li>
+</ol>
+<p>The Q.E.D. branch supersedes the prior no-candidate conclusion from the Dryden-only audit. It is mechanically selected by both accepted intermediates and corroborated by the local <code>□</code> success glyph.</p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="098-a7xstzDO.html"><span>← 上一份日志</span><strong>便携计数器</strong></a><a class="sequence-link next" href="100-GC3beioV.html"><span>下一份日志 →</span><strong>元素魔法</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>信达雅 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

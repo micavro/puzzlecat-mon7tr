@@ -3,46 +3,84 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="一个字：从前（TD4KhwRH）的独立题解与验证。">
+  <meta name="description" content="一个字：从前（TD4KhwRH）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>一个字：从前 · PuzzleCat 题解</title>
+  <title>一个字：从前 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>075</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>075 / 289</span><code>TD4KhwRH</code></div>
-        <h1>一个字：从前</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>梦</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/TD4KhwRH" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>5</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>四只蜜蜂构成 <code>B4=BEFORE</code>，地球周围有日出、日落、午夜等英文图词及编号位置；标题要求最终只交一个汉字。</p>
-<h3>我的解法</h3>
-<p>将三幅图读作 <code>SUNRISE、SUNSET、MIDNIGHT</code>，按标号取字母；四只蜜蜂给 <code>BEFORE</code>，进一步取 B 的前一个字母 A。五个输出位按编号排成 <code>DREAM</code>。标题“一个字”不是让交英文中间词，而是把它译成一个汉字，因此为 <code>梦</code>。</p>
-<h3>验证</h3>
-<p>修正底图为八字母 <code>MIDNIGHT</code> 后，五位提取完整且无缺口；<code>DREAM→梦</code>满足格式并通过。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="074-M8UxAs7n.html"><span>← 上一题</span><strong>〖鼠鼠谜〗竹林</strong></a><a class="sequence-link next" href="076-AjxTwX1Q.html"><span>下一题 →</span><strong>一代人的故事</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 一个字：从前</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>075</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">075 / 289</span><code>TD4KhwRH</code></div>
+      <h1>一个字：从前</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/TD4KhwRH" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/075-TD4KhwRH.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>TD4KhwRH - 一个字：从前</h1>
+<ul>
+<li>Owner: <code>chat2-w2-20260712</code></li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 5</li>
+<li>Stopping rule: submit only mechanism-supported candidates; stop at correct, evidence exhaustion (<code>cannot_do</code>), or 20 incorrect.</li>
+</ul>
+<h2>Evidence and observations</h2>
+<ul>
+<li>2026-07-12: Archived successfully with 12 files and 1 downloaded resource.</li>
+<li>Flavor is the lyric <code>从前从前，有个人爱你很久，但偏偏风渐渐把距离吹得好远～</code>; the title and centered <code>(一)</code> explicitly request one Chinese character.</li>
+<li>Four bee images give the rebus <code>B4</code> = <code>BEFORE</code>, directly confirming the title <code>从前</code>.</li>
+<li>The globe is surrounded by conspicuously green arrows and three time-of-day picture/blank clues.</li>
+<li>Top-left picture is <code>SUNRISE</code> (7 letters). Output label 2 sits on its fourth letter: <code>R</code>.</li>
+<li>Right picture is <code>SUNSET</code> (6 letters). Output label 3 sits on its fifth letter: <code>E</code>.</li>
+<li>Bottom picture is <code>NIGHTTIME</code> (9 letters). Output label 1 sits on its third letter <code>G</code>, and output label 5 sits on its first letter <code>N</code>.</li>
+<li>The globe itself is <code>EARTH</code>, supplying the otherwise unmarked output 4 as its initial <code>E</code>.</li>
+<li>The literal translation <code>绿</code> was rejected, showing that <code>GREEN</code> is a character-construction component rather than the final character.</li>
+<li>In Chinese character construction, green/blue-green gives <code>青</code>. The sunrise/sunset/nighttime clues collectively supply the day/sun radical <code>日</code>.</li>
+<li><code>日 + 青 = 晴</code>. The flavor is a direct lyric from Jay Chou's song <code>晴天</code>, independently confirming this exact character.</li>
+<li><code>晴</code> was also rejected. Therefore the time-of-day pictures provide clue contexts for the English words but do not contribute a <code>日</code> radical to the final answer.</li>
+<li>The stable five-letter extraction remains <code>GREEN</code>; in the puzzle's character-component/本格 context its basic one-character rendering is <code>青</code>, also the core component of the flavor-signaled <code>晴</code>.</li>
+<li><code>青</code> was rejected as well. The only fully mechanical payload is therefore the untranslated English word <code>GREEN</code>; title <code>一个字</code>/enumeration <code>(一)</code> must mean one word rather than one Chinese glyph.</li>
+<li><code>GREEN</code> was rejected, forcing correction of the bottom eight-letter picture clue: the crescent moon is <code>MIDNIGHT</code> (8), not <code>NIGHTTIME</code> (9).</li>
+<li>In <code>MIDNIGHT</code>, output label 1 is on the third letter <code>D</code>, and label 5 is on the first letter <code>M</code>.</li>
+<li>The four bee images give <code>B4</code> = <code>BEFORE</code>; the letter before <code>B</code> is <code>A</code>, supplying the missing output 4.</li>
+<li>The exact English extraction <code>DREAM</code> was rejected. Combined with the explicit title <code>一个字</code> and centered <code>(一)</code>, this means the extracted English word must be rendered as one Chinese character: <code>梦</code>.</li>
+</ul>
+<h2>Reasoning</h2>
+<p>Corrected output slots spell <code>DREAM</code>; apply the explicit one-character answer format to obtain <code>梦</code>.</p>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>梦</code> - exact one-character translation of the fully supported <code>DREAM</code> extraction.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>绿</code> - incorrect (<code>回答错误，请再试一次</code>), HTTP 200, prior attempts 0; this rejects the literal color translation and exposes the required <code>青</code> component construction.</li>
+<li><code>晴</code> - incorrect (<code>回答错误，请再试一次</code>), HTTP 200, prior attempts 1; this rejects adding the time-of-day <code>日</code> radical.</li>
+<li><code>青</code> - incorrect (<code>回答错误，请再试一次</code>), HTTP 200, prior attempts 2; this rejects translating the payload to a Chinese component.</li>
+<li><code>GREEN</code> - incorrect (<code>回答错误，请再试一次</code>), HTTP 200, prior attempts 3; this exposed the incorrect <code>NIGHTTIME</code> reading.</li>
+<li><code>DREAM</code> - incorrect (<code>回答错误，请再试一次</code>), HTTP 200, prior attempts 4; retained as the exact intermediate, with answer format requiring its Chinese character.</li>
+<li><code>梦</code> - correct (<code>恭喜你，回答正确！</code>), HTTP 200, prior attempts 5.</li>
+</ul>
+<h2>Final</h2>
+<ul>
+<li>Answer: <code>梦</code></li>
+<li>Intermediate: <code>DREAM</code></li>
+<li>Incorrect submissions: 5</li>
+<li>Series rule confirmed by checker: solve the graphic to an English intermediate, then translate its meaning into the number of Chinese characters specified by the <code>一个字</code>/<code>两个字</code> title and enumeration.</li>
+<li>Stopping criterion: correct verdict received.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="074-M8UxAs7n.html"><span>← 上一份日志</span><strong>〖鼠鼠谜〗竹林</strong></a><a class="sequence-link next" href="076-AjxTwX1Q.html"><span>下一份日志 →</span><strong>一代人的故事</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>一个字：从前 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

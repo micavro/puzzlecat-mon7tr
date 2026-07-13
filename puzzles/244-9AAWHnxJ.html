@@ -3,46 +3,61 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="老地方（微恐）（9AAWHnxJ）的独立题解与验证。">
+  <meta name="description" content="老地方（微恐）（9AAWHnxJ）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>老地方（微恐） · PuzzleCat 题解</title>
+  <title>老地方（微恐） · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>244</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>244 / 289</span><code>9AAWHnxJ</code></div>
-        <h1>老地方（微恐）</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>GRENADE</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/9AAWHnxJ" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>五张现实化场景对应 Counter-Strike 经典拆弹地图，地图名模板中若干字母被编号 1–7 代替。</p>
-<h3>我的解法</h3>
-<p>五图识别为 <code>MIRAGE、DUST_II、NUKE、INFERNO、ANUBIS</code>。按模板回填：1=MIRAGE 第5字母 G，2=第3字母 R，3=INFERNO 第4字母 E，4=第6字母 N，5=ANUBIS 第1字母 A，6=DUST_II 第1字母 D，7=NUKE 第4字母 E。按 1–7 得 <code>GRENADE</code>。</p>
-<h3>验证</h3>
-<p>七个字母均由地图名固定位置给出，答案也符合拆弹游戏语境；提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="243-KDdXEjGS.html"><span>← 上一题</span><strong>美术课呢？</strong></a><a class="sequence-link next" href="245-IH5LNP39.html"><span>下一题 →</span><strong>自我治疗</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 老地方（微恐）</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>244</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">244 / 289</span><code>9AAWHnxJ</code></div>
+      <h1>老地方（微恐）</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/9AAWHnxJ" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/244-9AAWHnxJ.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>9AAWHnxJ《老地方（微恐）》解题日志</h1>
+<h2>识图与题面模板</h2>
+<p>五张“现实化/微恐”场景均对应 Counter-Strike 的经典拆弹地图；归档资源文件名也独立校验了地图名。题面在每个地图名长度模板中以数字替代待抽取字母：</p>
+<ol>
+<li><code>MIRAGE</code> → <code>??2?1?</code></li>
+<li><code>DUST_II</code> → <code>6???_??</code></li>
+<li><code>NUKE</code> → <code>???7</code></li>
+<li><code>INFERNO</code> → <code>???3?4?</code></li>
+<li><code>ANUBIS</code> → <code>5?????</code></li>
+</ol>
+<p>flavor 所说“数据删除”的前置知识与 CS 的拆弹地图（<code>de_</code> map）语境相符。</p>
+<h2>抽取</h2>
+<ul>
+<li>1 = MIRAGE 第 5 字母 <code>G</code></li>
+<li>2 = MIRAGE 第 3 字母 <code>R</code></li>
+<li>3 = INFERNO 第 4 字母 <code>E</code></li>
+<li>4 = INFERNO 第 6 字母 <code>N</code></li>
+<li>5 = ANUBIS 第 1 字母 <code>A</code></li>
+<li>6 = DUST_II 第 1 字母 <code>D</code></li>
+<li>7 = NUKE 第 4 字母 <code>E</code></li>
+</ul>
+<p>按 <code>ans = 1234567</code> 得到 <code>GRENADE</code>。</p>
+<h2>候选与提交记录</h2>
+<ul>
+<li>唯一候选：<code>GRENADE</code>；所有七个位置均由题面直接决定，置信度 100%。</li>
+<li>尚未提交；错误次数 0。正确即停止。</li>
+<li><code>GRENADE</code>：<code>correct</code>（“恭喜你，回答正确！”）。最终错误次数 0。</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="243-KDdXEjGS.html"><span>← 上一份日志</span><strong>美术课呢？</strong></a><a class="sequence-link next" href="245-IH5LNP39.html"><span>下一份日志 →</span><strong>自我治疗</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>老地方（微恐） · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

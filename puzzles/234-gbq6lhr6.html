@@ -3,46 +3,90 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="神鲸谜 003（gbq6lhr6）的独立题解与验证。">
+  <meta name="description" content="神鲸谜 003（gbq6lhr6）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>神鲸谜 003 · PuzzleCat 题解</title>
+  <title>神鲸谜 003 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>234</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>234 / 289</span><code>gbq6lhr6</code></div>
-        <h1>神鲸谜 003</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>AGE</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/gbq6lhr6" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>1</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>复平面直线满足 <code>z=a+bi, b=a+1</code>，线上三个点配儿童、成人工作者、老人遗像，答案标 <code>(3)</code>。</p>
-<h3>我的解法</h3>
-<p>以截距 <code>(0,1)</code> 为尺度，三点约为 <code>(1,2)、(3,4)、(7,8)</code>；把实部、虚部顺次拼成 12、34、78，与三个人生阶段吻合，说明编码的是年龄。题面答案长度为 <code>(3)</code>，将这一概念写成三字母英文即 <code>AGE</code>。</p>
-<h3>验证</h3>
-<p><code>生命线</code> 判错；<code>年龄段</code> 命中中间验证，其反馈也确认英文 <code>age</code>。最终 <code>AGE</code> 可由坐标、人物阶段与三字母长度独立得到，反馈只作验证。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="233-yC1zg7XA.html"><span>← 上一题</span><strong>相生相克</strong></a><a class="sequence-link next" href="235-RKhAJFgi.html"><span>下一题 →</span><strong>神鲸谜 007</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 神鲸谜 003</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>234</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">234 / 289</span><code>gbq6lhr6</code></div>
+      <h1>神鲸谜 003</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/gbq6lhr6" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/234-gbq6lhr6.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>神鲸谜 003（gbq6lhr6）解题记录</h1>
+<h2>协作信息</h2>
+<ul>
+<li>Owner: <code>route-a-20260712</code></li>
+<li>仅负责本题；不提交答案，不执行 resolve。</li>
+<li>题面标签：<code>一枚</code>。本地元数据中未见 FPA 标签。</li>
+</ul>
+<h2>题面观察</h2>
+<ul>
+<li>唯一题面图片画出复平面，横轴 <code>x</code>、纵轴 <code>y</code>。</li>
+<li>方框给出 <code>z=a+bi, b=a+1</code>，所以图中的直线满足 <code>y=x+1</code>。</li>
+<li>直线上从较低到较高的三个位置分别用虚线连接：儿童、成年后使用电脑工作的人、挂黑纱的老人遗像。</li>
+<li>图片底部提问：“这条在复平面上的直线表示什么？(3)”；括号中的 <code>3</code> 很可能要求三个汉字。</li>
+</ul>
+<h2>推理</h2>
+<p>三个图标按直线方向依次表现人的童年、成年与死亡，合起来是完整的生命进程。题目问这条“线”表示什么，并明确要求三字，最自然且严格匹配图示的词是“生命线”。数学条件的作用是确定并画出这条向右上方延伸的直线，图标再赋予其生命历程的语义。</p>
+<h2>候选排序</h2>
+<ol>
+<li><strong>生命线</strong> — 高置信。标准三字词，直接对应从儿童到成人再到死亡的一条线。</li>
+<li><strong>人生路</strong> — 低置信。是常见的三字隐喻，也能覆盖从童年到死亡，但图中画的是数学直线而非道路，题干还直接强调“线”，故不如“生命线”。</li>
+<li><strong>一辈子</strong> — 低置信。三字且概括全部人生阶段，但没有利用“直线”这一核心呈现。</li>
+<li><strong>人生线</strong> — 很低置信。字面匹配图示且为三字，但不是通常说法；正常中文更常说“人生轨迹”（四字）或“生命线”。</li>
+<li><strong>成长线</strong> — 很低置信。儿童到成人可以解释为成长，但遗像强调死亡，因此覆盖不完整。</li>
+</ol>
+<h2>提交记录</h2>
+<ul>
+<li><code>生命线</code>：错误。</li>
+<li>错误次数：1。</li>
+</ul>
+<h2>当前结论</h2>
+<ul>
+<li>建议终局提交：<code>AGE</code></li>
+<li>置信度：确定（中间反馈已明示答案是 <code>age</code>）。</li>
+</ul>
+<h2>错误后复盘</h2>
+<p>“生命线”只解释了图标的泛义，没有解释为什么题面必须给出复数公式、纵轴截距 <code>1</code>，以及三个圆点为什么放在那些精确位置。</p>
+<p>以图中的纵轴截距 <code>(0,1)</code> 为尺度基准，直线上三个圆点相对于截距的位置约为：</p>
+<ul>
+<li>第一点右移 1 单位、上移 1 单位，即 <code>(1,2)</code>，对应儿童图标；将实部与虚部的数字顺次读为 <code>12</code> 岁。</li>
+<li>第二点右移 3 单位、上移 3 单位，即 <code>(3,4)</code>，对应成年工作者；读为 <code>34</code> 岁。</li>
+<li>第三点右移 7 单位、上移 7 单位，即 <code>(7,8)</code>，对应老年遗像；读为 <code>78</code> 岁。</li>
+</ul>
+<p>这些坐标也都严格满足 <code>b=a+1</code>。因此直线编码的是不同的<strong>年龄</strong>。题图在“直线”附近另标注“（线段）”，而答案长度为三字，最自然的精确答案是 <strong>年龄段</strong>：<code>年龄</code> 来自 12、34、78 与人物阶段的对应，<code>段</code> 来自题面对线段的提示。</p>
+<h3>修正后候选排序</h3>
+<ol>
+<li><strong>年龄段</strong> — 高置信；同时解释坐标数字、人物年龄、三字长度及“线段”提示。</li>
+<li><strong>年龄线</strong> — 低置信；解释坐标数字和直线，但不是自然常用词，也没有利用“线段”提示。</li>
+<li><strong>年龄表</strong> — 很低置信；可描述数据，却与线段呈现不符。</li>
+</ol>
+<h2>中间答案反馈与终局</h2>
+<ul>
+<li>提交 <code>年龄段</code> 后，站点返回 intermediate：<code>正确！答案是“age”</code>。</li>
+<li>这不是错误，累计错误次数仍为 1。</li>
+<li><code>(3)</code> 因而不是“三个汉字”，而是要求三个英文字母。</li>
+<li>图上的三个复数点将实部、虚部拼成 <code>12</code>、<code>34</code>、<code>78</code>，人物图标验证这些数字是年龄；所求概念直接翻译为英文 <strong>AGE</strong>。</li>
+<li>中间反馈已明确给出最终字符串，不存在进一步取字、移位或复数运算的证据。因此下一步应直接提交 <code>AGE</code>，不再变换。</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="233-yC1zg7XA.html"><span>← 上一份日志</span><strong>相生相克</strong></a><a class="sequence-link next" href="235-RKhAJFgi.html"><span>下一份日志 →</span><strong>神鲸谜 007</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>神鲸谜 003 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

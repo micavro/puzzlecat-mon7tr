@@ -3,46 +3,84 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="【星谜004】Made in Russia（m0fr8Uar）的独立题解与验证。">
+  <meta name="description" content="【星谜004】Made in Russia（m0fr8Uar）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>【星谜004】Made in Russia · PuzzleCat 题解</title>
+  <title>【星谜004】Made in Russia · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>058</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>058 / 289</span><code>m0fr8Uar</code></div>
-        <h1>【星谜004】Made in Russia</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>PAST</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/m0fr8Uar" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>图中有按规则网格排布的彩色圆点与两个灰色方块，答案长度为 4；标题与配色都指向俄罗斯方块。</p>
-<h3>我的解法</h3>
-<p>俄罗斯方块的标准颜色把圆点提示成方格。把各点扩成格子后，四组彼此分离的轮廓从左到右形成 <code>P、A、S、T</code>：第一组是带上半圆的竖干，第二组两腿和横杠组成 A，后两组直接呈 S、T 形。于是提取 <code>PAST</code>。</p>
-<h3>验证</h3>
-<p>四个字母与 <code>(4)</code> 一致；<code>PAST</code> 本地提交一次即为 <code>correct</code>，错误 0 次。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="057-51auzMeL.html"><span>← 上一题</span><strong>【星谜003】你图片带括号</strong></a><a class="sequence-link next" href="059-TSvKhwRH.html"><span>下一题 →</span><strong>【棱镜谜】一词多义</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 【星谜004】Made in Russia</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>058</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">058 / 289</span><code>m0fr8Uar</code></div>
+      <h1>【星谜004】Made in Russia</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/m0fr8Uar" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/058-m0fr8Uar.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>m0fr8Uar solve log</h1>
+<h2>2026-07-12 03:34:25 +08:00 - Initial inspection</h2>
+<ul>
+<li>Puzzle: <code>【星谜004】Made in Russia</code></li>
+<li>Local archive checked: <code>metadata.json</code>, <code>content.txt</code>, <code>page.txt</code>, <code>resources.json</code>, and the sole image asset.</li>
+<li>The archived Chinese text is mojibake, but its intended flavor is recoverable as approximately: “这怎么就只有一些点和方块啊，不过看颜色有些似曾相识的样子……是某款游戏吗？”</li>
+<li>The archived wrong-answer message is recoverable as approximately: “Nope，或许把点转化成方块？”</li>
+<li>Image observations:</li>
+<li>Header says “星谜 004”.</li>
+<li>Main field contains cyan, yellow, blue, orange, green, and purple circles plus two gray squares.</li>
+<li>Dots visibly lie on a regular lattice.</li>
+<li>The colors strongly resemble modern Tetris guideline colors: cyan <code>I</code>, yellow <code>O</code>, blue <code>J</code>, orange <code>L</code>, green <code>S</code>, purple <code>T</code>; red <code>Z</code> is notably absent.</li>
+<li>Title “Made in Russia” independently points to Tetris, created in the Soviet Union by Alexey Pajitnov.</li>
+<li>Initial hypothesis: convert circles to unit square cells and interpret each color as its canonical Tetris tetromino. Determine what the plotted positions encode after completing/placing pieces; likely an extraction from the resulting board rather than merely answering “Tetris”.</li>
+<li>Confidence at this stage: Tetris mechanism 0.95; final answer unknown.</li>
+</ul>
+<h2>2026-07-12 03:40:44 +08:00 - Coordinate and extraction verification</h2>
+<ul>
+<li>Recovered the otherwise garbled answer enumeration directly from UTF-8 bytes: the line after the image is <code>（4）</code>.</li>
+<li>Pixel component analysis found 22 colored circles and 2 gray squares. Circle centers sit on an approximately 36-pixel integer lattice. Representative normalized coordinates make the four widely separated macro-groups explicit:</li>
+<li>Group 1: a vertical run near <code>x=0</code> plus a compact upper loop near <code>x=2..4</code>.</li>
+<li>Group 2: mirrored left/right strokes, a horizontal middle run, and two pre-existing gray squares continuing the lower legs.</li>
+<li>Group 3: three cells stepping diagonally.</li>
+<li>Group 4: two upper cells with one centered below.</li>
+<li>Mechanism interpretation:
+  1. “Made in Russia”, the flavor's emphasized <code>颜色</code> / <code>某款游戏</code>, and the guideline colors identify <strong>Tetris / 俄罗斯方块</strong>.
+  2. Treat the colored points as square-block positions, as explicitly suggested by the wrong-answer feedback. Enlarging/replacing the points with block cells makes four block-letter silhouettes.
+  3. Read left to right, the silhouettes are:<ul>
+<li><code>P</code>: long left stem plus an upper bowl.</li>
+<li><code>A</code>: two legs plus the cyan middle bar; the two gray squares are already-block portions of the lower legs.</li>
+<li><code>S</code>: the green stair-step / S-shaped block.</li>
+<li><code>T</code>: the purple top bar plus central stem.</li>
+</ul>
+</li>
+<li>Primary candidate: <strong>PAST</strong>.</li>
+<li>Cross-checks:</li>
+<li>Exactly four output glyph groups match enumeration <code>(4)</code>.</li>
+<li>The letter shapes remain identifiable over reasonable block-size choices; this is not dependent on color-name initials.</li>
+<li>Tetris is the necessary thematic instruction for converting round colored markers into block glyphs.</li>
+<li>Alternative considered: <code>TETRIS</code>, <code>俄罗斯方块</code>, or <code>1984</code> merely from the title/game identification. These fail the explicit length-4 enumeration or do not explain the four spatial glyph groups. <code>PAST</code> explains all supplied structure.</li>
+<li>Confidence: <strong>0.92</strong>.</li>
+<li>Recommendation: <strong>submit <code>PAST</code></strong>. No account session or submission action was used by this solver.</li>
+</ul>
+<h2>Submission Result</h2>
+<ul>
+<li>Submitted: <code>2026-07-11T19:41:47Z</code></li>
+<li>Answer: <code>PAST</code></li>
+<li>Verdict: <code>correct</code></li>
+<li>Incorrect submissions for this practice run: <code>0 / 20</code></li>
+<li>Evidence: <code>submissions/2026-07-11T19-41-47-416Z/submission.json</code></li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="057-51auzMeL.html"><span>← 上一份日志</span><strong>【星谜003】你图片带括号</strong></a><a class="sequence-link next" href="059-TSvKhwRH.html"><span>下一份日志 →</span><strong>【棱镜谜】一词多义</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>【星谜004】Made in Russia · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

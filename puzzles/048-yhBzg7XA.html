@@ -3,46 +3,67 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="type（yhBzg7XA）的独立题解与验证。">
+  <meta name="description" content="type（yhBzg7XA）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>type · PuzzleCat 题解</title>
+  <title>type · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>048</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>048 / 289</span><code>yhBzg7XA</code></div>
-        <h1>type</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>9256</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/yhBzg7XA" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>示例把中文词的拼音首字母分组映射到传统手机九宫格按键，如 <code>PQRS → 7</code>、<code>GHI → 4</code>、<code>DEF → 3</code>。</p>
-<h3>我的解法</h3>
-<p>目标短语按连续字母组切分：<code>我小姨子</code> 的首字母为 <code>WXYZ</code>，对应 9；<code>啊不吃</code> 为 <code>ABC</code>，对应 2；<code>就哭了</code> 为 <code>JKL</code>，对应 5；<code>明年哦</code> 为 <code>MNO</code>，对应 6。合并得 <code>9256</code>。</p>
-<h3>验证</h3>
-<p>四组恰好覆盖电话键盘上的四个标准字母区间；<code>9256</code> 首次提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="047-DnOPz728.html"><span>← 上一题</span><strong>To ronto</strong></a><a class="sequence-link next" href="049-653d5dzE.html"><span>下一题 →</span><strong>wora1e</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · type</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>048</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">048 / 289</span><code>yhBzg7XA</code></div>
+      <h1>type</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/yhBzg7XA" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/048-yhBzg7XA.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log — type</h1>
+<ul>
+<li>Puzzle ID: <code>yhBzg7XA</code></li>
+<li>Owner: <code>codex-sub-m-20260712</code></li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0</li>
+</ul>
+<h2>Observations and reasoning</h2>
+<ul>
+<li>Archived locally; independent solve only.</li>
+<li>Examples use pinyin initials / literal Latin letters grouped by classic phone keypad: <code>喷泉人生</code> -&gt; P Q R S -&gt; key 7; <code>根号i</code> -&gt; G H I -&gt; key 4; <code>大鹅方</code> -&gt; D E F -&gt; key 3.</li>
+<li>Target initials split naturally as <code>我小姨子</code> = WXYZ -&gt; 9; <code>啊不吃</code> = ABC -&gt; 2; <code>就哭了</code> = JKL -&gt; 5; <code>明年哦</code> = MNO -&gt; 6.</li>
+<li>Therefore the requested output is <code>9256</code>.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ul>
+<li>
+<ol>
+<li><code>9256</code> — exact T9 mapping of the four consecutive initial groups.</li>
+</ol>
+</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>9256</code> — correct (first submission).</li>
+</ul>
+<h2>Final classification</h2>
+<ul>
+<li><code>correct</code>, answer <code>9256</code>, incorrect count 0.</li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Resolve on confirmed verdict; stop if evidence cannot distinguish a candidate; maximum 20 incorrect.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="047-DnOPz728.html"><span>← 上一份日志</span><strong>To ronto</strong></a><a class="sequence-link next" href="049-653d5dzE.html"><span>下一份日志 →</span><strong>wora1e</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>type · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

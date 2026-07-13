@@ -3,46 +3,62 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="明诚谜009（9XXWHnxJ）的独立题解与验证。">
+  <meta name="description" content="明诚谜009（9XXWHnxJ）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>明诚谜009 · PuzzleCat 题解</title>
+  <title>明诚谜009 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>198</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>198 / 289</span><code>9XXWHnxJ</code></div>
-        <h1>明诚谜009</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>RIVER</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/9XXWHnxJ" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>两天考试时间表中，每科考试时长除以 10 等于该科英文名长度；需要比较相同钟点的字母。</p>
-<h3>我的解法</h3>
-<p>两天科目依次可填 <code>GEOGRAPHY、HISTORY、VIROLOGY、ENGLISH、FRENCH</code> 与 <code>ART、MUSIC、VENETIAN、CHEMISTRY、LITERATURE</code>。从各考试开始，每十分钟放置下一个字母；比较同一时刻，08:40、09:50、11:00、13:20、15:30 的两边字母相同，分别是 R、I、V、E、R。</p>
-<h3>验证</h3>
-<p>每科时长与词长吻合，五个相同时刻依序拼成 <code>RIVER</code>；本地提交记录为 correct。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="197-eJ0oQPLb.html"><span>← 上一题</span><strong>明诚谜008</strong></a><a class="sequence-link next" href="199-TSUKhwRH.html"><span>下一题 →</span><strong>最烂的谜题只需枚举</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 明诚谜009</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>198</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">198 / 289</span><code>9XXWHnxJ</code></div>
+      <h1>明诚谜009</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/9XXWHnxJ" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/198-9XXWHnxJ.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: 9XXWHnxJ</h1>
+<h2>Puzzle</h2>
+<ul>
+<li>Owner: <code>codex-sub-ab-20260713</code></li>
+<li>Title: <code>明诚谜009</code></li>
+<li>The archived account state already records a correct submission of <code>RIVER</code> from an earlier worker.</li>
+</ul>
+<h2>Mechanism</h2>
+<p>Translate the pictured subjects to their intended English names. Each exam duration in minutes divided by 10 equals the word length:</p>
+<ul>
+<li>Day 1: GEOGRAPHY 9, HISTORY 7, VIROLOGY 8, ENGLISH 7, FRENCH 6.</li>
+<li>Day 2: ART 3, MUSIC 5, VENETIAN 8, CHEMISTRY 9, LITERATURE 10.</li>
+</ul>
+<p>Starting at each exam's start time, place one successive letter of the English subject name every ten minutes. Compare Day 1 and Day 2 at the same clock times and extract the matching letters:</p>
+<ul>
+<li>08:40: GEOGRAPHY letter 5 <code>R</code> = ART letter 2 <code>R</code>.</li>
+<li>09:50: HISTORY letter 2 <code>I</code> = MUSIC letter 4 <code>I</code>.</li>
+<li>11:00: VIROLOGY letter 1 <code>V</code> = VENETIAN letter 1 <code>V</code>.</li>
+<li>13:20: ENGLISH letter 1 <code>E</code> = CHEMISTRY letter 3 <code>E</code>.</li>
+<li>15:30: FRENCH letter 2 <code>R</code> = LITERATURE letter 5 <code>R</code>.</li>
+</ul>
+<p>In time order this spells <code>RIVER</code>.</p>
+<h2>Candidate and verdict</h2>
+<ul>
+<li><code>RIVER</code> — uniquely derived and already accepted by the site (<code>submissions/2026-07-12T20-46-08-250Z/submission.json</code>).</li>
+<li>Final incorrect count: 0.</li>
+</ul>
+<h2>Stopping criteria</h2>
+<p>Resolve correct using the archived accepted answer; do not create a redundant practice submission.</p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="197-eJ0oQPLb.html"><span>← 上一份日志</span><strong>明诚谜008</strong></a><a class="sequence-link next" href="199-TSUKhwRH.html"><span>下一份日志 →</span><strong>最烂的谜题只需枚举</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>明诚谜009 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

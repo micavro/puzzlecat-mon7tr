@@ -3,46 +3,134 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="公式化 ISIS 谜题（kZtS2WKJ）的独立题解与验证。">
+  <meta name="description" content="公式化 ISIS 谜题（kZtS2WKJ）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>公式化 ISIS 谜题 · PuzzleCat 题解</title>
+  <title>公式化 ISIS 谜题 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>102</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>102 / 289</span><code>kZtS2WKJ</code></div>
-        <h1>公式化 ISIS 谜题</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>SOLVER</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/kZtS2WKJ" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>六行中文句子要按给定词长和标点翻成英文，每句四个内容词的首字母结构都是 <code>I S I S</code>；斜线前数字用于索引。</p>
-<h3>我的解法</h3>
-<p>六句被长度强制为 <code>I substitute, I simplify</code>、<code>I sprint, I score</code>、<code>I slay! I'm Spire!</code>、<code>I'm six, it's seven</code>、<code>I sleep. I'm sleepy</code>、<code>I shoot, I survive</code>。去掉空格和标点后，分别按 5、11、3、11、4、10 取字母，得到 <code>S O L V E R</code>。</p>
-<h3>验证</h3>
-<p>所有词长、缩写标点和 ISIS 首字母校验同时成立；<code>SOLVER</code> 首次提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="101-GYnbeioV.html"><span>← 上一题</span><strong>克制关系</strong></a><a class="sequence-link next" href="103-PV7e2esI.html"><span>下一题 →</span><strong>六月十日的笔记本</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 公式化 ISIS 谜题</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>102</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">102 / 289</span><code>kZtS2WKJ</code></div>
+      <h1>公式化 ISIS 谜题</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/kZtS2WKJ" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/102-kZtS2WKJ.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve Log: kZtS2WKJ</h1>
+<ul>
+<li>Title: <code>公式化 ISIS 谜题</code></li>
+<li>Draw: <code>tmp/practice-draw.json</code> (<code>2026-07-12T05:02:34.723Z</code>)</li>
+<li>Solver: child agent coordinated by root</li>
+<li>Submission limit: 20 incorrect answers</li>
+<li>Started: <code>2026-07-12</code> (Asia/Shanghai)</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Six Caesar-themed paired statements follow the pattern <code>I [verb], I [verb/state]</code> with number-and-punctuation annotations.</li>
+<li>Flavor text replaces <code>Veni, vidi, vici</code> with <code>我搜，我解决</code>, pointing to Caesar, Latin, formulas, or indexed phrase transformations.</li>
+<li>Title explicitly says <code>公式化 ISIS 谜题</code>; <code>ISIS</code> may denote the repeated grammatical pattern <code>I ... I ...</code> rather than the organization.</li>
+<li>Cooldown is three minutes after an incorrect answer.</li>
+</ul>
+<h2>Reasoning</h2>
+<ul>
+<li>The numbers after each slash are standard word-length enumerations, with punctuation preserved. They force an English rendering of each Chinese quotation.</li>
+<li>Every forced English rendering has four content tokens whose initials are <code>I S I S</code>, explaining the title.</li>
+<li>The number before the slash is an extraction index into the full English sentence after removing spaces and punctuation (apostrophes included in the removal, not counted as letters).</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Row</th>
+<th>Forced English sentence</th>
+<th>Enumeration</th>
+<th>Index</th>
+<th>Indexed letter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>I substitute, I simplify.</code></td>
+<td><code>1 10, 1 8</code></td>
+<td>5</td>
+<td><code>S</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>I sprint, I score.</code></td>
+<td><code>1 6, 1 5</code></td>
+<td>11</td>
+<td><code>O</code></td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>I slay! I'm Spire!</code></td>
+<td><code>1 4! 1'1 5!</code></td>
+<td>3</td>
+<td><code>L</code></td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>I'm six, it's seven.</code></td>
+<td><code>1'1 3, 2'1 5</code></td>
+<td>11</td>
+<td><code>V</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>I sleep. I'm sleepy.</code></td>
+<td><code>1 5. 1'1 6.</code></td>
+<td>4</td>
+<td><code>E</code></td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>I shoot, I survive.</code></td>
+<td><code>1 5, 1 7</code></td>
+<td>10</td>
+<td><code>R</code></td>
+</tr>
+</tbody>
+</table>
+<p>Checks on the ambiguous rows:</p>
+<ul>
+<li>Row 3 references the game <em>Slay the Spire</em>, so <code>slay</code> and <code>Spire</code> fit both meaning and lengths.</li>
+<li>Row 4 contracts to <code>I'm</code> and <code>it's</code>, exactly matching <code>1'1</code> and <code>2'1</code>.</li>
+<li>Row 5 requires <code>sleepy</code> rather than <code>tired</code> because the second S-word has length 6.</li>
+</ul>
+<p>Concatenating the extracted letters gives <code>SOLVER</code>. This also matches the flavor quote's final word <code>解决</code> / "solve" and the puzzlehunt context.</p>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>SOLVER</code> — confidence <code>0.995</code>.</li>
+<li>No meaningful alternative; all six enumerations and indexed letters close exactly.</li>
+</ol>
+<h2>Attempts</h2>
+<ul>
+<li><code>SOLVER</code> - correct (<code>0 / 20</code> incorrect), submitted by root on <code>2026-07-12</code>.</li>
+<li>Evidence: <code>submissions/2026-07-12T05-06-57-679Z/submission.json</code>.</li>
+</ul>
+<h2>Stop decision</h2>
+<ul>
+<li><strong>Correct.</strong> The server accepted <code>SOLVER</code> on the first submission.</li>
+</ul>
+<h2>Lesson</h2>
+<ul>
+<li>Treat word lengths, punctuation, and contractions as a constraint system before choosing translation synonyms. Here they fixed every English sentence; the title supplied the <code>ISIS</code> initial-pattern checksum, and the pre-slash numbers supplied extraction indices.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="101-GYnbeioV.html"><span>← 上一份日志</span><strong>克制关系</strong></a><a class="sequence-link next" href="103-PV7e2esI.html"><span>下一份日志 →</span><strong>六月十日的笔记本</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>公式化 ISIS 谜题 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

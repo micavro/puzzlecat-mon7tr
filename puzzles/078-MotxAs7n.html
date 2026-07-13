@@ -3,46 +3,80 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="七字谜（MotxAs7n）的独立题解与验证。">
+  <meta name="description" content="七字谜（MotxAs7n）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>七字谜 · PuzzleCat 题解</title>
+  <title>七字谜 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>078</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>078 / 289</span><code>MotxAs7n</code></div>
-        <h1>七字谜</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>FONT MASTER</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/MotxAs7n" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>交互页只有输入框，没有普通脚本逻辑，却嵌入了自定义字体 <code>PuzzleFont</code>；输入正确文字后，字形本身会被替换成下一条提示。</p>
-<h3>我的解法</h3>
-<p>本地比较字体轮廓可见少量汉字被故意改造。输入诗句续句等正确答案会进入一串文字操作链，而终点字符 <code>赢</code> 的自定义字形直接画出两行英文 <code>FONT / MASTER</code>。因此答案不是字符“赢”，而是字体中明确显示的终局文本。</p>
-<h3>验证</h3>
-<p>终局文本与整题的自定义字体机制相互解释；<code>FONT MASTER</code> 提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="077-qWjUKLri.html"><span>← 上一题</span><strong>一则运算</strong></a><a class="sequence-link next" href="079-4SL9OF2B.html"><span>下一题 →</span><strong>不削能玩？</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 七字谜</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>078</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">078 / 289</span><code>MotxAs7n</code></div>
+      <h1>七字谜</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/MotxAs7n" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/078-MotxAs7n.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: MotxAs7n - 七字谜</h1>
+<ul>
+<li>Owner: <code>lane-c-20260712</code></li>
+<li>Claimed: 2026-07-12T09:33:23.442Z</li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0</li>
+<li>Submitted answers: none</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Puzzle is tagged <code>字谜</code>, <code>交互</code>, and <code>交互谜题</code>.</li>
+<li>Archived through the coordinated browser workflow; no external resources were downloaded.</li>
+<li>The interactive asset is a single text input with placeholder <code>接醉里挑灯看剑</code>; it has no JavaScript. Its only mechanism is a custom embedded OpenType font named <code>PuzzleFont</code>.</li>
+<li>The embedded font is based on Source Han Sans CN Normal 2.005 and contains 30,939 glyphs. A same-version official Source Han Sans reference was downloaded for reproducible outline comparison.</li>
+<li><code>analyze_font.py</code> hashes the resolved vector outline for every common Unicode codepoint. It found a small set of deliberately replaced Chinese glyphs amid an otherwise ordinary font.</li>
+<li>Rendering the altered glyph for <code>赢</code> produces a bespoke two-line underlined message: <code>FONT</code> / <code>MASTER</code>, not the Chinese character.</li>
+</ul>
+<h2>Reasoning</h2>
+<p>The font substitutions turn a correct response into the next clue. The recovered opening chain is:</p>
+<ol>
+<li><code>接醉里挑灯看剑</code> asks for the continuation of the verse. Entering <code>梦回吹角连营</code> renders <code>逆法语文中学</code>.</li>
+<li><code>逆法语文中学</code> means reverse <code>法语文中学</code>, giving <code>学中文语法</code>. Entering that renders <code>半莱阳旁张</code>.</li>
+<li><code>半莱阳旁张</code> asks for the useful halves/components of <code>莱 阳 旁 张</code>: <code>来 日 方 长</code>. Entering <code>来日方长</code> renders <code>对文收徒</code>.</li>
+<li>The remaining deliberately replaced characters continue this character-operation chain. Full traversal is not needed to identify the platform answer because the terminal <code>赢</code> glyph itself has a unique, explicit English rendering.</li>
+</ol>
+<p>The terminal message is especially strong evidence: <code>FONT MASTER</code> describes exactly the custom-font construction used by the puzzle and is not a generic success symbol or an inferred synonym.</p>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>FONT MASTER</code> - explicit text drawn by the handcrafted terminal glyph; overwhelmingly preferred.</li>
+<li><code>FONTMASTER</code> - normalization-equivalent spelling without the displayed space, unnecessary because the platform strips spaces.</li>
+<li><code>赢</code> - merely the input codepoint that reveals the terminal message, not the message itself.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>FONT MASTER</code> - correct (<code>2026-07-12T09:42:13.322Z</code>); incorrect count remains 0.</li>
+</ul>
+<h2>Resolution</h2>
+<ul>
+<li>Outcome: <code>correct</code></li>
+<li>Accepted answer: <code>FONT MASTER</code></li>
+<li>Incorrect submissions: 0</li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Submit only answers supported by the interaction mechanism and an explicit extraction.</li>
+<li>Stop at 20 incorrect submissions, or earlier as <code>cannot_do</code> if archived evidence and reproducible interaction no longer distinguish candidates.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="077-qWjUKLri.html"><span>← 上一份日志</span><strong>一则运算</strong></a><a class="sequence-link next" href="079-4SL9OF2B.html"><span>下一份日志 →</span><strong>不削能玩？</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>七字谜 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

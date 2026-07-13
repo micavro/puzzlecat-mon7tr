@@ -3,46 +3,60 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="吃什么（F1Myul5g）的独立题解与验证。">
+  <meta name="description" content="吃什么（F1Myul5g）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>吃什么 · PuzzleCat 题解</title>
+  <title>吃什么 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>123</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>123 / 289</span><code>F1Myul5g</code></div>
-        <h1>吃什么</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>烤鸡腿</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/F1Myul5g" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>六个不同汉字 A–F 满足多组两字食物、偏旁和烹饪方式条件，要求输出 FBC。</p>
-<h3>我的解法</h3>
-<p>节日食物 AB 取 <code>火鸡</code>，故 A=火、B=鸡；令 C=腿，则 AC=<code>火腿</code>、BC=<code>鸡腿</code>。D/E/F 都以火为偏旁；“每隔七天吃一次”影射疯狂星期四，DB=<code>炸鸡</code>，所以 D=炸。再取 EB=<code>烧鸡</code>、FB=<code>烤鸡</code>，而 EF=<code>烧烤</code> 正是烹饪手法，于是 E=烧、F=烤。所求 FBC 即 <code>烤鸡腿</code>。</p>
-<h3>验证</h3>
-<p>所有食物、偏旁、周期和烹饪条件逐项闭合，零错通过。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="122-GrbeioVN.html"><span>← 上一题</span><strong>只需枚举</strong></a><a class="sequence-link next" href="124-hv41SWQP.html"><span>下一题 →</span><strong>启动</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 吃什么</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>123</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">123 / 289</span><code>F1Myul5g</code></div>
+      <h1>吃什么</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/F1Myul5g" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/123-F1Myul5g.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>F1Myul5g《吃什么》解题日志</h1>
+<ul>
+<li>owner: <code>codex-sub-j-20260712</code></li>
+<li>状态: correct</li>
+<li>错误提交数: 0</li>
+<li>停止标准: 题面机制无法唯一化时记为 <code>cannot_do</code>；错误达到 20 次时停止。</li>
+</ul>
+<h2>观察</h2>
+<ul>
+<li>A、B、C、D、E、F 是六个不同汉字。</li>
+<li>AB、AC、BC 都是食物；AB 通常在某个节日被食用。</li>
+<li>D、E、F 都以 A 为偏旁；DB、EB、FB 都是食物。</li>
+<li>DB 通常每隔七天被食用；EF 是烹饪手法；提交 FBC。</li>
+</ul>
+<h2>推理与候选</h2>
+<ul>
+<li>节日食物 <code>火鸡</code> 通常在感恩节食用，因此 A=<code>火</code>、B=<code>鸡</code>。</li>
+<li>同时要求 AC 与 BC 均为食物，取 C=<code>腿</code>：<code>火腿</code>、<code>鸡腿</code> 均成立。</li>
+<li>D/E/F 均以“火”为偏旁。</li>
+<li>“每隔七天被食用”暗指每周四一次的“疯狂星期四”，故 DB=<code>炸鸡</code>，D=<code>炸</code>。</li>
+<li>剩余两种火旁食物可取 EB=<code>烧鸡</code>、FB=<code>烤鸡</code>，且 EF=<code>烧烤</code> 正是一种烹饪手法，因此 E=<code>烧</code>、F=<code>烤</code>。</li>
+<li>所求 FBC=<code>烤鸡腿</code>。所有条件逐项闭环，候选唯一且无需枚举同义词。</li>
+</ul>
+<h2>提交记录</h2>
+<ul>
+<li><code>烤鸡腿</code> → correct（服务器确认；错误数 0）。</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="122-GrbeioVN.html"><span>← 上一份日志</span><strong>只需枚举</strong></a><a class="sequence-link next" href="124-hv41SWQP.html"><span>下一份日志 →</span><strong>启动</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>吃什么 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

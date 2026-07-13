@@ -3,46 +3,89 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="【🚌】狂想（S3Pj2oe3）的独立题解与验证。">
+  <meta name="description" content="【🚌】狂想（S3Pj2oe3）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>【🚌】狂想 · PuzzleCat 题解</title>
+  <title>【🚌】狂想 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>068</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>068 / 289</span><code>S3Pj2oe3</code></div>
-        <h1>【🚌】狂想</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>48184</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/S3Pj2oe3" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>7</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>三组音、形、义小题给出三个中间答案；随后两辆“十六路”公交和道路标号组成一条索引、进制与减法指令。</p>
-<h3>我的解法</h3>
-<p>三题分别得到 <code>TRAFFIC</code>、<code>BUSH</code>、<code>84</code>。把前两词拼成 <code>TRAFFICBUSH</code>，用圈号索引读出 <code>SUBTRACT ... FROM ...</code>；右车圈号 <code>8787</code> 再索引成十六进制 <code>BCBC</code>，左车文字要求放入第三题答案 <code>84</code>。因此计算 <code>0xBCBC - 0x84 = 0xBC38</code>，再按“经十路”的十进制提示转成 <code>48184</code>。</p>
-<h3>验证</h3>
-<p>三个中间答案均获检查器确认，最终算式精确给出 <code>48184</code>；提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="067-YLdhZAop.html"><span>← 上一题</span><strong>【鼠鼠谜】道味海上</strong></a><a class="sequence-link next" href="069-5t7uzMeL.html"><span>下一题 →</span><strong>〖NbH₂谜〗Wordle</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 【🚌】狂想</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>068</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">068 / 289</span><code>S3Pj2oe3</code></div>
+      <h1>【🚌】狂想</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/S3Pj2oe3" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/068-S3Pj2oe3.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log — S3Pj2oe3《【🚌】狂想》</h1>
+<ul>
+<li>Owner: <code>codex-sub-aa-20260713</code></li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 7</li>
+<li>Stopping limit: 50 incorrect submissions, with evidence-based candidates only</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Three clue triples each map to an English word or number by sound, appearance, and meaning. The bus clue must take a different role in each row.</li>
+<li>Extraction image shows two route-16 buses on 经十路, road labels/numbers, and a central black divider/object. The left bus window literally says “第三题正确答案”; the right bus windows read <code>8787</code>.</li>
+</ul>
+<h2>Reasoning and candidates</h2>
+<ul>
+<li>Row 1 = <code>TRAFFIC</code>: Chinese 交通 (“traffic”) sounds very close to 绞痛; <code>TRAGIC</code> is visually one local letter change from <code>TRAFFIC</code> (<code>G</code> versus <code>FF</code>); a bus is traffic/transport by meaning. Thus bus supplies meaning.</li>
+<li>Row 2 = <code>BUSH</code>: a bush is a PLANT by meaning; 不是 sounds close to 布什/Bush; <code>BUS</code> is visibly contained in <code>BUSH</code>. Thus bus supplies shape.</li>
+<li>Row 3 = <code>84</code>: 巴士 (bus) sounds like 八四; “84消毒液” gives DISINFECTION by meaning; 曼 points through 黑曼巴/Kobe's jersey-number association. The server confirmed <code>84</code>.</li>
+<li>The bus roles are therefore meaning / shape / sound, satisfying rule 2.</li>
+<li>Concatenate the first two subanswers as <code>TRAFFICBUSH</code> and index it 1-based:</li>
+<li>Circled <code>10,9,8</code> decode to <code>S,U,B</code>.</li>
+<li><code>1,2,3,7,1</code> decode to <code>T,R,A,C,T</code>.</li>
+<li>This spells <code>SUBTRACT</code> around the left bus.</li>
+<li>At the center, <code>4,2</code> decode to <code>F,R</code>, followed by literal <code>O,M</code>, spelling <code>FROM</code>.</li>
+<li>Replace the left bus's “第三题正确答案” with <code>84</code>; the right bus contains <code>8787</code>. The full visual instruction is <code>SUBTRACT 84 FROM 8787</code>.</li>
+<li>A raw written-digit result <code>8703</code> was rejected. Therefore the otherwise redundant road/base labels matter: the operands are riding “十六路” buses and must be treated as hexadecimal, while “经十路” cues conversion through/base 10 for the requested result.</li>
+<li>Treating both operands as hexadecimal and converting the result to decimal gives <code>34563</code>, but that was also rejected.</li>
+<li>The reverse base-conversion interpretation (<code>8703</code> decimal expressed as hex <code>21FF</code>) was rejected too. A negative decimal try normalized to the already rejected positive digits and was also registered.</li>
+<li>Crucial correction: the circled numbers in the bus windows use the same <code>TRAFFICBUSH</code> indexing as the road labels:</li>
+<li>Left bus <code>8,4</code> -&gt; letters <code>B,F</code>, i.e. hexadecimal <code>BF</code>.</li>
+<li>Right bus <code>8,7,8,7</code> -&gt; letters <code>B,C,B,C</code>, i.e. hexadecimal <code>BCBC</code>.</li>
+<li>Thus the entire image says <code>SUBTRACT BF FROM BCBC</code>. “十六路” tells us these are base-16 operands.</li>
+<li>Both decimal <code>48125</code> and hexadecimal <code>BBFD</code> renderings were rejected. Reversing both window strings and decoding them (<code>CBCB - FB = 51920</code>) was also rejected.</li>
+<li>New visual distinction: the right bus's <code>8787</code> is already drawn with the same circled index typography as the road clues, while the left bus contains an uncircled placeholder saying to insert the third correct answer. Therefore only the right value is indexed:</li>
+<li>Right circled <code>8787</code> -&gt; <code>BCBC</code>.</li>
+<li>Left third answer remains literal <code>84</code>.</li>
+<li>In base 16, <code>0xBCBC - 0x84 = 0xBC38 = 48184</code> decimal. Given 经十路, submit decimal <code>48184</code>; the server confirmed it.</li>
+<li>Final answer: <code>48184</code>.</li>
+</ul>
+<h2>Submission history</h2>
+<ul>
+<li><code>TRAFFIC</code> — accepted intermediate: “恭喜你完成题目一，题目一的答案为TRAFFIC”.</li>
+<li><code>BUSH</code> — accepted intermediate: “恭喜你完成题目二，题目二的答案为BUSH”.</li>
+<li><code>84</code> — accepted intermediate: “恭喜你完成题目三，题目三的答案为84”.</li>
+<li><code>8703</code> — incorrect. This establishes that the base-conversion decoration is operative rather than cosmetic. Incorrect count: 1.</li>
+<li><code>34563</code> — incorrect; rejected the interpretation “hexadecimal operands, decimal output”. Incorrect count: 2.</li>
+<li><code>21FF</code> — incorrect; rejected the interpretation “decimal operands, hexadecimal output”. Incorrect count: 3.</li>
+<li><code>-34563</code> — incorrect/normalizes to the already rejected digits <code>34563</code>; this travel-direction branch is rejected. Incorrect count: 4.</li>
+<li><code>48125</code> — incorrect; rejects decimal rendering of the indexed hexadecimal subtraction. Incorrect count: 5.</li>
+<li><code>BBFD</code> — incorrect; rejects hexadecimal rendering of that same left-to-right indexed subtraction. Incorrect count: 6.</li>
+<li><code>51920</code> — incorrect; rejects reversing and indexing both buses. Incorrect count: 7.</li>
+<li><code>48184</code> — correct: “恭喜你，回答正确！”.</li>
+</ul>
+<h2>Stopping result</h2>
+<ul>
+<li>Resolved correct after 7 incorrect final-answer submissions. The three accepted intermediate checks are not counted as incorrect.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="067-YLdhZAop.html"><span>← 上一份日志</span><strong>【鼠鼠谜】道味海上</strong></a><a class="sequence-link next" href="069-5t7uzMeL.html"><span>下一份日志 →</span><strong>〖NbH₂谜〗Wordle</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>【🚌】狂想 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

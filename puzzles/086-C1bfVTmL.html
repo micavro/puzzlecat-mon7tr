@@ -3,46 +3,186 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="中国Cry??ic（二）（C1bfVTmL）的独立题解与验证。">
+  <meta name="description" content="中国Cry??ic（二）（C1bfVTmL）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>中国Cry??ic（二） · PuzzleCat 题解</title>
+  <title>中国Cry??ic（二） · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>086</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>086 / 289</span><code>C1bfVTmL</code></div>
-        <h1>中国Cry??ic（二）</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>若叶睦</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/C1bfVTmL" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>1</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>题目分阶段作答。第一阶段四个定义都落到同音为 <code>mu</code> 的末字，第二阶段用分数索引和十字箭头求一个中心字，之后还有检查器引导的作品/角色识别步骤。</p>
-<h3>我的解法</h3>
-<p>第一阶段填 <code>和睦、铁臂阿童木、开幕式、谜目</code>，末字均读 <code>MU</code>。第二阶段重新索引得到 <code>和、童、开、谜</code>，十字结构中只有 <code>字</code> 能同时组成 <code>别字、名字、字样、字母</code>，故为 <code>ZI</code>。本地提交记录还确认组合 <code>MUZIMI</code> 被当作中间答案接受，并要求继续提交三字角色名；但日志对最后角色定位使用了讨论区/搜索信息，按本批限制不采纳。</p>
-<h3>验证</h3>
-<p>本地记录能独立确认 <code>MU</code>、<code>ZI</code> 和中间串 <code>MUZIMI</code>，并显示最终提交 <code>若叶睦</code> 为 <code>correct</code>。本地日志仅能确认这部分链条与最终验收，不能在禁止讨论区信息的条件下完整复现最后识别。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="085-sU4Bl3vq.html"><span>← 上一题</span><strong>中专说唱高手</strong></a><a class="sequence-link next" href="087-j2WZrexE.html"><span>下一题 →</span><strong>中国Cryptic（二）</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 中国Cry??ic（二）</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>086</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">086 / 289</span><code>C1bfVTmL</code></div>
+      <h1>中国Cry??ic（二）</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/C1bfVTmL" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/086-C1bfVTmL.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve Log: C1bfVTmL</h1>
+<ul>
+<li>Title: <code>中国Cry??ic（二）</code></li>
+<li>Owner: <code>chat2-root-20260712</code></li>
+<li>Status: solving; final three-character candidate established after a second
+  intermediate check</li>
+<li>Incorrect submissions: 1</li>
+</ul>
+<h2>Stage 1</h2>
+<ul>
+<li>The four definitions give <code>和睦</code> (2), <code>铁臂阿童木</code> (5), <code>开幕式</code> (3),
+  and <code>谜目</code> (2).</li>
+<li>Their relevant final characters are <code>睦/木/幕/目</code>, all pronounced <code>mu</code>.</li>
+<li>Stage pinyin: <code>MU</code>.</li>
+</ul>
+<h2>Stage 2</h2>
+<ul>
+<li>Heading: <code>旧事重提（一）</code>. The fractions reuse the four Stage 1 answers and
+  their printed lengths:</li>
+</ul>
+<p><code>text
+  和睦       (1/2) -&gt; 和
+  铁臂阿童木 (4/5) -&gt; 童
+  开幕式     (1/3) -&gt; 开
+  谜目       (1/2) -&gt; 谜</code></p>
+<ul>
+<li>The arrows place <code>别/名/样/母</code> around a single central answer:</li>
+</ul>
+<p><code>text
+          别
+          ↓
+    名 -&gt; 字 -&gt; 样
+          ↓
+          母</code></p>
+<ul>
+<li><code>字</code> is uniquely forced because it forms all four ordinary compounds:
+  <code>别字 / 名字 / 字样 / 字母</code>. The four re-extracted Stage 1 results are also
+  literally individual characters (<code>字</code>), matching <code>旧事重提</code>.</li>
+<li>Stage 2 answer: <code>字</code>; required pinyin: <code>ZI</code>.</li>
+</ul>
+<h2>Stage 3</h2>
+<ul>
+<li>The bold references point to the public episode discussion, not merely the
+  anime's plot:</li>
+<li><code>迷途之子</code> = <code>BanG Dream! It's MyGO!!!!!</code>;</li>
+<li><code>第1集</code> = episode 1, Bangumi episode ID <code>1211350</code>;</li>
+<li><code>讨论</code> = that episode's public discussion thread.</li>
+<li>Public source: <code>https://bgm.tv/ep/1211350</code>. The thread contains two notable
+  confirmations:</li>
+<li>an episode-one comment says <code>我超，有姛</code>, exactly matching the Stage 1
+    heading;</li>
+<li>in post <code>#28</code>, user <code>zi楪丶痕</code> wrote:</li>
+</ul>
+<blockquote>
+<p><code>鼓子+李子，什么未来虹之咲</code></p>
+</blockquote>
+<ul>
+<li>The earlier reading chose <code>例题</code> and used the post's <code>李子</code> to support <code>LI</code>.
+  That produced rejected final <code>MUZILI</code> and is not mechanically forced: in the
+  actual sentence <code>我们来出个 ❓ 题吧！</code>, the ordinary puzzle-context completion
+  is <code>谜题</code>, not <code>例题</code>.</li>
+<li>Fill the blank with <code>谜</code>; Stage 3 answer pinyin: <code>MI</code>.</li>
+<li>The MyGO/Crychic references are a confirmation layer for the complete pinyin
+  string, rather than an instruction to select <code>李</code> from one isolated comment.</li>
+</ul>
+<h2>Rejected assembly</h2>
+<pre><code class="language-text">Stage 1: MU
+Stage 2: ZI
+Stage 3: LI
+Attempt: MU ZI LI
+</code></pre>
+<ul>
+<li><code>MU ZI LI</code> reads as the classic spoken character decomposition <code>木子李</code>:
+  <code>木 + 子 = 李</code>.</li>
+<li>This gives a strong final confirmation for every homophone choice:</li>
+<li>Stage 1's four answers deliberately end in <code>睦/木/幕/目</code>, all <code>MU</code>, with
+    <code>木</code> selected by the final phrase;</li>
+<li>Stage 2 gives literal <code>字</code>, homophonically normalized to <code>子</code>;</li>
+<li>Stage 3 gives <code>例/李</code>, both <code>LI</code>.</li>
+<li>The required <code>(2+2+2)</code> format matches exactly, but the checker rejected
+  <code>MUZILI</code>. Because the checker strips spaces and ignores case, spacing or case
+  cannot repair this attempt. Stage 3 <code>LI</code> is therefore reopened; it has not
+  been independently checker-tested.</li>
+</ul>
+<h2>Revised assembly</h2>
+<pre><code class="language-text">Stage 1: MU
+Stage 2: ZI
+Stage 3: MI
+Final:   MU ZI MI
+</code></pre>
+<ul>
+<li><code>MU-ZI-MI</code> is a Chinese-syllable approximation of Japanese <code>Mutsumi</code>, the
+  given name of Crychic member 若叶睦. This explains the work-specific framing:</li>
+<li>title <code>Cry??ic</code> supplies <code>CH</code>, producing the band name <code>Crychic</code>;</li>
+<li><code>迷途之子</code>, episode 1, and its discussion identify MyGO's setting;</li>
+<li>the first Stage 1 definition answers <code>和睦</code>, directly yielding <code>睦</code> (<code>MU</code> in
+    Mandarin), the character whose Japanese name is Mutsumi;</li>
+<li>the episode discussion's exact <code>有姛</code> comment confirms the Stage 1 heading.</li>
+<li>The title's <code>CH</code> is thematic identification here, not extra answer material.
+  The body explicitly requests three two-letter pinyins <code>(2+2+2)</code>, so appending
+  <code>CH</code> would violate the stated format.</li>
+<li>Checker-ready stage assembly: <code>MUZIMI</code>.</li>
+</ul>
+<h2>Checker-directed final step</h2>
+<ul>
+<li><code>MUZIMI</code> was submitted through the supported intermediate-answer mechanism
+  and accepted as an intermediate. The checker returned:</li>
+</ul>
+<blockquote>
+<p><code>请将该答案与二次元同时写入搜索框中，提交搜索引擎推荐的角色名称。（三）</code></p>
+</blockquote>
+<ul>
+<li>Non-interactive HTTP search audit:</li>
+<li>Baidu autocomplete for <code>MUZIMI 二次元</code> recommends <code>木子米二次元</code> as its
+    first suggestion.</li>
+<li>DuckDuckGo results for exact query <code>"木子米" 二次元</code> include
+    <code>16岁cos若叶睦</code>; its snippet explicitly contains both <code>睦子米</code> and
+    <code>木子米</code>. Other results pair <code>木子米</code> with tags <code>若叶睦</code>, <code>MyGO</code>, and
+    <code>Ave Mujica</code>.</li>
+<li>The 若叶睦 reference entry gives <code>若葉睦（むつみ） / Wakaba Mutsumi</code>,
+    lists <code>睦子米、木子米</code> as phonetic nicknames, and identifies her as a
+    former CRYCHIC member.</li>
+<li>The requested three-character role name is therefore <code>若叶睦</code>. Traditional
+  <code>若葉睦</code> should normalize equivalently, but use the simplified form printed
+  by the Chinese search results.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ol>
+<li>Final <code>若叶睦</code> - very high confidence. It follows the checker-directed search
+   step exactly and matches the work, band, romanization, and <code>木子米</code> nickname.</li>
+<li>Stage 1 <code>MU</code> - confirmed by the intermediate checker.</li>
+<li>Stage 2 <code>ZI</code> - high confidence from the uniquely forced arrow-cross center
+   <code>字</code>, but not yet independently checker-tested.</li>
+<li>Stage 3 <code>MI</code> - checker-confirmed as part of intermediate <code>MUZIMI</code>.</li>
+<li>Stage 3 <code>LI</code> - demoted. It depends on forcing <code>例题</code> and over-weighting one
+   discussion comment; its assembled final was rejected.</li>
+<li><code>MUZILI</code> - rejected; retain only as evidence that the attractive <code>木子李</code>
+   surface is not sufficient.</li>
+</ol>
+<h2>Submission history</h2>
+<ul>
+<li><code>MU</code> - Stage 1 intermediate answer correct (<code>1.答案正确</code>); not an incorrect
+  submission.</li>
+<li><code>MUZILI</code> - incorrect final answer, attempt 1. Submitted by the coordinator;
+  spacing and case normalize identically.</li>
+<li><code>MUZIMI</code> - accepted intermediate. Message directs solvers to search it with
+  <code>二次元</code> and submit the recommended three-character role name; not an
+  incorrect submission.</li>
+</ul>
+<h2>Recommendation</h2>
+<ul>
+<li>Submit <code>若叶睦</code> as the final answer through the serialized coordinator.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="085-sU4Bl3vq.html"><span>← 上一份日志</span><strong>中专说唱高手</strong></a><a class="sequence-link next" href="087-j2WZrexE.html"><span>下一份日志 →</span><strong>中国Cryptic（二）</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>中国Cry??ic（二） · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

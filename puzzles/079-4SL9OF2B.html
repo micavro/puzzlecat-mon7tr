@@ -3,46 +3,70 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="不削能玩？（4SL9OF2B）的独立题解与验证。">
+  <meta name="description" content="不削能玩？（4SL9OF2B）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>不削能玩？ · PuzzleCat 题解</title>
+  <title>不削能玩？ · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>079</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>079 / 289</span><code>4SL9OF2B</code></div>
-        <h1>不削能玩？</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>REMOTE</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/4SL9OF2B" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>题面给两套带编号的字母模式，背景提到“猫碰上死耗子”，暗示猫鼠组合及翻译转换。</p>
-<h3>我的解法</h3>
-<p>第一套 <code>①②③ &amp; ○④⑤⑤○</code> 可填 <code>TOM &amp; JERRY</code>，于是编号 1–5 分别对应 T、O、M、E、R。把角色关系译成中文“猫和老鼠”再直译回英文，是 <code>CAT &amp; MOUSE</code>，恰好吻合第二套 <code>○○① &amp; ③②○○④</code>。最后按 <code>⑤④③②①④</code> 取字母，得到 <code>R E M O T E</code>。</p>
-<h3>验证</h3>
-<p>两套模式分别由专名和普通名完整覆盖，编号提取无歧义；<code>REMOTE</code> 首次实际提交即正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="078-MotxAs7n.html"><span>← 上一题</span><strong>七字谜</strong></a><a class="sequence-link next" href="080-KxUXEjGS.html"><span>下一题 →</span><strong>不可能解决的难题</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 不削能玩？</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>079</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">079 / 289</span><code>4SL9OF2B</code></div>
+      <h1>不削能玩？</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/4SL9OF2B" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/079-4SL9OF2B.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log — 不削能玩？</h1>
+<ul>
+<li>Puzzle ID: <code>4SL9OF2B</code></li>
+<li>Owner: <code>codex-sub-o-20260712</code></li>
+<li>Incorrect submissions: 0 (final)</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Top pattern is <code>①②③ &amp; ○④⑤⑤○</code>; after translation and literal back-translation it becomes <code>○○① &amp; ③②○○④</code>.</li>
+<li>Flavor mentions “瞎猫碰上了死耗子”, explicitly suggesting a cat-and-mouse relation.</li>
+</ul>
+<h2>Reasoning and candidate ranking</h2>
+<ol>
+<li><code>TOM &amp; JERRY</code> fits the first lengths/pattern: <code>TOM</code> gives <code>1=T, 2=O, 3=M</code>; <code>JERRY</code> gives <code>4=E, 5=R</code> with repeated <code>RR</code>.</li>
+<li>Its Chinese translated concept is “猫和老鼠”; literal English back-translation is <code>CAT &amp; MOUSE</code>.</li>
+<li><code>CAT &amp; MOUSE</code> matches the second pattern exactly: <code>CA[1=T] &amp; [3=M][2=O]US[4=E]</code>.</li>
+<li>Decode <code>⑤④③②①④</code> as <code>R E M O T E</code> = <strong>REMOTE</strong>.</li>
+</ol>
+<p>Candidate ranking:</p>
+<ol>
+<li><code>REMOTE</code> — exact two-stage translation pattern and full indexed extraction.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li>Two command attempts were blocked locally by a stale global submit lock and never reached the site; they do not count as submissions.</li>
+<li><code>REMOTE</code> — <strong>correct</strong> on the first actual site submission.</li>
+</ul>
+<h2>Resolution</h2>
+<ul>
+<li>Final classification: <code>correct</code></li>
+<li>Final answer: <code>REMOTE</code></li>
+<li>Incorrect count: 0</li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Submit only a mechanism-supported word/phrase; stop rather than enumerate fandom terms.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="078-MotxAs7n.html"><span>← 上一份日志</span><strong>七字谜</strong></a><a class="sequence-link next" href="080-KxUXEjGS.html"><span>下一份日志 →</span><strong>不可能解决的难题</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>不削能玩？ · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

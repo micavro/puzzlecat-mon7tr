@@ -3,46 +3,65 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Cryptic Clue 一则（aqestzDO）的独立题解与验证。">
+  <meta name="description" content="Cryptic Clue 一则（aqestzDO）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>Cryptic Clue 一则 · PuzzleCat 题解</title>
+  <title>Cryptic Clue 一则 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>025</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>025 / 289</span><code>aqestzDO</code></div>
-        <h1>Cryptic Clue 一则</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>ANAGRAM</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/aqestzDO" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>线索：<code>Arrange for an endless game with augmented reality wordplay (7)</code>。</p>
-<h3>我的解法</h3>
-<p><code>game</code> 去尾得 <code>gam</code>，augmented reality 缩写为 <code>AR</code>；将 <code>GAM+AR</code> 重排为 <code>AGRAM</code>，前接题面中的 <code>AN</code> 得 <code>ANAGRAM</code>。定义端是 <code>wordplay</code>，枚举为 7。</p>
-<h3>验证</h3>
-<p>构词用尽全部素材，长度和定义一致；提交 correct。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="024-e83oQPLb.html"><span>← 上一题</span><strong>Cryptic 1- 绿泡泡</strong></a><a class="sequence-link next" href="026-XpakPIap.html"><span>下一题 →</span><strong>Cryptic cryptic Cryptic cryptic cryptic cryptic Cryptic cryptic</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · Cryptic Clue 一则</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>025</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">025 / 289</span><code>aqestzDO</code></div>
+      <h1>Cryptic Clue 一则</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/aqestzDO" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/025-aqestzDO.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log — aqestzDO — Cryptic Clue 一则</h1>
+<h2>Status</h2>
+<ul>
+<li>Claimed by: <code>codex-sub-k-20260712</code></li>
+<li>Current status: correct</li>
+<li>Incorrect submissions: 0</li>
+</ul>
+<h2>Clue</h2>
+<blockquote>
+<p>Arrange for an endless game with augmented reality wordplay (7)</p>
+</blockquote>
+<h2>Reasoning</h2>
+<ul>
+<li>Enumeration is 7.</li>
+<li><code>an</code> is present literally.</li>
+<li><code>game</code> endless (drop its final letter) gives <code>gam</code>.</li>
+<li>augmented reality abbreviates to <code>AR</code>.</li>
+<li>Arranging <code>GAM + AR</code> gives <code>AGRAM</code>; prefixing <code>AN</code> gives <code>ANAGRAM</code>.</li>
+<li><code>ANAGRAM</code> means a form of wordplay, so the clue's definition is “wordplay”; “Arrange” supplies the anagram instruction. The construction is exact and strongly unique.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>ANAGRAM</code> — exact length, definition, and complete letterplay.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>ANAGRAM</code> — server verdict: <strong>correct</strong>; incorrect count remains 0.</li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Correct answer confirmed; resolve atomically as <code>correct</code>.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="024-e83oQPLb.html"><span>← 上一份日志</span><strong>Cryptic 1- 绿泡泡</strong></a><a class="sequence-link next" href="026-XpakPIap.html"><span>下一份日志 →</span><strong>Cryptic cryptic Cryptic cryptic cryptic cryptic Cryptic cryptic</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>Cryptic Clue 一则 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

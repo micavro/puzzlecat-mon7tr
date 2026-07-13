@@ -3,46 +3,115 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="数独谜题（ADITwX1Q）的独立题解与验证。">
+  <meta name="description" content="数独谜题（ADITwX1Q）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>数独谜题 · PuzzleCat 题解</title>
+  <title>数独谜题 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>183</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>183 / 289</span><code>ADITwX1Q</code></div>
-        <h1>数独谜题</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>RESUME</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/ADITwX1Q" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>1</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>6×6 数独除行列宫规则外，还有大小箭头、互质边和定和边；每格附一个字母，风味要求按相同数字自上而下读字母，再重排成指令。</p>
-<h3>我的解法</h3>
-<p>本地回溯得到唯一数独。按数字 1–6 分组读字母分别是 <code>ANSWER、PUZZLE、OFTHIS、SUDOKU、BOTTOM、INSIDE</code>，可组成指令“ANSWER OF THIS PUZZLE INSIDE SUDOKU BOTTOM”。因此取数独内部最底行字母 <code>SMUREE</code>，重排为 <code>RESUME</code>。</p>
-<h3>验证</h3>
-<p>唯一盘面、六个英文块和底行字母多重集都可复核；错误的 <code>SUMMER</code> 不保字母数，<code>RESUME</code> 提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="182-s7QBl3vq.html"><span>← 上一题</span><strong>探骊格（三）</strong></a><a class="sequence-link next" href="184-7vOIxIpP.html"><span>下一题 →</span><strong>文化造纸</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 数独谜题</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>183</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">183 / 289</span><code>ADITwX1Q</code></div>
+      <h1>数独谜题</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/ADITwX1Q" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/183-ADITwX1Q.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve Log: ADITwX1Q</h1>
+<ul>
+<li>Title: <code>数独谜题</code></li>
+<li>Draw: <code>tmp/practice-draw.json</code> (<code>2026-07-12T06:24:44.019Z</code>)</li>
+<li>Solver: child agent coordinated by root</li>
+<li>Submission limit: 20 incorrect answers</li>
+<li>Started: <code>2026-07-12</code> (Asia/Shanghai)</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>A 6x6 Sudoku with digits 1-6, 2x3 boxes, and one letter in every cell.</li>
+<li>An arrow <code>x -&gt; y</code> means <code>x &gt; y</code>; a circled border means the adjacent values are coprime; a <code>$</code> border labeled <code>S</code> means their sum is <code>S</code>.</li>
+<li>Flavor: read the letters corresponding to the same digit from top to bottom, then rearrange them to obtain a final-answer instruction.</li>
+<li>Final answer length: six letters.</li>
+<li>No cooldown.</li>
+</ul>
+<h2>Transcription</h2>
+<p>Letter rows:</p>
+<pre><code class="language-text">I S B | P O A
+N F U | N U O
+T Z T | D S S
+O W I | T Z H
+L D E | I O K
+S M U | R E E
+</code></pre>
+<p>Arrows (<code>source &gt; destination</code>):</p>
+<pre><code class="language-text">r2c6 &gt; r1c6
+r3c4 &gt; r3c5
+r4c4 &gt; r3c4
+r3c6 &gt; r4c6
+r4c3 &gt; r4c4
+r4c1 &gt; r5c1
+</code></pre>
+<p>Coprime pairs:</p>
+<pre><code class="language-text">r1c1/r2c1  r1c2/r2c2  r2c2/r3c2  r2c6/r3c6
+r3c5/r4c5  r5c2/r6c2  r2c1/r2c2  r2c2/r2c3
+r2c5/r2c6  r3c5/r3c6  r5c4/r5c5
+</code></pre>
+<p>Sum pairs:</p>
+<pre><code class="language-text">r4c6 + r5c6 = 7
+r5c6 + r6c6 = 6
+</code></pre>
+<h2>Programmatic solve</h2>
+<p>A complete backtracking enumeration enforced all row, column, box, arrow, coprime, and sum constraints. It found exactly one solution:</p>
+<pre><code class="language-text">6 4 5 | 2 3 1
+1 3 2 | 6 4 5
+5 2 3 | 4 1 6
+4 1 6 | 5 2 3
+2 6 1 | 3 5 4
+3 5 4 | 1 6 2
+</code></pre>
+<p>Solution count: <code>1</code>.</p>
+<h2>Extraction</h2>
+<p>Reading the letters in cells containing each digit from row 1 through row 6 gives:</p>
+<pre><code class="language-text">digit 1: ANSWER
+digit 2: PUZZLE
+digit 3: OFTHIS
+digit 4: SUDOKU
+digit 5: BOTTOM
+digit 6: INSIDE
+</code></pre>
+<p>One coherent ordering of the six blocks is the telegraphic instruction:</p>
+<pre><code class="language-text">ANSWER OFTHIS PUZZLE INSIDE SUDOKU BOTTOM
+</code></pre>
+<p>Thus the answer of this puzzle is inside the bottom of the Sudoku. "Inside" disambiguates the location from the rule examples printed below the grid: use the bottom row within the Sudoku itself, <code>r6c1..r6c6</code>. Those cells contain:</p>
+<pre><code class="language-text">SMUREE
+</code></pre>
+<p>The exact character multiset is <code>EEMRSU</code>. Its clean six-letter English rearrangement is <code>RESUME</code> (<code>EEMRSU</code> after sorting), with no letters added or removed.</p>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>RESUME</code> - high confidence. Exact six-letter anagram of <code>SMUREE</code>, reached by a unique grid and a fully readable extraction instruction.</li>
+<li><code>SUMMER</code> - rejected. It was an invalid anagram: <code>SUMMER</code> sorts to <code>EMMRSU</code>, but <code>SMUREE</code> sorts to <code>EEMRSU</code>.</li>
+</ol>
+<h2>Attempts</h2>
+<ul>
+<li><code>SUMMER</code> - rejected by the server (<code>1 / 20</code>). This was a transcription-independent extraction error: the proposed word did not preserve the bottom row's character multiset.</li>
+<li><code>RESUME</code> - correct (<code>1 / 20</code> incorrect). Evidence: <code>submissions/2026-07-12T06-34-54-195Z/submission.json</code>.</li>
+</ul>
+<h2>Stop decision</h2>
+<ul>
+<li><strong>Final status: correct.</strong> The server accepted the exact-anagram candidate <code>RESUME</code>.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="182-s7QBl3vq.html"><span>← 上一份日志</span><strong>探骊格（三）</strong></a><a class="sequence-link next" href="184-7vOIxIpP.html"><span>下一份日志 →</span><strong>文化造纸</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>数独谜题 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

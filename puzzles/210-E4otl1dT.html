@@ -3,46 +3,52 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="森林不退化（E4otl1dT）的独立题解与验证。">
+  <meta name="description" content="森林不退化（E4otl1dT）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>森林不退化 · PuzzleCat 题解</title>
+  <title>森林不退化 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>210</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>210 / 289</span><code>E4otl1dT</code></div>
-        <h1>森林不退化</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>奥秘</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/E4otl1dT" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>右侧红白块是去除白色部分后仍可识别的国旗，左侧对应 2 格、3 格，箭头自下向上提取。</p>
-<h3>我的解法</h3>
-<p>上方两条竖红带对应秘鲁国旗，填 <code>秘鲁</code>；下方两条横红带对应奥地利国旗，填 <code>奥地利</code>。箭头自下而上先穿过“奥地利”的首字 <code>奥</code>，再穿过“秘鲁”的首字 <code>秘</code>，得到 <code>奥秘</code>。</p>
-<h3>验证</h3>
-<p>国旗方向、字数和箭头顺序一致；<code>奥秘</code> 首投正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="209-XjYkPIap.html"><span>← 上一题</span><strong>梨谜014A</strong></a><a class="sequence-link next" href="211-ghc6lhr6.html"><span>下一题 →</span><strong>森林退化</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 森林不退化</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>210</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">210 / 289</span><code>E4otl1dT</code></div>
+      <h1>森林不退化</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/E4otl1dT" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/210-E4otl1dT.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log — E4otl1dT《森林不退化》</h1>
+<ul>
+<li>Owner: <code>codex-root-b-20260712</code></li>
+<li>Claimed: 2026-07-13T05:19:17.556Z</li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0 / 50</li>
+</ul>
+<h2>Observations / reasoning</h2>
+<ul>
+<li>已完成归档，开始分析一枚中文题。</li>
+<li>题面明确链接配套《森林退化》作为提示；只读取其公开题面，不查看讨论/答案。</li>
+<li>右侧红块是去掉白色区域/图案后仍可辨认的国旗：上方两条竖红带对应秘鲁国旗（<code>秘鲁</code>，2 字），下方两条横红带对应奥地利国旗（<code>奥地利</code>，3 字）。两面旗本来都没有植物图案，故“不退化”。</li>
+<li>将国名填入左侧对应的 2 格、3 格，箭头自下而上先穿过“奥地利”的首字“奥”，再穿过“秘鲁”的首字“秘”，得到答案 <code>奥秘</code>。</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li>Candidate: <code>奥秘</code>（国旗、字数与箭头提取完全吻合）。</li>
+<li><code>奥秘</code> — correct。</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="209-XjYkPIap.html"><span>← 上一份日志</span><strong>梨谜014A</strong></a><a class="sequence-link next" href="211-ghc6lhr6.html"><span>下一份日志 →</span><strong>森林退化</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>森林不退化 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

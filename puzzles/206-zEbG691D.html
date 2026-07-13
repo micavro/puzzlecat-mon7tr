@@ -3,46 +3,116 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="来自地球的礼物（zEbG691D）的独立题解与验证。">
+  <meta name="description" content="来自地球的礼物（zEbG691D）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>来自地球的礼物 · PuzzleCat 题解</title>
+  <title>来自地球的礼物 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>206</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>206 / 289</span><code>zEbG691D</code></div>
-        <h1>来自地球的礼物</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>REMOTE CONTROLLED CAR</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/zEbG691D" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>2</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>月球上的女孩收到来自地球的礼物。题面给出一个不走斜线的 10×10 英文词搜和各类别、长度清单，称 16 件礼物中只出现了 15 件。</p>
-<h3>我的解法</h3>
-<p>我逐类在网格中找到 <code>SWING、SLIDE、BASKETBALL、SKATEBOARD、WATER GUN、GLOBE、CRAYON、BALLOON、CRT TV、TENT、PARASOL、CAMPFIRE、FLOWER、SANDCASTLE、BUG NET</code>。划去这 15 项后，剩余字母按行读为 <code>PRAGMATA</code>，说明题面背景对应游戏《PRAGMATA》。最初我误把 <code>BUG NET</code> 当缺失礼物；服务器否定后，重新对照本地日志中已确认的 16 件地球记忆收藏品，发现真正未在词搜中出现的是 RC Car。中间反馈给出 <code>(6 10 3)</code> / <code>(2 3)</code>，将其展开为 <code>REMOTE CONTROLLED CAR</code> / <code>RC CAR</code>。</p>
-<h3>验证</h3>
-<p>15 个词完整覆盖清单，余字 <code>PRAGMATA</code> 校验作品背景；枚举精确吻合 <code>REMOTE(6) CONTROLLED(10) CAR(3)</code>。该答案提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="205-IWfLNP39.html"><span>← 上一题</span><strong>本题设有中间答案验证</strong></a><a class="sequence-link next" href="207-bYF5uOJW.html"><span>下一题 →</span><strong>极简键盘</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 来自地球的礼物</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>206</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">206 / 289</span><code>zEbG691D</code></div>
+      <h1>来自地球的礼物</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/zEbG691D" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/206-zEbG691D.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve Log: zEbG691D</h1>
+<ul>
+<li>Title: <code>来自地球的礼物</code></li>
+<li>Draw: <code>tmp/practice-draw.json</code> (<code>2026-07-11T21:31:01.9377657Z</code>)</li>
+<li>Solver: child agent coordinated by root</li>
+<li>Submission limit: 20 incorrect answers</li>
+<li>Started: <code>2026-07-12</code> (Asia/Shanghai)</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Puzzle and one resource archived locally.</li>
+</ul>
+<h2>Attempts</h2>
+<ol>
+<li><code>BUG NET</code> - incorrect (<code>1 / 20</code>).</li>
+<li><code>PRAGMATA</code> - intermediate: each gift corresponds to an Earth memory; final enumeration <code>(6 10 3)</code> or <code>(2 3)</code>.</li>
+<li><code>DIANAS COLLECTION REM</code> - incorrect (<code>2 / 20</code>).</li>
+<li><code>REMOTE CONTROLLED CAR</code> - correct.</li>
+</ol>
+<h2>Grid Transcription</h2>
+<ul>
+<li>Flavor: a girl on the Moon received 16 gifts from Earth, but only 15 appear; identify the missing gift.</li>
+<li>The image is a 10 by 10 orthogonal word-search grid. The instruction explicitly says <code>无斜向</code> (no diagonals).</li>
+<li>Grid, row-major:</li>
+<li><code>SBEFPSWING</code></li>
+<li><code>AARLAKTENT</code></li>
+<li><code>NSIORACPRG</code></li>
+<li><code>DKFWATRBCL</code></li>
+<li><code>CEPESEAURO</code></li>
+<li><code>ATMROBYGTB</code></li>
+<li><code>SBALLOONTE</code></li>
+<li><code>TACAGANEVM</code></li>
+<li><code>LLNUGRETAW</code></li>
+<li><code>ELSLIDEATA</code></li>
+<li>The category/length inventory is:</li>
+<li>sports and amusement facilities, 5 gifts: <code>5, 5, 10, 10, (5 3)</code></li>
+<li>items commonly used indoors, 4 gifts: <code>5, 6, 7, (3 2)</code></li>
+<li>camping/travel, 3 gifts: <code>4, 7, 8</code></li>
+<li>nature/beach scenes, 2 gifts: <code>6, 10</code></li>
+<li>capturing tool, 1 gift: <code>6</code></li>
+</ul>
+<h2>Straight-Line Word Finds</h2>
+<ul>
+<li>Sports/amusement: <code>SWING</code> (r1c6-r1c10), <code>SLIDE</code> (r10c3-r10c7), <code>BASKETBALL</code> (r1c2-r10c2), <code>SKATEBOARD</code> (r1c6-r10c6), <code>WATER GUN</code> (r9c10-r9c3, reversed).</li>
+<li>Indoor: <code>GLOBE</code> (r3c10-r7c10), <code>CRAYON</code> (r3c7-r8c7), <code>BALLOON</code> (r7c2-r7c8). The <code>(3 2)</code> entry remains unidentified.</li>
+<li>Camping/travel: <code>TENT</code> (r2c7-r2c10), <code>PARASOL</code> (r1c5-r7c5), <code>CAMPFIRE</code> (r8c3-r1c3, reversed).</li>
+<li>Nature/beach: <code>FLOWER</code> (r1c4-r6c4), <code>SANDCASTLE</code> (r1c1-r10c1).</li>
+<li>Capturing tool: <code>BASKET</code> (r1c2-r6c2). It overlaps the first six letters of <code>BASKETBALL</code>.</li>
+<li>These 14 finds exactly match the stated category counts and lengths apart from the single indoor <code>(3 2)</code> phrase.</li>
+</ul>
+<h2>Fifteenth Gift and Missing Gift</h2>
+<ul>
+<li>The missing indoor entry is <code>CRT TV</code>: column 9, rows 4 through 8 reads <code>C R T T V</code>, exactly matching <code>(3 2)</code>.</li>
+<li>Marking the 15 listed gifts leaves 13 unused cells. In normal row-major order they read <code>PRBUGAGEMATA</code>.</li>
+<li>A six-letter word not present in the category inventory runs down column 8, rows 4 through 9: <code>BUGNET</code>. Four of its letters (<code>B,U,G,E</code>) are among those 13 unused cells; <code>N</code> intersects <code>BALLOON</code> and <code>T</code> intersects <code>WATER GUN</code>.</li>
+<li>This is the flavor's missing sixteenth gift: <code>BUG NET</code>.</li>
+<li>After additionally marking <code>BUG NET</code>, exactly eight cells remain. In row-major order they are:</li>
+<li>r3c8 <code>P</code>, r3c9 <code>R</code></li>
+<li>r8c4 <code>A</code>, r8c5 <code>G</code>, r8c10 <code>M</code></li>
+<li>r10c8 <code>A</code>, r10c9 <code>T</code>, r10c10 <code>A</code></li>
+<li>They spell <code>PRAGMATA</code>, the title of Capcom's science-fiction game centered on Diana, a young girl on the Moon. This is a strong checksum for the complete word set and the flavor, not the item asked for.</li>
+<li>Final-answer candidate: <code>BUG NET</code> (normalization also accepts <code>BUGNET</code>). Confidence: <code>0.98</code>.</li>
+<li>Submission advice: send <code>BUG NET</code> to the coordinator for one controlled submission; this agent has not submitted anything.</li>
+</ul>
+<h2>BUG NET Rejected; Correct Classification</h2>
+<ul>
+<li>The coordinator submitted <code>BUG NET</code>; the server returned <code>incorrect</code>. Incorrect submissions are now <code>1 / 20</code>.</li>
+<li>This falsifies the interpretation above. The semantic category <code>捕捉工具</code> (capturing tool), length 6, naturally and unambiguously identifies <code>BUG NET</code>, not <code>BASKET</code>.</li>
+<li><code>BASKET</code> is merely the first six letters of the already-counted <code>BASKETBALL</code>; treating that nested substring as a separate gift double-counted one placement and incorrectly promoted <code>BUG NET</code> to the missing item.</li>
+<li>The corrected set of 15 listed gifts therefore includes <code>BUG NET</code> at r4c8-r9c8. Marking those 15 words leaves exactly eight cells, whose row-major reading is directly <code>PRAGMATA</code>.</li>
+<li>The puzzle is tagged <code>English</code> and <code>Game</code>; <code>PRAGMATA</code> is an English game title, and its Moon setting plus the girl Diana independently confirm the flavor. No further transformation or localization is indicated.</li>
+<li>Revised final-answer candidate: <code>PRAGMATA</code>.</li>
+<li>Confidence: <code>0.99</code>. This is a direct exhaustive leftover extraction, and the only competing interpretation has now been server-falsified.</li>
+<li>Submission advice: send <code>PRAGMATA</code> to the coordinator for one controlled submission; this agent has not submitted it.</li>
+</ul>
+<h2>Accepted Final Answer</h2>
+<ul>
+<li>The 15 listed gifts are 15 of the 16 official <code>Read Earth Memory</code> (<code>REM</code>) collectibles in <em>PRAGMATA</em>.</li>
+<li>Comparing the exhaustive word-search list against the game's official 16-item REM list leaves only <code>RC Car</code> absent.</li>
+<li>The intermediate enumeration disambiguates its expanded name: <code>REMOTE</code> (6), <code>CONTROLLED</code> (10), <code>CAR</code> (3), or <code>RC CAR</code> (2, 3).</li>
+<li><code>REMOTE CONTROLLED CAR</code> was accepted by the server. Final incorrect count: <code>2 / 20</code>.</li>
+<li>Evidence: <code>submissions/2026-07-11T22-01-29-465Z/submission.json</code>.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="205-IWfLNP39.html"><span>← 上一份日志</span><strong>本题设有中间答案验证</strong></a><a class="sequence-link next" href="207-bYF5uOJW.html"><span>下一份日志 →</span><strong>极简键盘</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>来自地球的礼物 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

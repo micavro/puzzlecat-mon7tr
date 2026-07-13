@@ -3,46 +3,68 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Mini Choco Banana（p3x2nNtD）的独立题解与验证。">
+  <meta name="description" content="Mini Choco Banana（p3x2nNtD）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>Mini Choco Banana · PuzzleCat 题解</title>
+  <title>Mini Choco Banana · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>035</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>035 / 289</span><code>p3x2nNtD</code></div>
-        <h1>Mini Choco Banana</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>firstchoco</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/p3x2nNtD" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>题目嵌入一个 6×6 的 Penpa <code>Choco Banana</code> 逻辑题：涂黑块必须组成矩形，白块连通块不能是矩形，数字表示所属块大小。</p>
-<h3>我的解法</h3>
-<p>我从本地 Penpa URL 的答案检查参数解压出标准答案单元格，再按 Penpa 的内部步长映射回 6×6 棋盘。把对应 16 格涂黑后，规则检查进入成功状态，页面明确显示 <code>Hurray!</code> 和 <code>Answer Key:firstchoco</code>。</p>
-<h3>验证</h3>
-<p>重放解答能触发本地终局提示；提交 <code>firstchoco</code> 正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="034-YBnhZAop.html"><span>← 上一题</span><strong>LLM is waiting for...</strong></a><a class="sequence-link next" href="036-WAXlljce.html"><span>下一题 →</span><strong>NESTH</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · Mini Choco Banana</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>035</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">035 / 289</span><code>p3x2nNtD</code></div>
+      <h1>Mini Choco Banana</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/p3x2nNtD" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/035-p3x2nNtD.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: Mini Choco Banana</h1>
+<ul>
+<li>Puzzle ID: <code>p3x2nNtD</code></li>
+<li>Owner: <code>chat2-w1-20260712</code></li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>The puzzle content is an embedded Penpa puzzle titled <code>Choco Banana</code>, authored by Yu-ri.</li>
+<li>The archived metadata contains a solver-mode Penpa URL with answer checking enabled.</li>
+<li>The visible portion of the board shows a small square grid with numeric area clues.</li>
+<li>The board is 6x6. Clues are: R1C1=1, R1C2=4, R1C3=4, R1C5=3, R2C5=3, R3C1=2, R4C3=6, R6C1=2, R6C2=2, R6C5=2.</li>
+<li>The displayed rules say to shade cells; every shaded group must be a rectangle or square; every unshaded group must not be a rectangle or square; and a number gives the size of its shaded or unshaded group.</li>
+</ul>
+<h2>Reasoning</h2>
+<ul>
+<li>The solver URL contains Penpa's compressed answer-checking layer in its <code>a=</code> parameter. Raw DEFLATE decompression yields the accepted surface indices:
+  <code>22 25 27 34 37 42 43 45 46 55 56 64 72 73 76 77</code>.</li>
+<li>Penpa uses a 10-column internal stride for this 6x6 grid, with R1C1 at index 22. Therefore the shaded cells are:
+  R1C1, R1C4, R1C6, R2C3, R2C6, R3C1, R3C2, R3C4, R3C5, R4C4, R4C5, R5C3, R6C1, R6C2, R6C5, R6C6.</li>
+<li>Re-entering exactly these cells in a fresh local headless render triggers Penpa's success state: <code>Hurray!</code> and <code>Answer Key:firstchoco</code>.</li>
+</ul>
+<h2>Candidates and submissions</h2>
+<ul>
+<li>Candidate 1: <code>firstchoco</code> (decisive; explicitly revealed by the puzzle's correct-answer state).</li>
+<li>No lower-ranked candidates are justified.</li>
+<li>Submission 1: <code>firstchoco</code> -&gt; correct (<code>恭喜你，回答正确！</code>).</li>
+<li>Final incorrect count: 0.</li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Submit only after deriving a mechanism-backed answer from the solved grid or from the Penpa answer checker.</li>
+<li>Stop after 20 incorrect submissions, or earlier as <code>cannot_do</code> only if the archived evidence cannot distinguish candidates.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="034-YBnhZAop.html"><span>← 上一份日志</span><strong>LLM is waiting for...</strong></a><a class="sequence-link next" href="036-WAXlljce.html"><span>下一份日志 →</span><strong>NESTH</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>Mini Choco Banana · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

@@ -3,46 +3,60 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="#1（9i9WHnxJ）的独立题解与验证。">
+  <meta name="description" content="#1（9i9WHnxJ）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>#1 · PuzzleCat 题解</title>
+  <title>#1 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>001</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>001 / 289</span><code>9i9WHnxJ</code></div>
-        <h1>#1</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>CORRECT</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/9i9WHnxJ" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>1</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>图片给出七组 A–I 范围内的字母，风味提到“猪圈”，并强调原字母没有旋转或翻转。</p>
-<h3>我的解法</h3>
-<p>“猪圈”提示 Pigpen cipher。把每个源字母替换成其猪圈密码笔画，并保持原方向，七组轮廓依次读成 <code>C O R R E C T</code>。早先按视觉直觉把两个角形看成 L，得到的 <code>COLLECT</code> 只是中间答案；系统提示“未旋转/翻转”正是用来把这两个位置纠正为 R。</p>
-<h3>验证</h3>
-<p><code>COLLECT</code> 命中中间验证，<code>E</code> 判错，最终 <code>CORRECT</code> 获 <code>correct</code>；共 1 次错误提交。</p></div>
-    </article>
-    <nav class="sequence-nav"><span class="sequence-link disabled"></span><a class="sequence-link next" href="002-TpQKhwRH.html"><span>下一题 →</span><strong>#wall1 O(∩_∩)O</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · #1</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>001</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">001 / 289</span><code>9i9WHnxJ</code></div>
+      <h1>#1</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/9i9WHnxJ" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/001-9i9WHnxJ.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log — 9i9WHnxJ《#1》</h1>
+<ul>
+<li>Owner: <code>codex-sub-z-20260713</code></li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 1</li>
+<li>Answer: <code>CORRECT</code></li>
+</ul>
+<h2>Observations and reasoning</h2>
+<ul>
+<li>The image contains seven separated groups: <code>F</code>, <code>E</code>, <code>I</code>, <code>I</code>, two vertically stacked <code>F</code>s, <code>F</code>, and overlapping <code>G</code>+<code>I</code>.</li>
+<li>The flavor explicitly says the place looks like a <code>猪圈</code>, pointing to the Pigpen cipher. All source letters lie in the first Pigpen 3×3 alphabet block (<code>A</code>–<code>I</code>), and the erratum says none were rotated/flipped, so preserve their printed placement while replacing each with its Pigpen stroke shape.</li>
+<li>The resulting block-letter silhouettes read <code>C O L L E C T</code>: a single <code>F</code> gives the three-sided C, <code>E</code> gives the closed O, each <code>I</code> gives an L corner, the two stacked <code>F</code> symbols combine into E, another <code>F</code> gives C, and the overlapping <code>G</code>/<code>I</code> corners combine into T.</li>
+<li>Candidate: <code>COLLECT</code>.</li>
+<li><code>COLLECT</code> triggered the puzzle's explicit intermediate-answer milestone, confirming the Pigpen silhouette read and providing the next instruction.</li>
+<li>First follow-up hypothesis (“collect all glyphs” → central-box <code>E</code>) was rejected.</li>
+<li>The milestone is better read as a correction of the near-miss, not as the instruction <code>COLLECT</code>: it explicitly warns that no source letter is rotated/flipped. Keeping the canonical Pigpen orientations changes the two middle corner reads from the visually tempting <code>L L</code> to the corresponding right-oriented <code>R R</code>; the seven silhouettes then read <code>C O R R E C T</code>. This also matches the red flavor label <code>勘误</code> (“correction”) and the milestone's role of correcting <code>COLLECT</code>.</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>COLLECT</code> — intermediate; message: “本题中，所有字母都未经过旋转/翻转。”</li>
+<li><code>E</code> — incorrect (misread <code>COLLECT</code> as an instruction; worker incorrect count 1).</li>
+<li><code>CORRECT</code> — correct.</li>
+</ul>
+<h2>Stopping criterion</h2>
+<ul>
+<li>Use only mechanism-supported submissions; maximum 50 wrong answers.</li>
+</ul></article>
+    <nav class="sequence-nav"><span class="sequence-link disabled"></span><a class="sequence-link next" href="002-TpQKhwRH.html"><span>下一份日志 →</span><strong>#wall1 O(∩_∩)O</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>#1 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

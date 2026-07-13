@@ -3,46 +3,59 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="随蓝01（iZFRTMow）的独立题解与验证。">
+  <meta name="description" content="随蓝01（iZFRTMow）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>随蓝01 · PuzzleCat 题解</title>
+  <title>随蓝01 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>278</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>278 / 289</span><code>iZFRTMow</code></div>
-        <h1>随蓝01</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>三角</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/iZFRTMow" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p><code>[D2]</code> 线索可同时指课本单位和门牌单位，<code>[E2]</code> 可同时指素描方法和编程方法，求下一个 <code>[?2]</code> 常见词。</p>
-<h3>我的解法</h3>
-<p>第一词是 <code>单元</code>：课本单元、住宅单元，拼音首字母 D 且两字；第二词是 <code>二分</code>：素描二分/比例方法、编程二分法，首字母 E 且两字。首字又形成“单(一)、二”的递进，下一项应以“三”开头、两字且成词，因此是 <code>三角</code>，标签相当于 S2。</p>
-<h3>验证</h3>
-<p>双重释义、首字递进与长度都吻合；<code>三角</code> 首投正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="277-bsb5uOJW.html"><span>← 上一题</span><strong>降水</strong></a><a class="sequence-link next" href="279-zt5G691D.html"><span>下一题 →</span><strong>集单谜</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 随蓝01</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>278</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">278 / 289</span><code>iZFRTMow</code></div>
+      <h1>随蓝01</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/iZFRTMow" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/278-iZFRTMow.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: 随蓝01</h1>
+<ul>
+<li>Puzzle ID: <code>iZFRTMow</code></li>
+<li>Worker: <code>codex-sub-b-20260712</code></li>
+<li>Incorrect submissions: 0</li>
+</ul>
+<h2>Observations</h2>
+<p>The archived text is valid Chinese despite mojibake in the terminal renderer:</p>
+<ul>
+<li><code>[D2]</code> “这个单位经常出现在课本上，亦或是你家的门牌上。”</li>
+<li><code>[E2]</code> “这种方法可以用于画素描，亦或是解决一些编程题。”</li>
+<li>Find the next word, described as a common expression, <code>[?2]</code>.</li>
+</ul>
+<p>The first clue has the strong two-context answer <code>单元</code>: a textbook unit and an apartment/building unit shown in an address or doorplate. The second has the strong answer <code>二分</code>: the bisection method is used for proportion/construction in sketching and as binary search/bisection in programming problems.</p>
+<p>The labels encode pinyin initial plus two-character length: <code>单元</code> is D + 2 characters, while <code>二分</code> is E + 2 characters. Their first characters also represent one and two (<code>单</code> and <code>二</code>). The next term should therefore be a two-character word starting with the three-concept, yielding <code>三角</code> (S2).</p>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>三角</code> - high confidence. Continues <code>单/二/三</code>, is exactly two characters, and has the expected label <code>S2</code>.</li>
+<li>A four-character idiom beginning with <code>三</code> - low confidence. The explicit suffix <code>2</code> and the two preceding two-character answers argue against a four-character response; no particular idiom is distinguished.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>三角</code> -&gt; correct. Prior incorrect attempts: 0.</li>
+</ul>
+<h2>Stopping criteria</h2>
+<p>Solved. Resolve <code>correct</code> with 0 incorrect attempts and answer <code>三角</code>.</p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="277-bsb5uOJW.html"><span>← 上一份日志</span><strong>降水</strong></a><a class="sequence-link next" href="279-zt5G691D.html"><span>下一份日志 →</span><strong>集单谜</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>随蓝01 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

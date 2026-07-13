@@ -3,46 +3,72 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="SIX SEVEN!!!（MVLxAs7n）的独立题解与验证。">
+  <meta name="description" content="SIX SEVEN!!!（MVLxAs7n）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>SIX SEVEN!!! · PuzzleCat 题解</title>
+  <title>SIX SEVEN!!! · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>044</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>044 / 289</span><code>MVLxAs7n</code></div>
-        <h1>SIX SEVEN!!!</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>HOTDOG</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/MVLxAs7n" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>拼贴中有原子序数 67、质量 164.930 的元素格，关于“67”的标题字样、红框字母、圆形路径和带 180° 标注的 6/7 图形。</p>
-<h3>我的解法</h3>
-<p>原子序数 67 是钬，元素符号给 <code>Ho</code>。沿黑色路径读取红框中的 T、D，并把路径圆环读作 O；底部 6 与 7 按 180° 旋转/组合形成 G。依路径把这些片段拼成 <code>HO+T+D+O+G=HOTDOG</code>。</p>
-<h3>验证</h3>
-<p>所有红框与旋转标记都有用途，结果也符合搞笑标签；<code>HOTDOG</code> 首次提交 correct。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="043-koQS2WKJ.html"><span>← 上一题</span><strong>Reuniting Craft</strong></a><a class="sequence-link next" href="045-aLPstzDO.html"><span>下一题 →</span><strong>Super~big~</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · SIX SEVEN!!!</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>044</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">044 / 289</span><code>MVLxAs7n</code></div>
+      <h1>SIX SEVEN!!!</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/MVLxAs7n" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/044-MVLxAs7n.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: MVLxAs7n / SIX SEVEN!!!</h1>
+<h2>Claim</h2>
+<ul>
+<li>Owner: <code>route-a-20260712</code></li>
+<li>Claimed: 2026-07-12</li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Tags: 一枚, 英文, 文字, English, 害我笑了一下.</li>
+<li>One archived resource.</li>
+<li>Flavor text is a long repetition of <code>67</code>.</li>
+<li>The collage includes a periodic-table cell with atomic number 67 and atomic mass <code>164.930</code>, a headline <code>What Does 67 Mean on TikTok Right Now?</code>, and a <code>6-7!</code> graphic with a <code>180°</code> annotation.</li>
+<li>Red boxes mark a blank in the periodic-table cell, the letters <code>D</code> and <code>T</code> in the headline, the digits 6 and 7, and a final blank. A thick black path indicates their reading/combination order.</li>
+</ul>
+<h2>Reasoning</h2>
+<ul>
+<li>Atomic number 67 and mass 164.930 identify holmium; its symbol fills the first blank as <code>Ho</code>.</li>
+<li>Following the black path through the headline uses the red-boxed <code>T</code> and <code>D</code>; the large loop itself supplies the intervening/next round <code>O</code> shape.</li>
+<li>At the bottom, the boxed 6 and 7 are combined with the indicated 180-degree turn to make the final stylized <code>G</code>.</li>
+<li>Reading the pieces along the path gives <code>HO + T + D + O + G = HOTDOG</code>.</li>
+<li>This uses the exact atomic data, the specifically boxed letters, the drawn circular <code>O</code>, and the bottom rotation/overlay; it also fits the joke tag.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ul>
+<li><code>HOTDOG</code> - strong; complete path reading and thematic punchline.</li>
+<li><code>HOLMIUM</code> - identifies only the periodic-table subclue and leaves most annotations unused.</li>
+<li><code>NOTHING</code> - generic meaning of the 67 meme but leaves the constructed extraction unused.</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>HOTDOG</code> - correct (<code>2026-07-12T06:57:51.008Z</code>); site message: <code>恭喜你，回答正确！</code>.</li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Submit only candidates supported by a reproducible extraction or strong self-confirming mechanism.</li>
+<li>Stop after 20 incorrect submissions; stop earlier as <code>cannot_do</code> if evidence cannot distinguish candidates.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="043-koQS2WKJ.html"><span>← 上一份日志</span><strong>Reuniting Craft</strong></a><a class="sequence-link next" href="045-aLPstzDO.html"><span>下一份日志 →</span><strong>Super~big~</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>SIX SEVEN!!! · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

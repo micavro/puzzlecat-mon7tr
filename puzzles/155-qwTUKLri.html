@@ -3,46 +3,57 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="彩色方块（qwTUKLri）的独立题解与验证。">
+  <meta name="description" content="彩色方块（qwTUKLri）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>彩色方块 · PuzzleCat 题解</title>
+  <title>彩色方块 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>155</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>155 / 289</span><code>qwTUKLri</code></div>
-        <h1>彩色方块</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>TELEGRAM</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/qwTUKLri" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>题图把品牌或平台字标化成“每个字母一个色块”，示例可识别 <code>LASTFM、STEAM、FORTNITE、NETFLIX、EBAY、FEDEX、GOOGLE、PAYPAL</code> 等。</p>
-<h3>我的解法</h3>
-<p>最下方只给一个青蓝色块和长度 <code>(8)</code>，要求按相同规则识别主色对应的平台。该颜色与 Telegram 的标志性蓝色吻合，且 <code>TELEGRAM</code> 正好八字母；其他八字母蓝色品牌的常用色调与示例语境较弱。</p>
-<h3>验证</h3>
-<p>颜色与长度共同锁定候选；<code>TELEGRAM</code> 首次提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="154-swOBl3vq.html"><span>← 上一题</span><strong>当一切都沉寂之时</strong></a><a class="sequence-link next" href="156-UsvRTeZO.html"><span>下一题 →</span><strong>微谜137：述数术</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 彩色方块</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>155</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">155 / 289</span><code>qwTUKLri</code></div>
+      <h1>彩色方块</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/qwTUKLri" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/155-qwTUKLri.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>qwTUKLri《彩色方块》解题日志</h1>
+<h2>图像机制</h2>
+<p>题图把熟悉品牌/平台的字标拆成“每个字母一个色块”：</p>
+<ul>
+<li>上半部分可由已给字母和长度识别出 <code>LASTFM</code>、<code>STEAM</code>、<code>FORTNITE</code>、<code>NETFLIX</code>、<code>KICK</code>、<code>TWITCH</code> 等；</li>
+<li>下半部分的颜色序列可直接识别若干多色字标，例如：</li>
+<li>红/蓝/黄/绿四格 = <code>EBAY</code>；</li>
+<li>紫紫紫/橙橙 = <code>FEDEX</code>；</li>
+<li>蓝/红/黄/蓝/绿/红 = <code>GOOGLE</code>；</li>
+<li>深蓝三格接浅蓝三格 = <code>PAYPAL</code>。</li>
+</ul>
+<p>最下方明确给出一个青蓝色方块、问号和长度 <code>(8)</code>，要求按同样的“品牌主色 + 名称长度”识别平台。该青蓝色接近 Telegram 的标志性蓝色，<code>TELEGRAM</code> 恰为 8 个字母。</p>
+<h2>候选排序</h2>
+<ol>
+<li><code>TELEGRAM</code> — 标志色与 8 字母长度同时吻合；置信度 90%。</li>
+<li><code>FACEBOOK</code> / <code>LINKEDIN</code> — 也为 8 字母且偏蓝，但其常用蓝色更深，且 Facebook 已在示例语境中出现相近蓝块；置信度各低于 5%。</li>
+</ol>
+<h2>提交记录</h2>
+<ul>
+<li>尚未提交；错误次数 0。</li>
+<li>首选 <code>TELEGRAM</code>。若错误，只根据颜色/示例链的进一步证据调整，不枚举全部蓝色品牌。</li>
+<li><code>TELEGRAM</code>：<code>correct</code>（“恭喜你，回答正确！”）。</li>
+<li>最终错误次数：0；正确后停止。</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="154-swOBl3vq.html"><span>← 上一份日志</span><strong>当一切都沉寂之时</strong></a><a class="sequence-link next" href="156-UsvRTeZO.html"><span>下一份日志 →</span><strong>微谜137：述数术</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>彩色方块 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

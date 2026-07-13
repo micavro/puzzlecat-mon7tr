@@ -3,46 +3,73 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="文字游戏（BvqEpJHi）的独立题解与验证。">
+  <meta name="description" content="文字游戏（BvqEpJHi）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>文字游戏 · PuzzleCat 题解</title>
+  <title>文字游戏 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>185</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>185 / 289</span><code>BvqEpJHi</code></div>
-        <h1>文字游戏</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>alpha</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/BvqEpJHi" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>例子包括 <code>2-7=b、4-7=dl、6-7=z、8-7=th、21-16=h、23-16=s</code>，提示数字上限 24。</p>
-<h3>我的解法</h3>
-<p>数字按希腊字母表编号，并从第一个希腊字母英文名中删掉第二个名字的字母：<code>beta-eta=b</code>、<code>delta-eta=dl</code>、<code>zeta-eta=z</code>、<code>theta-eta=th</code>、<code>phi-pi=h</code>、<code>psi-pi=s</code>。六条例子本身已足以确定这套编号规则，因此编号 1 的名字是小写 <code>alpha</code>。</p>
-<h3>验证</h3>
-<p>六条例子均逐字成立；本地提交命令返回账号已解出，错误 0 次。日志后来通过浏览器取得的“上限 24”免费提示未用于本段推导。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="184-7vOIxIpP.html"><span>← 上一题</span><strong>文化造纸</strong></a><a class="sequence-link next" href="186-q4kUKLri.html"><span>下一题 →</span><strong>料理</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 文字游戏</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>185</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">185 / 289</span><code>BvqEpJHi</code></div>
+      <h1>文字游戏</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/BvqEpJHi" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/185-BvqEpJHi.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: 文字游戏 (<code>BvqEpJHi</code>)</h1>
+<p>Owner: <code>recover-w3-20260712</code></p>
+<h2>Observations</h2>
+<ul>
+<li>Examples: <code>2-7=b</code>, <code>4-7=dl</code>, <code>6-7=z</code>, <code>8-7=th</code>, <code>21-16=h</code>, <code>23-16=s</code>; target <code>1=?</code>.</li>
+<li>Right sides are lowercase letter sets/strings of varying length, so the hyphen likely separates two numeric properties or reference positions rather than ordinary subtraction.</li>
+<li>Answer checking is case-sensitive and does not strip punctuation, making exact output format significant.</li>
+<li>A free hint titled <code>完全看不懂……</code> exists, but its body is not present in the archive because it was not purchased at capture time. Root has been asked to reveal this zero-cost hint through the authorized browser.</li>
+<li>The revealed free hint says <code>其实这种文字游戏的数字上限是24</code>, independently confirming the 24-letter Greek alphabet.</li>
+</ul>
+<h2>Tested rule families</h2>
+<ul>
+<li>Ordinary differences, modular arithmetic, XOR, base conversion, primes/Fibonacci: do not fit the outputs.</li>
+<li>A1Z26/Caesar shifts and alphabet intervals: do not reproduce the multi-letter results.</li>
+<li>English/Chinese number-name subtraction or shared letters: inconsistent across examples.</li>
+<li>Seven-segment display subtraction/overlay: <code>6-7</code> and <code>8-7</code> would not yield the distinct listed outputs.</li>
+<li>Periodic-table atomic-number differences: only the first example coincidentally resembles boron (<code>7-2=5 -&gt; B</code>).</li>
+<li>Keyboard, phone keypad, Roman numeral, Morse, and Braille interpretations tested so far do not fit all six examples.</li>
+</ul>
+<h2>Solved rule</h2>
+<ul>
+<li>Numbers index the Greek alphabet, and subtraction removes the letters of the second Greek-letter name from the first.</li>
+<li><code>2-7</code>: <code>beta - eta = b</code>.</li>
+<li><code>4-7</code>: <code>delta - eta = dl</code>.</li>
+<li><code>6-7</code>: <code>zeta - eta = z</code>.</li>
+<li><code>8-7</code>: <code>theta - eta = th</code>.</li>
+<li><code>21-16</code>: <code>phi - pi = h</code>.</li>
+<li><code>23-16</code>: <code>psi - pi = s</code>.</li>
+<li>Therefore Greek letter 1 is <code>alpha</code>.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>alpha</code> - uniquely determined by the rule and lowercase formatting of every example.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li>Serialized submission of <code>alpha</code> returned <code>alreadySolved: true</code> with no new attempt. This is consistent with the independently proven answer and the shared account having become solved while the browser lock was contended.</li>
+</ul>
+<p>Incorrect count: 0.</p>
+<p>Stopping criterion reached: the rule and free hint uniquely establish lowercase <code>alpha</code>, and the work command confirms the shared account is already solved.</p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="184-7vOIxIpP.html"><span>← 上一份日志</span><strong>文化造纸</strong></a><a class="sequence-link next" href="186-q4kUKLri.html"><span>下一份日志 →</span><strong>料理</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>文字游戏 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

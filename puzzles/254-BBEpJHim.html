@@ -3,46 +3,81 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="芳香（BBEpJHim）的独立题解与验证。">
+  <meta name="description" content="芳香（BBEpJHim）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>芳香 · PuzzleCat 题解</title>
+  <title>芳香 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>254</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>254 / 289</span><code>BBEpJHim</code></div>
-        <h1>芳香</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>茉莉</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/BBEpJHim" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>2</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>中央是带共同绿色 <code>艹</code> 顶部的苯环图，左右要求“反义字”，标题是“芳香”。</p>
-<h3>我的解法</h3>
-<p>中央表示 <code>苯</code>，绿色带是共同草字头。左侧对下部 <code>本</code> 取反义字 <code>末</code>，加艹成 <code>茉</code>；右侧从苯“有害”的 <code>害</code> 取反义字 <code>利</code>，加艹成 <code>莉</code>。左右合为芳香花卉 <code>茉莉</code>。</p>
-<h3>验证</h3>
-<p>直接把“苯/笨”取反义所得 <code>聪明、灵巧</code> 均判错；保留艹部件后 <code>茉莉</code> 正确，共 2 次错误。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="253-5BEuzMeL.html"><span>← 上一题</span><strong>花卉培育！20260623</strong></a><a class="sequence-link next" href="255-OMhiZO0v.html"><span>下一题 →</span><strong>英文翻译？</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 芳香</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>254</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">254 / 289</span><code>BBEpJHim</code></div>
+      <h1>芳香</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/BBEpJHim" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/254-BBEpJHim.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve Log: BBEpJHim</h1>
+<ul>
+<li>Title: <code>芳香</code></li>
+<li>Draw: <code>tmp/practice-draw.json</code> (<code>2026-07-12T03:59:19.412Z</code>)</li>
+<li>Solver: child agent coordinated by root</li>
+<li>Submission limit: 20 incorrect answers</li>
+<li>Started: <code>2026-07-12</code> (Asia/Shanghai)</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Puzzle and one resource archived locally.</li>
+<li>The image shows a benzene ring in the center and one question mark on each side.</li>
+<li>Both arrows between a question mark and the ring are labeled <code>反义字</code> (antonymous character).</li>
+<li>The title <code>芳香</code> points to aromatic chemistry and disambiguates the central hexagonal ring as benzene (<code>苯</code>).</li>
+</ul>
+<h2>Reasoning</h2>
+<ol>
+<li>Read the central structure as <code>苯</code> (benzene), prompted by the title's chemistry meaning of aromaticity.</li>
+<li>Use the homophone <code>笨</code> because an actual chemical name does not have antonym characters, while <code>笨</code> does.</li>
+<li>The diagram asks for one antonym character on each side. The standard single-character opposites of <code>笨</code> are <code>灵</code> and <code>巧</code>.</li>
+<li>Reading the two missing characters from left to right gives <code>灵巧</code>, itself a natural word and semantic opposite of clumsy/stupid.</li>
+<li><code>聪明</code> is a weaker alternative: it is an antonym word for <code>笨</code>, but <code>聪</code> and <code>明</code> are not each independently the requested antonym character. The duplicated <code>反义字</code> labels therefore favor <code>灵</code> + <code>巧</code>.</li>
+</ol>
+<h3>Revised mechanism after <code>灵巧</code> was rejected</h3>
+<ol>
+<li>The identical bright-green top band on all three panels represents the common radical <code>艹</code>, rather than decorative color.</li>
+<li>The central panel is therefore the character <code>苯</code>: <code>艹</code> above the benzene/<code>本</code> clue.</li>
+<li>For the left panel, take the opposite character of the lower component <code>本</code>: <code>末</code>. Restore the common radical to get <code>艹 + 末 = 茉</code>.</li>
+<li>For the right panel, benzene is harmful (<code>害</code>); the opposite character is <code>利</code>. Restore the radical to get <code>艹 + 利 = 莉</code>.</li>
+<li>Reading left to right gives <code>茉莉</code>, a fragrant flower. The title <code>芳香</code> provides exact semantic closure.</li>
+<li>This mechanism uses the repeated green bands, both <code>反义字</code> labels, the central chemical icon, and the title; it is substantially stronger than treating <code>苯</code> only as the homophone <code>笨</code>.</li>
+</ol>
+<h2>Candidate</h2>
+<ul>
+<li><code>茉莉</code> — confidence <code>0.98</code>.</li>
+<li>Stop testing direct antonyms of the homophone <code>笨</code>.</li>
+</ul>
+<h2>Attempts</h2>
+<ul>
+<li><code>聪明</code> — incorrect (<code>1 / 20</code>). This is consistent with the diagram requiring two independently valid antonym characters rather than one two-character antonym word.</li>
+<li><code>灵巧</code> — incorrect (<code>2 / 20</code>). This disproves the direct <code>苯</code> -&gt; <code>笨</code> antonym-pair interpretation.</li>
+<li><code>茉莉</code> — correct. Evidence: <code>submissions/2026-07-12T04-08-46-965Z/submission.json</code>.</li>
+</ul>
+<h2>Outcome</h2>
+<ul>
+<li>Solved with answer <code>茉莉</code> after 2 incorrect attempts (<code>2 / 20</code>).</li>
+<li>Key lesson: repeated color bands can encode a shared character radical. Preserve the radical while applying labeled wordplay only to the lower component or the pictured object's semantic property.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="253-5BEuzMeL.html"><span>← 上一份日志</span><strong>花卉培育！20260623</strong></a><a class="sequence-link next" href="255-OMhiZO0v.html"><span>下一份日志 →</span><strong>英文翻译？</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>芳香 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

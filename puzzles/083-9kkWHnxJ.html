@@ -3,46 +3,75 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="两种木棍（9kkWHnxJ）的独立题解与验证。">
+  <meta name="description" content="两种木棍（9kkWHnxJ）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>两种木棍 · PuzzleCat 题解</title>
+  <title>两种木棍 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>083</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>083 / 289</span><code>9kkWHnxJ</code></div>
-        <h1>两种木棍</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>火柴</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/9kkWHnxJ" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>本题的本地目录与另一个仅大小写不同的 Puzzle ID 在 Windows 上发生碰撞，现存 <code>solve-log.md</code> 已被后来题目覆盖。</p>
-<h3>我的解法</h3>
-<p>可确认的独立本地证据只剩旧提交记录所保存的正确答案 <code>火柴</code>，而缺少当时对“两种木棍”题面及推导过程的完整记录。为避免借题名反推并编造机制，本题不补写未经证实的具体步骤。</p>
-<h3>验证</h3>
-<p>本地成功提交记录证明 <code>火柴</code> 被判正确；但解法机制属于证据缺口，需明确保留此标记。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="082-I6LNP392.html"><span>← 上一题</span><strong>不是省油的灯</strong></a><a class="sequence-link next" href="084-Ca5fVTmL.html"><span>下一题 →</span><strong>两面包夹芝士</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 两种木棍</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>083</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">083 / 289</span><code>9kkWHnxJ</code></div>
+      <h1>两种木棍</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/9kkWHnxJ" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/083-9kkWHnxJ.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: 花卉培育！20260620 (<code>9KKWHnxJ</code>)</h1>
+<p>Owner: <code>lane-b-20260712</code></p>
+<h2>Status</h2>
+<p>Solved with a mechanism-backed candidate. This lane made no submissions. Current-puzzle incorrect count: 0.</p>
+<h2>Filesystem collision note</h2>
+<p>Windows treats <code>9KKWHnxJ</code> and the older puzzle ID <code>9kkWHnxJ</code> as the same directory. At the start of this lane, <code>solve-log.md</code> and <code>submissions/</code> contained a stale successful record for the unrelated older puzzle <code>两种木棍</code> and answer <code>火柴</code>. The fresh API capture for the current uppercase-ID puzzle reports no attempts. The stale <code>submissions/</code> evidence was left untouched and must not be counted against or used to resolve this puzzle.</p>
+<h2>FPA compliance</h2>
+<ul>
+<li>Solved from the freshly archived title, rule text, and three clue words.</li>
+<li>No search for an existing answer, solution, original puzzle, PNKU post, or WeChat source was performed.</li>
+</ul>
+<h2>Rules and clues</h2>
+<p>The rule says to infer one word from three words through:</p>
+<ul>
+<li>sound: rhyme;</li>
+<li>form: a shared component/radical;</li>
+<li>meaning: a description of the answer.</li>
+</ul>
+<p>The solver must determine which clue corresponds to which relation. The three clues are:</p>
+<pre><code class="language-text">收尾  通牒  图纸
+</code></pre>
+<h2>Reasoning</h2>
+<p>Candidate <code>终结</code> satisfies all three relations cleanly:</p>
+<ol>
+<li>Meaning: <code>收尾</code> means bringing something to an end, i.e. <code>终结</code>.</li>
+<li>Sound: <code>通牒</code> (<code>tōng dié</code>) rhymes syllable-for-syllable with <code>终结</code> (<code>zhōng jié</code>): <code>-ong</code>, then <code>-ie</code>.</li>
+<li>Form: <code>终结</code> uses the <code>纟</code> component in both characters, and <code>纸</code> in <code>图纸</code> has the same <code>纟</code> component.</li>
+</ol>
+<p>The semantic match and unusually exact two-syllable rhyme strongly distinguish the candidate; the form clue confirms the silk radical.</p>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>终结</code> - high confidence. It simultaneously provides an exact meaning match, a two-syllable rhyme, and the intended shared <code>纟</code> component.</li>
+<li><code>结束</code> - rejected: it matches the meaning but does not rhyme with <code>通牒</code> or share the <code>纟</code> form clue.</li>
+<li><code>终点</code> - rejected: it is semantically related but the second syllable does not rhyme with <code>牒</code>.</li>
+</ol>
+<h2>Submission history</h2>
+<ul>
+<li>None for current puzzle <code>9KKWHnxJ</code>. Incorrect count: 0.</li>
+<li>The on-disk older <code>火柴</code> submission belongs to case-colliding puzzle <code>9kkWHnxJ</code> and is unrelated.</li>
+</ul>
+<h2>Stopping criteria</h2>
+<p>Report <code>终结</code>, the sound/form/meaning mapping, and the case-collision warning to the root worker. Do not archive, submit, resolve, or claim another puzzle from this lane.</p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="082-I6LNP392.html"><span>← 上一份日志</span><strong>不是省油的灯</strong></a><a class="sequence-link next" href="084-Ca5fVTmL.html"><span>下一份日志 →</span><strong>两面包夹芝士</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>两种木棍 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

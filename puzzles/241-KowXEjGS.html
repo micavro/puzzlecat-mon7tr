@@ -3,46 +3,96 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="编程（KowXEjGS）的独立题解与验证。">
+  <meta name="description" content="编程（KowXEjGS）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>编程 · PuzzleCat 题解</title>
+  <title>编程 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>241</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>241 / 289</span><code>KowXEjGS</code></div>
-        <h1>编程</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>CODE</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/KowXEjGS" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>一段 C++ 质数判断代码中若干字母变成问号，四处缺字带编号。</p>
-<h3>我的解法</h3>
-<p>按标准代码补字：<code>#inclu(3)e</code> 应为 include，所以 ③=D；<code>(1)in&gt;&gt;a</code> 为 cin，所以 ①=C；<code>??ut&lt;&lt;"y(4)s"</code> 补 cout/yes，④=E；<code>?(2)ut</code> 补 cout，②=O。按编号 1–4 读取。</p>
-<h3>验证</h3>
-<p>得到 <code>C O D E</code>；未编号问号只负责补全代码，不进入提取，首投正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="240-C7hfVTmL.html"><span>← 上一题</span><strong>纵横字咪</strong></a><a class="sequence-link next" href="242-L4xqNrv1.html"><span>下一题 →</span><strong>缩略</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 编程</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>241</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">241 / 289</span><code>KowXEjGS</code></div>
+      <h1>编程</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/KowXEjGS" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/241-KowXEjGS.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve Log: KowXEjGS</h1>
+<ul>
+<li>Title: <code>编程</code></li>
+<li>Draw: <code>tmp/practice-draw.json</code> (<code>2026-07-12T03:23:23.740Z</code>)</li>
+<li>Solver: child agent coordinated by root</li>
+<li>Submission limit: 20 incorrect answers</li>
+<li>Started: <code>2026-07-12</code> (Asia/Shanghai)</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Puzzle archived locally with no external resources.</li>
+<li>The body is a short C++ program intended to read an integer and print whether it is prime.</li>
+<li>Several obvious source-code letters are replaced by question marks or numbered parenthetical blanks.</li>
+</ul>
+<h2>Reasoning</h2>
+<ol>
+<li>Restore the four numbered blanks from standard C++ syntax/output:</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Fragment</th>
+<th>Restoration</th>
+<th>Numbered letter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>#inclu(3)e&lt;bits/stdc++.h&gt;</code></td>
+<td><code>#include&lt;bits/stdc++.h&gt;</code></td>
+<td><code>(3) = D</code></td>
+</tr>
+<tr>
+<td><code>(1)in&gt;&gt;a;</code></td>
+<td><code>cin&gt;&gt;a;</code></td>
+<td><code>(1) = C</code></td>
+</tr>
+<tr>
+<td><code>??ut&lt;&lt;"y(4)s";</code></td>
+<td><code>cout&lt;&lt;"yes";</code></td>
+<td><code>(4) = E</code></td>
+</tr>
+<tr>
+<td><code>?(2)ut&lt;&lt;"y?s";</code></td>
+<td><code>cout&lt;&lt;"yes";</code></td>
+<td><code>(2) = O</code></td>
+</tr>
+</tbody>
+</table>
+<ol start="2">
+<li>Reading the numbered replacements in order <code>(1)(2)(3)(4)</code> gives <code>C O D E</code>.</li>
+<li>The unnumbered <code>?</code> characters merely complete the repeated words <code>cout</code> and <code>yes</code>; they are not part of the ordered extraction.</li>
+<li>The loop condition in the archived text is <code>i%a==0</code>, whereas a functioning primality check would normally use <code>a%i==0</code>. This apparent coding error does not affect the letter-fill extraction and supplies no competing numbered letter.</li>
+</ol>
+<h2>Candidate</h2>
+<ul>
+<li><code>CODE</code> — confidence <code>0.99</code>.</li>
+</ul>
+<h2>Attempts</h2>
+<ol>
+<li><code>CODE</code> - correct.</li>
+</ol>
+<p>Evidence: <code>submissions/2026-07-12T03-25-30-083Z/submission.json</code>. Final incorrect count: <code>0 / 20</code>.</p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="240-C7hfVTmL.html"><span>← 上一份日志</span><strong>纵横字咪</strong></a><a class="sequence-link next" href="242-L4xqNrv1.html"><span>下一份日志 →</span><strong>缩略</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>编程 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

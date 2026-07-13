@@ -3,46 +3,84 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="单词勇者的冒险（CI1fVTmL）的独立题解与验证。">
+  <meta name="description" content="单词勇者的冒险（CI1fVTmL）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>单词勇者的冒险 · PuzzleCat 题解</title>
+  <title>单词勇者的冒险 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>111</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>111 / 289</span><code>CI1fVTmL</code></div>
-        <h1>单词勇者的冒险</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>STRENGTH</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/CI1fVTmL" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>6</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>故事里多处英文词故意少一个字母，补字后才符合上下文；最终枚举为 8。</p>
-<h3>我的解法</h3>
-<p>逐处修正：<code>WORD→SWORD</code> 取 S，<code>PLAN→PLANT</code> 取 T，<code>DIVE→DRIVE</code> 取 R，<code>BACON→BEACON</code> 取 E，<code>DIE→DINE</code> 取 N，<code>RIP→GRIP</code> 取 G，<code>SING→STING</code> 取 T，<code>ILL→HILL</code> 取 H。把八个新增字母依故事顺序串联。</p>
-<h3>验证</h3>
-<p>得到 <code>STRENGTH</code>，长度为 8，且正好对应故事中“足够强壮”的定义；完整使用八处异常词并通过。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="110-RiAJFgie.html"><span>← 上一题</span><strong>十字谜</strong></a><a class="sequence-link next" href="112-z1FG691D.html"><span>下一题 →</span><strong>危险源</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 单词勇者的冒险</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>111</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">111 / 289</span><code>CI1fVTmL</code></div>
+      <h1>单词勇者的冒险</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/CI1fVTmL" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/111-CI1fVTmL.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>CI1fVTmL - 单词勇者的冒险</h1>
+<h2>Claim</h2>
+<ul>
+<li>Owner: <code>codex-root-20260712</code></li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 6</li>
+<li>Stop condition: correct answer, evidence exhausted (<code>cannot_do</code>), or 20 incorrect submissions.</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Archive completed; no external resources were required.</li>
+<li>The story repeatedly pairs a base English word with a useful/resulting word that contains one newly planted letter.</li>
+<li>A direct UTF-8 API read recovered the final enumeration <code>(8)</code>, which the archived mojibake had hidden.</li>
+</ul>
+<h2>Reasoning</h2>
+<ul>
+<li><code>WORD</code> becomes <code>SWORD</code>, the weapon used against the dragon.</li>
+<li>Driving implies <code>CAR</code>, which becomes the post-fight <code>SCAR</code>.</li>
+<li><code>LAB</code> (a pet/dog) becomes a <code>SLAB</code> of bacon.</li>
+<li><code>DIE</code> plus the same new letter can be rearranged to <code>SIDE</code>, the surface carrying the grip.</li>
+<li>Singular <code>BEE</code> becomes plural <code>BEES</code>; the story also foregrounds <code>STING</code>.</li>
+<li><code>ILL</code> becomes <code>SILL</code>, a ledge that can be climbed.</li>
+<li>The invariant newly planted letter across these transformations is <code>S</code>.</li>
+<li>The repeated-S interpretation explains local transformations but does not define the final answer: eight literal <code>S</code> characters were rejected.</li>
+<li>The final paragraph supplies exact eight-letter anagram fodder: <code>STING + ILL</code> rearranges to <code>STILLING</code>. The following sentence explicitly echoes <code>still</code>, while the requested action <code>climb</code> supports the <code>-ing</code> action suffix.</li>
+<li>Full-story correction reveals eight one-letter transformations, each replacing an intentionally absurd story word with the contextually correct one (or vice versa):</li>
+<li><code>WORD -&gt; SWORD</code>: weapon against the dragon, yields <code>S</code>.</li>
+<li><code>PLAN -&gt; PLANT</code>: the tutor prepared a plan, yields <code>T</code>.</li>
+<li><code>DIVE -&gt; DRIVE</code>: underwater travel, yields <code>R</code>.</li>
+<li><code>BACON -&gt; BEACON</code>: object outside a cave entrance, yields <code>E</code>.</li>
+<li><code>DIE -&gt; DINE</code>: post-fight action, yields <code>N</code>.</li>
+<li><code>RIP -&gt; GRIP</code>: opening on the sealed gate surface, yields <code>G</code>.</li>
+<li><code>SING -&gt; STING</code>: bee action, yields <code>T</code>.</li>
+<li><code>ILL -&gt; HILL</code>: object to climb, yields <code>H</code>.</li>
+<li>The extracted letters spell <code>STRENGTH</code>, exactly defined by "strong enough" and matching <code>(8)</code>.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ul>
+<li><code>STRENGTH</code> - very high confidence; complete eight-step mechanism, exact extraction, exact definition, exact enumeration.</li>
+<li>No remaining evidence-supported alternative.</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>S</code> - incorrect (2026-07-12T07:01:33Z); the site expects a produced story word rather than the shared inserted letter.</li>
+<li><code>SILL</code> - incorrect (2026-07-12T07:04:03Z); the final climb clue requires a different prefix.</li>
+<li><code>HILL</code> - incorrect (2026-07-12T07:06:58Z); natural definition but unsupported prefix source.</li>
+<li><code>STILL</code> - incorrect (2026-07-12T07:09:41Z); ignored the hidden <code>(8)</code> enumeration.</li>
+<li><code>SSSSSSSS</code> - incorrect (2026-07-12T07:12:13Z); enumeration is a word length, not eight copies of the planted letter.</li>
+<li><code>STILLING</code> - incorrect (2026-07-12T07:16:03Z); local anagram ignored the other story corrections.</li>
+<li><code>STRENGTH</code> - correct (2026-07-12T09:37:16Z).</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="110-RiAJFgie.html"><span>← 上一份日志</span><strong>十字谜</strong></a><a class="sequence-link next" href="112-z1FG691D.html"><span>下一份日志 →</span><strong>危险源</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>单词勇者的冒险 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

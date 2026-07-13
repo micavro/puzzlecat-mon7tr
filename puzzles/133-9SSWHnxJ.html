@@ -3,46 +3,111 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="圆（9SSWHnxJ）的独立题解与验证。">
+  <meta name="description" content="圆（9SSWHnxJ）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>圆 · PuzzleCat 题解</title>
+  <title>圆 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>133</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>133 / 289</span><code>9SSWHnxJ</code></div>
-        <h1>圆</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>PUSKAS</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/9SSWHnxJ" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>五行 1/2 串配两队名称长度和一组坐标抽取；题注说明按时间排序，第四行另含点球串。</p>
-<h3>我的解法</h3>
-<p>1/2 表示足球比赛中两队依时间先后进球。五场分别可还原为巴西 1–7 德国、PSG 对巴塞罗那大逆转、拜仁 8–2 巴塞罗那、阿根廷 3–3 法国及点球、国际米兰 0–5 PSG。按坐标从队名取字：PSG[1]=P，BAYERNMUNICH[8]=U，PSG[2]=S，BRAZIL[6]=L 再字母前移一位得 K，FRANCE[3]=A，PSG[2]=S，组成 <code>PUSKAS</code>。</p>
-<h3>验证</h3>
-<p>五条进球时间线、队名长度与抽取坐标全部一致；<code>PUSKAS</code> 首次提交 correct。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="132-OS5iZO0v.html"><span>← 上一题</span><strong>回転</strong></a><a class="sequence-link next" href="134-M0NxAs7n.html"><span>下一题 →</span><strong>填字游戏</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 圆</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>133</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">133 / 289</span><code>9SSWHnxJ</code></div>
+      <h1>圆</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/9SSWHnxJ" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/133-9SSWHnxJ.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log — 9SSWHnxJ《圆》</h1>
+<ul>
+<li>Owner: <code>codex-root-b-20260712</code></li>
+<li>Claimed: 2026-07-12T10:52:54.831Z</li>
+<li>Archived: 2026-07-12T10:53:13Z</li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0 / 20</li>
+</ul>
+<h2>Statement transcription</h2>
+<ol>
+<li><code>22222221 (6 / 7)</code></li>
+<li><code>1111 2221222 (3 / 9)</code></li>
+<li><code>1211121111 (6 6 / 9)</code></li>
+<li><code>112212 (121121) (9 / 6)</code></li>
+<li><code>22222 (5 6 / 3)</code></li>
+</ol>
+<p>Extraction: <code>(5.2.1) (3.1.8) (2.1.2) (1.1.6)-1 (4.2.3) (5.2.2)</code>.</p>
+<p>Decoded note (from mojibake): “保证按照时间排序，且部分信息为简写。注：x.y.z 表示第 x 行括号中第 y 项的第 z 个字母（词组算作一项）。”</p>
+<h2>Initial observations</h2>
+<ul>
+<li>Every main string consists only of 1/2; parentheses contain slash-separated numbers, except row 4 also has <code>(121121)</code>.</li>
+<li>Note says the rows are chronological. The parenthetical items should decode to words/phrases, then the given coordinates extract letters.</li>
+<li>Title/tag/flavor suggest a sequence involving “圆” or a round object/coin; exact mechanism not yet established.</li>
+</ul>
+<h2>Candidate ranking / submissions</h2>
+<ul>
+<li>The <code>1</code>/<code>2</code> strings encode which of two football teams scored each goal, in chronological order. The adjacent numbers enumerate the team names; the extra parenthetical binary string on row 4 is the penalty shootout, with missed kicks omitted from the scoring string.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Row</th>
+<th>Match / mechanism</th>
+<th>Verification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>BRAZIL 1–7 GERMANY, 2014 World Cup semifinal</td>
+<td>Germany scored the first seven, Brazil the last: <code>22222221</code>; lengths 6/7.</td>
+</tr>
+<tr>
+<td>2</td>
+<td>PSG vs BARCELONA, 2016–17 UCL round of 16</td>
+<td>First leg PSG's four goals <code>1111</code>; second leg Barcelona's first three, PSG one, then Barcelona three: <code>2221222</code>; lengths 3/9.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>BAYERN MUNICH 8–2 BARCELONA, 2020 UCL</td>
+<td>Goal order is Bayern, Barça, Bayern×3, Barça, Bayern×4 = <code>1211121111</code>; lengths 6 6 / 9.</td>
+</tr>
+<tr>
+<td>4</td>
+<td>ARGENTINA 3–3 FRANCE, 2022 World Cup final</td>
+<td>Goal order <code>112212</code>; successful shootout kicks <code>121121</code>; lengths 9/6.</td>
+</tr>
+<tr>
+<td>5</td>
+<td>INTER MILAN(O) 0–5 PSG, 2025 UCL final</td>
+<td>All five goals by PSG = <code>22222</code>; first side shown as a 5/6-style name and PSG is the 3-letter second item.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Extraction, ignoring spaces in a multiword team name:</li>
+<li><code>(5.2.1)</code> = <strong>P</strong>SG[1]</li>
+<li><code>(3.1.8)</code> = BAYERNM<strong>U</strong>NICH[8]</li>
+<li><code>(2.1.2)</code> = P<strong>S</strong>G[2]</li>
+<li><code>(1.1.6)-1</code> = BRAZI<strong>L</strong>, alphabet shift −1 = <strong>K</strong></li>
+<li><code>(4.2.3)</code> = FR<strong>A</strong>NCE[3]</li>
+<li><code>(5.2.2)</code> = P<strong>S</strong>G[2]</li>
+<li>Extracted answer: <strong>PUSKAS</strong>, the FIFA award named for Ferenc Puskás and fitting the football theme.</li>
+<li>Candidate confidence: very high; every extracted position and all five score timelines agree.</li>
+<li>Submission 1: <code>PUSKAS</code> at 2026-07-12T10:57:45Z → HTTP 200, verdict <code>correct</code> (“答案正确”).</li>
+<li>Final incorrect count: 0.</li>
+<li>Stopping criterion: server-confirmed correct answer.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="132-OS5iZO0v.html"><span>← 上一份日志</span><strong>回転</strong></a><a class="sequence-link next" href="134-M0NxAs7n.html"><span>下一份日志 →</span><strong>填字游戏</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>圆 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

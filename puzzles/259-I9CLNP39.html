@@ -3,46 +3,63 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="观星思人（I9CLNP39）的独立题解与验证。">
+  <meta name="description" content="观星思人（I9CLNP39）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>观星思人 · PuzzleCat 题解</title>
+  <title>观星思人 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>259</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>259 / 289</span><code>I9CLNP39</code></div>
-        <h1>观星思人</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>春日忆李白</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/I9CLNP39" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>星空图中若干星名/星座名配编号，右侧为四行五格并问“出自《?????》”；成功文案保存了一联诗。</p>
-<h3>我的解法</h3>
-<p>本地日志没有保留下星名填格与逐字抽取，只能确认成功文案为“何时一樽酒，重与细论文”，其出处题名是杜甫《春日忆李白》，恰为五个汉字，并与“观星思人”的题名语义相合。因此答案可确认，但不能据现有日志补造星图如何产生该诗句。</p>
-<h3>验证</h3>
-<p>本地独立证据有限：五字枚举、提交成功文案中的诗句出处和 correct 状态一致，但星图抽取过程缺失，只能确认到上述范围。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="258-sQlBl3vq.html"><span>← 上一题</span><strong>西行漫记</strong></a><a class="sequence-link next" href="260-JzDgoAEX.html"><span>下一题 →</span><strong>译口同声</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 观星思人</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>259</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">259 / 289</span><code>I9CLNP39</code></div>
+      <h1>观星思人</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/I9CLNP39" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/259-I9CLNP39.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve Log: I9CLNP39</h1>
+<ul>
+<li>Title: <code>观星思人</code></li>
+<li>Owner: <code>chat2-root-20260712</code></li>
+<li>Status: solving</li>
+<li>Incorrect submissions: 0</li>
+<li>Answer format: five-character work title</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>The star photograph labels several three-character star/constellation names
+  with shared letters and numbered extraction slots.</li>
+<li>The right side has four five-cell rows and asks <code>出自《?????》</code>.</li>
+<li>The archived success message is the couplet <code>何时一樽酒，重与细论文</code>.</li>
+</ul>
+<h2>Reasoning</h2>
+<p>That couplet is the closing of Du Fu's poem <code>春日忆李白</code>. Its title has exactly
+five Chinese characters, matching the five red question marks. The puzzle title
+"observing stars, thinking of a person" independently fits a poem whose title
+means recalling Li Bai on a spring day.</p>
+<p>Candidate ranking:</p>
+<ol>
+<li><code>春日忆李白</code> - exact source of the quoted couplet and exact enumeration.</li>
+</ol>
+<h2>Stopping Criteria</h2>
+<ul>
+<li>Resolve <code>correct</code> if the poem title is accepted.</li>
+<li>If rejected, finish the constellation extraction before considering another
+  five-character work title.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="258-sQlBl3vq.html"><span>← 上一份日志</span><strong>西行漫记</strong></a><a class="sequence-link next" href="260-JzDgoAEX.html"><span>下一份日志 →</span><strong>译口同声</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>观星思人 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

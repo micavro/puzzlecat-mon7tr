@@ -3,46 +3,76 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Cryptic 1- 绿泡泡（e83oQPLb）的独立题解与验证。">
+  <meta name="description" content="Cryptic 1- 绿泡泡（e83oQPLb）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>Cryptic 1- 绿泡泡 · PuzzleCat 题解</title>
+  <title>Cryptic 1- 绿泡泡 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>024</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>024 / 289</span><code>e83oQPLb</code></div>
-        <h1>Cryptic 1- 绿泡泡</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>通讯录 新的朋友 群聊</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/e83oQPLb" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>题面为“我+三道杠”“我+正电荷”“我我”三组图标算式，分别要求三、四、二字，并要求一行提交三项。</p>
-<h3>我的解法</h3>
-<p>“绿泡泡”指微信，把“我”当人物轮廓而非汉字。人物配列表线对应底部功能 <code>通讯录</code>；人物配加号对应通讯录入口 <code>新的朋友</code>；双人物对应 <code>群聊</code>。三项都来自同一微信界面层级。</p>
-<h3>验证</h3>
-<p>三个字数分别为 3、4、2，图标语义一致。本地日志没有实际提交记录；本批清单将该答案列为 correct，本地日志仅能确认上述机制与候选。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="023-7wAIxIpP.html"><span>← 上一题</span><strong>CROSS†WORD</strong></a><a class="sequence-link next" href="025-aqestzDO.html"><span>下一题 →</span><strong>Cryptic Clue 一则</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · Cryptic 1- 绿泡泡</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>024</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">024 / 289</span><code>e83oQPLb</code></div>
+      <h1>Cryptic 1- 绿泡泡</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/e83oQPLb" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/024-e83oQPLb.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Cryptic 1 - 绿泡泡（e83oQPLb）解题记录</h1>
+<h2>协作信息</h2>
+<ul>
+<li>Owner: <code>route-a-20260712</code></li>
+<li>仅负责本题；不执行 archive、submit、resolve，也不领取新题。</li>
+<li>FPA：未搜索本题答案或题解。</li>
+<li>当前错误次数：0。</li>
+</ul>
+<h2>题面</h2>
+<ul>
+<li><code>我 + 三道杠 = ?（三字）</code></li>
+<li><code>我 + 正电荷 = ?（四字）</code></li>
+<li><code>我我 = ?（两字）</code></li>
+<li>标题：<code>绿泡泡</code>。</li>
+<li>Flavor 要求一行提交三个答案，以空格分隔；有三个里程碑。</li>
+</ul>
+<h2>机制</h2>
+<p>“绿泡泡”是微信的常见代称。三个 Cryptic 不是把“我”按字义做代数，而是把它看成一个单人轮廓图标，再与右侧符号组合，读微信界面中的正式功能名称。</p>
+<ol>
+<li><strong>单人 + 三条列表线 = 通讯录</strong>（三字）
+   - 微信底部的“通讯录”图标是联系人/人物配合列表线条的视觉意象。</li>
+<li><strong>单人 + 正电荷符号 <code>+</code> = 新的朋友</strong>（四字）
+   - 微信通讯录中的“新的朋友”入口以人物加号图标表示。</li>
+<li><strong>双人 = 群聊</strong>（两字）
+   - 两个人物轮廓是群组/群聊的常见图标，且“群聊”是微信通讯录中的正式二字入口。</li>
+</ol>
+<p>第一项先指向“通讯录”，后两项正好是同一通讯录界面中的条目，构成统一层级，而非三个任意的微信近义词。</p>
+<h2>候选排序</h2>
+<ol>
+<li><strong><code>通讯录 新的朋友 群聊</code></strong> — 高置信（约 88%）。三个字数完全吻合，图标机制一致，后两项又同属第一项页面。</li>
+<li><strong><code>通讯录 添加朋友 群聊</code></strong> — 中低置信。人物加号也可描述“添加朋友”，且同为四字；但微信通讯录列表的正式入口通常显示“新的朋友”，因此次选。</li>
+<li><strong><code>朋友圈 添加朋友 朋友</code></strong> — 很低置信。能勉强套微信语境，但“三道杠”和双人图标对应不精确，也缺乏统一界面层级。</li>
+</ol>
+<h2>提交记录</h2>
+<ul>
+<li>未提交（按上级任务要求）。</li>
+<li>错误次数：0。</li>
+</ul>
+<h2>建议</h2>
+<ul>
+<li>首选提交：<code>通讯录 新的朋友 群聊</code></li>
+<li>若站点仅第二个里程碑不匹配，再根据反馈考虑正式动作名 <code>添加朋友</code>；不应先无机制枚举其他同义词。</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="023-7wAIxIpP.html"><span>← 上一份日志</span><strong>CROSS†WORD</strong></a><a class="sequence-link next" href="025-aqestzDO.html"><span>下一份日志 →</span><strong>Cryptic Clue 一则</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>Cryptic 1- 绿泡泡 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

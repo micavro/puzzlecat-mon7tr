@@ -3,46 +3,59 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="好吃的成语（5LquzMeL）的独立题解与验证。">
+  <meta name="description" content="好吃的成语（5LquzMeL）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>好吃的成语 · PuzzleCat 题解</title>
+  <title>好吃的成语 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>138</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>138 / 289</span><code>5LquzMeL</code></div>
-        <h1>好吃的成语</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>工匠熟能生巧</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/5LquzMeL" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>题设 <code>ABCD</code> 与 <code>BEDF</code> 都是成语，给出字义关系，并说明 <code>CD</code> 是现代甜品、<code>EF</code> 是职业，要求输出 <code>EFABCD</code>。</p>
-<h3>我的解法</h3>
-<p><code>BEDF=能工巧匠</code>，其中 <code>能/巧</code> 都表示有技巧，<code>工/匠</code> 近义且合成职业“工匠”。于是 B=能、D=巧，对应的 <code>ABCD</code> 是 <code>熟能生巧</code>，A/C=<code>熟/生</code> 为反义，而 <code>生巧</code> 可指生巧克力。按 <code>EFABCD</code> 排列为 <code>工匠熟能生巧</code>。</p>
-<h3>验证</h3>
-<p>两个成语、反近义关系、甜品与职业提示全部被使用；提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="137-5ILuzMeL.html"><span>← 上一题</span><strong>大数邻</strong></a><a class="sequence-link next" href="139-oyvmNtwx.html"><span>下一题 →</span><strong>好数</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 好吃的成语</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>138</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">138 / 289</span><code>5LquzMeL</code></div>
+      <h1>好吃的成语</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/5LquzMeL" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/138-5LquzMeL.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: 5LquzMeL</h1>
+<h2>Puzzle</h2>
+<ul>
+<li>Owner: <code>codex-root-20260712</code></li>
+<li>Title: <code>好吃的成语</code></li>
+<li><code>ABCD</code> and <code>BEDF</code> are idioms. In context, <code>A/C</code> are antonyms,
+  <code>B/D</code> are near-synonyms, and <code>E/F</code> are near-synonyms. <code>CD</code> is a modern
+  dessert and <code>EF</code> is an occupation. The requested answer is <code>EFABCD</code>.</li>
+</ul>
+<h2>Solution</h2>
+<p><code>BEDF = 能工巧匠</code>:</p>
+<ul>
+<li><code>B/D = 能/巧</code>, both expressing skill.</li>
+<li><code>E/F = 工/匠</code>, near-synonyms whose combination <code>工匠</code> is an occupation.</li>
+</ul>
+<p>This fixes <code>B=能</code> and <code>D=巧</code>. The matching <code>ABCD</code> idiom is <code>熟能生巧</code>:</p>
+<ul>
+<li><code>A/C = 熟/生</code>, antonyms in this context.</li>
+<li><code>CD = 生巧</code>, nama chocolate, a modern confection/dessert.</li>
+</ul>
+<p>Therefore <code>EFABCD = 工匠熟能生巧</code>.</p>
+<h2>Submission</h2>
+<ul>
+<li><code>工匠熟能生巧</code> - correct (<code>2026-07-13 04:35</code> China time).</li>
+</ul>
+<p>Incorrect count: 0.</p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="137-5ILuzMeL.html"><span>← 上一份日志</span><strong>大数邻</strong></a><a class="sequence-link next" href="139-oyvmNtwx.html"><span>下一份日志 →</span><strong>好数</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>好吃的成语 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

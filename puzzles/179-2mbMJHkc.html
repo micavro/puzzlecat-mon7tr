@@ -3,46 +3,123 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="拼好字（2mbMJHkc）的独立题解与验证。">
+  <meta name="description" content="拼好字（2mbMJHkc）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>拼好字 · PuzzleCat 题解</title>
+  <title>拼好字 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>179</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>179 / 289</span><code>2mbMJHkc</code></div>
-        <h1>拼好字</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>ALGORITHM</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/2mbMJHkc" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>左侧九个残字需用右侧 A–T 共二十个部件补全；风味说活动从第 A 届办到第 T 届，提示按年度编码。</p>
-<h3>我的解法</h3>
-<p>九行补成中国年度汉字：<code>炒(2006)、享(2017)、梦(2012)、民(2020)、振(2023)、法(2014)、韧(2025)、房(2013)、奋(2018)</code>。把 2006 记 A、2007 记 B，顺推至 2025 记 T，各年份对应字母依次是 <code>A L G O R I T H M</code>。</p>
-<h3>验证</h3>
-<p>所有部件恰好用完，年份到 A–T 的线性映射明确；<code>ALGORITHM</code> 提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="178-fvQYBRMr.html"><span>← 上一题</span><strong>抽象猜歌5</strong></a><a class="sequence-link next" href="180-UwEvRTeZ.html"><span>下一题 →</span><strong>指北</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 拼好字</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>179</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">179 / 289</span><code>2mbMJHkc</code></div>
+      <h1>拼好字</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/2mbMJHkc" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/179-2mbMJHkc.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: 2mbMJHkc</h1>
+<h2>Coordination</h2>
+<ul>
+<li>Owner: <code>codex-sub-c-20260712</code></li>
+<li>Title: <code>拼好字</code></li>
+<li>Incorrect submissions: 0</li>
+<li>Status: solved</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Flavor: <code>拼字活动从第A届举办到了第T届，本年度又会拼出什么字呢？</code></li>
+<li>Enumeration: <code>(9)</code>.</li>
+<li>The image supplies nine partial characters on the left and twenty components labeled A-T on the right.</li>
+<li>The flavor emphasizes both <code>年度</code> (annual) and <code>字</code> (character), pointing to China's annual character selections.</li>
+</ul>
+<h2>Reasoning</h2>
+<p>Use every component on the right to complete the nine rows, in order:</p>
+<table>
+<thead>
+<tr>
+<th>Components</th>
+<th>Character</th>
+<th style="text-align: right;">Annual-character year</th>
+<th>Year letter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>火 + 小 + 丿</td>
+<td>炒</td>
+<td style="text-align: right;">2006</td>
+<td>A</td>
+</tr>
+<tr>
+<td>亠 + 口 + 了 + 一</td>
+<td>享</td>
+<td style="text-align: right;">2017</td>
+<td>L</td>
+</tr>
+<tr>
+<td>木 + 大 + 丨 + 夕</td>
+<td>梦</td>
+<td style="text-align: right;">2012</td>
+<td>G</td>
+</tr>
+<tr>
+<td>民</td>
+<td>民</td>
+<td style="text-align: right;">2020</td>
+<td>O</td>
+</tr>
+<tr>
+<td>扌 + 辰</td>
+<td>振</td>
+<td style="text-align: right;">2023</td>
+<td>R</td>
+</tr>
+<tr>
+<td>氵 + 土 + 厶</td>
+<td>法</td>
+<td style="text-align: right;">2014</td>
+<td>I</td>
+</tr>
+<tr>
+<td>韦 + 刃</td>
+<td>韧</td>
+<td style="text-align: right;">2025</td>
+<td>T</td>
+</tr>
+<tr>
+<td>丶 + 尸 + 丶 + 万</td>
+<td>房</td>
+<td style="text-align: right;">2013</td>
+<td>H</td>
+</tr>
+<tr>
+<td>大 + 口 + 一 + 丨</td>
+<td>奋</td>
+<td style="text-align: right;">2018</td>
+<td>M</td>
+</tr>
+</tbody>
+</table>
+<p>Treat the first annual-character selection, 2006, as A; 2007 is B, and so on through 2025 as T. Reading the year letters in row order gives <code>ALGORITHM</code>.</p>
+<h2>Submission</h2>
+<ul>
+<li>Submitted <code>ALGORITHM</code> once.</li>
+<li>Verdict: correct.</li>
+<li>Answer: <code>ALGORITHM</code>.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="178-fvQYBRMr.html"><span>← 上一份日志</span><strong>抽象猜歌5</strong></a><a class="sequence-link next" href="180-UwEvRTeZ.html"><span>下一份日志 →</span><strong>指北</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>拼好字 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

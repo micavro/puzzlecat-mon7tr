@@ -3,46 +3,68 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="我爱记歌词（EIStl1dT）的独立题解与验证。">
+  <meta name="description" content="我爱记歌词（EIStl1dT）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>我爱记歌词 · PuzzleCat 题解</title>
+  <title>我爱记歌词 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>167</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>167 / 289</span><code>EIStl1dT</code></div>
-        <h1>我爱记歌词</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>SING</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/EIStl1dT" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>十条歌词要求接下一句，风味强调“有一点”；题目按 3/2/2/3 分成四组，答案四字母。</p>
-<h3>我的解法</h3>
-<p>根据本地日志补出各句续歌词后，每条关键续句都会出现 <code>点</code> 或 <code>一</code>。把 <code>点</code> 当摩斯点 <code>.</code>，把 <code>一</code> 当横线 <code>-</code>，四组依次得到 <code>...</code>、<code>..</code>、<code>-.</code>、<code>--.</code>，即 <code>S、I、N、G</code>。</p>
-<h3>验证</h3>
-<p>分组长度与四个摩斯码完全吻合，结果又符合记歌词主题；<code>SING</code> 提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="166-WRKlljce.html"><span>← 上一题</span><strong>我是嘉豪（一）</strong></a><a class="sequence-link next" href="168-JyxgoAEX.html"><span>下一题 →</span><strong>我的世界一直在下雨……</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 我爱记歌词</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>167</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">167 / 289</span><code>EIStl1dT</code></div>
+      <h1>我爱记歌词</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/EIStl1dT" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/167-EIStl1dT.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>我爱记歌词（EIStl1dT）解题日志</h1>
+<ul>
+<li>Worker: <code>codex-sub-u-20260713</code></li>
+<li>状态：correct</li>
+<li>错误提交数：0 / 20</li>
+</ul>
+<h2>观察</h2>
+<ul>
+<li>Flavor 强调“接出 <strong>下一句</strong>”与“有 <strong>一点</strong> 厉害”；正文分为 3/2/2/3 行，答案枚举 (4)。</li>
+<li>公开歌词库核验到的下一句/续句：
+  1. <code>我看着路</code> → <code>梦的入口有点窄</code>（《遇见》）
+  2. <code>用时间去思念</code> → <code>爱情有点甜</code>（《有点甜》）
+  3. <code>我知道对或错我自己能分辨</code> → <code>请你安静点</code>（《将军令》）
+  4. <code>断开的感情线</code> → <code>我不要做断点</code>（《断点》）
+  5. <code>我们曾经过那么多考验</code> → <code>最后还是回到了原点</code>（《原点》）
+  6. <code>雪花飘飘北风萧萧</code> → <code>天地一片苍茫</code>（《一剪梅》）
+  7. <code>远方的星星</code> → 续句含 <code>点</code>（星星点灯/点灯语句；由组内机制校验）
+  8. <code>你伤害了我</code> → <code>还一笑而过</code>（《一笑而过》）
+  9. <code>终于在眼泪中明白</code> → <code>有些人一旦错过就不再</code>（《后来》）
+  10. <code>思念刮过背脊打着冷颤</code> → <code>眼神仍旧为你而点燃</code>（《你在终点等我》）</li>
+</ul>
+<h2>推理与候选</h2>
+<ul>
+<li>每个续句都特意含 <code>点</code> 或 <code>一</code>。按 flavor 的“一点”，将 <code>点</code> 视作摩斯点 <code>.</code>，<code>一</code> 视作横线 <code>-</code>。</li>
+<li>四组依次得到：<code>... = S</code>、<code>.. = I</code>、<code>-. = N</code>、<code>--. = G</code>。</li>
+<li>唯一答案：<code>SING</code>，同时契合歌词题主题。</li>
+</ul>
+<h2>提交记录</h2>
+<ul>
+<li><code>SING</code> → 正确。</li>
+</ul>
+<h2>停止标准</h2>
+<ul>
+<li>歌曲识别与抽取必须有题面证据；无法唯一化则 <code>cannot_do</code>；最多 20 次错误提交。</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="166-WRKlljce.html"><span>← 上一份日志</span><strong>我是嘉豪（一）</strong></a><a class="sequence-link next" href="168-JyxgoAEX.html"><span>下一份日志 →</span><strong>我的世界一直在下雨……</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>我爱记歌词 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

@@ -3,46 +3,79 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="【鼠鼠谜】道味海上（YLdhZAop）的独立题解与验证。">
+  <meta name="description" content="【鼠鼠谜】道味海上（YLdhZAop）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>【鼠鼠谜】道味海上 · PuzzleCat 题解</title>
+  <title>【鼠鼠谜】道味海上 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>067</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>067 / 289</span><code>YLdhZAop</code></div>
-        <h1>【鼠鼠谜】道味海上</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>HABITAT</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/YLdhZAop" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>图片仿大白兔奶糖包装，有十一格字母位及编号，末式为 <code>1234525=???????</code>。</p>
-<h3>我的解法</h3>
-<p>包装与风味指向 <code>WHITE RABBIT</code>，去空格正好十一字母。把它对齐格子可得编号映射：1=H，2=A，3=B（恰好出现两次），4=I，5=T，6=R。于是 <code>1234525</code> 解为 <code>HABITAT</code>。</p>
-<h3>验证</h3>
-<p>十一格、重复的编号 3 和七位答案长度完全一致；首次提交 correct。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="066-TxHKhwRH.html"><span>← 上一题</span><strong>【鼠鼠谜】螺旋</strong></a><a class="sequence-link next" href="068-S3Pj2oe3.html"><span>下一题 →</span><strong>【🚌】狂想</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 【鼠鼠谜】道味海上</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>067</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">067 / 289</span><code>YLdhZAop</code></div>
+      <h1>【鼠鼠谜】道味海上</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/YLdhZAop" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/067-YLdhZAop.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve Log: YLdhZAop</h1>
+<ul>
+<li>Title: <code>【鼠鼠谜】道味海上</code></li>
+<li>Draw: <code>tmp/practice-draw.json</code> (<code>2026-07-12T05:02:34.723Z</code>)</li>
+<li>Solver: child agent coordinated by root</li>
+<li>Submission limit: 20 incorrect answers</li>
+<li>Started: <code>2026-07-12</code> (Asia/Shanghai)</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Image-only puzzle styled after a White Rabbit (<code>大白兔</code>) candy wrapper.</li>
+<li>The central illustration has two horizontal rows of eleven cells, one red and one black, with the same numeric labels and several blank cells.</li>
+<li>The extraction prompt is <code>1234525 = ???????</code>, so the expected answer has seven characters unless the question marks are decorative.</li>
+<li>Flavor text: <code>一份甜到几代人心里的滋味</code>.</li>
+<li>The eleven cells in either row, read left to right, carry the pattern <code>_ 1 _ _ _ 6 2 3 3 4 5</code>.</li>
+</ul>
+<h2>Reasoning</h2>
+<ol>
+<li>The wrapper design and flavor identify the famous Shanghai candy brand <code>WHITE RABBIT</code> (<code>大白兔奶糖</code>).</li>
+<li>Removing the space gives exactly eleven letters, matching either cell row:</li>
+</ol>
+<p><code>W H I T E R A B B I T</code></p>
+<ol start="3">
+<li>Aligning the printed labels with those letters gives a consistent digit-to-letter key:
+   - label <code>1</code> is on position 2: <code>H</code>
+   - label <code>6</code> is on position 6: <code>R</code>
+   - label <code>2</code> is on position 7: <code>A</code>
+   - label <code>3</code> appears on positions 8 and 9, both <code>B</code>
+   - label <code>4</code> is on position 10: <code>I</code>
+   - label <code>5</code> is on position 11: <code>T</code></li>
+<li>Therefore <code>1234525</code> decodes as <code>H A B I T A T</code>.</li>
+<li><code>HABITAT</code> has exactly seven letters, matching the seven printed question marks and the puzzle's English tag.</li>
+</ol>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>HABITAT</code> - confidence <code>0.999</code>. Every cell position, the repeated <code>3</code>, answer length, wrapper art, flavor, and language tag agree.</li>
+</ol>
+<p>No secondary candidate is warranted; there is no remaining ambiguity in the extraction.</p>
+<h2>Attempts</h2>
+<ul>
+<li><code>HABITAT</code> - correct (<code>0 / 20</code> incorrect), submitted by root on <code>2026-07-12</code>.</li>
+</ul>
+<h2>Stop decision</h2>
+<ul>
+<li><strong>Correct.</strong> The server accepted <code>HABITAT</code> on the first submission.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="066-TxHKhwRH.html"><span>← 上一份日志</span><strong>【鼠鼠谜】螺旋</strong></a><a class="sequence-link next" href="068-S3Pj2oe3.html"><span>下一份日志 →</span><strong>【🚌】狂想</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>【鼠鼠谜】道味海上 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

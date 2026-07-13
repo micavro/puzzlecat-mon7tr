@@ -3,46 +3,162 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="[回放]花卉培育回放（ixJRTMow）的独立题解与验证。">
+  <meta name="description" content="[回放]花卉培育回放（ixJRTMow）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>[回放]花卉培育回放 · PuzzleCat 题解</title>
+  <title>[回放]花卉培育回放 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>011</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>011 / 289</span><code>ixJRTMow</code></div>
-        <h1>[回放]花卉培育回放</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>扎啤征战必胜激情坚持肃杀革命住户往昔算卦</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/ixJRTMow" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>1</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>十组各有三个中文提示，分别从读音、字形部件和意义三个角度指向一个二字词；最终把十个二字词连写。</p>
-<h3>我的解法</h3>
-<p>逐组求得：<code>扎啤、征战、必胜、激情、坚持、肃杀、革命、住户、往昔、算卦</code>。例如 <code>扎啤</code> 是酒水，和“巴黎”押韵，且扎/摸共享扌、啤/牌共享卑；<code>激情</code> 表示活力，与“批评”押韵，激/邀共享敫、情/请共享青。其余各组也以同样的音、形、义三重约束确定，按题面次序直接串联。</p>
-<h3>验证</h3>
-<p>初版首词 <code>渤海</code> 因意义关系过弱被判错；改为完整串 <code>扎啤征战必胜激情坚持肃杀革命住户往昔算卦</code> 后提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="010-GtybeioV.html"><span>← 上一题</span><strong>[NbH2谜022]五色交辉</strong></a><a class="sequence-link next" href="012-RMZAJFgi.html"><span>下一题 →</span><strong>[旧题] bitop</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · [回放]花卉培育回放</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>011</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">011 / 289</span><code>ixJRTMow</code></div>
+      <h1>[回放]花卉培育回放</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/ixJRTMow" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/011-ixJRTMow.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>iXJRTMow - A Big Mode Puzzle</h1>
+<h2>Claim</h2>
+<ul>
+<li>Owner: <code>codex-root-20260712</code></li>
+<li>Status: solving</li>
+<li>Incorrect submissions: 0</li>
+<li>Stop condition: correct answer, evidence exhausted (<code>cannot_do</code>), or 20 incorrect submissions.</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Archived successfully with one downloaded resource.</li>
+<li>The referenced game is <strong>Animal Well</strong>.</li>
+<li>The seven pictured tools are Firecracker, Animal Flute, Lantern, Top, Disc,
+  Bubble Wand, and Yo-Yo.</li>
+<li>The lower diagram is a simplified Animal Well world map with seven colored
+  marked locations: blue (upper left), orange (below blue), red (left middle),
+  green (lower middle), purple (upper middle), gray (right/lower middle), and
+  yellow (far right middle).</li>
+<li>The six unordered color pairs are blue-yellow, purple-red, green-red,
+  purple-orange, orange-gray, and green-yellow. They form one path using every
+  color exactly once.</li>
+</ul>
+<h2>Reasoning</h2>
+<ul>
+<li>The unique Hamilton path of the six pairs is
+  <code>blue -&gt; yellow -&gt; green -&gt; red -&gt; purple -&gt; orange -&gt; gray</code> (or reverse).</li>
+<li>Public MapGenie map data (<code>/api/v1/maps/620/data</code>) gives the actual pickup
+  coordinates. Projecting those coordinates with MapGenie's own map object
+  resolves the mapping: blue = Firecracker, orange = Bubble Wand, red = Animal
+  Flute, green = Top, purple = Disc, gray = Lantern, yellow = Yo-Yo.</li>
+<li>Following the path therefore gives Firecracker, Yo-Yo, Top, Animal Flute,
+  Disc, Bubble Wand, Lantern.</li>
+<li>The first count-based reading <code>MAGICAL</code> used an incorrect visual mapping and
+  was rejected. It is not a final candidate.</li>
+<li>The <code>lambda &lt; 400 nm</code> annotation explicitly indicates ultraviolet. In Animal
+  Well, the UV Lantern reveals a diagram on the Animal Flute chest mapping the
+  flute's eight directions to digits: clockwise from right they are 1 through
+  8. It also serves as a strong game/map identifier, but need not supply the
+  final digits.</li>
+<li>The seven reference pictures already define a natural 1-to-7 ordering:
+  Firecracker=1, Animal Flute=2, Lantern=3, Top=4, Disc=5, Bubble Wand=6,
+  Yo-Yo=7. Substituting these indices into the item path gives
+  <code>1 7 4 2 5 6 3</code>, but both orientations were rejected.</li>
+<li>The actual use of the UV flute diagram is spatial. The seven pictures form a
+  directional layout: Firecracker is upper-left (6), Animal Flute upper-right
+  (8), Lantern left (5), Disc right (1), Bubble Wand lower-left (4), and Yo-Yo
+  lower-right (2). The Top picture occupies the center but its name supplies
+  the missing <code>top</code>/up direction (7). The unused down direction would be 3.</li>
+<li>Replacing the item path <code>Firecracker, Yo-Yo, Top, Animal Flute, Disc, Bubble
+  Wand, Lantern</code> by those UV direction digits yields <code>6278145</code>.</li>
+<li>The flute directions are also actual pitches in an A-major octave: directions
+  1..8 are <code>A, B, C#, D, E, F#, G#, A</code>. This explains the otherwise unused
+  flavor phrase <code>C sharp</code>: the sole unoccupied direction in the picture layout
+  is down=3=C#. Converting the path's directions <code>6,2,7,8,1,4,5</code> to pitches
+  gives <code>F# B G# A A D E</code> (seven note letters after normalization).</li>
+<li>Reading the flavor literally as "do in C sharp" makes C# movable-do. The
+  same A-major pitch set, starting on C#, is the C# Phrygian mode, so its scale
+  degrees are C#=1, D=2, E=3, F#=4, G#=5, A=6, B=7. Therefore the path pitches
+  become <code>4 7 5 6 6 2 3</code>.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ul>
+<li>Evidence exhausted. The deterministic map/path and UV-flute layers are
+  preserved above, but all distinguishable output encodings were rejected.
+  Further candidates would be unsupported formatting, direction, or mode
+  variants.</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>MAGICAL</code> - incorrect (attempt 1, 2026-07-12 19:47 China time).</li>
+<li><code>1742563</code> - incorrect (attempt 2, 2026-07-12 20:15 China time).</li>
+<li><code>3652471</code> - incorrect (attempt 3, 2026-07-12 20:28 China time).</li>
+<li><code>6278145</code> - incorrect (attempt 4, 2026-07-12 20:35 China time).</li>
+<li><code>5418726</code> - incorrect (attempt 5, 2026-07-12 20:42 China time).</li>
+<li><code>F# B G# A A D E</code> - incorrect (attempt 6, 2026-07-12 20:52 China time).</li>
+<li><code>4756623</code> - incorrect (attempt 7, 2026-07-12 21:00 China time).</li>
+<li><code>FTSLLRM</code> - incorrect (attempt 8, 2026-07-12 21:11 China time).</li>
+</ul>
+<hr>
+<h1>Solve log — ixJRTMow《[回放]花卉培育回放》</h1>
+<ul>
+<li>Owner: <code>codex-sub-s-20260713</code></li>
+<li>Status: active</li>
+<li>Incorrect submissions for this puzzle: 0</li>
+<li>Filesystem note: Windows treats this ID as the same directory name as the already-resolved <code>iXJRTMow</code> puzzle above. The new archive metadata/content overwrite some generic capture files, while the earlier solve log and submissions remain. This separate section preserves both records.</li>
+</ul>
+<h2>Rules and transcription</h2>
+<p>For each triplet, infer a two-character word from one sound/rhyme clue, one shape/shared-component clue, and one meaning clue. Concatenate ten answers without spaces (20 Chinese characters).</p>
+<ol>
+<li>巴黎 / 酒水 / 摸牌</li>
+<li>打仗 / 风扇 / 正点</li>
+<li>不败 / 立正 / 心脏</li>
+<li>活力 / 批评 / 邀请</li>
+<li>继续 / 竖折 / 天池</li>
+<li>凄清 / 萧条 / 驻扎</li>
+<li>暴动 / 合并 / 勒令</li>
+<li>附录 / 僵尸 / 居民</li>
+<li>广西 / 以前 / 注音</li>
+<li>幻化 / 简朴 / 占卜</li>
+</ol>
+<h2>Reasoning and candidate ranking</h2>
+<ol>
+<li><code>扎啤</code>: means a kind of 酒水; rhymes with 巴黎 (zhā-pí / bā-lí); 扎/摸 share 扌, 啤/牌 share 卑. Initial candidate <code>渤海</code> satisfied a sound/shape permutation but used an overly broad “both are place names” meaning relation and was rejected.</li>
+<li><code>征战</code>: means 打仗; rhymes with 风扇; 征 contains 正, 战 contains 点's 占.</li>
+<li><code>必胜</code>: means 不败; rhymes with 立正; 必 uses 心, 胜 and 脏 share 月.</li>
+<li><code>激情</code>: means 活力; rhymes with 批评; 激/邀 share 敫, 情/请 share 青.</li>
+<li><code>坚持</code>: means 继续; rhymes with 天池; 坚/竖 share their upper component, 持/折 share 扌.</li>
+<li><code>肃杀</code>: conveys 凄清; rhymes with 驻扎; 肃 is in 萧, 杀/条 share 木.</li>
+<li><code>革命</code>: a 暴动; rhymes with 合并; 革 is in 勒, 令 is in 命.</li>
+<li><code>住户</code>: means 居民; rhymes with 附录; 住/僵 share 亻, 户/尸 share the 尸形 component.</li>
+<li><code>往昔</code>: means 以前; rhymes with 广西; 往/注 share 主, 昔/音 share 日.</li>
+<li><code>算卦</code>: means 占卜; rhymes with 幻化; 算/简 share 竹, 卦/朴 share 卜.</li>
+</ol>
+<p>Ranked full candidate: <code>扎啤征战必胜激情坚持肃杀革命住户往昔算卦</code>.</p>
+<h2>Submission history</h2>
+<ul>
+<li><code>渤海征战必胜激情坚持肃杀革命住户往昔算卦</code> — incorrect (attempt 1); row 1 revised as above.</li>
+<li><code>扎啤征战必胜激情坚持肃杀革命住户往昔算卦</code> — correct.</li>
+</ul>
+<h2>Resolution</h2>
+<ul>
+<li>Status: <code>correct</code></li>
+<li>Incorrect submissions: 1</li>
+<li>Final answer: <code>扎啤征战必胜激情坚持肃杀革命住户往昔算卦</code></li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Submit only the complete 20-character string; stop at 20 incorrect submissions or when no evidence distinguishes another full set.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="010-GtybeioV.html"><span>← 上一份日志</span><strong>[NbH2谜022]五色交辉</strong></a><a class="sequence-link next" href="012-RMZAJFgi.html"><span>下一份日志 →</span><strong>[旧题] bitop</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>[回放]花卉培育回放 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

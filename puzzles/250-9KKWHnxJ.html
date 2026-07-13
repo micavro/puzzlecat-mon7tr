@@ -3,46 +3,75 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="花卉培育！20260620（9KKWHnxJ）的独立题解与验证。">
+  <meta name="description" content="花卉培育！20260620（9KKWHnxJ）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>花卉培育！20260620 · PuzzleCat 题解</title>
+  <title>花卉培育！20260620 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>250</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>250 / 289</span><code>9KKWHnxJ</code></div>
-        <h1>花卉培育！20260620</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>终结</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/9KKWHnxJ" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>规则要求三个词分别从音、形、义提示同一答案；线索为“收尾、通牒、图纸”。</p>
-<h3>我的解法</h3>
-<p><code>收尾</code> 在意义上就是 <code>终结</code>；<code>通牒(tōng dié)</code> 与 <code>终结(zhōng jié)</code> 两个音节分别押韵；<code>终、结</code> 都含 <code>纟</code>，而 <code>图纸</code> 的“纸”也含该部件。三种关系恰好一一对应。</p>
-<h3>验证</h3>
-<p>语义、双音节押韵和共同部件同时成立。Windows 大小写不敏感导致目录与旧题 <code>9kkWHnxJ</code> 碰撞，现有“火柴”提交记录不属于本题；本地日志没有本题有效提交，只能确认清单答案与机制为 <code>终结</code>。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="249-YtJhZAop.html"><span>← 上一题</span><strong>花卉培育！20260619</strong></a><a class="sequence-link next" href="251-HAg44RZL.html"><span>下一题 →</span><strong>花卉培育！20260621</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 花卉培育！20260620</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>250</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">250 / 289</span><code>9KKWHnxJ</code></div>
+      <h1>花卉培育！20260620</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/9KKWHnxJ" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/250-9KKWHnxJ.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: 花卉培育！20260620 (<code>9KKWHnxJ</code>)</h1>
+<p>Owner: <code>lane-b-20260712</code></p>
+<h2>Status</h2>
+<p>Solved with a mechanism-backed candidate. This lane made no submissions. Current-puzzle incorrect count: 0.</p>
+<h2>Filesystem collision note</h2>
+<p>Windows treats <code>9KKWHnxJ</code> and the older puzzle ID <code>9kkWHnxJ</code> as the same directory. At the start of this lane, <code>solve-log.md</code> and <code>submissions/</code> contained a stale successful record for the unrelated older puzzle <code>两种木棍</code> and answer <code>火柴</code>. The fresh API capture for the current uppercase-ID puzzle reports no attempts. The stale <code>submissions/</code> evidence was left untouched and must not be counted against or used to resolve this puzzle.</p>
+<h2>FPA compliance</h2>
+<ul>
+<li>Solved from the freshly archived title, rule text, and three clue words.</li>
+<li>No search for an existing answer, solution, original puzzle, PNKU post, or WeChat source was performed.</li>
+</ul>
+<h2>Rules and clues</h2>
+<p>The rule says to infer one word from three words through:</p>
+<ul>
+<li>sound: rhyme;</li>
+<li>form: a shared component/radical;</li>
+<li>meaning: a description of the answer.</li>
+</ul>
+<p>The solver must determine which clue corresponds to which relation. The three clues are:</p>
+<pre><code class="language-text">收尾  通牒  图纸
+</code></pre>
+<h2>Reasoning</h2>
+<p>Candidate <code>终结</code> satisfies all three relations cleanly:</p>
+<ol>
+<li>Meaning: <code>收尾</code> means bringing something to an end, i.e. <code>终结</code>.</li>
+<li>Sound: <code>通牒</code> (<code>tōng dié</code>) rhymes syllable-for-syllable with <code>终结</code> (<code>zhōng jié</code>): <code>-ong</code>, then <code>-ie</code>.</li>
+<li>Form: <code>终结</code> uses the <code>纟</code> component in both characters, and <code>纸</code> in <code>图纸</code> has the same <code>纟</code> component.</li>
+</ol>
+<p>The semantic match and unusually exact two-syllable rhyme strongly distinguish the candidate; the form clue confirms the silk radical.</p>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>终结</code> - high confidence. It simultaneously provides an exact meaning match, a two-syllable rhyme, and the intended shared <code>纟</code> component.</li>
+<li><code>结束</code> - rejected: it matches the meaning but does not rhyme with <code>通牒</code> or share the <code>纟</code> form clue.</li>
+<li><code>终点</code> - rejected: it is semantically related but the second syllable does not rhyme with <code>牒</code>.</li>
+</ol>
+<h2>Submission history</h2>
+<ul>
+<li>None for current puzzle <code>9KKWHnxJ</code>. Incorrect count: 0.</li>
+<li>The on-disk older <code>火柴</code> submission belongs to case-colliding puzzle <code>9kkWHnxJ</code> and is unrelated.</li>
+</ul>
+<h2>Stopping criteria</h2>
+<p>Report <code>终结</code>, the sound/form/meaning mapping, and the case-collision warning to the root worker. Do not archive, submit, resolve, or claim another puzzle from this lane.</p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="249-YtJhZAop.html"><span>← 上一份日志</span><strong>花卉培育！20260619</strong></a><a class="sequence-link next" href="251-HAg44RZL.html"><span>下一份日志 →</span><strong>花卉培育！20260621</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>花卉培育！20260620 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

@@ -3,46 +3,60 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="麻雀（XxEkPIap）的独立题解与验证。">
+  <meta name="description" content="麻雀（XxEkPIap）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>麻雀 · PuzzleCat 题解</title>
+  <title>麻雀 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>284</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>284 / 289</span><code>XxEkPIap</code></div>
-        <h1>麻雀</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>白頭山</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/XxEkPIap" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>8</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>题面用日式麻将牌的特殊读法拼日语词；末行是“東”和“三”，左侧还有一块看似空白的区域，答案标三汉字。</p>
-<h3>我的解法</h3>
-<p>示例包括北=<code>ペー</code>、八=<code>パー</code>，连成 <code>ペーパー</code>；四=<code>し</code>、發=<code>はつ</code>，连成 <code>始発</code>。末行先按读音得到 <code>とうさん</code>，提交后本地中间提示明确说答案是三个汉字，并注意“東”左侧空白。麻将白板牌本身纯白，故空白补“白”的读音 <code>はく</code>；<code>はく+とう+さん</code> 对应三字地名 <code>白頭山</code>。</p>
-<h3>验证</h3>
-<p><code>とうさん</code> 获得定向中间提示，加入隐藏白板后字数、读音和地名均吻合；<code>白頭山</code> 提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="283-fqvYBRMr.html"><span>← 上一题</span><strong>鱼数</strong></a><a class="sequence-link next" href="285-O2YiZO0v.html"><span>下一题 →</span><strong>黑暗森林组织：序</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 麻雀</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>284</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">284 / 289</span><code>XxEkPIap</code></div>
+      <h1>麻雀</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/XxEkPIap" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/284-XxEkPIap.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log — XxEkPIap《麻雀》</h1>
+<ul>
+<li>Owner: <code>codex-root-b-20260712</code></li>
+<li>Claimed: 2026-07-12T20:20:06.070Z</li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 8 / 20</li>
+</ul>
+<h2>Observations / reasoning</h2>
+<ul>
+<li>已完成归档，开始分析日文一枚题。</li>
+<li>标题提示采用日麻牌名或汉字读音作语音重组。</li>
+<li>例：北=ペー、八=パー，得到 ペーパー（纸）；四=し、發=はつ，得到 始発（首班车）。</li>
+<li>末行東取音「とう」，三取音「み」，得到地名「とうみ」，对应长野县东御市，候选答案「東御」。</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>東御</code> — incorrect. 机制给出的是读音，题面用三个问号提示三假名，下一候选改为 <code>とうみ</code>。</li>
+<li><code>とうみ</code> — incorrect。重新统一例题的换写规则：六・五九→牢獄，四・發→始発；末行应将三（さん）换写为山，得到地名「東山」。</li>
+<li><code>東山</code> — incorrect。题目显式以麻雀读法为核心：東=トン、三=サン；答案可能要求直接提交合成读音 <code>トンサン</code>，而非换写汉字。</li>
+<li><code>トンサン</code> — incorrect。三个问号很可能是三汉字答案长度；<code>東=とう</code>、<code>三=み</code> 给出 <code>とうみ</code>，正式三字地名为「東御市」，此前漏了市字。</li>
+<li><code>東御市</code> — incorrect。查证「とうさん」的实际地域名为香川县东部的「東讃」；東=とう、三=さん 后按同音换写，严格复现例题机制。</li>
+<li><code>東讃</code> — incorrect。另一条更常见的地名换写是中国城市「唐山」（日语音とうざん），三→山发生连浊；同组例题本就允许读音形态变化（六→ろう）。</li>
+<li><code>唐山</code> — incorrect。题面目标画了三个问号，<code>とうさん</code> 对应的三字历史地理名是「東山道」（五畿七道之一），候选转为该完整地名。</li>
+<li><code>東山道</code> — incorrect。停止继续枚举地名写法；先验证字符最直接合成的普通音读 <code>とうさん</code>（此前只投过麻将音 <code>トンサン</code>）。</li>
+<li><code>とうさん</code> — intermediate：提示答案为三个汉字，并注意「東」左侧空白。空白即麻将白板「白」，因此白(ハク)+東(とう)+三(さん)=はくとうさん，对应三字地名「白頭山」。</li>
+<li><code>白頭山</code> — correct。</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="283-fqvYBRMr.html"><span>← 上一份日志</span><strong>鱼数</strong></a><a class="sequence-link next" href="285-O2YiZO0v.html"><span>下一份日志 →</span><strong>黑暗森林组织：序</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>麻雀 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

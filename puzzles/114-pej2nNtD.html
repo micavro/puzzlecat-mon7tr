@@ -3,46 +3,54 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="历史谜（二）（pej2nNtD）的独立题解与验证。">
+  <meta name="description" content="历史谜（二）（pej2nNtD）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>历史谜（二） · PuzzleCat 题解</title>
+  <title>历史谜（二） · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>114</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>114 / 289</span><code>pej2nNtD</code></div>
-        <h1>历史谜（二）</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>三五成群</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/pej2nNtD" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>题目用字母代替一串与三国有关的词，并要求提取指定字母位。</p>
-<h3>我的解法</h3>
-<p><code>AB=三国</code>，蜀汉都城 <code>CD=成都</code>，诸葛亮病逝于 <code>EFG=五丈原</code>，形容三国局势的 <code>HIJK=群雄逐鹿</code>。因此取 <code>A,E,C,H</code> 分别是 <code>三、五、成、群</code>。</p>
-<h3>验证</h3>
-<p>历史实体与字母复用关系完全一致，提取直接形成成语；<code>三五成群</code> 提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="113-LwpqNrv1.html"><span>← 上一题</span><strong>历史谜（一）</strong></a><a class="sequence-link next" href="115-OA2iZO0v.html"><span>下一题 →</span><strong>又是三个词？</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 历史谜（二）</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>114</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">114 / 289</span><code>pej2nNtD</code></div>
+      <h1>历史谜（二）</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/pej2nNtD" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/114-pej2nNtD.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log — pej2nNtD《历史谜（二）》</h1>
+<ul>
+<li>Owner: <code>codex-root-b-20260712</code></li>
+<li>Claimed: 2026-07-13T05:53:13.782Z</li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0 / 50</li>
+</ul>
+<h2>Observations / reasoning</h2>
+<ul>
+<li>已完成归档，开始分析历史题。</li>
+<li><code>AB=三国</code>。</li>
+<li>三国中蜀汉的 <code>CD=成都</code>，其中 D=都，正符合“政权的都城”。</li>
+<li>蜀汉丞相诸葛亮病逝于 <code>EFG=五丈原</code>。</li>
+<li><code>HIJK=群雄逐鹿</code>，常用于形容三国时期，故 H=群。</li>
+<li>提取 <code>AECH = 三 + 五 + 成 + 群 = 三五成群</code>。</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li>Candidate: <code>三五成群</code>。</li>
+<li><code>三五成群</code> — correct。</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="113-LwpqNrv1.html"><span>← 上一份日志</span><strong>历史谜（一）</strong></a><a class="sequence-link next" href="115-OA2iZO0v.html"><span>下一份日志 →</span><strong>又是三个词？</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>历史谜（二） · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

@@ -3,46 +3,76 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="平面直角坐标系（fBtYBRMr）的独立题解与验证。">
+  <meta name="description" content="平面直角坐标系（fBtYBRMr）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>平面直角坐标系 · PuzzleCat 题解</title>
+  <title>平面直角坐标系 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>153</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>153 / 289</span><code>fBtYBRMr</code></div>
-        <h1>平面直角坐标系</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>AXIS</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/fBtYBRMr" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>四个小题分别给图像、曲线、坐标点和物理量，先求四个英文中间答案，再按第五图抽取。</p>
-<h3>我的解法</h3>
-<p>四题得到 <code>ALPHA</code>（字母/alpha+bet rebus）、<code>CALCULUS</code>（曲线下面积）、<code>SIX</code>（直线 <code>y=.5x+3</code> 上 y=6 时 x=6）、<code>GRAVITY</code>（重量与质量斜率 9.8）。末图按标记及索引取 <code>ALPHA[1]=A、SIX[3]=X、GRAVITY[5]=I、CALCULUS[8]=S</code>，拼成 <code>AXIS</code>。</p>
-<h3>验证</h3>
-<p>四个中间词的长度和末图抽取全部吻合；首次提交 correct。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="152-lXxOiBju.html"><span>← 上一题</span><strong>帮Stavros回家</strong></a><a class="sequence-link next" href="154-swOBl3vq.html"><span>下一题 →</span><strong>当一切都沉寂之时</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 平面直角坐标系</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>153</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">153 / 289</span><code>fBtYBRMr</code></div>
+      <h1>平面直角坐标系</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/fBtYBRMr" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/153-fBtYBRMr.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>平面直角坐标系 solve log</h1>
+<ul>
+<li>Puzzle ID: <code>fBtYBRMr</code></li>
+<li>Owner: <code>codex-sub-a-20260712</code></li>
+<li>Status: correct and resolved</li>
+<li>Incorrect submissions: 0</li>
+<li>Submitted answers: <code>AXIS</code> (correct)</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Flavor: <code>你确定这题是关于平面直角坐标系的？</code></li>
+<li>The archive contains five panels uploaded in display order <code>4.png</code>, <code>3.png</code>, <code>1.png</code>, <code>2.png</code>, <code>5.png</code>.</li>
+<li>The puzzle explicitly states that there are four intermediate answers.</li>
+<li>Red parenthesized numbers in the four clue panels are answer lengths; the fifth panel gives extraction indices.</li>
+</ul>
+<h2>Intermediate answers</h2>
+<ol>
+<li>Original <code>1.png</code>: points on a decreasing distribution curve labeled <code>R</code>, <code>M</code>, and <code>X</code>, followed by <code>_____ + bet</code>. These are alphabet letters and the rebus completes <code>alpha + bet</code>, so the intermediate is <code>ALPHA</code>.</li>
+<li>Original <code>2.png</code>: the yellow area under a curve is the standard subject of <code>CALCULUS</code>, matching length 8.</li>
+<li>Original <code>3.png</code>: on <code>y = 0.5x + 3</code>, the marked point has <code>y=6</code>, hence <code>6 = 0.5x + 3</code> and <code>x=6</code>; length 3 gives <code>SIX</code>.</li>
+<li>Original <code>4.png</code>: the points <code>(1,9.8)</code> and <code>(2.5,24.5)</code> with horizontal axis mass <code>m</code> encode weight proportional to mass with acceleration <code>g=9.8</code>; length 7 gives <code>GRAVITY</code>.</li>
+</ol>
+<h2>Extraction</h2>
+<p>The final panel labels four bars by concept and gives heights/indices:</p>
+<ul>
+<li><code>abc</code>, index 1 -&gt; <code>ALPHA[1] = A</code></li>
+<li><code>123</code>, index 3 -&gt; <code>SIX[3] = X</code></li>
+<li><code>G</code>, index 5 -&gt; <code>GRAVITY[5] = I</code></li>
+<li><code>S</code> (the integral/summa association), index 8 -&gt; <code>CALCULUS[8] = S</code></li>
+</ul>
+<p>This spells <code>AXIS</code>, a four-letter final answer matching the apparent coordinate-axis presentation.</p>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>AXIS</code> - uniquely supported by all four intermediates and the ordered extraction.</li>
+</ol>
+<h2>Submission record</h2>
+<ul>
+<li><code>AXIS</code> - correct (<code>恭喜你，回答正确！</code>), HTTP 200, prior attempts 0, submitted 2026-07-12T13:07:42Z. Final incorrect count: 0.</li>
+</ul>
+<h2>Stopping condition</h2>
+<ul>
+<li>Stopped after the uniquely extracted <code>AXIS</code> was accepted.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="152-lXxOiBju.html"><span>← 上一份日志</span><strong>帮Stavros回家</strong></a><a class="sequence-link next" href="154-swOBl3vq.html"><span>下一份日志 →</span><strong>当一切都沉寂之时</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>平面直角坐标系 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

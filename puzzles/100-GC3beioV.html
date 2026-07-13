@@ -3,46 +3,66 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="元素魔法（GC3beioV）的独立题解与验证。">
+  <meta name="description" content="元素魔法（GC3beioV）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>元素魔法 · PuzzleCat 题解</title>
+  <title>元素魔法 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>100</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>100 / 289</span><code>GC3beioV</code></div>
-        <h1>元素魔法</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>CURE RATE</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/GC3beioV" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>1</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>五条中文描述指向《哈利·波特》咒语，每条附“第几个元素符号/总符号数”，末尾为 <code>(3 2)</code>。</p>
-<h3>我的解法</h3>
-<p>咒语依次为 <code>ACCIO、CRUCIO、REPARO、ALOHOMORA、FINITE</code>，按元素符号切分后选定 <code>C、U、Re、Ra、Te</code>。末尾 <code>(3 2)</code> 要按前三个、后两个符号分组拼写：<code>C/U/Re = CURE</code>，<code>Ra/Te = RATE</code>。</p>
-<h3>验证</h3>
-<p>每个咒语的元素符号数与索引一致；错误分支 <code>ER</code> 判错，<code>CURE RATE</code> 正确，共 1 次错误。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="099-XYkPIapg.html"><span>← 上一题</span><strong>信达雅</strong></a><a class="sequence-link next" href="101-GYnbeioV.html"><span>下一题 →</span><strong>克制关系</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 元素魔法</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>100</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">100 / 289</span><code>GC3beioV</code></div>
+      <h1>元素魔法</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/GC3beioV" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/100-GC3beioV.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>GC3beioV - 元素魔法</h1>
+<ul>
+<li>Owner: <code>chat2-w2-20260712</code></li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 1</li>
+<li>Stopping rule: submit only mechanism-backed answers; stop at correct, 20 incorrect, or earlier evidence exhaustion.</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Archive completed with no downloaded resources.</li>
+<li>Flavor: <code>麻瓜也要记咒语！</code>.</li>
+<li>Five Chinese descriptions identify Harry Potter incantations, each followed by a selection fraction; the final line is <code>(3 2)</code>.</li>
+</ul>
+<h2>Reasoning and candidates</h2>
+<ul>
+<li><code>来我身边</code> -&gt; <code>ACCIO</code> -&gt; <code>Ac / C / I / O</code> (four element symbols); select 2/4 -&gt; <code>C</code>.</li>
+<li><code>钻心之痛</code> -&gt; <code>CRUCIO</code> -&gt; <code>Cr / U / C / I / O</code> (five); select 2/5 -&gt; <code>U</code>.</li>
+<li><code>破镜重圆</code> -&gt; <code>REPARO</code> -&gt; <code>Re / P / Ar / O</code> (four); select 1/4 -&gt; <code>Re</code>.</li>
+<li><code>芝麻开门</code> -&gt; <code>ALOHOMORA</code> -&gt; <code>Al / O / H / O / Mo / Ra</code> (six); select 6/6 -&gt; <code>Ra</code>.</li>
+<li><code>终结之咒</code> -&gt; <code>FINITE</code> -&gt; <code>F / In / I / Te</code> (four); select 4/4 -&gt; <code>Te</code>.</li>
+<li>Concatenating the selected symbols gives <code>C U Re Ra Te</code>. The final <code>(3 2)</code> groups the five symbols into groups of three and two: <code>C/U/Re</code> -&gt; <code>CURE</code>, <code>Ra/Te</code> -&gt; <code>RATE</code>.</li>
+<li>Primary candidate: <code>CURE RATE</code>.</li>
+<li>Rejected branch: anagramming <code>CURERATE</code> to <code>CREATURE</code> and taking its 3rd and 2nd letters produced <code>ER</code>, but this added unsupported operations.</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>ER</code> - incorrect (2026-07-13 04:21 CST); rejected the extra <code>CREATURE</code> anagram and letter extraction.</li>
+<li><code>CURE RATE</code> - correct (2026-07-13 04:22 CST). The five selected element symbols group 3+2 as <code>C/U/Re Ra/Te</code>.</li>
+</ul>
+<h2>Final answer</h2>
+<ul>
+<li><code>CURE RATE</code></li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="099-XYkPIapg.html"><span>← 上一份日志</span><strong>信达雅</strong></a><a class="sequence-link next" href="101-GYnbeioV.html"><span>下一份日志 →</span><strong>克制关系</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>元素魔法 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

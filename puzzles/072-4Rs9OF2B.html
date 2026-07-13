@@ -3,46 +3,78 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="〖棱镜谜〗见微知著（4Rs9OF2B）的独立题解与验证。">
+  <meta name="description" content="〖棱镜谜〗见微知著（4Rs9OF2B）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>〖棱镜谜〗见微知著 · PuzzleCat 题解</title>
+  <title>〖棱镜谜〗见微知著 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>072</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>072 / 289</span><code>4Rs9OF2B</code></div>
-        <h1>〖棱镜谜〗见微知著</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>OBSERVATION</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/4Rs9OF2B" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>题面给出 11 个两字“微”片段，以及 11 条指向较长名句、书名或作品名的“著”描述。</p>
-<h3>我的解法</h3>
-<p>先把片段补回完整文本，例如 <code>底两→海底两万里</code>、<code>态分→正态分布</code>、<code>变符→奇变偶不变，符号看象限</code>、<code>我三→假如给我三天光明</code>、<code>吐葡→吃葡萄不吐葡萄皮</code>；其余可补成 <code>你想活出怎样的人生、白雪歌送武判官归京、燕雀安知鸿鹄之志、陪你度过漫长岁月</code> 等。按描述顺序，数出每个两字片段在完整文本之前和之后各有多少字，把两个数当作 5×5 Polybius 方阵坐标，得到 <code>34 12 43 15 42 51 11 44 24 34 33</code>。</p>
-<h3>验证</h3>
-<p>按 I/J 合并的标准 Polybius 方阵解码，恰为 <code>OBSERVATION</code>；含义“观察”也呼应“见微知著”。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="071-ASMTwX1Q.html"><span>← 上一题</span><strong>〖星谜001〗漏墨</strong></a><a class="sequence-link next" href="073-ut8C56DT.html"><span>下一题 →</span><strong>〖鼠鼠谜〗加特零</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 〖棱镜谜〗见微知著</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>072</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">072 / 289</span><code>4Rs9OF2B</code></div>
+      <h1>〖棱镜谜〗见微知著</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/4Rs9OF2B" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/072-4Rs9OF2B.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>4Rs9OF2B - 【棱镜谜】见微知著</h1>
+<p>Owner: <code>chat2-root-20260712</code></p>
+<h2>Observations</h2>
+<ul>
+<li>Flavor: <code>棋盘一角，见微知著</code>.</li>
+<li>There are eleven two-character <code>微</code> fragments and eleven descriptions of famous
+  longer works/phrases under <code>著</code>.</li>
+</ul>
+<h2>Reasoning</h2>
+<ul>
+<li>Secure matches reconstructed from the tiny contiguous fragments:</li>
+<li><code>底两</code> -&gt; 海底两万里 (著名小说)</li>
+<li><code>态分</code> -&gt; 正态分布 (N)</li>
+<li><code>变符</code> -&gt; 奇变偶不变，符号看象限 (高中数学口诀)</li>
+<li><code>义核</code> -&gt; 社会主义核心价值观 (12 words)</li>
+<li><code>我三</code> -&gt; 假如给我三天光明 (自传式散文)</li>
+<li><code>吐葡</code> -&gt; 吃葡萄不吐葡萄皮 (绕口令第一句)</li>
+<li><code>基疯</code> -&gt; 肯德基疯狂星期四 (50)</li>
+<li>Remaining fragments are <code>长岁、出怎、雀安、武判</code>; descriptions still needing
+  assignment are film/deep thought, farewell poem, self-encouragement, and Eason Chan
+  song.</li>
+<li>Final four matches:</li>
+<li><code>出怎</code> -&gt; 你想活出怎样的人生 (film/deep thought)</li>
+<li><code>武判</code> -&gt; 白雪歌送武判官归京 (farewell poem)</li>
+<li><code>雀安</code> -&gt; 燕雀安知鸿鹄之志 (self-encouragement)</li>
+<li><code>长岁</code> -&gt; 陪你度过漫长岁月 (Eason Chan song)</li>
+<li>In description order, count characters strictly before and after each shown two-character
+  fragment. These counts are coordinates in a standard 5x5 Polybius square:
+  <code>34 12 43 15 42 51 11 44 24 34 33</code>.</li>
+<li>Polybius decoding (I/J combined) gives <code>OBSERVATION</code>, matching "见微知著".</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ul>
+<li><code>OBSERVATION</code> - fully mechanism-supported.</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>OBSERVATION</code> - correct (<code>0 / 20</code> incorrect).</li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Resolve correct on an accepted, mechanism-supported answer.</li>
+<li>Resolve cannot_do if the static clue set cannot distinguish the final extraction.</li>
+</ul>
+<p>Resolved <code>correct</code> with answer <code>OBSERVATION</code>.</p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="071-ASMTwX1Q.html"><span>← 上一份日志</span><strong>〖星谜001〗漏墨</strong></a><a class="sequence-link next" href="073-ut8C56DT.html"><span>下一份日志 →</span><strong>〖鼠鼠谜〗加特零</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>〖棱镜谜〗见微知著 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

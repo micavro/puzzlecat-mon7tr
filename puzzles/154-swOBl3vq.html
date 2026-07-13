@@ -3,46 +3,163 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="当一切都沉寂之时（swOBl3vq）的独立题解与验证。">
+  <meta name="description" content="当一切都沉寂之时（swOBl3vq）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>当一切都沉寂之时 · PuzzleCat 题解</title>
+  <title>当一切都沉寂之时 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>154</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>154 / 289</span><code>swOBl3vq</code></div>
-        <h1>当一切都沉寂之时</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>DEADLINE</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/swOBl3vq" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>单图由若干彩色字格、共同黑色字格、下降箭头和图标组成；七个编号字母最后填入右侧两组四格。</p>
-<h3>我的解法</h3>
-<p>各行都是英文短语在某种量下降后的变化。温度下降使 <code>FRESH CREAM</code> 变成 <code>ICE CREAM</code>；速度下降使 <code>FULL GAS</code> 变成 <code>FULL STOP</code>；电力下降使 <code>ON END</code> 变成 <code>OFFEND</code>。编号由这些词得到 <code>1–7 = L,I,F,E,L,N,E</code>，在右侧先组成 <code>LIFE LINE</code>。最后生命降至终点，<code>LIFE</code> 变为 <code>DEAD</code>，共同后缀仍是 <code>LINE</code>，故得到 <code>DEADLINE</code>。</p>
-<h3>验证</h3>
-<p>三个示例的词长、图标和编号全部闭合；<code>DEADLINE</code> 也对应时钟图标。该答案首次提交即为 correct。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="153-fBtYBRMr.html"><span>← 上一题</span><strong>平面直角坐标系</strong></a><a class="sequence-link next" href="155-qwTUKLri.html"><span>下一题 →</span><strong>彩色方块</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 当一切都沉寂之时</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>154</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">154 / 289</span><code>swOBl3vq</code></div>
+      <h1>当一切都沉寂之时</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/swOBl3vq" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/154-swOBl3vq.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>swOBl3vq《当一切都沉寂之时》做题日志</h1>
+<h2>2026-07-12 03:34 CST - 开始</h2>
+<ul>
+<li>范围：只分析本题本地归档；不启动浏览器、不调用提交脚本、不读取凭据文件。</li>
+<li>已发现归档：<code>metadata.json</code>、<code>page.html</code>、<code>page.txt</code>、API 响应、页面截图，以及唯一图片资源 <code>assets/001-DzSPz728-图片_050_05.webp</code>。</li>
+<li>初步观察：<code>content.txt</code> 仅 1 字节，题面信息大概率主要承载在图片中。</li>
+<li>当前假设：尚无；需先提取元数据、页面可见文字和图片内容。</li>
+<li>当前候选：无。</li>
+<li>当前置信度：0%。</li>
+</ul>
+<h2>2026-07-12 03:36 CST - 题面提取</h2>
+<ul>
+<li>元数据：标题为《当一切都沉寂之时》，中文题，无 flavor text；作者 <code>Fish Puzzle Award</code>，FPA2026 题；已有 62 人通过，页面统计通过率 68%，难度均值约 2.7/5，说明题目应能从单图自洽解出。</li>
+<li>唯一题面图尺寸为 1734×1098。图中没有可 OCR 的正文，只有方格、箭头、等号、编号 1–7 与图标。</li>
+<li>图面分为四组：</li>
+<li>左上：5 个橙格（编号 3）经“水滴 + 向下箭头”变成 3 个灰格（编号 2）；旁边是两行各 5 个黑格的等式，上行编号 7。右侧图标为打印机、冰淇淋。</li>
+<li>左中：黑框内上下各 4 格相等，上行第 3、4 格编号 1、5；其后接 3 个橙格，经“奔跑 + 向下箭头”变成 4 个灰格。右侧图标为速度计/羽毛球与标点符号。</li>
+<li>左下：2 个橙格接黑框内 3 格（其中编号 4、6），经“电源 + 向下箭头”变成 3 个灰格；黑框内 3 格上下相等。右侧图标为柱状图、差评。</li>
+<li>右侧：橙色竖排 4 格（编号 1–4）横向变成灰色竖排 4 格；橙列向下接黑框内竖排 4 格（编号 5、2、6、7），与右边黑色竖排 4 格相等；下方图标为爱心、时钟。蓝色“答案”箭头指向灰列与右黑列拼出的 8 格竖向序列。</li>
+<li>结构性判断：橙/灰部分大概率是图标所示词之间的某种变化，黑框中的上下/左右等式则给出同一串字符的不同分词或同音词。七个编号反复出现，答案 8 格中很可能由编号映射填入，而不是简单抽取 7 字。</li>
+<li>标题假设 A：使用“无声”图标猜词，即图标没有配文字；较弱。</li>
+<li>标题假设 B：涉及 silent letters（不发音字母）或去掉声音/音标；若格子代表英文字符则较强，需用词长验证。</li>
+<li>当前候选：无。</li>
+<li>当前置信度：5%。</li>
+</ul>
+<h2>2026-07-12 03:43 CST - 结构破解</h2>
+<ul>
+<li>方格按英文单词逐字母填写。黑框内的上下（或左右）部分是相同字母串；彩色部分在蓝箭头所示条件下发生变化；两侧图标定义完整短语/单词。</li>
+<li>左下组可严格闭合：</li>
+<li>橙字 <code>ON</code> + 共同黑字 <code>END</code> = <code>ON END</code>，右侧竖条图标表示柱子“直立/竖着放”（standing on end）。</li>
+<li>power down（关机）使 <code>ON → OFF</code>；<code>OFF + END = OFFEND</code>，右侧差评/愤怒图标表示“冒犯”。</li>
+<li>所以编号 4 = <code>E</code>，编号 6 = <code>N</code>。</li>
+<li>左中组的共同段高度确定，但彩色段此时仍属初猜（后续放大图标后修正）：</li>
+<li>共同黑字应为 <code>FULL</code>，因为灰字 <code>STOP</code> 后组成 <code>FULL STOP</code>，右侧 <code>,.?!</code> 图标明确指向标点/句号。</li>
+<li>此时曾将橙字猜为 <code>RUN</code>、上方猜为 <code>FULL RUN</code>；后续确认上图是脚踩油门，正确填写为 <code>FULL GAS</code>。</li>
+<li><code>FULL</code> 的第 3、4 字母分别标号 1、5，故编号 1 = <code>L</code>、编号 5 = <code>L</code>。</li>
+<li>右侧左列按这些编号回填为 <code>_ I _ E + L I N E</code> 的可能性极高；自然且与爱心图标严格对应的是 <code>LIFE LINE = LIFELINE</code>。由此编号表应为：1=L，2=I，3=F，4=E，5=L，6=N，7=E。</li>
+<li>右侧灰色 4 格 + 共同后缀 <code>LINE</code> 由时钟图标定义。两个主要候选：</li>
+<li><code>DEADLINE</code>：时限，且 <code>LIFE → DEAD</code>；标题“当一切都沉寂之时”强烈呼应 dead。</li>
+<li><code>TIMELINE</code>：时间线，但缺少解释 <code>LIFE → TIME</code> 的关系，且标题支持较弱。</li>
+<li>当前首选已转为 <code>DEADLINE</code>，置信度 80%；仍需破解左上组并核准所有编号。</li>
+</ul>
+<h2>2026-07-12 03:49 CST - 全部交叉验证</h2>
+<h3>左上：温度下降</h3>
+<ul>
+<li>上行是 <code>FRESH CREAM</code>，右侧图标是鲜奶油/奶油容器；下行是 <code>ICE CREAM</code>，右侧为冰淇淋筒。</li>
+<li>初看曾把鲜奶油容器误认成打印机/墨水瓶；放大图标并结合 5+5 字长与编号后已排除。</li>
+<li>温度下降后 fresh cream 冻成 ice cream，因此彩色前缀 <code>FRESH → ICE</code>，共同黑色后缀为 <code>CREAM</code>。</li>
+<li>编号得到：3 = <code>F</code>（FRESH 第 1 字母），2 = <code>I</code>（ICE 第 1 字母），7 = <code>E</code>（CREAM 第 3 字母）。</li>
+</ul>
+<h3>左中：速度下降</h3>
+<ul>
+<li>上行 <code>FULL GAS</code>：速度表与脚踩油门图标表示 full gas / 全油门。</li>
+<li>速度降下并停住后得到 <code>FULL STOP</code>；下行标点图标也直接提示 full stop（句号）。</li>
+<li>共同黑色前缀 <code>FULL</code> 的第 3、4 字母给出：1 = <code>L</code>，5 = <code>L</code>。</li>
+</ul>
+<h3>左下：电力下降</h3>
+<ul>
+<li><code>ON END</code>：柱状物竖着立起（on end）。</li>
+<li>power down 使 <code>ON → OFF</code>，从而形成 <code>OFFEND</code>，对应被冒犯/差评图标。</li>
+<li>共同后缀 <code>END</code> 给出：4 = <code>E</code>，6 = <code>N</code>。</li>
+</ul>
+<h3>编号表与终局</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">编号</th>
+<th>来源</th>
+<th style="text-align: center;">字母</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>FULL[3]</td>
+<td style="text-align: center;">L</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>ICE[1]</td>
+<td style="text-align: center;">I</td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>FRESH[1]</td>
+<td style="text-align: center;">F</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>END[1]</td>
+<td style="text-align: center;">E</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>FULL[4]</td>
+<td style="text-align: center;">L</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>END[2]</td>
+<td style="text-align: center;">N</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>CREAM[3]</td>
+<td style="text-align: center;">E</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>将编号填入右侧橙/黑左列：<code>1 2 3 4 / 5 2 6 7</code> = <code>LIFE / LINE</code>，完整词为 <code>LIFELINE</code>，与爱心/生命图标一致。</li>
+<li>右侧黑色共同后缀仍是 <code>LINE</code>。生命降至终点即 <code>LIFE → DEAD</code>，而 <code>DEAD + LINE = DEADLINE</code>，与右下时钟/截止期限图标严格一致。</li>
+<li>标题《当一切都沉寂之时》也以 “dead quiet / life ends” 的语义强化 <code>DEAD</code>；各辅助组共同表现某种量下降（温度、速度、电力，最终生命）。</li>
+</ul>
+<h2>结论</h2>
+<ul>
+<li><strong>首选答案：<code>DEADLINE</code></strong></li>
+<li>建议提交：<strong>是</strong>。</li>
+<li>置信度：<strong>98%</strong>。字长、共同词段、7 个编号、两侧图标和标题全部闭合。</li>
+<li>备选：<code>TIMELINE</code>（约 2%）。它也能匹配时钟与后缀 <code>LINE</code>，但无法解释 <code>LIFE → TIME</code>，也没有标题和前三组“下降至终止状态”的支持，因此不建议优先。</li>
+<li>错误提交次数：0（本分析按要求未调用提交接口）。</li>
+</ul>
+<h2>Submission Result</h2>
+<ul>
+<li>Submitted: <code>2026-07-11T19:41:39Z</code></li>
+<li>Answer: <code>DEADLINE</code></li>
+<li>Verdict: <code>correct</code></li>
+<li>Incorrect submissions for this practice run: <code>0 / 20</code></li>
+<li>Evidence: <code>submissions/2026-07-11T19-41-39-076Z/submission.json</code></li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="153-fBtYBRMr.html"><span>← 上一份日志</span><strong>平面直角坐标系</strong></a><a class="sequence-link next" href="155-qwTUKLri.html"><span>下一份日志 →</span><strong>彩色方块</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>当一切都沉寂之时 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

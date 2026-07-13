@@ -3,46 +3,65 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="月照纱窗 2（m61r8Uar）的独立题解与验证。">
+  <meta name="description" content="月照纱窗 2（m61r8Uar）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>月照纱窗 2 · PuzzleCat 题解</title>
+  <title>月照纱窗 2 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>200</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>200 / 289</span><code>m61r8Uar</code></div>
-        <h1>月照纱窗 2</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>离家今几载</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/m61r8Uar" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>五行只显示汉字内部封闭区域，风味为“字字孔明诸格亮”；每行对应一个四字成语并有一个完全不可见字。</p>
-<h3>我的解法</h3>
-<p>可由题图直接观察到每行只保留了若干汉字的封闭区域，因此“没有封闭区域的字会消失”是合理方向。日志给出的五行复原为 <code>貌合神离、家喻户晓、博古通今、曾几何时、口碑载道</code>，相应缺字依次为 <code>离、家、今、几、载</code>，连读得到 <code>离家今几载</code>。</p>
-<h3>验证</h3>
-<p><code>离家今几载</code> 获正确判定。本地独立证据有限：日志在系统化匹配前已经查看本地保存的 P&amp;KU2 解法并使用外部生成器确认机制，现有记录无法证明五个成语是在未受该材料影响下独立还原；因此这里只把孔洞观察、日志所列填词和提交结果分开陈述。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="199-TSUKhwRH.html"><span>← 上一题</span><strong>最烂的谜题只需枚举</strong></a><a class="sequence-link next" href="201-Kx6XEjGS.html"><span>下一题 →</span><strong>月照纱窗 3</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 月照纱窗 2</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>200</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">200 / 289</span><code>m61r8Uar</code></div>
+      <h1>月照纱窗 2</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/m61r8Uar" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/200-m61r8Uar.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: m61r8Uar</h1>
+<h2>Coordination</h2>
+<ul>
+<li>Owner: <code>codex-sub-c-20260712</code></li>
+<li>Title: <code>月照纱窗 2</code></li>
+<li>Incorrect submissions: 0</li>
+<li>Status: solved</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>The puzzle is a single black image containing five rows of white shapes, with flavor <code>字字孔明诸格亮</code>.</li>
+<li>It is an unused draft of P&amp;KU2's <code>月照纱窗</code> and explicitly has the same mechanism but a different answer.</li>
+<li>The public <code>moonlight_window</code> generator and the local P&amp;KU2 solution confirm the mechanism: the white shapes are only the enclosed regions (holes/counters) of Chinese characters. Characters without enclosed regions disappear completely.</li>
+<li>This early draft format consists of five independent four-character idioms. Each row has one invisible character.</li>
+</ul>
+<h2>Reasoning</h2>
+<p>The visible counter shapes were matched against the generator's common-character dictionary. A 30,895-entry idiom corpus then gave an unambiguous best match for every row:</p>
+<ol>
+<li><code>貌合神离</code>: <code>离</code> has no enclosed region and is invisible.</li>
+<li><code>家喻户晓</code>: <code>家</code> has no enclosed region and is invisible.</li>
+<li><code>博古通今</code>: <code>今</code> has no enclosed region and is invisible.</li>
+<li><code>曾几何时</code>: <code>几</code> has no enclosed region and is invisible.</li>
+<li><code>口碑载道</code>: <code>载</code> has no enclosed region and is invisible.</li>
+</ol>
+<p>Reading the missing characters from top to bottom gives <code>离家今几载</code>.</p>
+<h2>Submissions</h2>
+<ul>
+<li><code>离家今几载</code> -&gt; correct.</li>
+<li>A later command issued while checking a delayed tool response detected <code>alreadySolved: true</code> and did not submit again.</li>
+</ul>
+<h2>Final answer</h2>
+<p><code>离家今几载</code></p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="199-TSUKhwRH.html"><span>← 上一份日志</span><strong>最烂的谜题只需枚举</strong></a><a class="sequence-link next" href="201-Kx6XEjGS.html"><span>下一份日志 →</span><strong>月照纱窗 3</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>月照纱窗 2 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

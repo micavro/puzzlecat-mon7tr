@@ -3,46 +3,66 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Test（7UlIxIpP）的独立题解与验证。">
+  <meta name="description" content="Test（7UlIxIpP）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>Test · PuzzleCat 题解</title>
+  <title>Test · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>046</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>046 / 289</span><code>7UlIxIpP</code></div>
-        <h1>Test</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>什么</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/7UlIxIpP" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>1</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>全部题面只有一句“请回答答案是什么”，并标记为网站测试题。</p>
-<h3>我的解法</h3>
-<p>我先按普通自指理解提交“答案”，但被拒绝。随后把句子按字面断为“答案是‘什么’”，即问题本身已经给出谓语后的答案词，所以提交“什么”。</p>
-<h3>验证</h3>
-<p><code>答案</code> 错、<code>什么</code> 对，确认这是利用中文句法歧义的自指测试。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="045-aLPstzDO.html"><span>← 上一题</span><strong>Super~big~</strong></a><a class="sequence-link next" href="047-DnOPz728.html"><span>下一题 →</span><strong>To ronto</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · Test</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>046</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">046 / 289</span><code>7UlIxIpP</code></div>
+      <h1>Test</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/7UlIxIpP" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/046-7UlIxIpP.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>7UlIxIpP Test — solve log</h1>
+<ul>
+<li>Owner: <code>codex-sub-g-20260712</code></li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 1</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>The entire puzzle text is <code>请回答答案是什么</code> (“Please answer what the answer is”), with <code>请回答</code> and <code>答案是什么</code> visually separated on the rendered page.</li>
+<li>It is explicitly tagged <code>test</code> and flavored as a website test; there is no other payload or resource.</li>
+<li>The direct self-referential fill is <code>答案</code> (“answer”): asked “答案是什么”, answer “答案”.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>答案</code> — exact literal/self-referential response to the only prompt.</li>
+<li><code>是什么</code> / <code>Test</code> — grammatically or mechanically weaker; no evidence.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>答案</code> — incorrect (HTTP 200, 2026-07-12T11:43:21.782Z). This rejects the generic self-reference; the intended Chinese wordplay is likely “答案是‘什么’”.</li>
+<li><code>什么</code> — correct (HTTP 200, 2026-07-12T11:44:30.862Z). The prompt parses literally as “the answer is 什么”.</li>
+</ul>
+<h2>Resolution</h2>
+<ul>
+<li>Final answer: <code>什么</code></li>
+<li>Incorrect count: 1</li>
+<li>Outcome: <code>correct</code></li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Require a direct or reproducible answer mechanism before submission.</li>
+<li>End as <code>correct</code>, evidentially exhausted <code>cannot_do</code>, or <code>wrong_20</code> after exactly 20 incorrect submissions.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="045-aLPstzDO.html"><span>← 上一份日志</span><strong>Super~big~</strong></a><a class="sequence-link next" href="047-DnOPz728.html"><span>下一份日志 →</span><strong>To ronto</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>Test · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

@@ -3,46 +3,80 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="叠叠叠叠叠词（Ys8hZAop）的独立题解与验证。">
+  <meta name="description" content="叠叠叠叠叠词（Ys8hZAop）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>叠叠叠叠叠词 · PuzzleCat 题解</title>
+  <title>叠叠叠叠叠词 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>120</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>120 / 289</span><code>Ys8hZAop</code></div>
-        <h1>叠叠叠叠叠词</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>原神</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/Ys8hZAop" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>1</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>四组五格重复句和三格短句共享末两红格，最终只提取两红格。</p>
-<h3>我的解法</h3>
-<p>日志在 <code>行长</code> 被否定后，把五字重复句、五字正文与三字短句识别为“云·原神”宣传/jingle 的挖空结构；三字短句按 <code>云原神</code> 填入时，首格是 <code>云</code>，共享的两红格就是 <code>原神</code>。为避免借用答对后出现的作者文字，本题不再列出正确提示中给出的完整歌词句子。</p>
-<h3>验证</h3>
-<p>早期把重复格误解为多音字并提交 <code>行长</code>，判错；<code>原神</code> 正确，错误 1 次。独立证据的关键只到“云原神”三格结构；答对后正确提示中的完整歌词仅作验证，不作为推导来源。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="119-HKd44RZL.html"><span>← 上一题</span><strong>反向探骊格</strong></a><a class="sequence-link next" href="121-y1Ezg7XA.html"><span>下一题 →</span><strong>古老迷宫游戏</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 叠叠叠叠叠词</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>120</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">120 / 289</span><code>Ys8hZAop</code></div>
+      <h1>叠叠叠叠叠词</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/Ys8hZAop" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/120-Ys8hZAop.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: Ys8hZAop</h1>
+<ul>
+<li>Owner: <code>recover-w1-20260712</code></li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 1</li>
+<li>Answer policy: fixed 1-minute cooldown; stop at 20 incorrect submissions.</li>
+<li>FPA check: no FPA tag (only a mojibake tag recovering approximately as <code>一枚</code>).</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Recovered title: <code>叠叠叠叠叠词</code>.</li>
+<li>Recovered flavor is approximately <code>？！叠叠！？</code>.</li>
+<li>The puzzle content is one image: <code>assets/001-cWVHRhJe-叠叠叠叠叠词.webp</code>.</li>
+</ul>
+<h2>Reasoning</h2>
+<ul>
+<li>The image has four parallel groups. Each group ends in three colored cells with the same pattern: one cyan cell followed by two red cells. The final answer display consists of two red cells, so the common red two-character suffix is extracted.</li>
+<li>A coherent fill is <code>银</code> (cyan) + <code>行长</code> (red) = <code>银行长</code>. Both <code>行</code> and <code>长</code> are polyphonic and polysemous, giving the four reading/segmentation interpretations that account for four groups and the heavy use of the iteration mark <code>々</code>.</li>
+<li>The first five-cell explanatory row can be filled <code>银行的行长</code>; its last two cells are exactly the red suffix <code>行长</code>, while its shortened three-cell form is <code>银行长</code>. Other groups exploit repeated <code>行</code>/<code>长</code> and alternate readings/meanings.</li>
+<li>This also fits the small <code>□！□□？</code> prompt as <code>行！行长？</code>, continuing the same ambiguous repeated-character joke.</li>
+<li>Therefore the two final red cells extract <code>行长</code>.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>行长</code> — rejected; the assumption that equal colors denote equal characters across groups was false.</li>
+<li>Investigating fivefold polyphonic-character readings. A plausible structural example is <code>行行行行行</code> paraphrased as <code>行业都可以</code>, with the three-cell reduction <code>都可以</code>; this matches a 5-cell row whose last two cells recur in a 3-cell row.</li>
+<li><code>原神</code> — exact recovery of the repeated lyric structure; submit.</li>
+</ol>
+<h3>Corrected mechanism</h3>
+<ul>
+<li>The diagram is a blanked transcription of the repetitive <code>云·原神</code> promotional/jingle meme, not a polyphonic-character exercise.</li>
+<li>Representative fill: <code>哼哼哼哼哼 / 好想玩原神 / 云原神</code>. Here the cyan cell is <code>云</code>, and the two red cells shared by the five-character and three-character lines are <code>原神</code>.</li>
+<li>Other visible patterns align as well: <code>当当当当当 / 看精彩缤纷 / 云原神</code>; another repeated-vocal line followed by <code>好想玩原神 / 云原神</code>; and <code>朋友已就位 / 一起玩原神 / 云原神</code>.</li>
+<li>The archived correct-message text independently mirrors this exact sequence, including the repeated vocalizations and phrases <code>好想玩原神</code>, <code>看精彩缤纷</code>, <code>朋友已就位</code>, and <code>一起玩原神</code>.</li>
+<li>Therefore the final two red boxes extract <code>原神</code>.</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>行长</code> — <strong>incorrect</strong>, message <code>回答错误，请再试一次</code>; incorrect count 1.</li>
+<li><code>原神</code> — <strong>correct</strong>. The site message reproduces the full lyric sequence, including <code>哒... / 好想玩原神 / 云原神</code>, <code>当当当当当 / 看精彩纷纷 / 云原神</code>, <code>呜呜呜呜呜 / 好想玩原神 / 云原神</code>, and <code>朋友已就位 / 一起玩原神 / 云原神</code>.</li>
+</ul>
+<h2>Final</h2>
+<ul>
+<li>Answer: <code>原神</code></li>
+<li>Incorrect count: 1</li>
+<li>Stopping criterion: correct verdict received.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="119-HKd44RZL.html"><span>← 上一份日志</span><strong>反向探骊格</strong></a><a class="sequence-link next" href="121-y1Ezg7XA.html"><span>下一份日志 →</span><strong>古老迷宫游戏</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>叠叠叠叠叠词 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

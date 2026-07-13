@@ -3,46 +3,74 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="如约而至（Wj2lljce）的独立题解与验证。">
+  <meta name="description" content="如约而至（Wj2lljce）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>如约而至 · PuzzleCat 题解</title>
+  <title>如约而至 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>140</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>140 / 289</span><code>Wj2lljce</code></div>
-        <h1>如约而至</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>INFANT</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/Wj2lljce" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>“转换器”把左图英文变成右图英文：母鸡到线圈、数数到乡村、过去到糕点，目标是得到士兵。</p>
-<h3>我的解法</h3>
-<p>统一操作是在左词后加 <code>RY</code>：<code>HEN→HENRY</code>（电感单位亨利）、<code>COUNT→COUNTRY</code>、<code>PAST→PASTRY</code>。士兵对应 <code>INFANTRY</code>，逆操作去掉 <code>RY</code>，得到六字母 <code>INFANT</code>。</p>
-<h3>验证</h3>
-<p>三条例子都严格使用同一后缀，且 <code>INFANT</code> 符合 <code>(6)</code>；首投正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="139-oyvmNtwx.html"><span>← 上一题</span><strong>好数</strong></a><a class="sequence-link next" href="141-mzEr8Uar.html"><span>下一题 →</span><strong>字母谜</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 如约而至</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>140</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">140 / 289</span><code>Wj2lljce</code></div>
+      <h1>如约而至</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/Wj2lljce" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/140-Wj2lljce.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Wj2lljce《如约而至》解题日志</h1>
+<ul>
+<li>Owner: <code>chat2-w3-20260712</code></li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Flavor: a converter changes the object on the left into the object on the right; asks what can <strong>become</strong> the soldier at bottom right.</li>
+<li>Answer enumeration is <code>(6)</code> and tags indicate English/wordplay.</li>
+<li>Rows show chicken/hen to a coil, a counting child to countryside, a marked past timeline to pastry/cake, and an unknown to a soldier.</li>
+</ul>
+<h2>Reasoning</h2>
+<ul>
+<li>The converter appends the letters <code>RY</code> to the English word clued on the left.</li>
+<li><code>HEN + RY = HENRY</code>; the hen becomes <code>HENRY</code>, the SI-derived unit of inductance associated with a coil.</li>
+<li><code>COUNT + RY = COUNTRY</code>; the counting child clues <code>COUNT</code>, and the right image is the country/countryside.</li>
+<li><code>PAST + RY = PASTRY</code>; the marked portion of the timeline is the past, and the right image is pastry.</li>
+<li>A soldier belongs to the <code>INFANTRY</code>. Removing the converter suffix <code>RY</code> gives <code>INFANT</code>, exactly six letters.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ul>
+<li>
+<ol>
+<li><code>INFANT</code> - certain; satisfies the enumeration and all three examples use the same append-<code>RY</code> operation.</li>
+</ol>
+</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>INFANT</code> - correct; site returned <code>恭喜你，回答正确！</code>.</li>
+</ul>
+<h2>Outcome</h2>
+<ul>
+<li>Correct answer: <code>INFANT</code></li>
+<li>Incorrect submissions: 0</li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Resolve correct on confirmed verdict; otherwise reassess only mechanism-derived alternatives and stop after 20 incorrect submissions.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="139-oyvmNtwx.html"><span>← 上一份日志</span><strong>好数</strong></a><a class="sequence-link next" href="141-mzEr8Uar.html"><span>下一份日志 →</span><strong>字母谜</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>如约而至 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

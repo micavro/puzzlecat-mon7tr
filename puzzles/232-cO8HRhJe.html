@@ -3,46 +3,74 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="百合谜 01（cO8HRhJe）的独立题解与验证。">
+  <meta name="description" content="百合谜 01（cO8HRhJe）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>百合谜 01 · PuzzleCat 题解</title>
+  <title>百合谜 01 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>232</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>232 / 289</span><code>cO8HRhJe</code></div>
-        <h1>百合谜 01</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>ADACHI</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/cO8HRhJe" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>2</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>三位角色图片后是其伴侣姓名模板，九个编号散布在字母位中；最终提示 <code>(9)→(6)</code>，先取九字母名字，再找其六字母伴侣。</p>
-<h3>我的解法</h3>
-<p>三组伴侣名按本地日志填为 <code>Tonami Ibuki</code>、<code>Anisufia Win Parettia</code>、<code>Miyagi Shiori</code>，用模板编号建立字母表。按 1–9 读取为 <code>SHIMAMURA</code>。继续套用题目的“与她相伴的人”规则，Shimamura 的六字母伴侣是 <code>ADACHI</code>。</p>
-<h3>验证</h3>
-<p>九个编号恰好拼出 <code>SHIMAMURA</code>，再满足六字母终点；<code>ADACHI</code> 提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="231-x8hD8t6h.html"><span>← 上一题</span><strong>病历乱神</strong></a><a class="sequence-link next" href="233-yC1zg7XA.html"><span>下一题 →</span><strong>相生相克</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 百合谜 01</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>232</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">232 / 289</span><code>cO8HRhJe</code></div>
+      <h1>百合谜 01</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/cO8HRhJe" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/232-cO8HRhJe.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: 百合谜 01</h1>
+<h2>Observations</h2>
+<ul>
+<li>Flavor: <code>你知道与她们相伴的人的名字吗？</code></li>
+<li>Three character images are followed by partner-name masks containing labels 1-9.</li>
+<li>The final line is <code>(9) -&gt; (6)</code>, suggesting a nine-letter intermediate followed by that character's six-letter companion.</li>
+<li>The note says to use Moegirl Encyclopedia translations.</li>
+</ul>
+<h2>Image identifications and fills</h2>
+<ol>
+<li>The pink-haired girl is Botan Kamiina from <em>Kamiina Botan, Yoheru Sugata wa Yuri no Hana</em>, and her companion is <code>Tonami Ibuki</code>.
+   <code>Tonami Ibuki</code> fits <code>???54? ????3</code> exactly.
+   This gives <code>3=I, 4=M, 5=A</code>.</li>
+<li>The white-haired swordswoman is Euphyllia Magenta from <em>The Magical Revolution</em>.
+   The Moegirl romanization of her companion is <code>Anisufia Win Parettia</code>, fitting <code>???17??? ??? ??8?????</code>.
+   This gives <code>1=S, 7=U, 8=R</code>.</li>
+<li>AnimeTrace confidently identifies the brown-haired girl as Hazuki Sendai from <em>A Story About Buying My Classmate Once a Week</em>.
+   Her companion <code>Miyagi Shiori</code> fits <code>6??9?? ?2????</code> exactly.
+   This gives <code>2=H, 6=M, 9=A</code>.</li>
+</ol>
+<h2>Extraction issue</h2>
+<ul>
+<li>Reading labels 1 through 9 gives <code>SHIMAMURA</code>:
+  <code>1=S, 2=H, 3=I, 4=M, 5=A, 6=M, 7=U, 8=R, 9=A</code>.</li>
+<li>The Moegirl romanizations are essential: <code>Anisufia Win Parettia</code>, rather than the English <code>Anisphia Wynn Palettia</code>, supplies <code>S</code>, <code>U</code>, and <code>R</code>.</li>
+<li>Shimamura's six-letter companion in <em>Adachi and Shimamura</em> is <code>ADACHI</code>, exactly matching <code>(9) -&gt; (6)</code>.</li>
+<li>A prior hypothesis for image 3 was Hougetsu Shimamura / <code>Sakura Adachi</code>, but the visual design and resulting letters are weaker.</li>
+<li>No answer has been submitted.</li>
+</ul>
+<h2>Candidate policy</h2>
+<ul>
+<li>Submit <code>ADACHI</code>, supported by the complete <code>SHIMAMURA -&gt; ADACHI</code> chain.</li>
+<li>Stop as <code>cannot_do</code> rather than enumerate six-letter yuri-character names without a mechanism.</li>
+</ul>
+<h2>Submissions</h2>
+<ol>
+<li><code>CANAAN</code> - incorrect. Based on the rejected <code>ALPHARDAS</code> / Alphard Al Sheya branch.</li>
+<li><code>KOKONE</code> - incorrect. Based on the rejected <code>ALPHAPLUS</code> / Alpha Hatsuseno branch.</li>
+<li><code>ADACHI</code> - correct. Extracted <code>SHIMAMURA</code>, then applied the same companion mechanism once more.</li>
+</ol>
+<p>Incorrect count: 2</p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="231-x8hD8t6h.html"><span>← 上一份日志</span><strong>病历乱神</strong></a><a class="sequence-link next" href="233-yC1zg7XA.html"><span>下一份日志 →</span><strong>相生相克</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>百合谜 01 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

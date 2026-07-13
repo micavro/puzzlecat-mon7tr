@@ -3,46 +3,60 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="人越多越好，鱼越切越少（fIqYBRMr）的独立题解与验证。">
+  <meta name="description" content="人越多越好，鱼越切越少（fIqYBRMr）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>人越多越好，鱼越切越少 · PuzzleCat 题解</title>
+  <title>人越多越好，鱼越切越少 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>093</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>093 / 289</span><code>fIqYBRMr</code></div>
-        <h1>人越多越好，鱼越切越少</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>田园</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/fIqYBRMr" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>示例把多人图形围绕框架组合成繁体“傘”；目标把鱼的外部切掉，再处理一个被方框包住的元/货币符号。</p>
-<h3>我的解法</h3>
-<p>按示例做汉字图形拆装。<code>魚/鱼</code> 去掉头尾外部，中央留下 <code>田</code>；<code>元</code> 被外框 <code>囗</code> 包住形成 <code>园</code>。两部分并排即 <code>田园</code>。若读成“日元”会忽略鱼中央的 <code>田</code> 和元外的框。</p>
-<h3>验证</h3>
-<p>图形分解、两字答案和标题提示都一致；<code>田园</code> 首次提交 correct。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="092-AXpTwX1Q.html"><span>← 上一题</span><strong>五月的新智能手机</strong></a><a class="sequence-link next" href="094-TPWKhwRH.html"><span>下一题 →</span><strong>以小见大</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 人越多越好，鱼越切越少</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>093</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">093 / 289</span><code>fIqYBRMr</code></div>
+      <h1>人越多越好，鱼越切越少</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/fIqYBRMr" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/093-fIqYBRMr.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log — fIqYBRMr</h1>
+<ul>
+<li>Owner: <code>codex-sub-i-20260712</code></li>
+<li>Title: 人越多越好，鱼越切越少</li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>The image gives an example equation: five person/running icons arranged around a <code>十</code>-like frame form the traditional character <code>傘</code>, which equals an umbrella icon.</li>
+<li>The target equation shows a fish with its outer/head/tail portions greyed or cut away, leaving the central box-and-cross component, followed by a boxed yuan/<code>元</code> symbol. The result has two Chinese characters.</li>
+</ul>
+<h2>Reasoning and candidate ranking</h2>
+<ol>
+<li><code>田园</code> — decisive. Cutting the top and bottom away from <code>魚/鱼</code> leaves its central <code>田</code>; enclosing yuan (<code>元</code>, represented by <code>¥</code>) in <code>囗</code> forms <code>园</code>. Concatenating the two constructed characters yields <code>田园</code>, matching the two question marks. The title explicitly directs “鱼越切越少”, while the umbrella example establishes graphical character decomposition/assembly.</li>
+<li><code>日元</code> is weaker: it would read the cut fish as <code>日</code> and the currency icon directly as 元, but the retained central component of 魚 is <code>田</code>, and the visible square enclosure around the currency is meaningful, forming <code>园</code> rather than merely 元.</li>
+</ol>
+<h2>Submissions and verdicts</h2>
+<ul>
+<li><code>田园</code> — <strong>correct</strong> (site message: <code>恭喜你，回答正确！</code>). Final incorrect count: 0.</li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Resolve <code>correct</code> on an accepted structurally derived answer.</li>
+<li>Resolve <code>cannot_do</code> when evidence no longer distinguishes candidates.</li>
+<li>Resolve <code>wrong_20</code> after exactly 20 incorrect submissions.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="092-AXpTwX1Q.html"><span>← 上一份日志</span><strong>五月的新智能手机</strong></a><a class="sequence-link next" href="094-TPWKhwRH.html"><span>下一份日志 →</span><strong>以小见大</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>人越多越好，鱼越切越少 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

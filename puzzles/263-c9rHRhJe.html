@@ -3,46 +3,73 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="误差分析（c9rHRhJe）的独立题解与验证。">
+  <meta name="description" content="误差分析（c9rHRhJe）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>误差分析 · PuzzleCat 题解</title>
+  <title>误差分析 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>263</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>263 / 289</span><code>c9rHRhJe</code></div>
-        <h1>误差分析</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>JAPAN</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/c9rHRhJe" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>四个“测量值±误差”为 <code>1853.5±35.5、1805.5±30.5、1642.5±19.5、1685±42</code>，误差异常大。</p>
-<h3>我的解法</h3>
-<p>把每对数转成上下界，得到年份区间：1818–1889 是 Joule，1775–1836 是 Ampere，1623–1662 是 Pascal，1643–1727 是 Newton。四位科学家对应 SI 单位符号依次为 <code>J、A、Pa、N</code>，连写为 <code>JAPAN</code>。</p>
-<h3>验证</h3>
-<p>四组端点精确等于生卒年，单位符号又组成国家名；首次提交 correct。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="262-LvSqNrv1.html"><span>← 上一题</span><strong>语言</strong></a><a class="sequence-link next" href="264-Mm7xAs7n.html"><span>下一题 →</span><strong>读法错误</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 误差分析</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>263</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">263 / 289</span><code>c9rHRhJe</code></div>
+      <h1>误差分析</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/c9rHRhJe" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/263-c9rHRhJe.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>c9rHRhJe - 误差分析</h1>
+<p>Owner: <code>chat2-root-20260712</code></p>
+<h2>Observations</h2>
+<ul>
+<li>Archive completed with 11 files and no failed resources.</li>
+<li>Four measurements are given as center value plus/minus an unusually large
+  error: <code>1853.5±35.5</code>, <code>1805.5±30.5</code>, <code>1642.5±19.5</code>, <code>1685±42</code>.</li>
+</ul>
+<h2>Reasoning</h2>
+<ul>
+<li>Convert each center/error pair to its two endpoints:</li>
+<li><code>1853.5±35.5 -&gt; 1818–1889</code>: James Prescott Joule.</li>
+<li><code>1805.5±30.5 -&gt; 1775–1836</code>: Andre-Marie Ampere.</li>
+<li><code>1642.5±19.5 -&gt; 1623–1662</code>: Blaise Pascal.</li>
+<li><code>1685±42 -&gt; 1643–1727</code>: Isaac Newton.</li>
+<li>These are exact birth/death years, explaining why the apparent measurement
+  errors are so large.</li>
+<li>Each scientist names an SI derived unit. Their unit symbols in order are
+  <code>J</code>, <code>A</code>, <code>Pa</code>, <code>N</code>, which concatenate to <code>JAPAN</code>.</li>
+<li>The <code>日式谜题</code> tag confirms the resulting country name.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ul>
+<li><code>JAPAN</code> - exact dates, SI symbols, and tag all agree.</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>JAPAN</code> - correct (<code>2026-07-12T13:03:35.517Z</code>).</li>
+<li>Total incorrect: <code>0 / 20</code>.</li>
+</ul>
+<h2>Result</h2>
+<ul>
+<li><code>correct</code>: <code>JAPAN</code>.</li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Resolve <code>correct</code> after an accepted, mechanism-supported answer.</li>
+<li>Resolve <code>cannot_do</code> if evidence cannot distinguish candidates.</li>
+<li>Resolve <code>wrong_20</code> after exactly 20 incorrect submissions.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="262-LvSqNrv1.html"><span>← 上一份日志</span><strong>语言</strong></a><a class="sequence-link next" href="264-Mm7xAs7n.html"><span>下一份日志 →</span><strong>读法错误</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>误差分析 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

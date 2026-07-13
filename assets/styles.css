@@ -213,6 +213,33 @@ footer a { color: var(--accent); }
 .back-index a { display: inline-block; padding: 11px 18px; border-radius: 999px; background: var(--ink); color: var(--paper); text-decoration: none; font-weight: 700; font-size: 13px; }
 .detail-main footer { width: min(900px, 100%); margin: 0 auto; padding-left: 0; padding-right: 0; }
 
+/* Raw solve-log presentation */
+.log-notice { width: min(1240px, calc(100% - 44px)); margin: 38px auto 0; padding: 15px 18px; display: flex; gap: 12px; align-items: baseline; border: 1px solid var(--line); border-radius: 13px; background: var(--surface); color: var(--muted); font-size: 13px; }
+.log-notice strong { color: var(--accent); flex: 0 0 auto; }
+.log-card > a { min-height: 198px; }
+.log-card-meta { margin-top: auto; display: flex; justify-content: space-between; gap: 12px; padding: 9px 11px; border-radius: 10px; background: var(--code); color: var(--muted); font-size: 11px; }
+.log-card-meta strong { color: var(--green); }
+.log-detail-main { padding-top: 96px; }
+.log-page-header { width: min(940px, 100%); margin: 0 auto 18px; padding: clamp(25px, 5vw, 45px); border: 1px solid var(--line); border-radius: 21px; background: linear-gradient(145deg, color-mix(in srgb, var(--accent-soft) 62%, var(--surface)), var(--surface)); box-shadow: var(--shadow); }
+.log-page-header > div:first-child { display: flex; align-items: center; gap: 12px; color: var(--muted); }
+.log-sequence { color: var(--accent); font: 800 11px/1 ui-monospace, monospace; letter-spacing: .1em; }
+.log-page-header h1 { margin: 20px 0 25px; font-family: Georgia, "Noto Serif SC", serif; font-size: clamp(34px, 6vw, 58px); line-height: 1.18; overflow-wrap: anywhere; }
+.log-toolbar { display: flex; flex-wrap: wrap; gap: 9px; }
+.log-toolbar a { padding: 9px 13px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); color: var(--ink); text-decoration: none; font-size: 12px; font-weight: 800; }
+.log-toolbar a:first-child { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.log-toolbar a:hover { border-color: var(--accent); color: var(--accent); }
+.solve-log-document { width: min(940px, 100%); margin: 0 auto; padding: clamp(26px, 6vw, 58px); border: 1px solid var(--line); border-radius: 21px; background: var(--surface); box-shadow: var(--shadow); }
+.solve-log-document h1 { margin: 0 0 30px; padding-bottom: 20px; border-bottom: 2px solid var(--ink); font-family: Georgia, "Noto Serif SC", serif; font-size: clamp(28px, 5vw, 44px); line-height: 1.25; }
+.solve-log-document h2 { margin: 44px 0 16px; padding: 8px 0 8px 14px; border-left: 4px solid var(--accent); color: var(--ink); font-family: Georgia, "Noto Serif SC", serif; font-size: 25px; }
+.solve-log-document h3 { margin: 32px 0 12px; color: var(--green); font-size: 18px; }
+.solve-log-document h4 { color: var(--accent); }
+.solve-log-document p { margin: 8px 0 17px; }
+.solve-log-document li { margin-bottom: 5px; }
+.solve-log-document hr { margin: 42px 0; border: 0; border-top: 1px solid var(--line); }
+.solve-log-document img { max-width: 100%; height: auto; border-radius: 10px; }
+.solve-log-document a { color: var(--accent); }
+.log-detail-main .breadcrumb, .log-detail-main .sequence-nav, .log-detail-main .back-index, .log-detail-main footer { width: min(940px, 100%); }
+
 @media (max-width: 980px) {
   :root { --sidebar-width: 290px; }
   .menu-button { display: inline-grid; place-items: center; }
@@ -250,6 +277,9 @@ footer a { color: var(--accent); }
   .sequence-link.next { text-align: left; }
   .detail-actions { align-items: stretch; }
   .answer-panel, .source-button { width: 100%; justify-content: space-between; }
+  .log-notice { width: calc(100% - 28px); align-items: flex-start; flex-direction: column; }
+  .log-page-header, .solve-log-document { border-radius: 15px; }
+  .log-toolbar a { width: 100%; text-align: center; }
 }
 
 @media print {

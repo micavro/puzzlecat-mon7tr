@@ -3,46 +3,74 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="嘉豪谜（一）（IvFLNP39）的独立题解与验证。">
+  <meta name="description" content="嘉豪谜（一）（IvFLNP39）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>嘉豪谜（一） · PuzzleCat 题解</title>
+  <title>嘉豪谜（一） · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>131</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>131 / 289</span><code>IvFLNP39</code></div>
-        <h1>嘉豪谜（一）</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>DEATH</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/IvFLNP39" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>画面提示 Alan Walker，并把无主唱的曲名与有主唱版本并排，圈出标题新增的字母。</p>
-<h3>我的解法</h3>
-<p><code>Fade</code> 的有声版本题名为 <code>Faded</code>，新增 <code>D</code>，故 ①=D；<code>Spectre</code> 对应 <code>The Spectre</code>，新增 <code>THE</code>，故 ②③④=T、H、E。代入末尾排列 <code>①④a②③</code>，得到 <code>D E A T H</code>。</p>
-<h3>验证</h3>
-<p>两组标题变化精确给出四个圈字，终排使用全部圈号并拼成 <code>DEATH</code>；首投正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="130-cWVHRhJe.html"><span>← 上一题</span><strong>唐人街灯谜（巴黎）</strong></a><a class="sequence-link next" href="132-OS5iZO0v.html"><span>下一题 →</span><strong>回転</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 嘉豪谜（一）</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>131</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">131 / 289</span><code>IvFLNP39</code></div>
+      <h1>嘉豪谜（一）</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/IvFLNP39" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/131-IvFLNP39.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve Log: IvFLNP39</h1>
+<ul>
+<li>Owner: <code>chat2-w1-20260712</code></li>
+<li>Title: 嘉豪谜（一）</li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0</li>
+</ul>
+<h2>Evidence</h2>
+<ul>
+<li>Archived successfully on 2026-07-12 after one transient no-output archive attempt; the retry produced the complete archive.</li>
+<li>One downloaded image is present. The flavor dialogue describes a DJ wearing Alan Walker's characteristic black face covering and hoodie, and B begins to identify the favorite artist with <code>A.....</code>.</li>
+<li>The image labels its columns with a crossed-out singer (instrumental version) and a singer (vocal version), then shows two rebus pairs.</li>
+<li>A fading <code>F</code> clues Alan Walker's instrumental <code>Fade</code>. Its vocal remake is <code>Faded</code>, so the added character in circle 1 is <code>D</code>.</li>
+<li>A ghost clues Alan Walker's instrumental <code>Spectre</code>. Its vocal remake is <code>The Spectre</code>, so circles 2, 3, 4 are <code>T</code>, <code>H</code>, <code>E</code> respectively.</li>
+<li>The final assembly instruction is <code>①④a②③</code>, which gives <code>D E A T H</code>.</li>
+<li>A submission artifact was eventually written at <code>submissions/2026-07-12T11-49-59-529Z/submission.json</code>. It records answer <code>DEATH</code>, verdict <code>correct</code>, and message <code>恭喜你，回答正确！</code>.</li>
+<li>The unlocked author explanation independently states the same mechanism: <code>Fade -&gt; Faded</code> gives 1=<code>D</code>, and <code>Spectre -&gt; The Spectre</code> gives 2/3/4=<code>THE</code>, yielding <code>death</code>.</li>
+</ul>
+<h2>Reasoning</h2>
+<ul>
+<li>Alan Walker released instrumental tracks and later vocal remakes whose titles gained letters.</li>
+<li><code>Fade + D = Faded</code>; hence 1=<code>D</code>.</li>
+<li><code>Spectre + THE = The Spectre</code>; hence 2=<code>T</code>, 3=<code>H</code>, 4=<code>E</code>.</li>
+<li>Substituting into <code>①④a②③</code> produces <code>DEATH</code>.</li>
+</ul>
+<h2>Candidate Ranking</h2>
+<ul>
+<li>
+<ol>
+<li><code>DEATH</code> - uniquely determined by the two title transformations and final ordering; submitted and accepted.</li>
+</ol>
+</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>DEATH</code> - correct (0 incorrect attempts). The command initially returned without a console verdict while queued behind the global browser lock, but the single resulting site submission was recorded as correct.</li>
+</ul>
+<h2>Stopping Criteria</h2>
+<ul>
+<li>Stopped after the first actual site submission was accepted.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="130-cWVHRhJe.html"><span>← 上一份日志</span><strong>唐人街灯谜（巴黎）</strong></a><a class="sequence-link next" href="132-OS5iZO0v.html"><span>下一份日志 →</span><strong>回転</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>嘉豪谜（一） · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

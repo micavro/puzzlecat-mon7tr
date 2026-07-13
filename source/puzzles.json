@@ -1,0 +1,2314 @@
+[
+  {
+    "number": 1,
+    "id": "9i9WHnxJ",
+    "title": "#1",
+    "slug": "001-9i9WHnxJ",
+    "log_file": "solve-logs/001-9i9WHnxJ.md",
+    "original_url": "https://puzzle.cat/puzzles/9i9WHnxJ"
+  },
+  {
+    "number": 2,
+    "id": "TpQKhwRH",
+    "title": "#wall1 O(∩_∩)O",
+    "slug": "002-TpQKhwRH",
+    "log_file": "solve-logs/002-TpQKhwRH.md",
+    "original_url": "https://puzzle.cat/puzzles/TpQKhwRH"
+  },
+  {
+    "number": 3,
+    "id": "AxmTwX1Q",
+    "title": "#wall2 机器人合体",
+    "slug": "003-AxmTwX1Q",
+    "log_file": "solve-logs/003-AxmTwX1Q.md",
+    "original_url": "https://puzzle.cat/puzzles/AxmTwX1Q"
+  },
+  {
+    "number": 4,
+    "id": "qlZUKLri",
+    "title": "#wall3 OOTD",
+    "slug": "004-qlZUKLri",
+    "log_file": "solve-logs/004-qlZUKLri.md",
+    "original_url": "https://puzzle.cat/puzzles/qlZUKLri"
+  },
+  {
+    "number": 5,
+    "id": "Hi044RZL",
+    "title": "&",
+    "slug": "005-Hi044RZL",
+    "log_file": "solve-logs/005-Hi044RZL.md",
+    "original_url": "https://puzzle.cat/puzzles/Hi044RZL"
+  },
+  {
+    "number": 6,
+    "id": "KmGXEjGS",
+    "title": "1 small maze",
+    "slug": "006-KmGXEjGS",
+    "log_file": "solve-logs/006-KmGXEjGS.md",
+    "original_url": "https://puzzle.cat/puzzles/KmGXEjGS"
+  },
+  {
+    "number": 7,
+    "id": "F5kyul5g",
+    "title": "10 Buttons",
+    "slug": "007-F5kyul5g",
+    "log_file": "solve-logs/007-F5kyul5g.md",
+    "original_url": "https://puzzle.cat/puzzles/F5kyul5g"
+  },
+  {
+    "number": 8,
+    "id": "tqM7ji9S",
+    "title": "21st Century Cryptic",
+    "slug": "008-tqM7ji9S",
+    "log_file": "solve-logs/008-tqM7ji9S.md",
+    "original_url": "https://puzzle.cat/puzzles/tqM7ji9S"
+  },
+  {
+    "number": 9,
+    "id": "dCzF4LbF",
+    "title": "7️⃣🔪",
+    "slug": "009-dCzF4LbF",
+    "log_file": "solve-logs/009-dCzF4LbF.md",
+    "original_url": "https://puzzle.cat/puzzles/dCzF4LbF"
+  },
+  {
+    "number": 10,
+    "id": "GtybeioV",
+    "title": "[NbH2谜022]五色交辉",
+    "slug": "010-GtybeioV",
+    "log_file": "solve-logs/010-GtybeioV.md",
+    "original_url": "https://puzzle.cat/puzzles/GtybeioV"
+  },
+  {
+    "number": 11,
+    "id": "ixJRTMow",
+    "title": "[回放]花卉培育回放",
+    "slug": "011-ixJRTMow",
+    "log_file": "solve-logs/011-ixJRTMow.md",
+    "original_url": "https://puzzle.cat/puzzles/ixJRTMow"
+  },
+  {
+    "number": 12,
+    "id": "RMZAJFgi",
+    "title": "[旧题] bitop",
+    "slug": "012-RMZAJFgi",
+    "log_file": "solve-logs/012-RMZAJFgi.md",
+    "original_url": "https://puzzle.cat/puzzles/RMZAJFgi"
+  },
+  {
+    "number": 13,
+    "id": "AkhTwX1Q",
+    "title": "A Cryptic",
+    "slug": "013-AkhTwX1Q",
+    "log_file": "solve-logs/013-AkhTwX1Q.md",
+    "original_url": "https://puzzle.cat/puzzles/AkhTwX1Q"
+  },
+  {
+    "number": 14,
+    "id": "uBVC56DT",
+    "title": "AAA Cryptic",
+    "slug": "014-uBVC56DT",
+    "log_file": "solve-logs/014-uBVC56DT.md",
+    "original_url": "https://puzzle.cat/puzzles/uBVC56DT"
+  },
+  {
+    "number": 15,
+    "id": "kxqS2WKJ",
+    "title": "AB谜",
+    "slug": "015-kxqS2WKJ",
+    "log_file": "solve-logs/015-kxqS2WKJ.md",
+    "original_url": "https://puzzle.cat/puzzles/kxqS2WKJ"
+  },
+  {
+    "number": 16,
+    "id": "D3WPz728",
+    "title": "Animals in Grids",
+    "slug": "016-D3WPz728",
+    "log_file": "solve-logs/016-D3WPz728.md",
+    "original_url": "https://puzzle.cat/puzzles/D3WPz728"
+  },
+  {
+    "number": 17,
+    "id": "1EGaRpKD",
+    "title": "Another Cryptic",
+    "slug": "017-1EGaRpKD",
+    "log_file": "solve-logs/017-1EGaRpKD.md",
+    "original_url": "https://puzzle.cat/puzzles/1EGaRpKD"
+  },
+  {
+    "number": 18,
+    "id": "mdar8Uar",
+    "title": "APP",
+    "slug": "018-mdar8Uar",
+    "log_file": "solve-logs/018-mdar8Uar.md",
+    "original_url": "https://puzzle.cat/puzzles/mdar8Uar"
+  },
+  {
+    "number": 19,
+    "id": "lZoOiBju",
+    "title": "Calculate！",
+    "slug": "019-lZoOiBju",
+    "log_file": "solve-logs/019-lZoOiBju.md",
+    "original_url": "https://puzzle.cat/puzzles/lZoOiBju"
+  },
+  {
+    "number": 20,
+    "id": "sHRBl3vq",
+    "title": "CCBC",
+    "slug": "020-sHRBl3vq",
+    "log_file": "solve-logs/020-sHRBl3vq.md",
+    "original_url": "https://puzzle.cat/puzzles/sHRBl3vq"
+  },
+  {
+    "number": 21,
+    "id": "6ed5dzET",
+    "title": "Celebratory Cryptic",
+    "slug": "021-6ed5dzET",
+    "log_file": "solve-logs/021-6ed5dzET.md",
+    "original_url": "https://puzzle.cat/puzzles/6ed5dzET"
+  },
+  {
+    "number": 22,
+    "id": "XDEkPIap",
+    "title": "Clues with Problems",
+    "slug": "022-XDEkPIap",
+    "log_file": "solve-logs/022-XDEkPIap.md",
+    "original_url": "https://puzzle.cat/puzzles/XDEkPIap"
+  },
+  {
+    "number": 23,
+    "id": "7wAIxIpP",
+    "title": "CROSS†WORD",
+    "slug": "023-7wAIxIpP",
+    "log_file": "solve-logs/023-7wAIxIpP.md",
+    "original_url": "https://puzzle.cat/puzzles/7wAIxIpP"
+  },
+  {
+    "number": 24,
+    "id": "e83oQPLb",
+    "title": "Cryptic 1- 绿泡泡",
+    "slug": "024-e83oQPLb",
+    "log_file": "solve-logs/024-e83oQPLb.md",
+    "original_url": "https://puzzle.cat/puzzles/e83oQPLb"
+  },
+  {
+    "number": 25,
+    "id": "aqestzDO",
+    "title": "Cryptic Clue 一则",
+    "slug": "025-aqestzDO",
+    "log_file": "solve-logs/025-aqestzDO.md",
+    "original_url": "https://puzzle.cat/puzzles/aqestzDO"
+  },
+  {
+    "number": 26,
+    "id": "XpakPIap",
+    "title": "Cryptic cryptic Cryptic cryptic cryptic cryptic Cryptic cryptic",
+    "slug": "026-XpakPIap",
+    "log_file": "solve-logs/026-XpakPIap.md",
+    "original_url": "https://puzzle.cat/puzzles/XpakPIap"
+  },
+  {
+    "number": 27,
+    "id": "7QRIxIpP",
+    "title": "Cryptixacum",
+    "slug": "027-7QRIxIpP",
+    "log_file": "solve-logs/027-7QRIxIpP.md",
+    "original_url": "https://puzzle.cat/puzzles/7QRIxIpP"
+  },
+  {
+    "number": 28,
+    "id": "xo5D8t6h",
+    "title": "Find the Answer Ⅱ",
+    "slug": "028-xo5D8t6h",
+    "log_file": "solve-logs/028-xo5D8t6h.md",
+    "original_url": "https://puzzle.cat/puzzles/xo5D8t6h"
+  },
+  {
+    "number": 29,
+    "id": "GEFbeioV",
+    "title": "Find the Answer Ⅲ",
+    "slug": "029-GEFbeioV",
+    "log_file": "solve-logs/029-GEFbeioV.md",
+    "original_url": "https://puzzle.cat/puzzles/GEFbeioV"
+  },
+  {
+    "number": 30,
+    "id": "sqHBl3vq",
+    "title": "Finding Dragon's Pearl (tanlige)",
+    "slug": "030-sqHBl3vq",
+    "log_file": "solve-logs/030-sqHBl3vq.md",
+    "original_url": "https://puzzle.cat/puzzles/sqHBl3vq"
+  },
+  {
+    "number": 31,
+    "id": "MrIxAs7n",
+    "title": "Finding Dragon's Pearl 2",
+    "slug": "031-MrIxAs7n",
+    "log_file": "solve-logs/031-MrIxAs7n.md",
+    "original_url": "https://puzzle.cat/puzzles/MrIxAs7n"
+  },
+  {
+    "number": 32,
+    "id": "ys7zg7XA",
+    "title": "Iconic",
+    "slug": "032-ys7zg7XA",
+    "log_file": "solve-logs/032-ys7zg7XA.md",
+    "original_url": "https://puzzle.cat/puzzles/ys7zg7XA"
+  },
+  {
+    "number": 33,
+    "id": "TjvKhwRH",
+    "title": "Little Cryptic 3",
+    "slug": "033-TjvKhwRH",
+    "log_file": "solve-logs/033-TjvKhwRH.md",
+    "original_url": "https://puzzle.cat/puzzles/TjvKhwRH"
+  },
+  {
+    "number": 34,
+    "id": "YBnhZAop",
+    "title": "LLM is waiting for...",
+    "slug": "034-YBnhZAop",
+    "log_file": "solve-logs/034-YBnhZAop.md",
+    "original_url": "https://puzzle.cat/puzzles/YBnhZAop"
+  },
+  {
+    "number": 35,
+    "id": "p3x2nNtD",
+    "title": "Mini Choco Banana",
+    "slug": "035-p3x2nNtD",
+    "log_file": "solve-logs/035-p3x2nNtD.md",
+    "original_url": "https://puzzle.cat/puzzles/p3x2nNtD"
+  },
+  {
+    "number": 36,
+    "id": "WAXlljce",
+    "title": "NESTH",
+    "slug": "036-WAXlljce",
+    "log_file": "solve-logs/036-WAXlljce.md",
+    "original_url": "https://puzzle.cat/puzzles/WAXlljce"
+  },
+  {
+    "number": 37,
+    "id": "LNjqNrv1",
+    "title": "Not A 和同开珎",
+    "slug": "037-LNjqNrv1",
+    "log_file": "solve-logs/037-LNjqNrv1.md",
+    "original_url": "https://puzzle.cat/puzzles/LNjqNrv1"
+  },
+  {
+    "number": 38,
+    "id": "5asuzMeL",
+    "title": "One cryptic",
+    "slug": "038-5asuzMeL",
+    "log_file": "solve-logs/038-5asuzMeL.md",
+    "original_url": "https://puzzle.cat/puzzles/5asuzMeL"
+  },
+  {
+    "number": 39,
+    "id": "So2j2oe3",
+    "title": "OoOo.o",
+    "slug": "039-So2j2oe3",
+    "log_file": "solve-logs/039-So2j2oe3.md",
+    "original_url": "https://puzzle.cat/puzzles/So2j2oe3"
+  },
+  {
+    "number": 40,
+    "id": "XMskPIap",
+    "title": "Phigryptics",
+    "slug": "040-XMskPIap",
+    "log_file": "solve-logs/040-XMskPIap.md",
+    "original_url": "https://puzzle.cat/puzzles/XMskPIap"
+  },
+  {
+    "number": 41,
+    "id": "UWqvRTeZ",
+    "title": "pqqp",
+    "slug": "041-UWqvRTeZ",
+    "log_file": "solve-logs/041-UWqvRTeZ.md",
+    "original_url": "https://puzzle.cat/puzzles/UWqvRTeZ"
+  },
+  {
+    "number": 42,
+    "id": "atMstzDO",
+    "title": "puzzle.cat",
+    "slug": "042-atMstzDO",
+    "log_file": "solve-logs/042-atMstzDO.md",
+    "original_url": "https://puzzle.cat/puzzles/atMstzDO"
+  },
+  {
+    "number": 43,
+    "id": "koQS2WKJ",
+    "title": "Reuniting Craft",
+    "slug": "043-koQS2WKJ",
+    "log_file": "solve-logs/043-koQS2WKJ.md",
+    "original_url": "https://puzzle.cat/puzzles/koQS2WKJ"
+  },
+  {
+    "number": 44,
+    "id": "MVLxAs7n",
+    "title": "SIX SEVEN!!!",
+    "slug": "044-MVLxAs7n",
+    "log_file": "solve-logs/044-MVLxAs7n.md",
+    "original_url": "https://puzzle.cat/puzzles/MVLxAs7n"
+  },
+  {
+    "number": 45,
+    "id": "aLPstzDO",
+    "title": "Super~big~",
+    "slug": "045-aLPstzDO",
+    "log_file": "solve-logs/045-aLPstzDO.md",
+    "original_url": "https://puzzle.cat/puzzles/aLPstzDO"
+  },
+  {
+    "number": 46,
+    "id": "7UlIxIpP",
+    "title": "Test",
+    "slug": "046-7UlIxIpP",
+    "log_file": "solve-logs/046-7UlIxIpP.md",
+    "original_url": "https://puzzle.cat/puzzles/7UlIxIpP"
+  },
+  {
+    "number": 47,
+    "id": "DnOPz728",
+    "title": "To ronto",
+    "slug": "047-DnOPz728",
+    "log_file": "solve-logs/047-DnOPz728.md",
+    "original_url": "https://puzzle.cat/puzzles/DnOPz728"
+  },
+  {
+    "number": 48,
+    "id": "yhBzg7XA",
+    "title": "type",
+    "slug": "048-yhBzg7XA",
+    "log_file": "solve-logs/048-yhBzg7XA.md",
+    "original_url": "https://puzzle.cat/puzzles/yhBzg7XA"
+  },
+  {
+    "number": 49,
+    "id": "653d5dzE",
+    "title": "wora1e",
+    "slug": "049-653d5dzE",
+    "log_file": "solve-logs/049-653d5dzE.md",
+    "original_url": "https://puzzle.cat/puzzles/653d5dzE"
+  },
+  {
+    "number": 50,
+    "id": "tNP7ji9S",
+    "title": "☀️、⛵ 、💃 、✈️",
+    "slug": "050-tNP7ji9S",
+    "log_file": "solve-logs/050-tNP7ji9S.md",
+    "original_url": "https://puzzle.cat/puzzles/tNP7ji9S"
+  },
+  {
+    "number": 51,
+    "id": "L9DqNrv1",
+    "title": "「NLS-001」🔥",
+    "slug": "051-L9DqNrv1",
+    "log_file": "solve-logs/051-L9DqNrv1.md",
+    "original_url": "https://puzzle.cat/puzzles/L9DqNrv1"
+  },
+  {
+    "number": 52,
+    "id": "yELzg7XA",
+    "title": "【98】狂想",
+    "slug": "052-yELzg7XA",
+    "log_file": "solve-logs/052-yELzg7XA.md",
+    "original_url": "https://puzzle.cat/puzzles/yELzg7XA"
+  },
+  {
+    "number": 53,
+    "id": "cK6HRhJe",
+    "title": "【NbH₂谜】倒数ing…",
+    "slug": "053-cK6HRhJe",
+    "log_file": "solve-logs/053-cK6HRhJe.md",
+    "original_url": "https://puzzle.cat/puzzles/cK6HRhJe"
+  },
+  {
+    "number": 54,
+    "id": "LWPqNrv1",
+    "title": "【NbH₂谜】黑板",
+    "slug": "054-LWPqNrv1",
+    "log_file": "solve-logs/054-LWPqNrv1.md",
+    "original_url": "https://puzzle.cat/puzzles/LWPqNrv1"
+  },
+  {
+    "number": 55,
+    "id": "ckFHRhJe",
+    "title": "【北斗谜航】#7☀️ 🌼 🔥 🌙",
+    "slug": "055-ckFHRhJe",
+    "log_file": "solve-logs/055-ckFHRhJe.md",
+    "original_url": "https://puzzle.cat/puzzles/ckFHRhJe"
+  },
+  {
+    "number": 56,
+    "id": "RkaAJFgi",
+    "title": "【星谜002】ReReRebus",
+    "slug": "056-RkaAJFgi",
+    "log_file": "solve-logs/056-RkaAJFgi.md",
+    "original_url": "https://puzzle.cat/puzzles/RkaAJFgi"
+  },
+  {
+    "number": 57,
+    "id": "51auzMeL",
+    "title": "【星谜003】你图片带括号",
+    "slug": "057-51auzMeL",
+    "log_file": "solve-logs/057-51auzMeL.md",
+    "original_url": "https://puzzle.cat/puzzles/51auzMeL"
+  },
+  {
+    "number": 58,
+    "id": "m0fr8Uar",
+    "title": "【星谜004】Made in Russia",
+    "slug": "058-m0fr8Uar",
+    "log_file": "solve-logs/058-m0fr8Uar.md",
+    "original_url": "https://puzzle.cat/puzzles/m0fr8Uar"
+  },
+  {
+    "number": 59,
+    "id": "TSvKhwRH",
+    "title": "【棱镜谜】一词多义",
+    "slug": "059-TSvKhwRH",
+    "log_file": "solve-logs/059-TSvKhwRH.md",
+    "original_url": "https://puzzle.cat/puzzles/TSvKhwRH"
+  },
+  {
+    "number": 60,
+    "id": "FbXyul5g",
+    "title": "【谜题】地名重组",
+    "slug": "060-FbXyul5g",
+    "log_file": "solve-logs/060-FbXyul5g.md",
+    "original_url": "https://puzzle.cat/puzzles/FbXyul5g"
+  },
+  {
+    "number": 61,
+    "id": "avmstzDO",
+    "title": "【鼠鼠谜】五角星",
+    "slug": "061-avmstzDO",
+    "log_file": "solve-logs/061-avmstzDO.md",
+    "original_url": "https://puzzle.cat/puzzles/avmstzDO"
+  },
+  {
+    "number": 62,
+    "id": "OZCiZO0v",
+    "title": "【鼠鼠谜】什么声音",
+    "slug": "062-OZCiZO0v",
+    "log_file": "solve-logs/062-OZCiZO0v.md",
+    "original_url": "https://puzzle.cat/puzzles/OZCiZO0v"
+  },
+  {
+    "number": 63,
+    "id": "jmKZrexE",
+    "title": "【鼠鼠谜】动物朋友",
+    "slug": "063-jmKZrexE",
+    "log_file": "solve-logs/063-jmKZrexE.md",
+    "original_url": "https://puzzle.cat/puzzles/jmKZrexE"
+  },
+  {
+    "number": 64,
+    "id": "Gs6beioV",
+    "title": "【鼠鼠谜】我兜",
+    "slug": "064-Gs6beioV",
+    "log_file": "solve-logs/064-Gs6beioV.md",
+    "original_url": "https://puzzle.cat/puzzles/Gs6beioV"
+  },
+  {
+    "number": 65,
+    "id": "fLUYBRMr",
+    "title": "【鼠鼠谜】源自自然",
+    "slug": "065-fLUYBRMr",
+    "log_file": "solve-logs/065-fLUYBRMr.md",
+    "original_url": "https://puzzle.cat/puzzles/fLUYBRMr"
+  },
+  {
+    "number": 66,
+    "id": "TxHKhwRH",
+    "title": "【鼠鼠谜】螺旋",
+    "slug": "066-TxHKhwRH",
+    "log_file": "solve-logs/066-TxHKhwRH.md",
+    "original_url": "https://puzzle.cat/puzzles/TxHKhwRH"
+  },
+  {
+    "number": 67,
+    "id": "YLdhZAop",
+    "title": "【鼠鼠谜】道味海上",
+    "slug": "067-YLdhZAop",
+    "log_file": "solve-logs/067-YLdhZAop.md",
+    "original_url": "https://puzzle.cat/puzzles/YLdhZAop"
+  },
+  {
+    "number": 68,
+    "id": "S3Pj2oe3",
+    "title": "【🚌】狂想",
+    "slug": "068-S3Pj2oe3",
+    "log_file": "solve-logs/068-S3Pj2oe3.md",
+    "original_url": "https://puzzle.cat/puzzles/S3Pj2oe3"
+  },
+  {
+    "number": 69,
+    "id": "5t7uzMeL",
+    "title": "〖NbH₂谜〗Wordle",
+    "slug": "069-5t7uzMeL",
+    "log_file": "solve-logs/069-5t7uzMeL.md",
+    "original_url": "https://puzzle.cat/puzzles/5t7uzMeL"
+  },
+  {
+    "number": 70,
+    "id": "UlUvRTeZ",
+    "title": "〖NbH₂谜〗未植数",
+    "slug": "070-UlUvRTeZ",
+    "log_file": "solve-logs/070-UlUvRTeZ.md",
+    "original_url": "https://puzzle.cat/puzzles/UlUvRTeZ"
+  },
+  {
+    "number": 71,
+    "id": "ASMTwX1Q",
+    "title": "〖星谜001〗漏墨",
+    "slug": "071-ASMTwX1Q",
+    "log_file": "solve-logs/071-ASMTwX1Q.md",
+    "original_url": "https://puzzle.cat/puzzles/ASMTwX1Q"
+  },
+  {
+    "number": 72,
+    "id": "4Rs9OF2B",
+    "title": "〖棱镜谜〗见微知著",
+    "slug": "072-4Rs9OF2B",
+    "log_file": "solve-logs/072-4Rs9OF2B.md",
+    "original_url": "https://puzzle.cat/puzzles/4Rs9OF2B"
+  },
+  {
+    "number": 73,
+    "id": "ut8C56DT",
+    "title": "〖鼠鼠谜〗加特零",
+    "slug": "073-ut8C56DT",
+    "log_file": "solve-logs/073-ut8C56DT.md",
+    "original_url": "https://puzzle.cat/puzzles/ut8C56DT"
+  },
+  {
+    "number": 74,
+    "id": "M8UxAs7n",
+    "title": "〖鼠鼠谜〗竹林",
+    "slug": "074-M8UxAs7n",
+    "log_file": "solve-logs/074-M8UxAs7n.md",
+    "original_url": "https://puzzle.cat/puzzles/M8UxAs7n"
+  },
+  {
+    "number": 75,
+    "id": "TD4KhwRH",
+    "title": "一个字：从前",
+    "slug": "075-TD4KhwRH",
+    "log_file": "solve-logs/075-TD4KhwRH.md",
+    "original_url": "https://puzzle.cat/puzzles/TD4KhwRH"
+  },
+  {
+    "number": 76,
+    "id": "AjxTwX1Q",
+    "title": "一代人的故事",
+    "slug": "076-AjxTwX1Q",
+    "log_file": "solve-logs/076-AjxTwX1Q.md",
+    "original_url": "https://puzzle.cat/puzzles/AjxTwX1Q"
+  },
+  {
+    "number": 77,
+    "id": "qWjUKLri",
+    "title": "一则运算",
+    "slug": "077-qWjUKLri",
+    "log_file": "solve-logs/077-qWjUKLri.md",
+    "original_url": "https://puzzle.cat/puzzles/qWjUKLri"
+  },
+  {
+    "number": 78,
+    "id": "MotxAs7n",
+    "title": "七字谜",
+    "slug": "078-MotxAs7n",
+    "log_file": "solve-logs/078-MotxAs7n.md",
+    "original_url": "https://puzzle.cat/puzzles/MotxAs7n"
+  },
+  {
+    "number": 79,
+    "id": "4SL9OF2B",
+    "title": "不削能玩？",
+    "slug": "079-4SL9OF2B",
+    "log_file": "solve-logs/079-4SL9OF2B.md",
+    "original_url": "https://puzzle.cat/puzzles/4SL9OF2B"
+  },
+  {
+    "number": 80,
+    "id": "KxUXEjGS",
+    "title": "不可能解决的难题",
+    "slug": "080-KxUXEjGS",
+    "log_file": "solve-logs/080-KxUXEjGS.md",
+    "original_url": "https://puzzle.cat/puzzles/KxUXEjGS"
+  },
+  {
+    "number": 81,
+    "id": "pPS2nNtD",
+    "title": "不是中文 Cryptic",
+    "slug": "081-pPS2nNtD",
+    "log_file": "solve-logs/081-pPS2nNtD.md",
+    "original_url": "https://puzzle.cat/puzzles/pPS2nNtD"
+  },
+  {
+    "number": 82,
+    "id": "I6LNP392",
+    "title": "不是省油的灯",
+    "slug": "082-I6LNP392",
+    "log_file": "solve-logs/082-I6LNP392.md",
+    "original_url": "https://puzzle.cat/puzzles/I6LNP392"
+  },
+  {
+    "number": 83,
+    "id": "9kkWHnxJ",
+    "title": "两种木棍",
+    "slug": "083-9kkWHnxJ",
+    "log_file": "solve-logs/083-9kkWHnxJ.md",
+    "original_url": "https://puzzle.cat/puzzles/9kkWHnxJ"
+  },
+  {
+    "number": 84,
+    "id": "Ca5fVTmL",
+    "title": "两面包夹芝士",
+    "slug": "084-Ca5fVTmL",
+    "log_file": "solve-logs/084-Ca5fVTmL.md",
+    "original_url": "https://puzzle.cat/puzzles/Ca5fVTmL"
+  },
+  {
+    "number": 85,
+    "id": "sU4Bl3vq",
+    "title": "中专说唱高手",
+    "slug": "085-sU4Bl3vq",
+    "log_file": "solve-logs/085-sU4Bl3vq.md",
+    "original_url": "https://puzzle.cat/puzzles/sU4Bl3vq"
+  },
+  {
+    "number": 86,
+    "id": "C1bfVTmL",
+    "title": "中国Cry??ic（二）",
+    "slug": "086-C1bfVTmL",
+    "log_file": "solve-logs/086-C1bfVTmL.md",
+    "original_url": "https://puzzle.cat/puzzles/C1bfVTmL"
+  },
+  {
+    "number": 87,
+    "id": "j2WZrexE",
+    "title": "中国Cryptic（二）",
+    "slug": "087-j2WZrexE",
+    "log_file": "solve-logs/087-j2WZrexE.md",
+    "original_url": "https://puzzle.cat/puzzles/j2WZrexE"
+  },
+  {
+    "number": 88,
+    "id": "K2JXEjGS",
+    "title": "中英互译-DLC",
+    "slug": "088-K2JXEjGS",
+    "log_file": "solve-logs/088-K2JXEjGS.md",
+    "original_url": "https://puzzle.cat/puzzles/K2JXEjGS"
+  },
+  {
+    "number": 89,
+    "id": "odqmNtwx",
+    "title": "串联珍珠",
+    "slug": "089-odqmNtwx",
+    "log_file": "solve-logs/089-odqmNtwx.md",
+    "original_url": "https://puzzle.cat/puzzles/odqmNtwx"
+  },
+  {
+    "number": 90,
+    "id": "JGPgoAEX",
+    "title": "九个梦魇",
+    "slug": "090-JGPgoAEX",
+    "log_file": "solve-logs/090-JGPgoAEX.md",
+    "original_url": "https://puzzle.cat/puzzles/JGPgoAEX"
+  },
+  {
+    "number": 91,
+    "id": "RDqAJFgi",
+    "title": "二进制晶格",
+    "slug": "091-RDqAJFgi",
+    "log_file": "solve-logs/091-RDqAJFgi.md",
+    "original_url": "https://puzzle.cat/puzzles/RDqAJFgi"
+  },
+  {
+    "number": 92,
+    "id": "AXpTwX1Q",
+    "title": "五月的新智能手机",
+    "slug": "092-AXpTwX1Q",
+    "log_file": "solve-logs/092-AXpTwX1Q.md",
+    "original_url": "https://puzzle.cat/puzzles/AXpTwX1Q"
+  },
+  {
+    "number": 93,
+    "id": "fIqYBRMr",
+    "title": "人越多越好，鱼越切越少",
+    "slug": "093-fIqYBRMr",
+    "log_file": "solve-logs/093-fIqYBRMr.md",
+    "original_url": "https://puzzle.cat/puzzles/fIqYBRMr"
+  },
+  {
+    "number": 94,
+    "id": "TPWKhwRH",
+    "title": "以小见大",
+    "slug": "094-TPWKhwRH",
+    "log_file": "solve-logs/094-TPWKhwRH.md",
+    "original_url": "https://puzzle.cat/puzzles/TPWKhwRH"
+  },
+  {
+    "number": 95,
+    "id": "JumgoAEX",
+    "title": "以德芙人",
+    "slug": "095-JumgoAEX",
+    "log_file": "solve-logs/095-JumgoAEX.md",
+    "original_url": "https://puzzle.cat/puzzles/JumgoAEX"
+  },
+  {
+    "number": 96,
+    "id": "mGtr8Uar",
+    "title": "何意【V】",
+    "slug": "096-mGtr8Uar",
+    "log_file": "solve-logs/096-mGtr8Uar.md",
+    "original_url": "https://puzzle.cat/puzzles/mGtr8Uar"
+  },
+  {
+    "number": 97,
+    "id": "E9mtl1dT",
+    "title": "你好，谢谢，最后是……",
+    "slug": "097-E9mtl1dT",
+    "log_file": "solve-logs/097-E9mtl1dT.md",
+    "original_url": "https://puzzle.cat/puzzles/E9mtl1dT"
+  },
+  {
+    "number": 98,
+    "id": "a7xstzDO",
+    "title": "便携计数器",
+    "slug": "098-a7xstzDO",
+    "log_file": "solve-logs/098-a7xstzDO.md",
+    "original_url": "https://puzzle.cat/puzzles/a7xstzDO"
+  },
+  {
+    "number": 99,
+    "id": "XYkPIapg",
+    "title": "信达雅",
+    "slug": "099-XYkPIapg",
+    "log_file": "solve-logs/099-XYkPIapg.md",
+    "original_url": "https://puzzle.cat/puzzles/XYkPIapg"
+  },
+  {
+    "number": 100,
+    "id": "GC3beioV",
+    "title": "元素魔法",
+    "slug": "100-GC3beioV",
+    "log_file": "solve-logs/100-GC3beioV.md",
+    "original_url": "https://puzzle.cat/puzzles/GC3beioV"
+  },
+  {
+    "number": 101,
+    "id": "GYnbeioV",
+    "title": "克制关系",
+    "slug": "101-GYnbeioV",
+    "log_file": "solve-logs/101-GYnbeioV.md",
+    "original_url": "https://puzzle.cat/puzzles/GYnbeioV"
+  },
+  {
+    "number": 102,
+    "id": "kZtS2WKJ",
+    "title": "公式化 ISIS 谜题",
+    "slug": "102-kZtS2WKJ",
+    "log_file": "solve-logs/102-kZtS2WKJ.md",
+    "original_url": "https://puzzle.cat/puzzles/kZtS2WKJ"
+  },
+  {
+    "number": 103,
+    "id": "PV7e2esI",
+    "title": "六月十日的笔记本",
+    "slug": "103-PV7e2esI",
+    "log_file": "solve-logs/103-PV7e2esI.md",
+    "original_url": "https://puzzle.cat/puzzles/PV7e2esI"
+  },
+  {
+    "number": 104,
+    "id": "yuhzg7XA",
+    "title": "别敲了",
+    "slug": "104-yuhzg7XA",
+    "log_file": "solve-logs/104-yuhzg7XA.md",
+    "original_url": "https://puzzle.cat/puzzles/yuhzg7XA"
+  },
+  {
+    "number": 105,
+    "id": "ermoQPLb",
+    "title": "动物园谜001：大家好啊",
+    "slug": "105-ermoQPLb",
+    "log_file": "solve-logs/105-ermoQPLb.md",
+    "original_url": "https://puzzle.cat/puzzles/ermoQPLb"
+  },
+  {
+    "number": 106,
+    "id": "oFUmNtwx",
+    "title": "动物细胞融合",
+    "slug": "106-oFUmNtwx",
+    "log_file": "solve-logs/106-oFUmNtwx.md",
+    "original_url": "https://puzzle.cat/puzzles/oFUmNtwx"
+  },
+  {
+    "number": 107,
+    "id": "BULEpJHi",
+    "title": "动物躲猫猫",
+    "slug": "107-BULEpJHi",
+    "log_file": "solve-logs/107-BULEpJHi.md",
+    "original_url": "https://puzzle.cat/puzzles/BULEpJHi"
+  },
+  {
+    "number": 108,
+    "id": "zCJG691D",
+    "title": "十一个单词",
+    "slug": "108-zCJG691D",
+    "log_file": "solve-logs/108-zCJG691D.md",
+    "original_url": "https://puzzle.cat/puzzles/zCJG691D"
+  },
+  {
+    "number": 109,
+    "id": "RjXAJFgi",
+    "title": "十一个单词2",
+    "slug": "109-RjXAJFgi",
+    "log_file": "solve-logs/109-RjXAJFgi.md",
+    "original_url": "https://puzzle.cat/puzzles/RjXAJFgi"
+  },
+  {
+    "number": 110,
+    "id": "RiAJFgie",
+    "title": "十字谜",
+    "slug": "110-RiAJFgie",
+    "log_file": "solve-logs/110-RiAJFgie.md",
+    "original_url": "https://puzzle.cat/puzzles/RiAJFgie"
+  },
+  {
+    "number": 111,
+    "id": "CI1fVTmL",
+    "title": "单词勇者的冒险",
+    "slug": "111-CI1fVTmL",
+    "log_file": "solve-logs/111-CI1fVTmL.md",
+    "original_url": "https://puzzle.cat/puzzles/CI1fVTmL"
+  },
+  {
+    "number": 112,
+    "id": "z1FG691D",
+    "title": "危险源",
+    "slug": "112-z1FG691D",
+    "log_file": "solve-logs/112-z1FG691D.md",
+    "original_url": "https://puzzle.cat/puzzles/z1FG691D"
+  },
+  {
+    "number": 113,
+    "id": "LwpqNrv1",
+    "title": "历史谜（一）",
+    "slug": "113-LwpqNrv1",
+    "log_file": "solve-logs/113-LwpqNrv1.md",
+    "original_url": "https://puzzle.cat/puzzles/LwpqNrv1"
+  },
+  {
+    "number": 114,
+    "id": "pej2nNtD",
+    "title": "历史谜（二）",
+    "slug": "114-pej2nNtD",
+    "log_file": "solve-logs/114-pej2nNtD.md",
+    "original_url": "https://puzzle.cat/puzzles/pej2nNtD"
+  },
+  {
+    "number": 115,
+    "id": "OA2iZO0v",
+    "title": "又是三个词？",
+    "slug": "115-OA2iZO0v",
+    "log_file": "solve-logs/115-OA2iZO0v.md",
+    "original_url": "https://puzzle.cat/puzzles/OA2iZO0v"
+  },
+  {
+    "number": 116,
+    "id": "ikmRTMow",
+    "title": "友人的来信",
+    "slug": "116-ikmRTMow",
+    "log_file": "solve-logs/116-ikmRTMow.md",
+    "original_url": "https://puzzle.cat/puzzles/ikmRTMow"
+  },
+  {
+    "number": 117,
+    "id": "baG5uOJW",
+    "title": "双日凌空（一）",
+    "slug": "117-baG5uOJW",
+    "log_file": "solve-logs/117-baG5uOJW.md",
+    "original_url": "https://puzzle.cat/puzzles/baG5uOJW"
+  },
+  {
+    "number": 118,
+    "id": "cinHRhJe",
+    "title": "反切的艺术",
+    "slug": "118-cinHRhJe",
+    "log_file": "solve-logs/118-cinHRhJe.md",
+    "original_url": "https://puzzle.cat/puzzles/cinHRhJe"
+  },
+  {
+    "number": 119,
+    "id": "HKd44RZL",
+    "title": "反向探骊格",
+    "slug": "119-HKd44RZL",
+    "log_file": "solve-logs/119-HKd44RZL.md",
+    "original_url": "https://puzzle.cat/puzzles/HKd44RZL"
+  },
+  {
+    "number": 120,
+    "id": "Ys8hZAop",
+    "title": "叠叠叠叠叠词",
+    "slug": "120-Ys8hZAop",
+    "log_file": "solve-logs/120-Ys8hZAop.md",
+    "original_url": "https://puzzle.cat/puzzles/Ys8hZAop"
+  },
+  {
+    "number": 121,
+    "id": "y1Ezg7XA",
+    "title": "古老迷宫游戏",
+    "slug": "121-y1Ezg7XA",
+    "log_file": "solve-logs/121-y1Ezg7XA.md",
+    "original_url": "https://puzzle.cat/puzzles/y1Ezg7XA"
+  },
+  {
+    "number": 122,
+    "id": "GrbeioVN",
+    "title": "只需枚举",
+    "slug": "122-GrbeioVN",
+    "log_file": "solve-logs/122-GrbeioVN.md",
+    "original_url": "https://puzzle.cat/puzzles/GrbeioVN"
+  },
+  {
+    "number": 123,
+    "id": "F1Myul5g",
+    "title": "吃什么",
+    "slug": "123-F1Myul5g",
+    "log_file": "solve-logs/123-F1Myul5g.md",
+    "original_url": "https://puzzle.cat/puzzles/F1Myul5g"
+  },
+  {
+    "number": 124,
+    "id": "hv41SWQP",
+    "title": "启动",
+    "slug": "124-hv41SWQP",
+    "log_file": "solve-logs/124-hv41SWQP.md",
+    "original_url": "https://puzzle.cat/puzzles/hv41SWQP"
+  },
+  {
+    "number": 125,
+    "id": "mJYr8Uar",
+    "title": "和同开珎",
+    "slug": "125-mJYr8Uar",
+    "log_file": "solve-logs/125-mJYr8Uar.md",
+    "original_url": "https://puzzle.cat/puzzles/mJYr8Uar"
+  },
+  {
+    "number": 126,
+    "id": "XPtkPIap",
+    "title": "和同谜",
+    "slug": "126-XPtkPIap",
+    "log_file": "solve-logs/126-XPtkPIap.md",
+    "original_url": "https://puzzle.cat/puzzles/XPtkPIap"
+  },
+  {
+    "number": 127,
+    "id": "7WSIxIpP",
+    "title": "和和同同",
+    "slug": "127-7WSIxIpP",
+    "log_file": "solve-logs/127-7WSIxIpP.md",
+    "original_url": "https://puzzle.cat/puzzles/7WSIxIpP"
+  },
+  {
+    "number": 128,
+    "id": "yBIzg7XA",
+    "title": "哈基谜（二）",
+    "slug": "128-yBIzg7XA",
+    "log_file": "solve-logs/128-yBIzg7XA.md",
+    "original_url": "https://puzzle.cat/puzzles/yBIzg7XA"
+  },
+  {
+    "number": 129,
+    "id": "6Grd5dzE",
+    "title": "哈基谜（雾",
+    "slug": "129-6Grd5dzE",
+    "log_file": "solve-logs/129-6Grd5dzE.md",
+    "original_url": "https://puzzle.cat/puzzles/6Grd5dzE"
+  },
+  {
+    "number": 130,
+    "id": "cWVHRhJe",
+    "title": "唐人街灯谜（巴黎）",
+    "slug": "130-cWVHRhJe",
+    "log_file": "solve-logs/130-cWVHRhJe.md",
+    "original_url": "https://puzzle.cat/puzzles/cWVHRhJe"
+  },
+  {
+    "number": 131,
+    "id": "IvFLNP39",
+    "title": "嘉豪谜（一）",
+    "slug": "131-IvFLNP39",
+    "log_file": "solve-logs/131-IvFLNP39.md",
+    "original_url": "https://puzzle.cat/puzzles/IvFLNP39"
+  },
+  {
+    "number": 132,
+    "id": "OS5iZO0v",
+    "title": "回転",
+    "slug": "132-OS5iZO0v",
+    "log_file": "solve-logs/132-OS5iZO0v.md",
+    "original_url": "https://puzzle.cat/puzzles/OS5iZO0v"
+  },
+  {
+    "number": 133,
+    "id": "9SSWHnxJ",
+    "title": "圆",
+    "slug": "133-9SSWHnxJ",
+    "log_file": "solve-logs/133-9SSWHnxJ.md",
+    "original_url": "https://puzzle.cat/puzzles/9SSWHnxJ"
+  },
+  {
+    "number": 134,
+    "id": "M0NxAs7n",
+    "title": "填字游戏",
+    "slug": "134-M0NxAs7n",
+    "log_file": "solve-logs/134-M0NxAs7n.md",
+    "original_url": "https://puzzle.cat/puzzles/M0NxAs7n"
+  },
+  {
+    "number": 135,
+    "id": "KMgXEjGS",
+    "title": "大厂笔试题",
+    "slug": "135-KMgXEjGS",
+    "log_file": "solve-logs/135-KMgXEjGS.md",
+    "original_url": "https://puzzle.cat/puzzles/KMgXEjGS"
+  },
+  {
+    "number": 136,
+    "id": "bEu5uOJW",
+    "title": "大发大发",
+    "slug": "136-bEu5uOJW",
+    "log_file": "solve-logs/136-bEu5uOJW.md",
+    "original_url": "https://puzzle.cat/puzzles/bEu5uOJW"
+  },
+  {
+    "number": 137,
+    "id": "5ILuzMeL",
+    "title": "大数邻",
+    "slug": "137-5ILuzMeL",
+    "log_file": "solve-logs/137-5ILuzMeL.md",
+    "original_url": "https://puzzle.cat/puzzles/5ILuzMeL"
+  },
+  {
+    "number": 138,
+    "id": "5LquzMeL",
+    "title": "好吃的成语",
+    "slug": "138-5LquzMeL",
+    "log_file": "solve-logs/138-5LquzMeL.md",
+    "original_url": "https://puzzle.cat/puzzles/5LquzMeL"
+  },
+  {
+    "number": 139,
+    "id": "oyvmNtwx",
+    "title": "好数",
+    "slug": "139-oyvmNtwx",
+    "log_file": "solve-logs/139-oyvmNtwx.md",
+    "original_url": "https://puzzle.cat/puzzles/oyvmNtwx"
+  },
+  {
+    "number": 140,
+    "id": "Wj2lljce",
+    "title": "如约而至",
+    "slug": "140-Wj2lljce",
+    "log_file": "solve-logs/140-Wj2lljce.md",
+    "original_url": "https://puzzle.cat/puzzles/Wj2lljce"
+  },
+  {
+    "number": 141,
+    "id": "mzEr8Uar",
+    "title": "字母谜",
+    "slug": "141-mzEr8Uar",
+    "log_file": "solve-logs/141-mzEr8Uar.md",
+    "original_url": "https://puzzle.cat/puzzles/mzEr8Uar"
+  },
+  {
+    "number": 142,
+    "id": "EQxtl1dT",
+    "title": "字母重组",
+    "slug": "142-EQxtl1dT",
+    "log_file": "solve-logs/142-EQxtl1dT.md",
+    "original_url": "https://puzzle.cat/puzzles/EQxtl1dT"
+  },
+  {
+    "number": 143,
+    "id": "KBXEjGSH",
+    "title": "字的奥秘",
+    "slug": "143-KBXEjGSH",
+    "log_file": "solve-logs/143-KBXEjGSH.md",
+    "original_url": "https://puzzle.cat/puzzles/KBXEjGSH"
+  },
+  {
+    "number": 144,
+    "id": "PmEe2esI",
+    "title": "字谜三则",
+    "slug": "144-PmEe2esI",
+    "log_file": "solve-logs/144-PmEe2esI.md",
+    "original_url": "https://puzzle.cat/puzzles/PmEe2esI"
+  },
+  {
+    "number": 145,
+    "id": "uYPC56DT",
+    "title": "学好数学",
+    "slug": "145-uYPC56DT",
+    "log_file": "solve-logs/145-uYPC56DT.md",
+    "original_url": "https://puzzle.cat/puzzles/uYPC56DT"
+  },
+  {
+    "number": 146,
+    "id": "OjoiZO0v",
+    "title": "学舌",
+    "slug": "146-OjoiZO0v",
+    "log_file": "solve-logs/146-OjoiZO0v.md",
+    "original_url": "https://puzzle.cat/puzzles/OjoiZO0v"
+  },
+  {
+    "number": 147,
+    "id": "yYszg7XA",
+    "title": "宝可灯谜1",
+    "slug": "147-yYszg7XA",
+    "log_file": "solve-logs/147-yYszg7XA.md",
+    "original_url": "https://puzzle.cat/puzzles/yYszg7XA"
+  },
+  {
+    "number": 148,
+    "id": "ybfzg7XA",
+    "title": "小学生必背",
+    "slug": "148-ybfzg7XA",
+    "log_file": "solve-logs/148-ybfzg7XA.md",
+    "original_url": "https://puzzle.cat/puzzles/ybfzg7XA"
+  },
+  {
+    "number": 149,
+    "id": "d1uF4LbF",
+    "title": "展览墙",
+    "slug": "149-d1uF4LbF",
+    "log_file": "solve-logs/149-d1uF4LbF.md",
+    "original_url": "https://puzzle.cat/puzzles/d1uF4LbF"
+  },
+  {
+    "number": 150,
+    "id": "YvzhZAop",
+    "title": "巧填幻方",
+    "slug": "150-YvzhZAop",
+    "log_file": "solve-logs/150-YvzhZAop.md",
+    "original_url": "https://puzzle.cat/puzzles/YvzhZAop"
+  },
+  {
+    "number": 151,
+    "id": "6Cnd5dzE",
+    "title": "巧填方格",
+    "slug": "151-6Cnd5dzE",
+    "log_file": "solve-logs/151-6Cnd5dzE.md",
+    "original_url": "https://puzzle.cat/puzzles/6Cnd5dzE"
+  },
+  {
+    "number": 152,
+    "id": "lXxOiBju",
+    "title": "帮Stavros回家",
+    "slug": "152-lXxOiBju",
+    "log_file": "solve-logs/152-lXxOiBju.md",
+    "original_url": "https://puzzle.cat/puzzles/lXxOiBju"
+  },
+  {
+    "number": 153,
+    "id": "fBtYBRMr",
+    "title": "平面直角坐标系",
+    "slug": "153-fBtYBRMr",
+    "log_file": "solve-logs/153-fBtYBRMr.md",
+    "original_url": "https://puzzle.cat/puzzles/fBtYBRMr"
+  },
+  {
+    "number": 154,
+    "id": "swOBl3vq",
+    "title": "当一切都沉寂之时",
+    "slug": "154-swOBl3vq",
+    "log_file": "solve-logs/154-swOBl3vq.md",
+    "original_url": "https://puzzle.cat/puzzles/swOBl3vq"
+  },
+  {
+    "number": 155,
+    "id": "qwTUKLri",
+    "title": "彩色方块",
+    "slug": "155-qwTUKLri",
+    "log_file": "solve-logs/155-qwTUKLri.md",
+    "original_url": "https://puzzle.cat/puzzles/qwTUKLri"
+  },
+  {
+    "number": 156,
+    "id": "UsvRTeZO",
+    "title": "微谜137：述数术",
+    "slug": "156-UsvRTeZO",
+    "log_file": "solve-logs/156-UsvRTeZO.md",
+    "original_url": "https://puzzle.cat/puzzles/UsvRTeZO"
+  },
+  {
+    "number": 157,
+    "id": "JpgoAEXN",
+    "title": "微谜139: 汉语词典",
+    "slug": "157-JpgoAEXN",
+    "log_file": "solve-logs/157-JpgoAEXN.md",
+    "original_url": "https://puzzle.cat/puzzles/JpgoAEXN"
+  },
+  {
+    "number": 158,
+    "id": "CzfVTmLk",
+    "title": "微谜145: 叠色",
+    "slug": "158-CzfVTmLk",
+    "log_file": "solve-logs/158-CzfVTmLk.md",
+    "original_url": "https://puzzle.cat/puzzles/CzfVTmLk"
+  },
+  {
+    "number": 159,
+    "id": "LimqNrv1",
+    "title": "微谜147: 力",
+    "slug": "159-LimqNrv1",
+    "log_file": "solve-logs/159-LimqNrv1.md",
+    "original_url": "https://puzzle.cat/puzzles/LimqNrv1"
+  },
+  {
+    "number": 160,
+    "id": "duyF4LbF",
+    "title": "心",
+    "slug": "160-duyF4LbF",
+    "log_file": "solve-logs/160-duyF4LbF.md",
+    "original_url": "https://puzzle.cat/puzzles/duyF4LbF"
+  },
+  {
+    "number": 161,
+    "id": "o0tmNtwx",
+    "title": "怀旧数学",
+    "slug": "161-o0tmNtwx",
+    "log_file": "solve-logs/161-o0tmNtwx.md",
+    "original_url": "https://puzzle.cat/puzzles/o0tmNtwx"
+  },
+  {
+    "number": 162,
+    "id": "WTklljce",
+    "title": "成词成对",
+    "slug": "162-WTklljce",
+    "log_file": "solve-logs/162-WTklljce.md",
+    "original_url": "https://puzzle.cat/puzzles/WTklljce"
+  },
+  {
+    "number": 163,
+    "id": "iS6RTMow",
+    "title": "成语与反义词",
+    "slug": "163-iS6RTMow",
+    "log_file": "solve-logs/163-iS6RTMow.md",
+    "original_url": "https://puzzle.cat/puzzles/iS6RTMow"
+  },
+  {
+    "number": 164,
+    "id": "OkbiZO0v",
+    "title": "成语与反义词2",
+    "slug": "164-OkbiZO0v",
+    "log_file": "solve-logs/164-OkbiZO0v.md",
+    "original_url": "https://puzzle.cat/puzzles/OkbiZO0v"
+  },
+  {
+    "number": 165,
+    "id": "D0iPz728",
+    "title": "成语接龙",
+    "slug": "165-D0iPz728",
+    "log_file": "solve-logs/165-D0iPz728.md",
+    "original_url": "https://puzzle.cat/puzzles/D0iPz728"
+  },
+  {
+    "number": 166,
+    "id": "WRKlljce",
+    "title": "我是嘉豪（一）",
+    "slug": "166-WRKlljce",
+    "log_file": "solve-logs/166-WRKlljce.md",
+    "original_url": "https://puzzle.cat/puzzles/WRKlljce"
+  },
+  {
+    "number": 167,
+    "id": "EIStl1dT",
+    "title": "我爱记歌词",
+    "slug": "167-EIStl1dT",
+    "log_file": "solve-logs/167-EIStl1dT.md",
+    "original_url": "https://puzzle.cat/puzzles/EIStl1dT"
+  },
+  {
+    "number": 168,
+    "id": "JyxgoAEX",
+    "title": "我的世界一直在下雨……",
+    "slug": "168-JyxgoAEX",
+    "log_file": "solve-logs/168-JyxgoAEX.md",
+    "original_url": "https://puzzle.cat/puzzles/JyxgoAEX"
+  },
+  {
+    "number": 169,
+    "id": "ZmApgd2S",
+    "title": "我解谜",
+    "slug": "169-ZmApgd2S",
+    "log_file": "solve-logs/169-ZmApgd2S.md",
+    "original_url": "https://puzzle.cat/puzzles/ZmApgd2S"
+  },
+  {
+    "number": 170,
+    "id": "JY3goAEX",
+    "title": "我解谜 I puzzIe.",
+    "slug": "170-JY3goAEX",
+    "log_file": "solve-logs/170-JY3goAEX.md",
+    "original_url": "https://puzzle.cat/puzzles/JY3goAEX"
+  },
+  {
+    "number": 171,
+    "id": "eyFoQPLb",
+    "title": "才不是汽水谜！(二)",
+    "slug": "171-eyFoQPLb",
+    "log_file": "solve-logs/171-eyFoQPLb.md",
+    "original_url": "https://puzzle.cat/puzzles/eyFoQPLb"
+  },
+  {
+    "number": 172,
+    "id": "ELjtl1dT",
+    "title": "才不是汽水谜！（一）",
+    "slug": "172-ELjtl1dT",
+    "log_file": "solve-logs/172-ELjtl1dT.md",
+    "original_url": "https://puzzle.cat/puzzles/ELjtl1dT"
+  },
+  {
+    "number": 173,
+    "id": "EqZtl1dT",
+    "title": "打字比赛",
+    "slug": "173-EqZtl1dT",
+    "log_file": "solve-logs/173-EqZtl1dT.md",
+    "original_url": "https://puzzle.cat/puzzles/EqZtl1dT"
+  },
+  {
+    "number": 174,
+    "id": "zY6G691D",
+    "title": "找不同",
+    "slug": "174-zY6G691D",
+    "log_file": "solve-logs/174-zY6G691D.md",
+    "original_url": "https://puzzle.cat/puzzles/zY6G691D"
+  },
+  {
+    "number": 175,
+    "id": "TP9KhwRH",
+    "title": "抽象猜歌1",
+    "slug": "175-TP9KhwRH",
+    "log_file": "solve-logs/175-TP9KhwRH.md",
+    "original_url": "https://puzzle.cat/puzzles/TP9KhwRH"
+  },
+  {
+    "number": 176,
+    "id": "APVTwX1Q",
+    "title": "抽象猜歌2",
+    "slug": "176-APVTwX1Q",
+    "log_file": "solve-logs/176-APVTwX1Q.md",
+    "original_url": "https://puzzle.cat/puzzles/APVTwX1Q"
+  },
+  {
+    "number": 177,
+    "id": "9ppWHnxJ",
+    "title": "抽象猜歌4",
+    "slug": "177-9ppWHnxJ",
+    "log_file": "solve-logs/177-9ppWHnxJ.md",
+    "original_url": "https://puzzle.cat/puzzles/9ppWHnxJ"
+  },
+  {
+    "number": 178,
+    "id": "fvQYBRMr",
+    "title": "抽象猜歌5",
+    "slug": "178-fvQYBRMr",
+    "log_file": "solve-logs/178-fvQYBRMr.md",
+    "original_url": "https://puzzle.cat/puzzles/fvQYBRMr"
+  },
+  {
+    "number": 179,
+    "id": "2mbMJHkc",
+    "title": "拼好字",
+    "slug": "179-2mbMJHkc",
+    "log_file": "solve-logs/179-2mbMJHkc.md",
+    "original_url": "https://puzzle.cat/puzzles/2mbMJHkc"
+  },
+  {
+    "number": 180,
+    "id": "UwEvRTeZ",
+    "title": "指北",
+    "slug": "180-UwEvRTeZ",
+    "log_file": "solve-logs/180-UwEvRTeZ.md",
+    "original_url": "https://puzzle.cat/puzzles/UwEvRTeZ"
+  },
+  {
+    "number": 181,
+    "id": "gy76lhr6",
+    "title": "探骊格之底线",
+    "slug": "181-gy76lhr6",
+    "log_file": "solve-logs/181-gy76lhr6.md",
+    "original_url": "https://puzzle.cat/puzzles/gy76lhr6"
+  },
+  {
+    "number": 182,
+    "id": "s7QBl3vq",
+    "title": "探骊格（三）",
+    "slug": "182-s7QBl3vq",
+    "log_file": "solve-logs/182-s7QBl3vq.md",
+    "original_url": "https://puzzle.cat/puzzles/s7QBl3vq"
+  },
+  {
+    "number": 183,
+    "id": "ADITwX1Q",
+    "title": "数独谜题",
+    "slug": "183-ADITwX1Q",
+    "log_file": "solve-logs/183-ADITwX1Q.md",
+    "original_url": "https://puzzle.cat/puzzles/ADITwX1Q"
+  },
+  {
+    "number": 184,
+    "id": "7vOIxIpP",
+    "title": "文化造纸",
+    "slug": "184-7vOIxIpP",
+    "log_file": "solve-logs/184-7vOIxIpP.md",
+    "original_url": "https://puzzle.cat/puzzles/7vOIxIpP"
+  },
+  {
+    "number": 185,
+    "id": "BvqEpJHi",
+    "title": "文字游戏",
+    "slug": "185-BvqEpJHi",
+    "log_file": "solve-logs/185-BvqEpJHi.md",
+    "original_url": "https://puzzle.cat/puzzles/BvqEpJHi"
+  },
+  {
+    "number": 186,
+    "id": "q4kUKLri",
+    "title": "料理",
+    "slug": "186-q4kUKLri",
+    "log_file": "solve-logs/186-q4kUKLri.md",
+    "original_url": "https://puzzle.cat/puzzles/q4kUKLri"
+  },
+  {
+    "number": 187,
+    "id": "p0e2nNtD",
+    "title": "旅立ち",
+    "slug": "187-p0e2nNtD",
+    "log_file": "solve-logs/187-p0e2nNtD.md",
+    "original_url": "https://puzzle.cat/puzzles/p0e2nNtD"
+  },
+  {
+    "number": 188,
+    "id": "cSyHRhJe",
+    "title": "旅行前也要先填饱肚子呀……",
+    "slug": "188-cSyHRhJe",
+    "log_file": "solve-logs/188-cSyHRhJe.md",
+    "original_url": "https://puzzle.cat/puzzles/cSyHRhJe"
+  },
+  {
+    "number": 189,
+    "id": "qOpUKLri",
+    "title": "无需多言",
+    "slug": "189-qOpUKLri",
+    "log_file": "solve-logs/189-qOpUKLri.md",
+    "original_url": "https://puzzle.cat/puzzles/qOpUKLri"
+  },
+  {
+    "number": 190,
+    "id": "Xe7kPIap",
+    "title": "无需枚举",
+    "slug": "190-Xe7kPIap",
+    "log_file": "solve-logs/190-Xe7kPIap.md",
+    "original_url": "https://puzzle.cat/puzzles/Xe7kPIap"
+  },
+  {
+    "number": 191,
+    "id": "KeQXEjGS",
+    "title": "时雨谜 · 〇三一 || 血雨",
+    "slug": "191-KeQXEjGS",
+    "log_file": "solve-logs/191-KeQXEjGS.md",
+    "original_url": "https://puzzle.cat/puzzles/KeQXEjGS"
+  },
+  {
+    "number": 192,
+    "id": "KpIXEjGS",
+    "title": "明诚谜 003",
+    "slug": "192-KpIXEjGS",
+    "log_file": "solve-logs/192-KpIXEjGS.md",
+    "original_url": "https://puzzle.cat/puzzles/KpIXEjGS"
+  },
+  {
+    "number": 193,
+    "id": "FCjyul5g",
+    "title": "明诚谜 005",
+    "slug": "193-FCjyul5g",
+    "log_file": "solve-logs/193-FCjyul5g.md",
+    "original_url": "https://puzzle.cat/puzzles/FCjyul5g"
+  },
+  {
+    "number": 194,
+    "id": "X2akPIap",
+    "title": "明诚谜001",
+    "slug": "194-X2akPIap",
+    "log_file": "solve-logs/194-X2akPIap.md",
+    "original_url": "https://puzzle.cat/puzzles/X2akPIap"
+  },
+  {
+    "number": 195,
+    "id": "AZDTwX1Q",
+    "title": "明诚谜004",
+    "slug": "195-AZDTwX1Q",
+    "log_file": "solve-logs/195-AZDTwX1Q.md",
+    "original_url": "https://puzzle.cat/puzzles/AZDTwX1Q"
+  },
+  {
+    "number": 196,
+    "id": "tQe7ji9S",
+    "title": "明诚谜007",
+    "slug": "196-tQe7ji9S",
+    "log_file": "solve-logs/196-tQe7ji9S.md",
+    "original_url": "https://puzzle.cat/puzzles/tQe7ji9S"
+  },
+  {
+    "number": 197,
+    "id": "eJ0oQPLb",
+    "title": "明诚谜008",
+    "slug": "197-eJ0oQPLb",
+    "log_file": "solve-logs/197-eJ0oQPLb.md",
+    "original_url": "https://puzzle.cat/puzzles/eJ0oQPLb"
+  },
+  {
+    "number": 198,
+    "id": "9XXWHnxJ",
+    "title": "明诚谜009",
+    "slug": "198-9XXWHnxJ",
+    "log_file": "solve-logs/198-9XXWHnxJ.md",
+    "original_url": "https://puzzle.cat/puzzles/9XXWHnxJ"
+  },
+  {
+    "number": 199,
+    "id": "TSUKhwRH",
+    "title": "最烂的谜题只需枚举",
+    "slug": "199-TSUKhwRH",
+    "log_file": "solve-logs/199-TSUKhwRH.md",
+    "original_url": "https://puzzle.cat/puzzles/TSUKhwRH"
+  },
+  {
+    "number": 200,
+    "id": "m61r8Uar",
+    "title": "月照纱窗 2",
+    "slug": "200-m61r8Uar",
+    "log_file": "solve-logs/200-m61r8Uar.md",
+    "original_url": "https://puzzle.cat/puzzles/m61r8Uar"
+  },
+  {
+    "number": 201,
+    "id": "Kx6XEjGS",
+    "title": "月照纱窗 3",
+    "slug": "201-Kx6XEjGS",
+    "log_file": "solve-logs/201-Kx6XEjGS.md",
+    "original_url": "https://puzzle.cat/puzzles/Kx6XEjGS"
+  },
+  {
+    "number": 202,
+    "id": "TMHKhwRH",
+    "title": "月照纱窗 4",
+    "slug": "202-TMHKhwRH",
+    "log_file": "solve-logs/202-TMHKhwRH.md",
+    "original_url": "https://puzzle.cat/puzzles/TMHKhwRH"
+  },
+  {
+    "number": 203,
+    "id": "q9SUKLri",
+    "title": "月照纱窗1",
+    "slug": "203-q9SUKLri",
+    "log_file": "solve-logs/203-q9SUKLri.md",
+    "original_url": "https://puzzle.cat/puzzles/q9SUKLri"
+  },
+  {
+    "number": 204,
+    "id": "gCN6lhr6",
+    "title": "月照纱窗（无限版）",
+    "slug": "204-gCN6lhr6",
+    "log_file": "solve-logs/204-gCN6lhr6.md",
+    "original_url": "https://puzzle.cat/puzzles/gCN6lhr6"
+  },
+  {
+    "number": 205,
+    "id": "IWfLNP39",
+    "title": "本题设有中间答案验证",
+    "slug": "205-IWfLNP39",
+    "log_file": "solve-logs/205-IWfLNP39.md",
+    "original_url": "https://puzzle.cat/puzzles/IWfLNP39"
+  },
+  {
+    "number": 206,
+    "id": "zEbG691D",
+    "title": "来自地球的礼物",
+    "slug": "206-zEbG691D",
+    "log_file": "solve-logs/206-zEbG691D.md",
+    "original_url": "https://puzzle.cat/puzzles/zEbG691D"
+  },
+  {
+    "number": 207,
+    "id": "bYF5uOJW",
+    "title": "极简键盘",
+    "slug": "207-bYF5uOJW",
+    "log_file": "solve-logs/207-bYF5uOJW.md",
+    "original_url": "https://puzzle.cat/puzzles/bYF5uOJW"
+  },
+  {
+    "number": 208,
+    "id": "tvD7ji9S",
+    "title": "核类艺术（微恐）",
+    "slug": "208-tvD7ji9S",
+    "log_file": "solve-logs/208-tvD7ji9S.md",
+    "original_url": "https://puzzle.cat/puzzles/tvD7ji9S"
+  },
+  {
+    "number": 209,
+    "id": "XjYkPIap",
+    "title": "梨谜014A",
+    "slug": "209-XjYkPIap",
+    "log_file": "solve-logs/209-XjYkPIap.md",
+    "original_url": "https://puzzle.cat/puzzles/XjYkPIap"
+  },
+  {
+    "number": 210,
+    "id": "E4otl1dT",
+    "title": "森林不退化",
+    "slug": "210-E4otl1dT",
+    "log_file": "solve-logs/210-E4otl1dT.md",
+    "original_url": "https://puzzle.cat/puzzles/E4otl1dT"
+  },
+  {
+    "number": 211,
+    "id": "ghc6lhr6",
+    "title": "森林退化",
+    "slug": "211-ghc6lhr6",
+    "log_file": "solve-logs/211-ghc6lhr6.md",
+    "original_url": "https://puzzle.cat/puzzles/ghc6lhr6"
+  },
+  {
+    "number": 212,
+    "id": "RX1AJFgi",
+    "title": "水浒卡",
+    "slug": "212-RX1AJFgi",
+    "log_file": "solve-logs/212-RX1AJFgi.md",
+    "original_url": "https://puzzle.cat/puzzles/RX1AJFgi"
+  },
+  {
+    "number": 213,
+    "id": "WiTlljce",
+    "title": "江河湖海",
+    "slug": "213-WiTlljce",
+    "log_file": "solve-logs/213-WiTlljce.md",
+    "original_url": "https://puzzle.cat/puzzles/WiTlljce"
+  },
+  {
+    "number": 214,
+    "id": "gFt6lhr6",
+    "title": "汽水谜",
+    "slug": "214-gFt6lhr6",
+    "log_file": "solve-logs/214-gFt6lhr6.md",
+    "original_url": "https://puzzle.cat/puzzles/gFt6lhr6"
+  },
+  {
+    "number": 215,
+    "id": "bC65uOJW",
+    "title": "汽水谜（三）",
+    "slug": "215-bC65uOJW",
+    "log_file": "solve-logs/215-bC65uOJW.md",
+    "original_url": "https://puzzle.cat/puzzles/bC65uOJW"
+  },
+  {
+    "number": 216,
+    "id": "z5nG691D",
+    "title": "汽水谜（二）",
+    "slug": "216-z5nG691D",
+    "log_file": "solve-logs/216-z5nG691D.md",
+    "original_url": "https://puzzle.cat/puzzles/z5nG691D"
+  },
+  {
+    "number": 217,
+    "id": "RkTAJFgi",
+    "title": "汽水谜（六）",
+    "slug": "217-RkTAJFgi",
+    "log_file": "solve-logs/217-RkTAJFgi.md",
+    "original_url": "https://puzzle.cat/puzzles/RkTAJFgi"
+  },
+  {
+    "number": 218,
+    "id": "iK0RTMow",
+    "title": "汽水谜（四）",
+    "slug": "218-iK0RTMow",
+    "log_file": "solve-logs/218-iK0RTMow.md",
+    "original_url": "https://puzzle.cat/puzzles/iK0RTMow"
+  },
+  {
+    "number": 219,
+    "id": "79kIxIpP",
+    "title": "洋",
+    "slug": "219-79kIxIpP",
+    "log_file": "solve-logs/219-79kIxIpP.md",
+    "original_url": "https://puzzle.cat/puzzles/79kIxIpP"
+  },
+  {
+    "number": 220,
+    "id": "p8D2nNtD",
+    "title": "添几笔",
+    "slug": "220-p8D2nNtD",
+    "log_file": "solve-logs/220-p8D2nNtD.md",
+    "original_url": "https://puzzle.cat/puzzles/p8D2nNtD"
+  },
+  {
+    "number": 221,
+    "id": "5EtuzMeL",
+    "title": "演变",
+    "slug": "221-5EtuzMeL",
+    "log_file": "solve-logs/221-5EtuzMeL.md",
+    "original_url": "https://puzzle.cat/puzzles/5EtuzMeL"
+  },
+  {
+    "number": 222,
+    "id": "1BzaRpKD",
+    "title": "漫游",
+    "slug": "222-1BzaRpKD",
+    "log_file": "solve-logs/222-1BzaRpKD.md",
+    "original_url": "https://puzzle.cat/puzzles/1BzaRpKD"
+  },
+  {
+    "number": 223,
+    "id": "1IuaRpKD",
+    "title": "火柴人推箱子",
+    "slug": "223-1IuaRpKD",
+    "log_file": "solve-logs/223-1IuaRpKD.md",
+    "original_url": "https://puzzle.cat/puzzles/1IuaRpKD"
+  },
+  {
+    "number": 224,
+    "id": "xebD8t6h",
+    "title": "熊不是黑白的",
+    "slug": "224-xebD8t6h",
+    "log_file": "solve-logs/224-xebD8t6h.md",
+    "original_url": "https://puzzle.cat/puzzles/xebD8t6h"
+  },
+  {
+    "number": 225,
+    "id": "TelKhwRH",
+    "title": "熟悉的等式",
+    "slug": "225-TelKhwRH",
+    "log_file": "solve-logs/225-TelKhwRH.md",
+    "original_url": "https://puzzle.cat/puzzles/TelKhwRH"
+  },
+  {
+    "number": 226,
+    "id": "KZ7XEjGS",
+    "title": "猜单词",
+    "slug": "226-KZ7XEjGS",
+    "log_file": "solve-logs/226-KZ7XEjGS.md",
+    "original_url": "https://puzzle.cat/puzzles/KZ7XEjGS"
+  },
+  {
+    "number": 227,
+    "id": "zu0G691D",
+    "title": "猜单词 1",
+    "slug": "227-zu0G691D",
+    "log_file": "solve-logs/227-zu0G691D.md",
+    "original_url": "https://puzzle.cat/puzzles/zu0G691D"
+  },
+  {
+    "number": 228,
+    "id": "mnCr8Uar",
+    "title": "猜单词 2",
+    "slug": "228-mnCr8Uar",
+    "log_file": "solve-logs/228-mnCr8Uar.md",
+    "original_url": "https://puzzle.cat/puzzles/mnCr8Uar"
+  },
+  {
+    "number": 229,
+    "id": "SxSj2oe3",
+    "title": "画",
+    "slug": "229-SxSj2oe3",
+    "log_file": "solve-logs/229-SxSj2oe3.md",
+    "original_url": "https://puzzle.cat/puzzles/SxSj2oe3"
+  },
+  {
+    "number": 230,
+    "id": "HjG44RZL",
+    "title": "留空",
+    "slug": "230-HjG44RZL",
+    "log_file": "solve-logs/230-HjG44RZL.md",
+    "original_url": "https://puzzle.cat/puzzles/HjG44RZL"
+  },
+  {
+    "number": 231,
+    "id": "x8hD8t6h",
+    "title": "病历乱神",
+    "slug": "231-x8hD8t6h",
+    "log_file": "solve-logs/231-x8hD8t6h.md",
+    "original_url": "https://puzzle.cat/puzzles/x8hD8t6h"
+  },
+  {
+    "number": 232,
+    "id": "cO8HRhJe",
+    "title": "百合谜 01",
+    "slug": "232-cO8HRhJe",
+    "log_file": "solve-logs/232-cO8HRhJe.md",
+    "original_url": "https://puzzle.cat/puzzles/cO8HRhJe"
+  },
+  {
+    "number": 233,
+    "id": "yC1zg7XA",
+    "title": "相生相克",
+    "slug": "233-yC1zg7XA",
+    "log_file": "solve-logs/233-yC1zg7XA.md",
+    "original_url": "https://puzzle.cat/puzzles/yC1zg7XA"
+  },
+  {
+    "number": 234,
+    "id": "gbq6lhr6",
+    "title": "神鲸谜 003",
+    "slug": "234-gbq6lhr6",
+    "log_file": "solve-logs/234-gbq6lhr6.md",
+    "original_url": "https://puzzle.cat/puzzles/gbq6lhr6"
+  },
+  {
+    "number": 235,
+    "id": "RKhAJFgi",
+    "title": "神鲸谜 007",
+    "slug": "235-RKhAJFgi",
+    "log_file": "solve-logs/235-RKhAJFgi.md",
+    "original_url": "https://puzzle.cat/puzzles/RKhAJFgi"
+  },
+  {
+    "number": 236,
+    "id": "Zeipgd2S",
+    "title": "福尔摩斯",
+    "slug": "236-Zeipgd2S",
+    "log_file": "solve-logs/236-Zeipgd2S.md",
+    "original_url": "https://puzzle.cat/puzzles/Zeipgd2S"
+  },
+  {
+    "number": 237,
+    "id": "stNBl3vq",
+    "title": "秘密单词本",
+    "slug": "237-stNBl3vq",
+    "log_file": "solve-logs/237-stNBl3vq.md",
+    "original_url": "https://puzzle.cat/puzzles/stNBl3vq"
+  },
+  {
+    "number": 238,
+    "id": "xJsD8t6h",
+    "title": "符世绘",
+    "slug": "238-xJsD8t6h",
+    "log_file": "solve-logs/238-xJsD8t6h.md",
+    "original_url": "https://puzzle.cat/puzzles/xJsD8t6h"
+  },
+  {
+    "number": 239,
+    "id": "4O19OF2B",
+    "title": "粉色",
+    "slug": "239-4O19OF2B",
+    "log_file": "solve-logs/239-4O19OF2B.md",
+    "original_url": "https://puzzle.cat/puzzles/4O19OF2B"
+  },
+  {
+    "number": 240,
+    "id": "C7hfVTmL",
+    "title": "纵横字咪",
+    "slug": "240-C7hfVTmL",
+    "log_file": "solve-logs/240-C7hfVTmL.md",
+    "original_url": "https://puzzle.cat/puzzles/C7hfVTmL"
+  },
+  {
+    "number": 241,
+    "id": "KowXEjGS",
+    "title": "编程",
+    "slug": "241-KowXEjGS",
+    "log_file": "solve-logs/241-KowXEjGS.md",
+    "original_url": "https://puzzle.cat/puzzles/KowXEjGS"
+  },
+  {
+    "number": 242,
+    "id": "L4xqNrv1",
+    "title": "缩略",
+    "slug": "242-L4xqNrv1",
+    "log_file": "solve-logs/242-L4xqNrv1.md",
+    "original_url": "https://puzzle.cat/puzzles/L4xqNrv1"
+  },
+  {
+    "number": 243,
+    "id": "KDdXEjGS",
+    "title": "美术课呢？",
+    "slug": "243-KDdXEjGS",
+    "log_file": "solve-logs/243-KDdXEjGS.md",
+    "original_url": "https://puzzle.cat/puzzles/KDdXEjGS"
+  },
+  {
+    "number": 244,
+    "id": "9AAWHnxJ",
+    "title": "老地方（微恐）",
+    "slug": "244-9AAWHnxJ",
+    "log_file": "solve-logs/244-9AAWHnxJ.md",
+    "original_url": "https://puzzle.cat/puzzles/9AAWHnxJ"
+  },
+  {
+    "number": 245,
+    "id": "IH5LNP39",
+    "title": "自我治疗",
+    "slug": "245-IH5LNP39",
+    "log_file": "solve-logs/245-IH5LNP39.md",
+    "original_url": "https://puzzle.cat/puzzles/IH5LNP39"
+  },
+  {
+    "number": 246,
+    "id": "SMkj2oe3",
+    "title": "节日快乐",
+    "slug": "246-SMkj2oe3",
+    "log_file": "solve-logs/246-SMkj2oe3.md",
+    "original_url": "https://puzzle.cat/puzzles/SMkj2oe3"
+  },
+  {
+    "number": 247,
+    "id": "sIwBl3vq",
+    "title": "芉禧姩洣趧迋ふ（一）",
+    "slug": "247-sIwBl3vq",
+    "log_file": "solve-logs/247-sIwBl3vq.md",
+    "original_url": "https://puzzle.cat/puzzles/sIwBl3vq"
+  },
+  {
+    "number": 248,
+    "id": "WA5lljce",
+    "title": "芉禧姩洣趧迋ふ（二）",
+    "slug": "248-WA5lljce",
+    "log_file": "solve-logs/248-WA5lljce.md",
+    "original_url": "https://puzzle.cat/puzzles/WA5lljce"
+  },
+  {
+    "number": 249,
+    "id": "YtJhZAop",
+    "title": "花卉培育！20260619",
+    "slug": "249-YtJhZAop",
+    "log_file": "solve-logs/249-YtJhZAop.md",
+    "original_url": "https://puzzle.cat/puzzles/YtJhZAop"
+  },
+  {
+    "number": 250,
+    "id": "9KKWHnxJ",
+    "title": "花卉培育！20260620",
+    "slug": "250-9KKWHnxJ",
+    "log_file": "solve-logs/250-9KKWHnxJ.md",
+    "original_url": "https://puzzle.cat/puzzles/9KKWHnxJ"
+  },
+  {
+    "number": 251,
+    "id": "HAg44RZL",
+    "title": "花卉培育！20260621",
+    "slug": "251-HAg44RZL",
+    "log_file": "solve-logs/251-HAg44RZL.md",
+    "original_url": "https://puzzle.cat/puzzles/HAg44RZL"
+  },
+  {
+    "number": 252,
+    "id": "4TE9OF2B",
+    "title": "花卉培育！20260622",
+    "slug": "252-4TE9OF2B",
+    "log_file": "solve-logs/252-4TE9OF2B.md",
+    "original_url": "https://puzzle.cat/puzzles/4TE9OF2B"
+  },
+  {
+    "number": 253,
+    "id": "5BEuzMeL",
+    "title": "花卉培育！20260623",
+    "slug": "253-5BEuzMeL",
+    "log_file": "solve-logs/253-5BEuzMeL.md",
+    "original_url": "https://puzzle.cat/puzzles/5BEuzMeL"
+  },
+  {
+    "number": 254,
+    "id": "BBEpJHim",
+    "title": "芳香",
+    "slug": "254-BBEpJHim",
+    "log_file": "solve-logs/254-BBEpJHim.md",
+    "original_url": "https://puzzle.cat/puzzles/BBEpJHim"
+  },
+  {
+    "number": 255,
+    "id": "OMhiZO0v",
+    "title": "英文翻译？",
+    "slug": "255-OMhiZO0v",
+    "log_file": "solve-logs/255-OMhiZO0v.md",
+    "original_url": "https://puzzle.cat/puzzles/OMhiZO0v"
+  },
+  {
+    "number": 256,
+    "id": "RSsAJFgi",
+    "title": "蔚蓝谜",
+    "slug": "256-RSsAJFgi",
+    "log_file": "solve-logs/256-RSsAJFgi.md",
+    "original_url": "https://puzzle.cat/puzzles/RSsAJFgi"
+  },
+  {
+    "number": 257,
+    "id": "P8Le2esI",
+    "title": "蛙谜1 篮球赛得分情况",
+    "slug": "257-P8Le2esI",
+    "log_file": "solve-logs/257-P8Le2esI.md",
+    "original_url": "https://puzzle.cat/puzzles/P8Le2esI"
+  },
+  {
+    "number": 258,
+    "id": "sQlBl3vq",
+    "title": "西行漫记",
+    "slug": "258-sQlBl3vq",
+    "log_file": "solve-logs/258-sQlBl3vq.md",
+    "original_url": "https://puzzle.cat/puzzles/sQlBl3vq"
+  },
+  {
+    "number": 259,
+    "id": "I9CLNP39",
+    "title": "观星思人",
+    "slug": "259-I9CLNP39",
+    "log_file": "solve-logs/259-I9CLNP39.md",
+    "original_url": "https://puzzle.cat/puzzles/I9CLNP39"
+  },
+  {
+    "number": 260,
+    "id": "JzDgoAEX",
+    "title": "译口同声",
+    "slug": "260-JzDgoAEX",
+    "log_file": "solve-logs/260-JzDgoAEX.md",
+    "original_url": "https://puzzle.cat/puzzles/JzDgoAEX"
+  },
+  {
+    "number": 261,
+    "id": "5h1uzMeL",
+    "title": "语文课",
+    "slug": "261-5h1uzMeL",
+    "log_file": "solve-logs/261-5h1uzMeL.md",
+    "original_url": "https://puzzle.cat/puzzles/5h1uzMeL"
+  },
+  {
+    "number": 262,
+    "id": "LvSqNrv1",
+    "title": "语言",
+    "slug": "262-LvSqNrv1",
+    "log_file": "solve-logs/262-LvSqNrv1.md",
+    "original_url": "https://puzzle.cat/puzzles/LvSqNrv1"
+  },
+  {
+    "number": 263,
+    "id": "c9rHRhJe",
+    "title": "误差分析",
+    "slug": "263-c9rHRhJe",
+    "log_file": "solve-logs/263-c9rHRhJe.md",
+    "original_url": "https://puzzle.cat/puzzles/c9rHRhJe"
+  },
+  {
+    "number": 264,
+    "id": "Mm7xAs7n",
+    "title": "读法错误",
+    "slug": "264-Mm7xAs7n",
+    "log_file": "solve-logs/264-Mm7xAs7n.md",
+    "original_url": "https://puzzle.cat/puzzles/Mm7xAs7n"
+  },
+  {
+    "number": 265,
+    "id": "TkqKhwRH",
+    "title": "课文两景",
+    "slug": "265-TkqKhwRH",
+    "log_file": "solve-logs/265-TkqKhwRH.md",
+    "original_url": "https://puzzle.cat/puzzles/TkqKhwRH"
+  },
+  {
+    "number": 266,
+    "id": "9AlWHnxJ",
+    "title": "负负得……",
+    "slug": "266-9AlWHnxJ",
+    "log_file": "solve-logs/266-9AlWHnxJ.md",
+    "original_url": "https://puzzle.cat/puzzles/9AlWHnxJ"
+  },
+  {
+    "number": 267,
+    "id": "IUdLNP39",
+    "title": "贪婪与高尚",
+    "slug": "267-IUdLNP39",
+    "log_file": "solve-logs/267-IUdLNP39.md",
+    "original_url": "https://puzzle.cat/puzzles/IUdLNP39"
+  },
+  {
+    "number": 268,
+    "id": "usrC56DT",
+    "title": "越狱",
+    "slug": "268-usrC56DT",
+    "log_file": "solve-logs/268-usrC56DT.md",
+    "original_url": "https://puzzle.cat/puzzles/usrC56DT"
+  },
+  {
+    "number": 269,
+    "id": "FsDyul5g",
+    "title": "路线",
+    "slug": "269-FsDyul5g",
+    "log_file": "solve-logs/269-FsDyul5g.md",
+    "original_url": "https://puzzle.cat/puzzles/FsDyul5g"
+  },
+  {
+    "number": 270,
+    "id": "GBdbeioV",
+    "title": "跳舞的小人",
+    "slug": "270-GBdbeioV",
+    "log_file": "solve-logs/270-GBdbeioV.md",
+    "original_url": "https://puzzle.cat/puzzles/GBdbeioV"
+  },
+  {
+    "number": 271,
+    "id": "iD5RTMow",
+    "title": "跳马2",
+    "slug": "271-iD5RTMow",
+    "log_file": "solve-logs/271-iD5RTMow.md",
+    "original_url": "https://puzzle.cat/puzzles/iD5RTMow"
+  },
+  {
+    "number": 272,
+    "id": "ogImNtwx",
+    "title": "这不是数独，这是英独！",
+    "slug": "272-ogImNtwx",
+    "log_file": "solve-logs/272-ogImNtwx.md",
+    "original_url": "https://puzzle.cat/puzzles/ogImNtwx"
+  },
+  {
+    "number": 273,
+    "id": "HRJ44RZL",
+    "title": "这是Cryptic clue吗？",
+    "slug": "273-HRJ44RZL",
+    "log_file": "solve-logs/273-HRJ44RZL.md",
+    "original_url": "https://puzzle.cat/puzzles/HRJ44RZL"
+  },
+  {
+    "number": 274,
+    "id": "9kAWHnxJ",
+    "title": "这期神了",
+    "slug": "274-9kAWHnxJ",
+    "log_file": "solve-logs/274-9kAWHnxJ.md",
+    "original_url": "https://puzzle.cat/puzzles/9kAWHnxJ"
+  },
+  {
+    "number": 275,
+    "id": "9TOWHnxJ",
+    "title": "远亲与不邻",
+    "slug": "275-9TOWHnxJ",
+    "log_file": "solve-logs/275-9TOWHnxJ.md",
+    "original_url": "https://puzzle.cat/puzzles/9TOWHnxJ"
+  },
+  {
+    "number": 276,
+    "id": "Prte2esI",
+    "title": "邑首Quiz",
+    "slug": "276-Prte2esI",
+    "log_file": "solve-logs/276-Prte2esI.md",
+    "original_url": "https://puzzle.cat/puzzles/Prte2esI"
+  },
+  {
+    "number": 277,
+    "id": "bsb5uOJW",
+    "title": "降水",
+    "slug": "277-bsb5uOJW",
+    "log_file": "solve-logs/277-bsb5uOJW.md",
+    "original_url": "https://puzzle.cat/puzzles/bsb5uOJW"
+  },
+  {
+    "number": 278,
+    "id": "iZFRTMow",
+    "title": "随蓝01",
+    "slug": "278-iZFRTMow",
+    "log_file": "solve-logs/278-iZFRTMow.md",
+    "original_url": "https://puzzle.cat/puzzles/iZFRTMow"
+  },
+  {
+    "number": 279,
+    "id": "zt5G691D",
+    "title": "集单谜",
+    "slug": "279-zt5G691D",
+    "log_file": "solve-logs/279-zt5G691D.md",
+    "original_url": "https://puzzle.cat/puzzles/zt5G691D"
+  },
+  {
+    "number": 280,
+    "id": "7ljIxIpP",
+    "title": "集单谜2-忌惮谜",
+    "slug": "280-7ljIxIpP",
+    "log_file": "solve-logs/280-7ljIxIpP.md",
+    "original_url": "https://puzzle.cat/puzzles/7ljIxIpP"
+  },
+  {
+    "number": 281,
+    "id": "RPMAJFgi",
+    "title": "非洲79",
+    "slug": "281-RPMAJFgi",
+    "log_file": "solve-logs/281-RPMAJFgi.md",
+    "original_url": "https://puzzle.cat/puzzles/RPMAJFgi"
+  },
+  {
+    "number": 282,
+    "id": "KS3XEjGS",
+    "title": "食物·景观·战役",
+    "slug": "282-KS3XEjGS",
+    "log_file": "solve-logs/282-KS3XEjGS.md",
+    "original_url": "https://puzzle.cat/puzzles/KS3XEjGS"
+  },
+  {
+    "number": 283,
+    "id": "fqvYBRMr",
+    "title": "鱼数",
+    "slug": "283-fqvYBRMr",
+    "log_file": "solve-logs/283-fqvYBRMr.md",
+    "original_url": "https://puzzle.cat/puzzles/fqvYBRMr"
+  },
+  {
+    "number": 284,
+    "id": "XxEkPIap",
+    "title": "麻雀",
+    "slug": "284-XxEkPIap",
+    "log_file": "solve-logs/284-XxEkPIap.md",
+    "original_url": "https://puzzle.cat/puzzles/XxEkPIap"
+  },
+  {
+    "number": 285,
+    "id": "O2YiZO0v",
+    "title": "黑暗森林组织：序",
+    "slug": "285-O2YiZO0v",
+    "log_file": "solve-logs/285-O2YiZO0v.md",
+    "original_url": "https://puzzle.cat/puzzles/O2YiZO0v"
+  },
+  {
+    "number": 286,
+    "id": "dfGF4LbF",
+    "title": "미로",
+    "slug": "286-dfGF4LbF",
+    "log_file": "solve-logs/286-dfGF4LbF.md",
+    "original_url": "https://puzzle.cat/puzzles/dfGF4LbF"
+  },
+  {
+    "number": 287,
+    "id": "pmp2nNtD",
+    "title": "복제",
+    "slug": "287-pmp2nNtD",
+    "log_file": "solve-logs/287-pmp2nNtD.md",
+    "original_url": "https://puzzle.cat/puzzles/pmp2nNtD"
+  },
+  {
+    "number": 288,
+    "id": "Sepj2oe3",
+    "title": "회전",
+    "slug": "288-Sepj2oe3",
+    "log_file": "solve-logs/288-Sepj2oe3.md",
+    "original_url": "https://puzzle.cat/puzzles/Sepj2oe3"
+  },
+  {
+    "number": 289,
+    "id": "1wsaRpKD",
+    "title": "！？土土？！",
+    "slug": "289-1wsaRpKD",
+    "log_file": "solve-logs/289-1wsaRpKD.md",
+    "original_url": "https://puzzle.cat/puzzles/1wsaRpKD"
+  }
+]

@@ -3,46 +3,84 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="不是中文 Cryptic（pPS2nNtD）的独立题解与验证。">
+  <meta name="description" content="不是中文 Cryptic（pPS2nNtD）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>不是中文 Cryptic · PuzzleCat 题解</title>
+  <title>不是中文 Cryptic · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>081</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>081 / 289</span><code>pPS2nNtD</code></div>
-        <h1>不是中文 Cryptic</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>SAGE</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/pPS2nNtD" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>1</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>线索为 <code>乱世嘉人 (4)</code>，表面仿“乱世佳人”，但特意写成“世嘉”。</p>
-<h3>我的解法</h3>
-<p><code>乱</code> 是变位指示词，<code>世嘉</code> 对应游戏公司 SEGA，<code>人</code> 作定义，指智者/贤人。将 <code>SEGA</code> 重排得到 <code>SAGE</code>。早先按电影表面猜 <code>GONE</code>，既没有完整字词构造，也未给“人”合理定义。</p>
-<h3>验证</h3>
-<p><code>GONE</code> 被拒；<code>SAGE</code> 满足四字母枚举、完整变位和定义，并被本地正确状态确认。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="080-KxUXEjGS.html"><span>← 上一题</span><strong>不可能解决的难题</strong></a><a class="sequence-link next" href="082-I6LNP392.html"><span>下一题 →</span><strong>不是省油的灯</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 不是中文 Cryptic</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>081</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">081 / 289</span><code>pPS2nNtD</code></div>
+      <h1>不是中文 Cryptic</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/pPS2nNtD" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/081-pPS2nNtD.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: 不是中文 Cryptic (<code>pPS2nNtD</code>)</h1>
+<p>Owner: <code>lane-b-20260712</code></p>
+<h2>Status</h2>
+<p>Recovered after one incorrect submission. Current answer: <code>SAGE</code> (high confidence).
+Incorrect count: 1.</p>
+<p>This lane did not submit, archive, resolve, or claim another puzzle.</p>
+<h2>FPA compliance</h2>
+<ul>
+<li>Solved from the archived clue and standard cryptic conventions.</li>
+<li>No search for an existing answer, solution, original puzzle, or WeChat source was performed.</li>
+</ul>
+<h2>Clue</h2>
+<pre><code class="language-text">乱世嘉人 (4)
+</code></pre>
+<p>The surface deliberately resembles the Chinese title of <em>Gone with the Wind</em>,
+<code>乱世佳人</code>, but changes <code>佳</code> to the homophone <code>嘉</code>.</p>
+<h2>Complete parse</h2>
+<pre><code class="language-text">乱       = anagram indicator
+世嘉     = SEGA (the game-company name in Chinese)
+人       = definition: a person, specifically a wise person / sage
+(SEGA)*  = SAGE
+</code></pre>
+<p>Therefore the exact answer is:</p>
+<pre><code class="language-text">SAGE
+</code></pre>
+<p>The enumeration is exactly four. Every character has a role: <code>乱</code> supplies the
+cryptic operation, <code>世嘉</code> supplies all four letters, and <code>人</code> supplies the
+definition. The <code>佳</code> -&gt; <code>嘉</code> substitution is mechanically necessary because
+<code>世嘉</code> is <code>SEGA</code>; it is not merely a decorative misspelling of the film title.</p>
+<h2>Why <code>GONE</code> is wrong</h2>
+<p><code>GONE</code> is strongly suggested by the film-title surface, but the site rejected
+it. The proposed <code>G + ONE</code> parse is also incomplete: it must translate <code>嘉</code> as
+an abbreviation for GOOD and scramble <code>世</code> = EON into ONE, while leaving <code>人</code>
+without a valid definition of GONE. In contrast, <code>SAGE</code> uses the exact adjacent
+unit <code>世嘉</code> and gives both a standard anagram operation and a valid definition.</p>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>SAGE</code> - high confidence; exact <code>(SEGA)*</code>, exact length 4, and <code>人</code> defines a sage.</li>
+<li><code>AGES</code> - the other common anagram of SEGA, but <code>人</code> cannot define AGES.</li>
+<li><code>GONE</code> - rejected by the site and lacks a valid role for <code>人</code>.</li>
+<li><code>WIND</code> - fits only the movie reference and has no cryptic wordplay support.</li>
+</ol>
+<h2>Submission history</h2>
+<ul>
+<li><code>GONE</code> - incorrect, submitted 2026-07-12T18:13:16.167Z by the existing worker workflow.</li>
+<li>No submission from this recovery lane.</li>
+</ul>
+<p>Incorrect count: 1.</p>
+<h2>Stopping criteria</h2>
+<p>Report <code>SAGE</code> and the full <code>乱 + 世嘉 + 人</code> parse to the root worker. Do not
+archive, submit, resolve, or claim another puzzle from this lane.</p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="080-KxUXEjGS.html"><span>← 上一份日志</span><strong>不可能解决的难题</strong></a><a class="sequence-link next" href="082-I6LNP392.html"><span>下一份日志 →</span><strong>不是省油的灯</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>不是中文 Cryptic · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

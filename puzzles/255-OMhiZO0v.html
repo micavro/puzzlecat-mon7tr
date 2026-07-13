@@ -3,46 +3,69 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="英文翻译？（OMhiZO0v）的独立题解与验证。">
+  <meta name="description" content="英文翻译？（OMhiZO0v）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>英文翻译？ · PuzzleCat 题解</title>
+  <title>英文翻译？ · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>255</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>255 / 289</span><code>OMhiZO0v</code></div>
-        <h1>英文翻译？</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>ELEVEN</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/OMhiZO0v" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>九个中文词被空行分成三组：橙色/九/橡皮，苹果/狗/点，树/蛋/不；标题要求英文翻译。</p>
-<h3>我的解法</h3>
-<p>逐词翻译并取首字母：<code>Orange Nine Eraser→ONE</code>，<code>Apple Dog Dot→ADD</code>，<code>Tree Egg No→TEN</code>。三个组输出指令 <code>ONE ADD TEN</code>，计算 1+10=11，再按标题写成英文 <code>ELEVEN</code>。</p>
-<h3>验证</h3>
-<p>空行恰好承担分组作用，三组首字母形成完整算式；首次提交 correct。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="254-BBEpJHim.html"><span>← 上一题</span><strong>芳香</strong></a><a class="sequence-link next" href="256-RSsAJFgi.html"><span>下一题 →</span><strong>蔚蓝谜</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 英文翻译？</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>255</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">255 / 289</span><code>OMhiZO0v</code></div>
+      <h1>英文翻译？</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/OMhiZO0v" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/255-OMhiZO0v.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: 英文翻译？</h1>
+<ul>
+<li>Puzzle ID: <code>OMhiZO0v</code></li>
+<li>Owner: <code>recover-w3-20260712</code></li>
+<li>Incorrect submissions: 0</li>
+<li>Status: correct</li>
+</ul>
+<h2>Prompt</h2>
+<p>Flavor: <code>要求在标题上，但是为什么会有这么诡异的排列方式和这么诡异的空行</code></p>
+<p>The body is arranged as three groups:</p>
+<ol>
+<li><code>橙色 / 九 / 橡皮</code></li>
+<li><code>苹果 / 狗 / 点</code></li>
+<li><code>树 / 蛋 / 不</code></li>
+</ol>
+<p>The hint remains unpurchased.</p>
+<h2>Observations and reasoning</h2>
+<ol>
+<li>The title asks for English translation, so translate each Chinese item independently.</li>
+<li>Group 1 becomes <code>Orange / Nine / Eraser</code>. Their initials spell <code>ONE</code>.</li>
+<li>Group 2 becomes <code>Apple / Dog / Dot</code>. Their initials spell <code>ADD</code>.</li>
+<li>Group 3 becomes <code>Tree / Egg / No</code>. Their initials spell <code>TEN</code>.</li>
+<li>The strange blank lines are therefore deliberate group boundaries. Reading the three group outputs gives <code>ONE ADD TEN</code>.</li>
+<li>Evaluating the instruction gives <code>1 + 10 = 11</code>, whose English spelling is <code>ELEVEN</code>.</li>
+</ol>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>ELEVEN</code> - fully determined by the translations, initials, grouping, and arithmetic.</li>
+<li><code>ONE ADD TEN</code> - the intermediate instruction rather than the requested final answer.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>ELEVEN</code> - correct (attempt 1; 0 incorrect submissions).</li>
+</ul>
+<h2>Stopping criteria</h2>
+<p>The first candidate was accepted; no further submission is required.</p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="254-BBEpJHim.html"><span>← 上一份日志</span><strong>芳香</strong></a><a class="sequence-link next" href="256-RSsAJFgi.html"><span>下一份日志 →</span><strong>蔚蓝谜</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>英文翻译？ · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

@@ -3,46 +3,63 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="To ronto（DnOPz728）的独立题解与验证。">
+  <meta name="description" content="To ronto（DnOPz728）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>To ronto · PuzzleCat 题解</title>
+  <title>To ronto · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>047</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>047 / 289</span><code>DnOPz728</code></div>
-        <h1>To ronto</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>PIANO</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/DnOPz728" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>图中是若干“可见字母 + 被遮连续片段”的单词等式，右侧用图标或类别验证结果。</p>
-<h3>我的解法</h3>
-<p>示例可读为 <code>O+MEGA=OMEGA</code>、<code>O+XYGE+N=OXYGEN</code>。目标行露出 <code>pi</code>，右侧提示乐器/音乐，补上 <code>ANO</code> 便得到 <code>PIANO</code>；末行 <code>PICO</code> 的拆法再次验证遮挡规则。</p>
-<h3>验证</h3>
-<p>前缀、被遮长度和音乐语义唯一吻合；<code>PIANO</code> 首投正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="046-7UlIxIpP.html"><span>← 上一题</span><strong>Test</strong></a><a class="sequence-link next" href="048-yhBzg7XA.html"><span>下一题 →</span><strong>type</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · To ronto</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>047</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">047 / 289</span><code>DnOPz728</code></div>
+      <h1>To ronto</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/DnOPz728" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/047-DnOPz728.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>DnOPz728 - To ronto</h1>
+<h2>Claim</h2>
+<ul>
+<li>Owner: <code>codex-root-20260712</code></li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0</li>
+<li>Stop condition: correct answer, evidence exhausted (<code>cannot_do</code>), or 20 incorrect submissions.</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Archive completed successfully with one downloaded resource.</li>
+<li>The image contains four word equations. Solid circles obscure contiguous letter runs; the right-hand side gives either the completed word or its conventional symbol/category.</li>
+<li>The title <code>To ronto</code> reinforces splitting a word into visible components.</li>
+</ul>
+<h2>Reasoning</h2>
+<ul>
+<li>Row 1 is <code>O + MEGA = OMEGA</code>, shown on the right as Greek omega.</li>
+<li>Row 2 is <code>O + XYGE + N = OXYGEN</code>, shown on the right as its chemical symbol <code>O</code>.</li>
+<li>The target row begins with <code>pi</code> and asks for something musical. Filling the obscured run with <code>ANO</code> gives <code>PIANO</code>.</li>
+<li>The final row cross-checks the visual convention: obscured <code>PICO</code> is rendered on the right as <code>pi + C + O</code>.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ul>
+<li><code>PIANO</code> - high confidence; exact prefix and semantic category match.</li>
+<li>No evidence-supported alternative.</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>PIANO</code> - correct (2026-07-12T06:55:09Z).</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="046-7UlIxIpP.html"><span>← 上一份日志</span><strong>Test</strong></a><a class="sequence-link next" href="048-yhBzg7XA.html"><span>下一份日志 →</span><strong>type</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>To ronto · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

@@ -3,46 +3,70 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="十字谜（RiAJFgie）的独立题解与验证。">
+  <meta name="description" content="十字谜（RiAJFgie）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>十字谜 · PuzzleCat 题解</title>
+  <title>十字谜 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>110</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>110 / 289</span><code>RiAJFgie</code></div>
-        <h1>十字谜</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>灵光一现</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/RiAJFgie" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>四个十字结构的中心为空，中心字需分别与四周字组成常用二字词。</p>
-<h3>我的解法</h3>
-<p>第一组可组成 <code>机灵、灵媒、闪灵、灵感</code>，中心为灵；第二组 <code>目光、光华、采光、光谱</code>，中心为光；第三组 <code>统一、一致、专一、一旦</code>，中心为一；第四组 <code>显现、现金、重现、现存</code>，中心为现。自上而下得到 <code>灵光一现</code>。</p>
-<h3>验证</h3>
-<p>十六个二字词都成立，四个中心字组成完整成语；提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="109-RjXAJFgi.html"><span>← 上一题</span><strong>十一个单词2</strong></a><a class="sequence-link next" href="111-CI1fVTmL.html"><span>下一题 →</span><strong>单词勇者的冒险</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 十字谜</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>110</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">110 / 289</span><code>RiAJFgie</code></div>
+      <h1>十字谜</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/RiAJFgie" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/110-RiAJFgie.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: RiAJFgie</h1>
+<ul>
+<li>Owner: <code>recover-w1-20260712</code></li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0</li>
+<li>Answer policy: fixed 3-minute cooldown; stop at 20 incorrect submissions.</li>
+<li>FPA check: no FPA tag; tag is <code>肥咕矩阵</code>.</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Title: <code>十字谜</code>.</li>
+<li>Series/flavor: <code>肥咕矩阵的原点</code> series; originally published <code>2017.06.28</code>.</li>
+<li>Content is one narrow image: <code>assets/001-AXpTwX1Q-01_170628.webp</code>.</li>
+</ul>
+<h2>Reasoning</h2>
+<ul>
+<li>Each blank center must form a valid two-character word with every neighboring character, following the arrow sequence through the center.</li>
+<li>Cross 1: <code>机灵</code>, <code>灵媒</code>, <code>闪灵</code>, <code>灵感</code> -&gt; center <code>灵</code>.</li>
+<li>Cross 2: <code>目光</code>, <code>光华</code>, <code>采光</code>, <code>光谱</code> -&gt; center <code>光</code>.</li>
+<li>Cross 3: <code>统一</code>, <code>一致</code>, <code>专一</code>, <code>一旦</code> -&gt; center <code>一</code>.</li>
+<li>Cross 4: <code>显现</code>, <code>现金</code>, <code>重现</code>, <code>现存</code> -&gt; center <code>现</code>.</li>
+<li>Reading the four centers from top to bottom gives the idiom <code>灵光一现</code>.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>灵光一现</code> — exact centers of all four crosses; submit.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>灵光一现</code> — <strong>correct</strong>, site message <code>恭喜你，回答正确！</code>.</li>
+</ul>
+<h2>Final</h2>
+<ul>
+<li>Answer: <code>灵光一现</code></li>
+<li>Incorrect count: 0</li>
+<li>Stopping criterion: correct verdict received.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="109-RjXAJFgi.html"><span>← 上一份日志</span><strong>十一个单词2</strong></a><a class="sequence-link next" href="111-CI1fVTmL.html"><span>下一份日志 →</span><strong>单词勇者的冒险</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>十字谜 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

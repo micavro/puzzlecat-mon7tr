@@ -3,46 +3,87 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="【北斗谜航】#7☀️ 🌼 🔥 🌙（ckFHRhJe）的独立题解与验证。">
+  <meta name="description" content="【北斗谜航】#7☀️ 🌼 🔥 🌙（ckFHRhJe）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>【北斗谜航】#7☀️ 🌼 🔥 🌙 · PuzzleCat 题解</title>
+  <title>【北斗谜航】#7☀️ 🌼 🔥 🌙 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>055</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>055 / 289</span><code>ckFHRhJe</code></div>
-        <h1>【北斗谜航】#7☀️ 🌼 🔥 🌙</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>新北二楼</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/ckFHRhJe" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>题面用字母、数字和日月花火等图形搭出汉字部件树；五个示例对应熟悉诗句，底部要求按编号部件重新组字。</p>
-<h3>我的解法</h3>
-<p>五句分别还原为“春花秋月何时了”“南朝四百八十寺”“停车坐爱枫林晚”“夕阳无限好”“洛阳亲友如相问”等句子，由此确定编号部件 <code>1=亲、2=斤、3=二、4=木、5=米、6=女</code>，红色 <code>N</code> 表示北。底部组合为 <code>亲+斤=新</code>、<code>北</code>、<code>二</code>、<code>木+(米/女)=楼</code>，得到 <code>新北二楼</code>。</p>
-<h3>验证</h3>
-<p>每个输出字都能由已在示例中校准的部件组成，且结果是题面提示的地点；提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="054-LWPqNrv1.html"><span>← 上一题</span><strong>【NbH₂谜】黑板</strong></a><a class="sequence-link next" href="056-RkaAJFgi.html"><span>下一题 →</span><strong>【星谜002】ReReRebus</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 【北斗谜航】#7☀️ 🌼 🔥 🌙</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>055</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">055 / 289</span><code>ckFHRhJe</code></div>
+      <h1>【北斗谜航】#7☀️ 🌼 🔥 🌙</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/ckFHRhJe" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/055-ckFHRhJe.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>ckFHRhJe solve log</h1>
+<h2>Puzzle</h2>
+<ul>
+<li>Title: 【北斗谜航】#7☀️ 🌼 🔥 🌙</li>
+<li>Owner: <code>codex-main-20260712</code></li>
+<li>Claim lease: 720 minutes</li>
+<li>Tags: 一枚, 汉语, 中国传统文化, 中文</li>
+<li>Answer policy: no cooldown</li>
+</ul>
+<h2>Observations and phrase recovery</h2>
+<p>Each square is an abstract Chinese-character component tree. Repeated letters/numbers denote repeated components; pictograms stand for components such as 日、花、火、月.</p>
+<p>The five examples resolve to familiar verses:</p>
+<ol>
+<li><code>春花秋月何时了，往事知多少</code></li>
+<li><code>南朝四百八十寺，多少楼台烟雨中</code></li>
+<li><code>停车坐爱枫林晚，霜叶红于二月花</code></li>
+<li><code>夕阳无限好，只是近黄昏</code></li>
+<li><code>洛阳亲友如相问，一片冰心在玉壶</code></li>
+</ol>
+<p>These readings explain the full structural notation, including <code>A=口</code>, <code>B=夕</code>, <code>D=雨</code>, <code>E=友</code>, <code>F=目</code>, and <code>G=阝</code>.</p>
+<h2>Extraction</h2>
+<p>The numbered components needed at the bottom are:</p>
+<pre><code class="language-text">1 = 亲
+2 = 斤
+3 = 二
+4 = 木
+5 = 米
+6 = 女
+</code></pre>
+<p>The red compass letter <code>N</code> denotes 北, just as red <code>S</code> in <code>南朝四百八十寺</code> denotes 南.</p>
+<p>The four bottom constructions are therefore:</p>
+<ol>
+<li>left-right <code>亲 + 斤</code> = <code>新</code></li>
+<li><code>N</code> = <code>北</code></li>
+<li><code>二</code></li>
+<li>left <code>木</code>, right top <code>米</code>, right bottom <code>女</code> = <code>楼</code></li>
+</ol>
+<p>Final answer: <code>新北二楼</code>, consistent with the flavor saying the original answer was a location on the BUAA Xueyuan Road campus.</p>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>新北二楼</code> - every component and all four output positions are fully determined.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>新北二楼</code> - correct (<code>恭喜你，回答正确！</code>)</li>
+<li>Final incorrect count: 0</li>
+<li>Submission evidence: <code>submissions/2026-07-12T11-00-07-443Z/</code></li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Resolved condition met: <code>新北二楼</code> was accepted.</li>
+<li>If rejected, inspect whether the site expects a longer formal building name; do not enumerate campus names without evidence.</li>
+<li>Hard stop after 20 incorrect submissions.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="054-LWPqNrv1.html"><span>← 上一份日志</span><strong>【NbH₂谜】黑板</strong></a><a class="sequence-link next" href="056-RkaAJFgi.html"><span>下一份日志 →</span><strong>【星谜002】ReReRebus</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>【北斗谜航】#7☀️ 🌼 🔥 🌙 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

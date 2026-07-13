@@ -3,46 +3,103 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="抽象猜歌1（TP9KhwRH）的独立题解与验证。">
+  <meta name="description" content="抽象猜歌1（TP9KhwRH）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>抽象猜歌1 · PuzzleCat 题解</title>
+  <title>抽象猜歌1 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>175</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>175 / 289</span><code>TP9KhwRH</code></div>
-        <h1>抽象猜歌1</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>BAD ROMANCE</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/TP9KhwRH" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>图片上排是两个埃及太阳神 Ra 和三张喊叫图，下排是罗马斗兽场重复并截短；限定为 2000 年代、B 开头的双词英文歌。</p>
-<h3>我的解法</h3>
-<p>上排读作 <code>Ra-ra-ah-ah-ah</code>，下排读作 <code>Roma-roma-ma</code>。这是 Lady Gaga 2009 年歌曲《Bad Romance》开头最有辨识度的歌词，且歌名确为 B 开头的两个词。</p>
-<h3>验证</h3>
-<p>本地元数据的答对提示也保存了同一句歌词；<code>BAD ROMANCE</code> 提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="174-zY6G691D.html"><span>← 上一题</span><strong>找不同</strong></a><a class="sequence-link next" href="176-APVTwX1Q.html"><span>下一题 →</span><strong>抽象猜歌2</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 抽象猜歌1</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>175</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">175 / 289</span><code>TP9KhwRH</code></div>
+      <h1>抽象猜歌1</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/TP9KhwRH" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/175-TP9KhwRH.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>TP9KhwRH《抽象猜歌1》解题日志</h1>
+<h2>题面约束</h2>
+<ul>
+<li>题目要求回答歌名。</li>
+<li>英语歌。</li>
+<li>年代：2000s。</li>
+<li>歌名为两个词，第一个词以 <code>B</code> 开头。</li>
+<li>本轮只分析，不登录、不提交答案。</li>
+</ul>
+<h2>素材观察</h2>
+<p>素材：<code>assets/001-jFPZrexE-词猜遍cat1.webp</code></p>
+<ol>
+<li>上排左侧连续出现两张埃及鹰头太阳神浮雕。结合其头顶太阳圆盘，可读作埃及太阳神 <strong>Ra</strong> 两次：<code>Ra-ra</code>。</li>
+<li>上排右侧连续出现三张张嘴叫喊的土拨鼠/旱獭画面，可抽象为三声 <code>ah</code>：<code>ah-ah-ah</code>。</li>
+<li>因而上排整体明确拼出：<code>Ra-ra-ah-ah-ah</code>。</li>
+<li>下排是罗马斗兽场（Rome / Roma）的横向重复并在末端截断：可读成 <code>Roma-roma-ma</code>。</li>
+<li>两排合起来正是 Lady Gaga《Bad Romance》开头最有辨识度的一句：<code>Ra-ra-ah-ah-ah / Roma-roma-ma</code>。</li>
+</ol>
+<h2>元数据旁证</h2>
+<ul>
+<li><code>metadata.json</code> 的 <code>correctMessage</code> 字段原样为：<code>Ra-ra-ah-ah-ah Roma-roma-ma</code>。</li>
+<li>这与图片独立解读完全一致，说明图片的目标不是直接拼 <code>bad</code> 和 <code>romance</code> 两个词，而是先拼出歌曲的标志性开头歌词，再由歌词识别歌名。</li>
+<li>同一元数据的答案规范化会忽略大小写、空格和标点，但本轮不进行提交。</li>
+</ul>
+<h2>约束核对</h2>
+<ul>
+<li><strong>语言</strong>：Lady Gaga 的《Bad Romance》是英语歌。</li>
+<li><strong>年代</strong>：歌曲于 2009 年发行，属于 2000s。</li>
+<li><strong>标题格式</strong>：<code>Bad Romance</code> 恰为两个词，首词 <code>Bad</code> 以 <code>B</code> 开头。</li>
+<li><strong>图像歌词</strong>：<code>Ra-ra-ah-ah-ah / Roma-roma-ma</code> 是该曲开头的标志性歌词，与图片逐段对应。</li>
+</ul>
+<h2>候选与排除</h2>
+<table>
+<thead>
+<tr>
+<th>候选</th>
+<th>匹配情况</th>
+<th style="text-align: right;">置信度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bad Romance</strong></td>
+<td>同时满足年代、语言、B 开头双词标题、图片拼出的开头歌词、元数据答对提示</td>
+<td style="text-align: right;"><strong>99.9%</strong></td>
+</tr>
+<tr>
+<td>Beautiful Liar</td>
+<td>2000s、B 开头双词，但不含图中所拼的标志性歌词</td>
+<td style="text-align: right;">&lt;0.1%</td>
+</tr>
+<tr>
+<td>Bleeding Love</td>
+<td>2000s、B 开头双词，但不含图中所拼的标志性歌词</td>
+<td style="text-align: right;">&lt;0.1%</td>
+</tr>
+</tbody>
+</table>
+<h2>结论</h2>
+<p>首选答案：<strong>BAD ROMANCE</strong></p>
+<p>可复现推理：<code>Ra</code> 图 x2 + 喊叫图 x3 = <code>Ra-ra-ah-ah-ah</code>；罗马斗兽场的重复/截断 = <code>Roma-roma-ma</code>；搜索或凭歌词识别可定位到 Lady Gaga 2009 年歌曲《Bad Romance》，并逐项满足题面限定。</p>
+<p>跳过理由：无。证据已经闭环，建议主线程只提交首选答案，不需要消耗错误尝试。</p>
+<h2>Submission result</h2>
+<ul>
+<li>Submitted answer: <code>BAD ROMANCE</code></li>
+<li>Verdict: <code>correct</code></li>
+<li>Incorrect count: <code>0</code></li>
+<li>Site confirmation: <code>Ra-ra-ah-ah-ah Roma-roma-ma</code></li>
+<li>Stopping criterion: a correct verdict was received, so no further candidates were submitted.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="174-zY6G691D.html"><span>← 上一份日志</span><strong>找不同</strong></a><a class="sequence-link next" href="176-APVTwX1Q.html"><span>下一份日志 →</span><strong>抽象猜歌2</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>抽象猜歌1 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

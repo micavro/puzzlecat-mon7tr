@@ -3,46 +3,89 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="好数（oyvmNtwx）的独立题解与验证。">
+  <meta name="description" content="好数（oyvmNtwx）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>好数 · PuzzleCat 题解</title>
+  <title>好数 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>139</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>139 / 289</span><code>oyvmNtwx</code></div>
-        <h1>好数</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>GREY</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/oyvmNtwx" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>1</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>“好数”要求同一数字的相邻两次出现之间恰隔该数字个位置；27 位串用汉字及左右部件表示，需解出“风清月明”。</p>
-<h3>我的解法</h3>
-<p>把左右结构字展开为两位部件，例如 <code>清=氵+青、时=日+寸、晴=日+青、对=又+寸</code>。用好数间距约束求解，可锁定 <code>氵=1、青=8、日=2、寸=6</code>，并得到 <code>风=7、清=18、月=5</code>；因 <code>明=日+月</code>，故明=25。于是“风清月明”给出 <code>7,18,5,25</code>。</p>
-<h3>验证</h3>
-<p>A1Z26 将四数转为 <code>G,R,E,Y</code>；长度正好为四，<code>GREY</code> 提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="138-5LquzMeL.html"><span>← 上一题</span><strong>好吃的成语</strong></a><a class="sequence-link next" href="140-Wj2lljce.html"><span>下一题 →</span><strong>如约而至</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 好数</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>139</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">139 / 289</span><code>oyvmNtwx</code></div>
+      <h1>好数</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/oyvmNtwx" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/139-oyvmNtwx.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: oyvmNtwx</h1>
+<h2>Puzzle</h2>
+<ul>
+<li>Owner: <code>recover-w2-20260712</code></li>
+<li>Title: 好数</li>
+<li>Need construct a 27-digit good number containing digits 1-9 and decode <code>风清月明</code>.</li>
+</ul>
+<h2>Good-number rule</h2>
+<p>For every digit <code>d</code>, consecutive occurrences are exactly <code>d+1</code> positions apart, i.e. there are exactly <code>d</code> intervening digits. Every digit used must occur at least twice.</p>
+<p>Examples:</p>
+<ul>
+<li>In <code>312132</code>, the two 1s, 2s, and 3s are separated by 2, 3, and 4 positions respectively.</li>
+<li><code>30003</code> is valid: the 3s differ by 4 positions, while consecutive 0s are adjacent.</li>
+<li><code>121</code> is invalid because 2 occurs only once.</li>
+</ul>
+<p>An initial search incorrectly assumed every digit occurs exactly three times. General exact-cover search with the character constraints allows nine valid completions, but all give the same queried component values.</p>
+<h2>Character structure</h2>
+<p>The 22 displayed symbols expand to 27 digits because exactly five characters have left-right structure and therefore encode two component digits:</p>
+<ul>
+<li><code>清 = 氵 + 青</code></li>
+<li><code>河 = 氵 + 可</code></li>
+<li><code>时 = 日 + 寸</code></li>
+<li><code>晴 = 日 + 青</code></li>
+<li><code>对 = 又 + 寸</code></li>
+</ul>
+<p>The other displayed Chinese characters encode a single component digit. This gives consistency constraints such as the second digit of 清 equaling 青, both 晴 and 时 starting with 日, and both 时 and 对 ending with 寸.</p>
+<p>These constraints force 氵=1, 青=8, 日=2, and 寸=6. General search gives nine completions, beginning with either <code>181215...</code> or <code>181915...</code>; the differences do not affect the requested characters. One valid completion is:</p>
+<p><code>181215267285296475384639743</code></p>
+<p>The decoded character values are:</p>
+<ul>
+<li>清=18 (河 can vary between compatible values)</li>
+<li>月=5</li>
+<li>时=26, 风=7, 晴=28</li>
+<li>日=2, 寸=6, 青=8, 对=46</li>
+</ul>
+<p>Since <code>明 = 日 + 月</code>, its two-digit value is <code>25</code>. Therefore:</p>
+<p><code>风清月明 = 7 / 18 / 5 / 25</code></p>
+<p>The four values <code>7,18,5,25</code> are A1Z26 indices:</p>
+<ul>
+<li>7 = G</li>
+<li>18 = R</li>
+<li>5 = E</li>
+<li>25 = Y</li>
+</ul>
+<p>Thus the <code>(4)</code> answer is <code>GREY</code>. The numeric submission omitted this final conversion.</p>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>GREY</code> - A1Z26 conversion of the four decoded character values.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>718525</code> - incorrect; these are intermediate A1Z26 indices, not the enumerated four-letter answer. Incorrect count: 1.</li>
+<li><code>GREY</code> - correct. Final incorrect count: 1.</li>
+</ul>
+<h2>Stopping criteria</h2>
+<p>Stopped on the correct verdict for <code>GREY</code>.</p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="138-5LquzMeL.html"><span>← 上一份日志</span><strong>好吃的成语</strong></a><a class="sequence-link next" href="140-Wj2lljce.html"><span>下一份日志 →</span><strong>如约而至</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>好数 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

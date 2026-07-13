@@ -3,46 +3,159 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="集单谜（zt5G691D）的独立题解与验证。">
+  <meta name="description" content="集单谜（zt5G691D）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>集单谜 · PuzzleCat 题解</title>
+  <title>集单谜 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>279</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>279 / 289</span><code>zt5G691D</code></div>
-        <h1>集单谜</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>SEASONDAN</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/zt5G691D" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>5</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>九条鸡蛋主题的一句话谜语各带拼音首字母/汉字数标记和抽取位置，风味说“最后记得把它去掉”。</p>
-<h3>我的解法</h3>
-<p>机制是先猜蛋梗答案，把无声调拼音连写，再按索引取字。日志早期因第 2–6 行猜词不精确，错误抽成 <code>SUMMERDAN</code>，继而猜过 <code>SUMMER、SPRING CHICKEN、SPRINGDAN、SPRING</code>。重新校正九行后，逐行抽取恰为 <code>S E A S O N D A N</code>，应直接提交 <code>SEASONDAN</code>；成功文案再以“season dan / 季蛋 / 鸡蛋”做谐音收束。</p>
-<h3>验证</h3>
-<p>本地独立证据有限：五个过早解释均 incorrect，直接九字母串 <code>SEASONDAN</code> correct；日志没有完整保留九条最终谜底，因此无法逐行复现最终九字母，不补写缺失拼音。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="278-iZFRTMow.html"><span>← 上一题</span><strong>随蓝01</strong></a><a class="sequence-link next" href="280-7ljIxIpP.html"><span>下一题 →</span><strong>集单谜2-忌惮谜</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 集单谜</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>279</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">279 / 289</span><code>zt5G691D</code></div>
+      <h1>集单谜</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/zt5G691D" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/279-zt5G691D.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>zt5G691D solve log</h1>
+<h2>Puzzle</h2>
+<ul>
+<li>Title: 集单谜</li>
+<li>Owner: <code>codex-main-20260712</code></li>
+<li>Claim lease: 720 minutes</li>
+<li>Tags: 害我笑了一下, 文字, 字谜</li>
+<li>Flavor: <code>最后记得把它去掉。</code></li>
+<li>Answer policy: no cooldown</li>
+</ul>
+<h2>Observations</h2>
+<p>There are nine egg-themed one-line riddles. Each has a marker such as <code>[S4]</code>, <code>[Y4]</code>, or <code>[J7]</code>, followed by the extraction indices:</p>
+<pre><code class="language-text">1 5 6 7 12 3 3 2 6
+</code></pre>
+<p>The marker denotes the pinyin initial and Chinese-character count of the pun answer. The extraction index addresses the concatenated toneless pinyin, not Chinese characters (indices reach 12).</p>
+<h2>Reasoning</h2>
+<p>Several rows are directly recoverable and anchor the extraction:</p>
+<table>
+<thead>
+<tr>
+<th>Row</th>
+<th>Riddle answer / working wording</th>
+<th>Toneless pinyin</th>
+<th style="text-align: right;">Index</th>
+<th>Letter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>水和鸡蛋</td>
+<td>SHUIHEJIDAN</td>
+<td style="text-align: right;">1</td>
+<td>S</td>
+</tr>
+<tr>
+<td>2</td>
+<td>摇滚蛋清</td>
+<td>YAOGUNDANQING</td>
+<td style="text-align: right;">5</td>
+<td>U</td>
+</tr>
+<tr>
+<td>3</td>
+<td>蛋比猕桃 (egg versus kiwi wording)</td>
+<td>DANBIMITAO</td>
+<td style="text-align: right;">6</td>
+<td>M</td>
+</tr>
+<tr>
+<td>4</td>
+<td>蛋要么大 (reject a small egg)</td>
+<td>DANYAOMEDA</td>
+<td style="text-align: right;">7</td>
+<td>M</td>
+</tr>
+<tr>
+<td>5</td>
+<td>seven-character J-initial mushroom/egg-custard punchline</td>
+<td>J...</td>
+<td style="text-align: right;">12</td>
+<td>E</td>
+</tr>
+<tr>
+<td>6</td>
+<td>four-character D-initial “fried rice is gone” punchline</td>
+<td>D...</td>
+<td style="text-align: right;">3</td>
+<td>R</td>
+</tr>
+<tr>
+<td>7</td>
+<td>复旦大学</td>
+<td>FUDANDAXUE</td>
+<td style="text-align: right;">3</td>
+<td>D</td>
+</tr>
+<tr>
+<td>8</td>
+<td>蛋落大赛</td>
+<td>DANLUODASAI</td>
+<td style="text-align: right;">2</td>
+<td>A</td>
+</tr>
+<tr>
+<td>9</td>
+<td>虾仁炒蛋</td>
+<td>XIARENCHAODAN</td>
+<td style="text-align: right;">6</td>
+<td>N</td>
+</tr>
+</tbody>
+</table>
+<p>The nine extracted letters are:</p>
+<pre><code class="language-text">SUMMERDAN
+</code></pre>
+<p><code>DAN</code> is the pinyin for 蛋 and is the repeated egg motif. Initially the flavor was interpreted as removing this suffix, leaving <code>SUMMER</code>.</p>
+<p>The initial working phrasings for rows 2-6 were not sufficiently exact to support their pinyin letters. They are retained above as rejected working notes rather than authoritative fills.</p>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>SPRING CHICKEN</code> - corrected semantic meta: the extraction is a <code>SEASON + DAN</code> (季蛋), and <code>蛋生鸡</code> transforms DAN/egg into CHICKEN. <code>SPRING CHICKEN</code> is the unique established English phrase of this form.</li>
+<li><code>SUMMERDAN</code> - rejected working extraction based on approximate row answers.</li>
+<li><code>SUMMER</code> - rejected suffix-removal interpretation.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>SUMMER</code> - incorrect (<code>回答错误，请再试一次</code>); evidence: <code>submissions/2026-07-12T09-36-18-607Z/</code></li>
+<li><code>SUMMERDAN</code> - incorrect (<code>回答错误，请再试一次</code>); evidence: <code>submissions/2026-07-12T09-37-08-145Z/</code></li>
+<li><code>SPRING CHICKEN</code> - incorrect (<code>回答错误，请再试一次</code>); evidence: <code>submissions/2026-07-12T09-38-15-679Z/</code></li>
+<li><code>SPRINGDAN</code> - incorrect (<code>回答错误，请再试一次</code>); evidence: <code>submissions/2026-07-12T09-38-54-007Z/</code></li>
+<li><code>SPRING</code> - incorrect (<code>回答错误，请再试一次</code>); evidence: <code>submissions/2026-07-12T09-39-33-544Z/</code></li>
+<li>Incorrect count: 5</li>
+</ul>
+<p>The key correction is that nine rows match the literal nine-character string <code>SEASONDAN</code>, not a six-letter season name plus DAN. This exactly matches the archived success message's phrase <code>season dan</code>; the corrected row outputs are <code>S E A S O N D A N</code>. The earlier approximate row-2 through row-6 joke fills were therefore wrong. Next candidate: <code>SEASONDAN</code>, the direct extraction. A possible later conversion is <code>season -&gt; 季</code> and <code>dan -&gt; 蛋</code>, giving 季蛋/鸡蛋, but that should not precede testing the direct extracted answer.</p>
+<ul>
+<li><code>SEASONDAN</code> - correct (<code>这是一个季蛋。season dan，蛋生鸡。</code>); evidence: <code>submissions/2026-07-12T09-41-51-087Z/</code></li>
+<li>Final incorrect count: 5</li>
+</ul>
+<h2>Final answer</h2>
+<p><code>SEASONDAN</code></p>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Resolve <code>correct</code> if <code>SUMMER</code> is accepted.</li>
+<li>If rejected, revisit the exact row-5/row-6 pun wording and whether the final season is Chinese; do not enumerate seasons without evidence.</li>
+<li>Hard stop after 20 incorrect submissions.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="278-iZFRTMow.html"><span>← 上一份日志</span><strong>随蓝01</strong></a><a class="sequence-link next" href="280-7ljIxIpP.html"><span>下一份日志 →</span><strong>集单谜2-忌惮谜</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>集单谜 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

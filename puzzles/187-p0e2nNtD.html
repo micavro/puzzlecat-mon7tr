@@ -3,46 +3,75 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="旅立ち（p0e2nNtD）的独立题解与验证。">
+  <meta name="description" content="旅立ち（p0e2nNtD）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>旅立ち · PuzzleCat 题解</title>
+  <title>旅立ち · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>187</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>187 / 289</span><code>p0e2nNtD</code></div>
-        <h1>旅立ち</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>運勢</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/p0e2nNtD" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>题图用圆圈表示恒星演化阶段名称的日语假名，灰圈舍弃、彩圈提取；旁边图标用于确认同音词。</p>
-<h3>我的解法</h3>
-<p>前两行示范：<code>主系列星（しゅけいれつせい）</code> 提取 <code>けいつい=頸椎</code>，含 <code>巨星（きょせい）</code> 的阶段提取 <code>きせい=規制</code>。末行 <code>超新星（ちょうしんせい）</code> 的蓝圈取第 3、5、6、7 个假名，得到 <code>うんせい</code>，写作 <code>運勢</code>。</p>
-<h3>验证</h3>
-<p>三个阶段都遵守同一“天文词读音→抽假名→同音词”规则，末图的幸运含义进一步校验 <code>運勢</code>；提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="186-q4kUKLri.html"><span>← 上一题</span><strong>料理</strong></a><a class="sequence-link next" href="188-cSyHRhJe.html"><span>下一题 →</span><strong>旅行前也要先填饱肚子呀……</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 旅立ち</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>187</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">187 / 289</span><code>p0e2nNtD</code></div>
+      <h1>旅立ち</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/p0e2nNtD" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/187-p0e2nNtD.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve Log: p0e2nNtD</h1>
+<ul>
+<li>Owner: <code>chat2-w1-20260712</code></li>
+<li>Title: 旅立ち</li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0</li>
+</ul>
+<h2>Evidence</h2>
+<ul>
+<li>Archived successfully on 2026-07-12 through the serialized browser queue.</li>
+<li>The sole puzzle image depicts stages of stellar evolution. Gray circles stand for kana; outlined white/colored circles are extraction positions. Small circles correspond to small kana such as <code>ゅ</code> and <code>ょ</code>.</li>
+<li>First stage: <code>主系列星</code> is read <code>しゅけいれつせい</code>. The outlined positions select <code>け・い・つ・い</code>, or <code>けいつい</code>, shown as the homophone <code>頸椎</code>.</li>
+<li>Middle stages use stellar terms ending in <code>巨星</code> (<code>きょせい</code>). The extraction keeps <code>き・せ・い</code> and omits the small <code>ょ</code>, producing <code>きせい</code>, shown as <code>規制</code>.</li>
+<li>Final stage: <code>超新星</code> is read <code>ちょうしんせい</code>, represented by seven circles (<code>ち/ょ/う/し/ん/せ/い</code>). The blue positions 3, 5, 6, and 7 select <code>う・ん・せ・い</code>, or <code>うんせい</code> = <code>運勢</code>.</li>
+<li>Local headless reverse-image research identified the three adjacent icons as achievements from <code>Outer Wilds</code>:</li>
+<li><code>Oof Ouch, My Bones</code>, whose condition involves having one's spine adjusted, validates <code>頸椎</code>.</li>
+<li><code>Celsius 232.78</code>, awarded for burning a slide reel and referencing Fahrenheit 451/book burning, validates the censorship sense of <code>規制</code>.</li>
+<li><code>Beginner's Luck</code>, shown with <code>1st</code>, validates the luck/fortune sense of <code>運勢</code>.</li>
+<li>Submission <code>運勢</code> returned HTTP 200 with verdict <code>correct</code> and message <code>恭喜你，回答正确！</code>.</li>
+</ul>
+<h2>Reasoning</h2>
+<ul>
+<li>The first two rows demonstrate the rule: fill a Japanese astronomical term, remove the kana in gray circles, and interpret the retained reading as a homophonous word supported by the adjacent achievement icon.</li>
+<li>Applying the same rule to <code>超新星（ちょうしんせい）</code> gives retained kana <code>うんせい</code>.</li>
+<li>The final <code>Beginner's Luck</code> icon disambiguates this as <code>運勢</code> rather than another spelling.</li>
+</ul>
+<h2>Candidate Ranking</h2>
+<ul>
+<li>
+<ol>
+<li><code>運勢</code> - exact kana extraction from <code>超新星</code>, independently confirmed by the achievement icon; submitted and accepted.</li>
+</ol>
+</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>運勢</code> - correct (0 prior/incorrect attempts).</li>
+</ul>
+<h2>Stopping Criteria</h2>
+<ul>
+<li>Stopped after the first submission was accepted.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="186-q4kUKLri.html"><span>← 上一份日志</span><strong>料理</strong></a><a class="sequence-link next" href="188-cSyHRhJe.html"><span>下一份日志 →</span><strong>旅行前也要先填饱肚子呀……</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>旅立ち · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

@@ -3,46 +3,74 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Clues with Problems（XDEkPIap）的独立题解与验证。">
+  <meta name="description" content="Clues with Problems（XDEkPIap）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>Clues with Problems · PuzzleCat 题解</title>
+  <title>Clues with Problems · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>022</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>022 / 289</span><code>XDEkPIap</code></div>
-        <h1>Clues with Problems</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>CASUAL</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/XDEkPIap" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>六个故意显得荒诞的英文问答，每题附 <code>(提取位/答案长度)</code>；最终应得到一个六字母词。</p>
-<h3>我的解法</h3>
-<p>前四题可稳定解为：熟了也能吃的“生菜” <code>LETTUCE</code>，取第 6 字母 C；上面的符号常为白色的 <code>BLACKBOARD</code>，取第 3 字母 A；拍慢动作仍需 <code>SHUTTER</code>，取第 1 字母 S；夏天也能吃的“冬瓜” <code>WAX GOURD</code>，忽略空格取第 6 字母 U。前缀因此为 <code>CASU</code>。后两题的枚举分别支持第 2 字母 A（如 <code>HANGZHOU</code>）与第 3 字母 L，唯一符合题目轻松、随意风格的六字母完成是 <code>CASUAL</code>。</p>
-<h3>验证</h3>
-<p>四个独立答案已经给出强约束 <code>CASU</code>，剩余两题补足 A、L；<code>CASUAL</code> 零错通过。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="021-6ed5dzET.html"><span>← 上一题</span><strong>Celebratory Cryptic</strong></a><a class="sequence-link next" href="023-7wAIxIpP.html"><span>下一题 →</span><strong>CROSS†WORD</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · Clues with Problems</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>022</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">022 / 289</span><code>XDEkPIap</code></div>
+      <h1>Clues with Problems</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/XDEkPIap" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/022-XDEkPIap.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: Clues with Problems</h1>
+<ul>
+<li>Puzzle ID: <code>XDEkPIap</code></li>
+<li>Owner: <code>recover-w3-20260712</code></li>
+<li>Incorrect submissions: 0</li>
+<li>Status: correct</li>
+</ul>
+<h2>Prompt</h2>
+<p>Flavor: <code>为什么不是 Clues with Answers？</code></p>
+<ol>
+<li>为什么这种菜熟了也能吃？ <code>(6/7)</code></li>
+<li>为什么它上面的符号通常是白的？ <code>(3/10)</code></li>
+<li>为什么用相机拍摄慢动作也需要它？ <code>(1/7)</code></li>
+<li>为什么夏天能吃到这种蔬菜？ <code>(6/3 5)</code></li>
+<li>为什么这座中国省会城市位于北半球？ <code>(2/8)</code></li>
+<li>为什么要在室内吃这个？ <code>(3/8)</code></li>
+</ol>
+<p>The hint is unpurchased and will remain so.</p>
+<h2>Observations and reasoning</h2>
+<ul>
+<li>The slash notation naturally reads as <code>extraction index / answer enumeration</code>.</li>
+<li>Each question is a deliberately silly "problem" whose answer is an English word or phrase with a literal-name contradiction.</li>
+<li>Clue 1 is <code>LETTUCE</code> (生菜, literally "raw vegetable", but it remains edible cooked). It has 7 letters and letter 6 is <code>C</code>.</li>
+<li>Clue 2 is <code>BLACKBOARD</code>: symbols written on it in chalk are usually white. It has 10 letters and letter 3 is <code>A</code>.</li>
+<li>Clue 3 is <code>SHUTTER</code>: filming slow motion still requires the camera shutter. It has 7 letters and letter 1 is <code>S</code>.</li>
+<li>Clue 4 is <code>WAX GOURD</code> (冬瓜, literally "winter melon", but eaten in summer). Its enumeration is 3,5 and the sixth letter ignoring the space is <code>U</code>.</li>
+<li>The first four extractions spell <code>CASU</code>. The intended final answer is therefore strongly constrained to <code>CASUAL</code>, matching the light, joke-question presentation.</li>
+<li>Clue 5 must be an 8-letter provincial-capital answer whose second letter is <code>A</code>; <code>HANGZHOU</code> satisfies the enumeration and extraction. The exact joke wording is less important once the acrostic is fixed.</li>
+<li>Clue 6 must be an 8-letter food answer whose third letter is <code>L</code>; the indoor wording likely supplies a hall/inside pun. Again, the extraction is fixed by the four independently solved clues and final English word.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>CASUAL</code> - four direct extractions give <code>CASU</code>, while the final two enumerations support <code>A</code> and <code>L</code>; also semantically fits the casual joke clues.</li>
+<li>No competing six-letter completion of <code>CASU</code> fits the puzzle tone and both remaining indexed letters.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>CASUAL</code> - correct (attempt 1; 0 incorrect submissions).</li>
+</ul>
+<h2>Stopping criteria</h2>
+<p>The first candidate was accepted, so no further submission is required.</p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="021-6ed5dzET.html"><span>← 上一份日志</span><strong>Celebratory Cryptic</strong></a><a class="sequence-link next" href="023-7wAIxIpP.html"><span>下一份日志 →</span><strong>CROSS†WORD</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>Clues with Problems · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

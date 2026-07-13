@@ -3,46 +3,166 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="大厂笔试题（KMgXEjGS）的独立题解与验证。">
+  <meta name="description" content="大厂笔试题（KMgXEjGS）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>大厂笔试题 · PuzzleCat 题解</title>
+  <title>大厂笔试题 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>135</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>135 / 289</span><code>KMgXEjGS</code></div>
-        <h1>大厂笔试题</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>NETEASE</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/KMgXEjGS" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>1</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>七个左侧汉字与七个打乱的汉字配成二字词，再翻译成指定长度的英文，并从红格取字。</p>
-<h3>我的解法</h3>
-<p>配词为 <code>会议、提前、现实、二十、直径、学科、儿女</code>，翻译成 <code>CONFERENCE、ADVANCE、REALITY、TWENTY、DIAMETER、SUBJECT、CHILDREN</code>。按各行红位提取，依次为 <code>N,E,T,E,A,S,E</code>。</p>
-<h3>验证</h3>
-<p>提取得到大厂网易的英文名 <code>NETEASE</code>，吻合标题；中文“网易”因不是图中直接提取串而被拒，英文形式正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="134-M0NxAs7n.html"><span>← 上一题</span><strong>填字游戏</strong></a><a class="sequence-link next" href="136-bEu5uOJW.html"><span>下一题 →</span><strong>大发大发</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 大厂笔试题</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>135</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">135 / 289</span><code>KMgXEjGS</code></div>
+      <h1>大厂笔试题</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/KMgXEjGS" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/135-KMgXEjGS.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: KMgXEjGS - 大厂笔试题</h1>
+<h2>Coordination</h2>
+<ul>
+<li>Owner: <code>recover-w1-20260712</code></li>
+<li>Current puzzle ID is case-sensitive <code>KMgXEjGS</code>.</li>
+<li>The Windows archive path collided with the previously solved <code>KmGXEjGS</code>; that puzzle's log is preserved as <code>solve-log-KmGXEjGS.md</code>, and its solver/submission artifacts were not used for this puzzle.</li>
+<li>Answer policy: no cooldown.</li>
+<li>Submission limit: stop at 20 incorrect answers.</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>The image has seven left-side characters: <code>会 提 现 二 直 学 儿</code>.</li>
+<li>Seven shuffled bottom characters are: <code>径 前 十 女 议 实 科</code>.</li>
+<li>Pairing them into ordinary two-character Chinese words gives:</li>
+<li><code>会议</code></li>
+<li><code>提前</code></li>
+<li><code>现实</code></li>
+<li><code>二十</code></li>
+<li><code>直径</code></li>
+<li><code>学科</code></li>
+<li><code>儿女</code></li>
+<li>To the right are seven English answer lines of lengths 10, 7, 7, 6, 8, 7, and 8, respectively, with one red extraction position per line.</li>
+</ul>
+<h2>Translation and extraction</h2>
+<table>
+<thead>
+<tr>
+<th>Chinese</th>
+<th>English</th>
+<th style="text-align: right;">Length</th>
+<th style="text-align: right;">Red position</th>
+<th>Letter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>会议</td>
+<td><code>CONFERENCE</code></td>
+<td style="text-align: right;">10</td>
+<td style="text-align: right;">3</td>
+<td>N</td>
+</tr>
+<tr>
+<td>提前</td>
+<td><code>ADVANCE</code></td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">7</td>
+<td>E</td>
+</tr>
+<tr>
+<td>现实</td>
+<td><code>REALITY</code></td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">6</td>
+<td>T</td>
+</tr>
+<tr>
+<td>二十</td>
+<td><code>TWENTY</code></td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">3</td>
+<td>E</td>
+</tr>
+<tr>
+<td>直径</td>
+<td><code>DIAMETER</code></td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">3</td>
+<td>A</td>
+</tr>
+<tr>
+<td>学科</td>
+<td><code>SUBJECT</code></td>
+<td style="text-align: right;">7</td>
+<td style="text-align: right;">1</td>
+<td>S</td>
+</tr>
+<tr>
+<td>儿女</td>
+<td><code>CHILDREN</code></td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">7</td>
+<td>E</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The extracted string is <code>NETEASE</code>.</li>
+<li>NetEase is the English name of <code>网易</code>, matching the title's “大厂”.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>网易</code> - exact company identified by the extraction <code>NETEASE</code>.</li>
+<li><code>NETEASE</code> - same answer in extracted English form; only needed if the site rejects the Chinese company name.</li>
+</ol>
+<h2>Submissions</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Answer</th>
+<th>Verdict</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>网易</code></td>
+<td>Incorrect (<code>不对哦，再想想~</code>)</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>NETEASE</code></td>
+<td>Correct (<code>恭喜你，回答正确~</code>)</td>
+</tr>
+</tbody>
+</table>
+<p>Incorrect count: <strong>1</strong></p>
+<h2>Revision after submission 1</h2>
+<ul>
+<li>The Chinese company name was rejected despite the exact extraction. The puzzle has both English and Chinese tags, and the image directly spells <code>NETEASE</code>; submit that exact extracted form next.</li>
+</ul>
+<h2>Final result</h2>
+<ul>
+<li>Accepted answer: <code>NETEASE</code>.</li>
+<li>Incorrect submissions: <strong>1</strong>.</li>
+<li>The extraction is exact; no further submissions required.</li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Resolve <code>correct</code> immediately when <code>网易</code> or, if necessary, the exact extracted form <code>NETEASE</code> is accepted.</li>
+<li>Stop after 20 incorrect answers; stop earlier as <code>cannot_do</code> only if evidence becomes insufficient to distinguish candidates.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="134-M0NxAs7n.html"><span>← 上一份日志</span><strong>填字游戏</strong></a><a class="sequence-link next" href="136-bEu5uOJW.html"><span>下一份日志 →</span><strong>大发大发</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>大厂笔试题 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

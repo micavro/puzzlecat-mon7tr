@@ -3,46 +3,57 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="[NbH2谜022]五色交辉（GtybeioV）的独立题解与验证。">
+  <meta name="description" content="[NbH2谜022]五色交辉（GtybeioV）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>[NbH2谜022]五色交辉 · PuzzleCat 题解</title>
+  <title>[NbH2谜022]五色交辉 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>010</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>010 / 289</span><code>GtybeioV</code></div>
-        <h1>[NbH2谜022]五色交辉</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>者</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/GtybeioV" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>四色汉字分别与图标所示部件组合成新字，再翻成以 S 开头的英文词；红色路径产生第五种颜色。</p>
-<h3>我的解法</h3>
-<p><code>黄+竹=簧→SPRING</code>，<code>黑+犬=默→SILENCE</code>，<code>青+日=晴→SUNNY</code>，<code>白+七=皂→SOAP</code>。红线抽出 <code>IENNA</code>，补共同首字母 S 得 <code>SIENNA</code>。将 sienna 译回“赭”，沿用同一拆字规则：<code>赤+者=赭</code>，所以问号处要填的基础部件是 <code>者</code>。</p>
-<h3>验证</h3>
-<p>五个英文词均获 intermediate，最终提交 <code>者</code> 为 correct，且无错误提交。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="009-dCzF4LbF.html"><span>← 上一题</span><strong>7️⃣🔪</strong></a><a class="sequence-link next" href="011-ixJRTMow.html"><span>下一题 →</span><strong>[回放]花卉培育回放</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · [NbH2谜022]五色交辉</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>010</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">010 / 289</span><code>GtybeioV</code></div>
+      <h1>[NbH2谜022]五色交辉</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/GtybeioV" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/010-GtybeioV.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log — GtybeioV《[NbH2谜022]五色交辉》</h1>
+<ul>
+<li>Owner: <code>codex-root-b-20260712</code></li>
+<li>Claimed: 2026-07-12T13:05:22.653Z</li>
+<li>Archived: 2026-07-12T13:06Z</li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0 / 20</li>
+</ul>
+<h2>Observations / reasoning</h2>
+<ul>
+<li>Each icon is a Chinese component. Combining it with the colored Chinese character creates a new character, whose English definition matches the shown shared <code>S</code> plus box count:</li>
+<li>yellow <code>黄</code> + bamboo <code>竹</code> -&gt; <code>簧</code> -&gt; <code>SPRING</code> (S + 5)</li>
+<li>black <code>黑</code> + dog <code>犬</code> -&gt; <code>默</code> -&gt; <code>SILENCE</code> (S + 6)</li>
+<li>cyan/green <code>青</code> + sun <code>日</code> -&gt; <code>晴</code> -&gt; <code>SUNNY</code> (S + 4)</li>
+<li>white <code>白</code> + seven <code>七</code> -&gt; <code>皂</code> -&gt; <code>SOAP</code> (S + 3)</li>
+<li>The red route selects <code>I E N N A</code>; restoring the shared initial S gives the fifth color/intermediate <code>SIENNA</code>.</li>
+<li>The puzzle explicitly has five intermediate answers, so submit these five to obtain the final-layer feedback before guessing.</li>
+<li>All five were server-confirmed intermediate answers. Translate the fifth, <code>SIENNA</code>, back to Chinese: <code>赭</code>. The red route supplies the red component <code>赤</code>; applying the same construction as the first four rows gives <code>赤 + 者 = 赭</code>. Therefore the question-mark base component/final answer is <code>者</code>.</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>SPRING</code>, <code>SILENCE</code>, <code>SUNNY</code>, <code>SOAP</code>, <code>SIENNA</code> -&gt; all <code>intermediate</code>, 0 incorrect.</li>
+<li><code>者</code> -&gt; correct, 0 incorrect.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="009-dCzF4LbF.html"><span>← 上一份日志</span><strong>7️⃣🔪</strong></a><a class="sequence-link next" href="011-ixJRTMow.html"><span>下一份日志 →</span><strong>[回放]花卉培育回放</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>[NbH2谜022]五色交辉 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

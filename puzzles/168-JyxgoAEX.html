@@ -3,46 +3,104 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="我的世界一直在下雨……（JyxgoAEX）的独立题解与验证。">
+  <meta name="description" content="我的世界一直在下雨……（JyxgoAEX）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>我的世界一直在下雨…… · PuzzleCat 题解</title>
+  <title>我的世界一直在下雨…… · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>168</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>168 / 289</span><code>JyxgoAEX</code></div>
-        <h1>我的世界一直在下雨……</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>SUNNY</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/JyxgoAEX" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>五张 Minecraft 截图分别展示生成结构，HUD 经验等级为 <code>1,4,3,2,8</code>；题目开头给 <code>/weather clear</code>。</p>
-<h3>我的解法</h3>
-<p>使用归档图片文件名的结构 ID：<code>swamp_hut、monument、mansion、ancient_city、jungle_pyramid</code>，去掉下划线后按对应等级作一基索引，取到 <code>S,U,N,N,Y</code>。</p>
-<h3>验证</h3>
-<p>五图一图一字，提取串为 <code>SUNNY</code>；含义正是清除持续下雨后希望得到的天气。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="167-EIStl1dT.html"><span>← 上一题</span><strong>我爱记歌词</strong></a><a class="sequence-link next" href="169-ZmApgd2S.html"><span>下一题 →</span><strong>我解谜</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 我的世界一直在下雨……</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>168</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">168 / 289</span><code>JyxgoAEX</code></div>
+      <h1>我的世界一直在下雨……</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/JyxgoAEX" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/168-JyxgoAEX.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: 我的世界一直在下雨... (<code>JyxgoAEX</code>)</h1>
+<p>Owner: <code>lane-b-20260712</code></p>
+<h2>Status</h2>
+<p>Solved with a mechanism-backed candidate. This lane made no submissions. Incorrect count: 0.</p>
+<h2>FPA compliance</h2>
+<ul>
+<li>Solved entirely from the archived puzzle assets and ordinary Minecraft terminology.</li>
+<li>No search for an existing answer, solution, original puzzle, or WeChat answer source was performed.</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>The flavor starts with the Minecraft command <code>/weather clear</code>; its tiny parenthetical says some HUD/food design details are unrelated.</li>
+<li>The five images have explicit filenames identifying Minecraft generated structures, in this order:
+  1. <code>swamp_hut.png</code>
+  2. <code>monument.png</code>
+  3. <code>mansion.png</code>
+  4. <code>ancient_city.png</code>
+  5. <code>jungle_pyramid.png</code></li>
+<li>The HUD experience levels in those same screenshots are respectively <code>1, 4, 3, 2, 8</code>.</li>
+<li>Rain is visible in the outdoor screenshots, matching the title.</li>
+</ul>
+<h2>Extraction</h2>
+<p>Treat each filename stem as the Minecraft structure ID, remove its underscore, and use the visible experience level as a 1-based index:</p>
+<table>
+<thead>
+<tr>
+<th>Structure ID</th>
+<th style="text-align: right;">Level</th>
+<th>Indexed letter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>swamphut</code></td>
+<td style="text-align: right;">1</td>
+<td>S</td>
+</tr>
+<tr>
+<td><code>monument</code></td>
+<td style="text-align: right;">4</td>
+<td>U</td>
+</tr>
+<tr>
+<td><code>mansion</code></td>
+<td style="text-align: right;">3</td>
+<td>N</td>
+</tr>
+<tr>
+<td><code>ancientcity</code></td>
+<td style="text-align: right;">2</td>
+<td>N</td>
+</tr>
+<tr>
+<td><code>junglepyramid</code></td>
+<td style="text-align: right;">8</td>
+<td>Y</td>
+</tr>
+</tbody>
+</table>
+<p>This spells <code>SUNNY</code>, the natural result of clearing the persistent rain.</p>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>SUNNY</code> - high confidence. Every image contributes exactly one letter through a visible numeric index, and the result directly resolves the title/flavor.</li>
+<li>No runner-up: adding unofficial qualifiers such as <code>ocean</code> or <code>woodland</code> breaks the extraction, while the supplied filenames give an exact English word.</li>
+</ol>
+<h2>Submission history</h2>
+<ul>
+<li>None from this lane. Incorrect count: 0.</li>
+</ul>
+<h2>Stopping criteria</h2>
+<p>Report <code>SUNNY</code> and its mechanism to the root worker. Do not archive, submit, resolve, or claim another puzzle from this lane.</p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="167-EIStl1dT.html"><span>← 上一份日志</span><strong>我爱记歌词</strong></a><a class="sequence-link next" href="169-ZmApgd2S.html"><span>下一份日志 →</span><strong>我解谜</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>我的世界一直在下雨…… · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

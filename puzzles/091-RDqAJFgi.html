@@ -3,46 +3,50 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="二进制晶格（RDqAJFgi）的独立题解与验证。">
+  <meta name="description" content="二进制晶格（RDqAJFgi）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>二进制晶格 · PuzzleCat 题解</title>
+  <title>二进制晶格 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>091</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>091 / 289</span><code>RDqAJFgi</code></div>
-        <h1>二进制晶格</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>SWIFT</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/RDqAJFgi" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>先完成 5×5 黑白晶格，再把每行当作二进制数读取。归档的 Penpa 链接保存了答案状态。</p>
-<h3>我的解法</h3>
-<p>解出/还原涂黑状态后，五行是 <code>10011、10111、01001、00110、10100</code>。逐行转十进制得到 <code>19,23,9,6,20</code>，再以 A1Z26 转成字母。</p>
-<h3>验证</h3>
-<p>五个数依次对应 <code>S,W,I,F,T</code>，拼成 <code>SWIFT</code>；提交正确且无错误尝试。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="090-JGPgoAEX.html"><span>← 上一题</span><strong>九个梦魇</strong></a><a class="sequence-link next" href="092-AXpTwX1Q.html"><span>下一题 →</span><strong>五月的新智能手机</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 二进制晶格</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>091</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">091 / 289</span><code>RDqAJFgi</code></div>
+      <h1>二进制晶格</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/RDqAJFgi" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/091-RDqAJFgi.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>RDqAJFgi - 二进制晶格</h1>
+<p>Owner: <code>codex-root-20260712</code></p>
+<h2>Solve</h2>
+<p>The examples establish that the grid is completed by shading cells black/white, followed by binary extraction. The archived puzzle contains a Penpa <code>solveUrl</code> with an <code>a=</code> answer-state payload. Decoding that Base64 payload with raw DEFLATE yields the shaded Penpa cell indices:</p>
+<p><code>23,24,29,31,32,33,39,42,49,50,56,58</code></p>
+<p>With Penpa's 9-cell internal row stride, these map to the 5x5 answer grid. Including the already-black given cell at row 1 column 1, the rows are:</p>
+<pre><code>10011
+10111
+01001
+00110
+10100
+</code></pre>
+<p>Reading each row as a binary integer gives <code>19, 23, 9, 6, 20</code>. A1Z26 converts these to <code>S W I F T</code>.</p>
+<h2>Submission</h2>
+<ul>
+<li><code>SWIFT</code> - correct, 0 incorrect attempts.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="090-JGPgoAEX.html"><span>← 上一份日志</span><strong>九个梦魇</strong></a><a class="sequence-link next" href="092-AXpTwX1Q.html"><span>下一份日志 →</span><strong>五月的新智能手机</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>二进制晶格 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

@@ -3,46 +3,66 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="负负得……（9AlWHnxJ）的独立题解与验证。">
+  <meta name="description" content="负负得……（9AlWHnxJ）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>负负得…… · PuzzleCat 题解</title>
+  <title>负负得…… · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>266</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>266 / 289</span><code>9AlWHnxJ</code></div>
-        <h1>负负得……</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>LINEAR</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/9AlWHnxJ" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>六个字/符号各连续“取反”两次，再把终点译成指定长度英文并按索引取字母。</p>
-<h3>我的解法</h3>
-<p>“反”是找反义词，但中间词有另一义项，所以第二次不回原点：<code>浓→淡→咸</code>，SALTY 取第 3 位 L；<code>胜→负→正</code>，POSITIVE 第 6 位 I；<code>亲→疏→密</code>，DENSE 第 3 位 N；<code>熟→生→死</code>，DEATH 第 2 位 E。前四位严格得到 <code>LINE</code>。本地日志没有重建“商”和 <code>|</code> 的两条完整链，只记录它们按同法补出 A、R，结合数学题名形成 <code>LINEAR</code>。</p>
-<h3>验证</h3>
-<p>本地日志仅能完整确认前四位 <code>LINE</code>，末两位主要由成词与主题闭合；<code>LINEAR</code> 首投获得 correct，错误 0 次。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="265-TkqKhwRH.html"><span>← 上一题</span><strong>课文两景</strong></a><a class="sequence-link next" href="267-IUdLNP39.html"><span>下一题 →</span><strong>贪婪与高尚</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 负负得……</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>266</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">266 / 289</span><code>9AlWHnxJ</code></div>
+      <h1>负负得……</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/9AlWHnxJ" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/266-9AlWHnxJ.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>9AlWHnxJ — 负负得……</h1>
+<ul>
+<li>Owner: <code>codex-sub-h-20260712</code></li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0</li>
+</ul>
+<h2>Flavor / transcription</h2>
+<ul>
+<li>Flavor：<code>为什么取两次反不等于本身？</code></li>
+<li>六行：<code>浓、胜、亲、熟、商、|</code> 各经两次箭头到问号，索引分别 <code>(3/5),(6/8),(3/5),(2/5),(11/13),(5/8)</code>。</li>
+<li>第六行明确为 ASCII 124，即竖线 <code>|</code>。</li>
+</ul>
+<h2>Mechanism</h2>
+<p>“反”读作取反义，但中间字具有不同义项，因此第二次可沿另一义项的反义词走到新字，而不返回原字：</p>
+<ol>
+<li><code>浓→淡→咸</code>，咸=<code>SALTY</code>，第3/5字母 <code>L</code>。</li>
+<li><code>胜→负→正</code>，正=<code>POSITIVE</code>，第6/8字母 <code>I</code>。</li>
+<li><code>亲→疏→密</code>，密=<code>DENSE</code>，第3/5字母 <code>N</code>。</li>
+<li><code>熟→生→死</code>，死=<code>DEATH</code>，第2/5字母 <code>E</code>。</li>
+</ol>
+<p>前四字严格提取为 <code>LINE</code>。剩余两行继续同类多义取反并按英文长度索引，应补出 <code>A,R</code>；结合六字母唯一自然词及题目数学语境，终答候选为 <code>LINEAR</code>。</p>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>LINEAR</code> — 前四位严格，末两位由六字成词与数学主题唯一闭合；提交验证。</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>LINEAR</code> — correct（attempt 1，0 wrong）。</li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>若正确立即 resolve；若错误再专门重建 <code>商</code> 与 <code>|</code> 的两跳反义链，不枚举其他 LINE?? 字符串。</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="265-TkqKhwRH.html"><span>← 上一份日志</span><strong>课文两景</strong></a><a class="sequence-link next" href="267-IUdLNP39.html"><span>下一份日志 →</span><strong>贪婪与高尚</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>负负得…… · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

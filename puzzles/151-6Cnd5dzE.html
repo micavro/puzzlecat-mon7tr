@@ -3,46 +3,105 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="巧填方格（6Cnd5dzE）的独立题解与验证。">
+  <meta name="description" content="巧填方格（6Cnd5dzE）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>巧填方格 · PuzzleCat 题解</title>
+  <title>巧填方格 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>151</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>151 / 289</span><code>6Cnd5dzE</code></div>
-        <h1>巧填方格</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>CONJUGACY</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/6Cnd5dzE" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>第一部分是 6×6 数织；第二部分是带空格的 6×6 数表，规律涉及每个连续 3×3 方块。</p>
-<h3>我的解法</h3>
-<p>数织唯一解为 <code>###..# / #####. / .#.### / ###### / ##..## / ###.#.</code>。数表规律是每个滑动 3×3 的九数乘积均为完全平方数。对每个质因子只看指数奇偶，在 GF(2) 上列 16 个窗口异或方程，求出各空格的最小正整数平方自由部分，补成完整数表。再用数织白格作掩码，按行读取对应数字：<code>3,15,14,10,21,7,1,3,25</code>。</p>
-<h3>验证</h3>
-<p>补表后 16 个 3×3 乘积全为平方数；A1Z26 把白格数值转成 <code>C O N J U G A C Y</code>，零错通过。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="150-YvzhZAop.html"><span>← 上一题</span><strong>巧填幻方</strong></a><a class="sequence-link next" href="152-lXxOiBju.html"><span>下一题 →</span><strong>帮Stavros回家</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 巧填方格</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>151</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">151 / 289</span><code>6Cnd5dzE</code></div>
+      <h1>巧填方格</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/6Cnd5dzE" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/151-6Cnd5dzE.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve Log: 6Cnd5dzE</h1>
+<ul>
+<li>Title: <code>巧填方格</code></li>
+<li>Draw: <code>tmp/practice-draw.json</code> (<code>2026-07-12T03:57:00.684Z</code>)</li>
+<li>Solver: child agent coordinated by root</li>
+<li>Submission limit: 20 incorrect answers</li>
+<li>Started: <code>2026-07-12</code> (Asia/Shanghai)</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Puzzle and three resources archived locally.</li>
+</ul>
+<h2>Attempts</h2>
+<p>No submissions yet.</p>
+<h2>First question: nonogram</h2>
+<p>The 6x6 clues transcribe as:</p>
+<pre><code class="language-text">rows:    (3,1), (5), (1,3), (6), (2,2), (3,1)
+columns: (2,3), (6), (2,1,1), (3), (5), (1,3)
+</code></pre>
+<p>Exhaustive line-pattern propagation gives one solution (<code>#</code> filled, <code>.</code> empty):</p>
+<pre><code class="language-text">###..#
+#####.
+.#.###
+######
+##..##
+###.#.
+</code></pre>
+<h2>Second question: rule discovery</h2>
+<p>The example's rule is not equality of sums or products. For every sliding 3x3 window, the product of its nine entries is a perfect square.</p>
+<p>For example, the four corner 3x3 products are:</p>
+<pre><code class="language-text">29,811,600 = 5,460^2
+768,398,400 = 27,720^2
+67,076,100 = 8,190^2
+85,377,600 = 9,240^2
+</code></pre>
+<p>Factoring all 16 sliding-window products confirms that every prime exponent is even.</p>
+<h3>Constraint solve</h3>
+<p>For each prime, encode the parity of its exponent in each cell as a GF(2) bit. Every 3x3 window imposes that the XOR of its nine bits is zero. The 16 window equations uniquely determine the square-free part of every blank. Since each answer must be a positive integer no greater than 25 and the smallest valid value is required, use that square-free part itself.</p>
+<p>In row-major order, the 13 blank cells are:</p>
+<pre><code class="language-text">(1,1)=5   (1,3)=2   (1,4)=3   (1,5)=15
+(2,2)=21  (2,6)=14
+(3,1)=10  (3,3)=21  (3,5)=15
+(5,3)=7   (5,4)=1
+(6,1)=15  (6,5)=10
+</code></pre>
+<p>The completed grid is:</p>
+<pre><code class="language-text"> 5 16  2  3 15  3
+12 21  1  9  7 14
+10  3 21  2 15  9
+ 2  5 25 30  3  6
+12  3  7  1  4  2
+15  2 21  3 10 25
+</code></pre>
+<p>All 16 sliding 3x3 products have square-free part 1 after filling.</p>
+<h2>Combined extraction</h2>
+<p>Overlay the nonogram on the completed numeric grid and read the cells left white (<code>.</code>) in row-major order:</p>
+<pre><code class="language-text">3, 15, 14, 10, 21, 7, 1, 3, 25
+ C   O   N   J   U  G  A  C   Y
+</code></pre>
+<h3>Candidate</h3>
+<ul>
+<li>Answer: <code>CONJUGACY</code></li>
+<li>Confidence: <code>0.999</code>.</li>
+<li>This agent did not submit. The coordinator should submit serially.</li>
+</ul>
+<h2>Accepted answer</h2>
+<ul>
+<li>The coordinator submitted <code>CONJUGACY</code>; the server returned <code>correct</code>.</li>
+<li>Final answer: <code>CONJUGACY</code>.</li>
+<li>Incorrect submissions before acceptance: <code>0 / 20</code>.</li>
+<li>Confirmed mechanism: perfect-square products in every sliding 3x3 window, GF(2) prime-exponent parity solving, then the first-question nonogram's white cells as an A1Z26 extraction mask.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="150-YvzhZAop.html"><span>← 上一份日志</span><strong>巧填幻方</strong></a><a class="sequence-link next" href="152-lXxOiBju.html"><span>下一份日志 →</span><strong>帮Stavros回家</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>巧填方格 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

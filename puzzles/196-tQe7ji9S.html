@@ -3,46 +3,90 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="明诚谜007（tQe7ji9S）的独立题解与验证。">
+  <meta name="description" content="明诚谜007（tQe7ji9S）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>明诚谜007 · PuzzleCat 题解</title>
+  <title>明诚谜007 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>196</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>196 / 289</span><code>tQe7ji9S</code></div>
-        <h1>明诚谜007</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>A6F10H3</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/tQe7ji9S" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>10×12 网格中给出必须覆盖的蓝色机身格、禁止进入的深灰格，以及三种可旋转的飞机形状；要求报告三架飞机机鼻坐标。</p>
-<h3>我的解法</h3>
-<p>把每个形状相对机鼻的格偏移录入程序，枚举四种旋转和所有平移，剔除越界、碰禁格、机鼻落在既有机身格的放置。再组合三架飞机，要求互不重叠且恰覆盖全部 14 个蓝格。合法单形状放置分别有 18、10、14 种，三者组合只有一解：机鼻为 <code>A6、F10、H3</code>。</p>
-<h3>验证</h3>
-<p>唯一组合满足全部覆盖与禁入约束；按行字母升序串联为 <code>A6F10H3</code>，首投正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="195-AZDTwX1Q.html"><span>← 上一题</span><strong>明诚谜004</strong></a><a class="sequence-link next" href="197-eJ0oQPLb.html"><span>下一题 →</span><strong>明诚谜008</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 明诚谜007</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>196</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">196 / 289</span><code>tQe7ji9S</code></div>
+      <h1>明诚谜007</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/tQe7ji9S" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/196-tQe7ji9S.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: 明诚谜007</h1>
+<h2>Status</h2>
+<ul>
+<li>Owner: <code>chat2-w3-20260712</code></li>
+<li>Puzzle ID: <code>tQe7ji9S</code></li>
+<li>State: correct</li>
+<li>Incorrect submissions: 0</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>The puzzle consists of one image and asks for the coordinates of three airplane noses.</li>
+<li>Coordinates must be concatenated in ascending row-letter order, e.g. <code>A3B2C1</code>.</li>
+<li>The page says there are three intermediate-answer checks.</li>
+<li>Site cooldown after a wrong answer: 3 minutes.</li>
+<li>The grid is 10 rows (<code>A</code>-<code>J</code>) by 12 columns (<code>1</code>-<code>12</code>).</li>
+<li>Given blue body cells: <code>D4 D5 D6 D7 D8 E3 E6 F2 F4 F6 F8 F9 G3</code>.</li>
+<li>Forbidden dark-gray cells: <code>A9 B3 B9 C3 C9 D1 D3 D9 E4 E5 F12 G2 G4 G7 G8 H6 I6 J6 J9</code>.</li>
+<li>All three pictured shapes are drawn with their nose above the body. Relative to a nose at <code>(0,0)</code>, their body cells are:</li>
+<li>Shape 1: <code>(-2,1) (-1,1) (0,1) (1,1) (2,1) (0,2) (-1,3) (0,3) (1,3)</code>.</li>
+<li>Shape 2: <code>(-1,1) (0,1) (1,1) (-2,2) (0,2) (2,2) (0,3) (-1,4) (0,4) (1,4)</code>.</li>
+<li>Shape 3: <code>(0,1) (-2,2) (-1,2) (0,2) (1,2) (2,2) (0,3) (-1,4) (1,4)</code>.</li>
+</ul>
+<h2>Reasoning</h2>
+<ul>
+<li>Enumerated every translation and each of four 90-degree rotations for each shape.</li>
+<li>Rejected placements that leave the grid, touch a forbidden cell, or put a nose on a given blue body cell.</li>
+<li>Combined exactly one placement of each shape, requiring no overlap and requiring the union to cover all 14 given blue cells.</li>
+<li>Legal single-shape placement counts after boundary/wall filtering were 18, 10, and 14.</li>
+<li>Exactly one three-shape combination satisfies all constraints:</li>
+<li>Shape 1: nose <code>A6</code>, orientation as pictured (downward).</li>
+<li>Shape 2: nose <code>F10</code>, rotated 90 degrees.</li>
+<li>Shape 3: nose <code>H3</code>, rotated 180 degrees.</li>
+<li>Sorting the nose coordinates by row letter yields <code>A6F10H3</code>.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ul>
+<li>
+<ol>
+<li><code>A6F10H3</code> — uniquely forced by exhaustive placement enumeration.</li>
+</ol>
+</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>A6F10H3</code> — correct (<code>恭喜你，回答正确！</code>).</li>
+</ul>
+<h2>Result</h2>
+<ul>
+<li>Final answer: <code>A6F10H3</code></li>
+<li>Incorrect submissions: 0</li>
+<li>The answer was uniquely determined before submission; no intermediate checks were needed.</li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Submit only a candidate uniquely forced by the image constraints.</li>
+<li>Stop at correct, at 20 incorrect submissions, or earlier as <code>cannot_do</code> if the archived evidence cannot distinguish candidates.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="195-AZDTwX1Q.html"><span>← 上一份日志</span><strong>明诚谜004</strong></a><a class="sequence-link next" href="197-eJ0oQPLb.html"><span>下一份日志 →</span><strong>明诚谜008</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>明诚谜007 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

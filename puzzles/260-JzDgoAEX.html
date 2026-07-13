@@ -3,46 +3,61 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="译口同声（JzDgoAEX）的独立题解与验证。">
+  <meta name="description" content="译口同声（JzDgoAEX）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>译口同声 · PuzzleCat 题解</title>
+  <title>译口同声 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>260</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>260 / 289</span><code>JzDgoAEX</code></div>
-        <h1>译口同声</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>WRITE TO YOU</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/JzDgoAEX" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>1</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>每个中文词先翻成英文，再换成不同意义的同音词，并按给定位置提取；中间结果枚举与最终枚举不同。</p>
-<h3>我的解法</h3>
-<p>例如 那里 <code>THERE→THEIR</code>、雄性的 <code>MALE→MAIL</code>、道路 <code>WAY→WEIGH</code>、我们的 <code>OUR→HOUR</code>、夜晚 <code>NIGHT→KNIGHT</code> 等。按索引抽取九项得到 <code>RIGHT TWO U</code>。题目要求继续应用同音替换并匹配 <code>(5 2 3)</code>，所以三段分别变为 <code>WRITE TO YOU</code>。</p>
-<h3>验证</h3>
-<p>只改后两段的 <code>RIGHT TO YOU</code> 被判错；三段全部换同音词后的 <code>WRITE TO YOU</code> 正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="259-I9CLNP39.html"><span>← 上一题</span><strong>观星思人</strong></a><a class="sequence-link next" href="261-5h1uzMeL.html"><span>下一题 →</span><strong>语文课</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 译口同声</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>260</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">260 / 289</span><code>JzDgoAEX</code></div>
+      <h1>译口同声</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/JzDgoAEX" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/260-JzDgoAEX.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log — JzDgoAEX《译口同声》</h1>
+<ul>
+<li>Owner: <code>codex-root-b-20260712</code></li>
+<li>Claimed: 2026-07-12T14:27:05.505Z</li>
+<li>Archived: 2026-07-12T14:28Z</li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0 / 20</li>
+</ul>
+<h2>Observations / reasoning</h2>
+<ul>
+<li>Each Chinese clue translates to an English word, but the intended entry is a wrong-meaning homophone of that translation:</li>
+<li>那里 THERE -&gt; THEIR[5]=R</li>
+<li>雄性的 MALE -&gt; MAIL[3]=I</li>
+<li>道路 WAY -&gt; WEIGH[4]=G</li>
+<li>我们的 OUR -&gt; HOUR[1]=H</li>
+<li>夜晚 NIGHT -&gt; KNIGHT[6]=T</li>
+<li>哪一个 WHICH -&gt; WITCH[3]=T</li>
+<li>面粉 FLOUR -&gt; FLOWER[4]=W</li>
+<li>太阳 SUN -&gt; SON[2]=O</li>
+<li>再见 BYE -&gt; BUY[2]=U</li>
+<li>Extraction gives <code>RIGHT TWO U</code> with enumeration <code>(5 3 1)</code>. Apply the same sound-preserving mistranslation to match <code>(5 2 3)</code>: <code>RIGHT TO YOU</code>.</li>
+<li><code>RIGHT TO YOU</code> was rejected (incorrect count 1) because all three extracted tokens must change to their homophones. <code>RIGHT -&gt; WRITE</code>, <code>TWO -&gt; TO</code>, <code>U -&gt; YOU</code>, giving <code>WRITE TO YOU</code> <code>(5 2 3)</code>.</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>RIGHT TO YOU</code> -&gt; incorrect (1).</li>
+<li><code>WRITE TO YOU</code> -&gt; correct (1 incorrect total).</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="259-I9CLNP39.html"><span>← 上一份日志</span><strong>观星思人</strong></a><a class="sequence-link next" href="261-5h1uzMeL.html"><span>下一份日志 →</span><strong>语文课</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>译口同声 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

@@ -3,46 +3,87 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="动物躲猫猫（BULEpJHi）的独立题解与验证。">
+  <meta name="description" content="动物躲猫猫（BULEpJHi）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>动物躲猫猫 · PuzzleCat 题解</title>
+  <title>动物躲猫猫 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>107</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>107 / 289</span><code>BULEpJHi</code></div>
-        <h1>动物躲猫猫</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>三国演义</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/BULEpJHi" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>每行三字，中间字是某个动物字去掉 <code>犭</code> 后剩下的部分；再拼左右两字的拼音成分。</p>
-<h3>我的解法</h3>
-<p>例子表明：取左字声母，加右字韵母与声调。四行分别为：<code>死 者 搬</code> 中“者”藏猪，得 <code>s+ān=sān</code>；<code>个 瓜 驼</code> 中“瓜”藏狐，得 <code>g+uó=guó</code>；<code>银 星 闪</code> 中“星”藏猩，得 <code>y+ǎn=yǎn</code>；<code>严 师 第</code> 中“师”藏狮，得 <code>y+ì=yì</code>。</p>
-<h3>验证</h3>
-<p>四音节为 <code>sān guó yǎn yì</code>，按固定短语写成 <code>三国演义</code>；每行均使用同一规则，首投正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="106-oFUmNtwx.html"><span>← 上一题</span><strong>动物细胞融合</strong></a><a class="sequence-link next" href="108-zCJG691D.html"><span>下一题 →</span><strong>十一个单词</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 动物躲猫猫</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>107</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">107 / 289</span><code>BULEpJHi</code></div>
+      <h1>动物躲猫猫</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/BULEpJHi" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/107-BULEpJHi.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log — 动物躲猫猫</h1>
+<ul>
+<li>Puzzle ID: <code>BULEpJHi</code></li>
+<li>Owner: <code>codex-sub-m-20260712</code></li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0</li>
+</ul>
+<h2>Observations and reasoning</h2>
+<ul>
+<li>Claimed and archived under the shared worker protocol; beginning from local files.</li>
+<li>Public factual/mechanism research is permitted, but no direct answer, official solution, discussion answer, or reproduced walkthrough will be used. Any final answer must be independently derived from the puzzle statement.</li>
+<li>Mechanism from examples: an animal drops its <code>犭</code> radical, leaving a component hidden as a full character. Take the initial of the character immediately left of that component and the final plus tone of the character immediately right. Example <code>树 苗 长</code> hides <code>猫 -&gt; 苗</code>: <code>sh</code> + <code>ang</code> (tone 3) = <code>shǎng</code>; <code>一 句 名</code> hides <code>狗 -&gt; 句</code>: <code>y</code> + <code>ing</code> (tone 2) = <code>yíng</code>.</li>
+<li>
+<ol>
+<li><code>死 者 搬</code>: <code>猪 -&gt; 者</code>; <code>s</code> + <code>an</code> (搬 tone 1) = <code>sān</code> = 三.</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li><code>个 瓜 驼</code>: <code>狐 -&gt; 瓜</code>; <code>g</code> + <code>uo</code> (驼 tone 2) = <code>guó</code> = 国.</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li><code>银 星 闪</code>: <code>猩 -&gt; 星</code>; <code>y</code> + <code>an</code> (闪 tone 3) = <code>yǎn</code> = 演 (not 眼 in the final phrase).</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li><code>严 师 第</code>: <code>狮 -&gt; 师</code>; <code>y</code> + <code>i</code> (第 tone 4) = <code>yì</code> = 义.</li>
+</ol>
+</li>
+<li>The four independently derived syllables spell <code>三国演义</code>.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ul>
+<li>
+<ol>
+<li><code>三国演义</code> — exact four-character phrase from <code>sān guó yǎn yì</code>, with every line explained by the same radical-removal and pinyin-splicing rule.</li>
+</ol>
+</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>三国演义</code> — correct (HTTP 200, first submission).</li>
+</ul>
+<h2>Final classification</h2>
+<ul>
+<li><code>correct</code>, incorrect count 0, answer <code>三国演义</code>.</li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Correct on confirmed verdict; <code>cannot_do</code> if the evidence ceases to distinguish a candidate; hard stop at 20 incorrect submissions.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="106-oFUmNtwx.html"><span>← 上一份日志</span><strong>动物细胞融合</strong></a><a class="sequence-link next" href="108-zCJG691D.html"><span>下一份日志 →</span><strong>十一个单词</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>动物躲猫猫 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

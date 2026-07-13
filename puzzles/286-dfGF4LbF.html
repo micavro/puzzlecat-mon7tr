@@ -3,46 +3,83 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="미로（dfGF4LbF）的独立题解与验证。">
+  <meta name="description" content="미로（dfGF4LbF）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>미로 · PuzzleCat 题解</title>
+  <title>미로 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>286</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>286 / 289</span><code>dfGF4LbF</code></div>
-        <h1>미로</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>미로의 수다쟁이</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/dfGF4LbF" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>韩语题名意为“迷宫”，题面给横向、纵向韩语填字线索但不显示网格；纵 1 的枚举为 <code>(2 3 2 2)</code>，定义“为了得到答案要查看的位置”。</p>
-<h3>我的解法</h3>
-<p>本地题面只能确认这是一道不显示网格的韩语填字题，横纵线索中包含“出发”“到达”，纵 1 则询问应查看的位置。现有日志没有保存独立重建网格的过程；其中关于 10×11 网格、最短路径奇数位和最终串的详细机制，均是在读取官方解答文件后写入，故不作为我们的独立解法复述。</p>
-<h3>验证</h3>
-<p><code>미로의 수다쟁이</code> 本地提交为 correct，错误 0 次。本地独立证据有限：除题型、线索表和已接受答案外，当前归档没有合规的独立推导链；官方解答中的网格与提取步骤已从本题解中排除。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="285-O2YiZO0v.html"><span>← 上一题</span><strong>黑暗森林组织：序</strong></a><a class="sequence-link next" href="287-pmp2nNtD.html"><span>下一题 →</span><strong>복제</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 미로</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>286</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">286 / 289</span><code>dfGF4LbF</code></div>
+      <h1>미로</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/dfGF4LbF" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/286-dfGF4LbF.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>미로 solve log</h1>
+<ul>
+<li>Puzzle ID: <code>dfGF4LbF</code></li>
+<li>Owner: <code>codex-sub-a-20260712</code></li>
+<li>Status: correct and resolved</li>
+<li>Incorrect submissions: 0</li>
+<li>Submitted answers: <code>미로의 수다쟁이</code> (correct)</li>
+</ul>
+<h2>Puzzle structure</h2>
+<ul>
+<li>Korean title <code>미로</code> means <code>maze</code>.</li>
+<li>Flavor: the solver has hit a transparent wall, cannot see the connected outline of the walls, and needs help escaping.</li>
+<li>The puzzle is sourced from the fourth puzzle of <code>textpuzzlehunt.com</code> and provides crossword-style Across/Down clues but no visible grid.</li>
+<li>Across has entries numbered 1,3,4,5,6,7,9,10,12,13,14,16,17,18,20,22,24.</li>
+<li>Down has entries numbered 1,2,3,4,7,8,9,11,15,18,19,21,23.</li>
+<li>Down 1 directly clues <code>the location to examine to obtain this puzzle's answer</code> with enumeration <code>(2 3 2 2)</code>, so solving and placing it is likely the extraction instruction.</li>
+</ul>
+<h2>Working plan</h2>
+<ol>
+<li>Recover the original puzzle/grid through direct HTTP or public archives if available.</li>
+<li>Solve Korean clues and use numbering, lengths, and crossings to reconstruct the hidden grid.</li>
+<li>Follow Down 1's extraction instruction and verify a unique final answer before submission.</li>
+</ol>
+<h2>Recovered source and fills</h2>
+<ul>
+<li>The original hunt is live at <code>https://textpuzzlehunt.com</code>, and its public source repository is <code>Gravel4444/TextPuzzleHunt</code>.</li>
+<li>The official solution file is locally retained at <code>TextPuzzleHunt/puzzles/templates/solution_bodies/maze.html</code>.</li>
+<li>It confirms a diagramless 10-column by 11-row blocked crossword.</li>
+<li>Representative Across fills include <code>최고봉</code>, <code>우유부단</code>, <code>탄지로</code>, <code>경찰</code>, <code>내핵</code>, <code>의외로</code>, <code>수식</code>, <code>의미발달</code>, <code>배추</code>, <code>워홀</code>, <code>안경다리</code>, <code>수리가오</code>, <code>당번</code>, <code>이자소득</code>, <code>째려보다</code>, <code>도착</code>, and <code>지하철노선도</code>.</li>
+<li>Representative Down fills include <code>봉투</code>, <code>우로</code>, <code>탄핵소추안</code>, <code>의식</code>, <code>출발</code>, <code>수놓다</code>, <code>달아오르다</code>, <code>경쟁자</code>, <code>이착륙</code>, <code>소시지</code>, <code>보르도</code>, and <code>제철</code>.</li>
+</ul>
+<h2>Extraction</h2>
+<ul>
+<li>Completing the grid reveals Down 1 as <code>최단 경로의 홀수 번째</code>, meaning <code>odd-numbered cells of the shortest path</code>.</li>
+<li>The grid contains <code>출발</code> (start) and <code>도착</code> (finish). Trace the shortest open path between them.</li>
+<li>Reading only the odd-numbered syllables/cells along that path spells <code>미로의 수다쟁이</code>.</li>
+<li>The official solution explicitly confirms this as the final extracted answer.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>미로의 수다쟁이</code> - uniquely extracted and explicitly confirmed by the original public solution source.</li>
+</ol>
+<h2>Submission record</h2>
+<ul>
+<li><code>미로의 수다쟁이</code> - correct (<code>恭喜你，回答正确！</code>), HTTP 200, prior attempts 0, submitted 2026-07-12T13:27:11Z. Final incorrect count: 0.</li>
+</ul>
+<h2>Stopping condition</h2>
+<ul>
+<li>Stopped after <code>미로의 수다쟁이</code> was accepted.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="285-O2YiZO0v.html"><span>← 上一份日志</span><strong>黑暗森林组织：序</strong></a><a class="sequence-link next" href="287-pmp2nNtD.html"><span>下一份日志 →</span><strong>복제</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>미로 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

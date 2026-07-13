@@ -3,46 +3,73 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="【星谜003】你图片带括号（51auzMeL）的独立题解与验证。">
+  <meta name="description" content="【星谜003】你图片带括号（51auzMeL）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>【星谜003】你图片带括号 · PuzzleCat 题解</title>
+  <title>【星谜003】你图片带括号 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>057</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>057 / 289</span><code>51auzMeL</code></div>
-        <h1>【星谜003】你图片带括号</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>PUZZLE</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/51auzMeL" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>题面用括号包住成对图片并给等号；示例 <code>(毛巾, 猫头鹰)=te</code>、<code>(地球(5), 词(4))=l</code>。</p>
-<h3>我的解法</h3>
-<p>把图片命名为英文，并从前词删去后词字母：<code>TOWEL-OWL=TE</code>，<code>WORLD-WORD=L</code>。末行中 PAY 的过去式是 <code>PAID</code>，first-aid kit 给 <code>AID</code>，相减得 P；“嗡”的英文是 <code>BUZZ</code>，减去 B 得 <code>UZZ</code>；再接题面已有 <code>LE</code>，即 <code>P+UZZ+LE=PUZZLE</code>。</p>
-<h3>验证</h3>
-<p>两个示例和末行都符合相同字母删减规则；首次提交 correct。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="056-RkaAJFgi.html"><span>← 上一题</span><strong>【星谜002】ReReRebus</strong></a><a class="sequence-link next" href="058-m0fr8Uar.html"><span>下一题 →</span><strong>【星谜004】Made in Russia</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 【星谜003】你图片带括号</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>057</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">057 / 289</span><code>51auzMeL</code></div>
+      <h1>【星谜003】你图片带括号</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/51auzMeL" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/057-51auzMeL.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: 【星谜003】你图片带括号 (<code>51auzMeL</code>)</h1>
+<h2>Observations</h2>
+<ul>
+<li>The image presents ordered pairs of pictures in parentheses, followed by an
+  equality. The flavor asks whether these are mathematical expressions.</li>
+<li>First check: a towel and an owl give <code>te</code>.</li>
+<li>Second check: a globe marked <code>(5)</code> and a word cloud marked <code>(4)</code> give <code>l</code>.</li>
+<li>The final line contains a payment picture labeled “past tense”, a first-aid
+  kit, the Chinese onomatopoeia <code>嗡</code> marked “Eng”, the letter <code>b</code>, and <code>le</code>.</li>
+<li>No previous submission directory exists for this archive.</li>
+</ul>
+<h2>Mechanism</h2>
+<p>For <code>(picture A, picture B)</code>, name both pictures in English and remove the
+letters of B from A while preserving the letters left in A:</p>
+<pre><code class="language-text">(TOWEL, OWL) = TE
+(WORLD, WORD) = L
+</code></pre>
+<p>The parenthetical lengths disambiguate <code>WORLD</code> (5) and <code>WORD</code> (4).</p>
+<p>Apply the same operation to the final line:</p>
+<pre><code class="language-text">past tense of PAY = PAID
+first ___ kit      = AID
+(PAID, AID)        = P
+
+English for 嗡     = BUZZ
+(BUZZ, B)          = UZZ
+
+P + UZZ + LE       = PUZZLE
+</code></pre>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>PUZZLE</code> - uniquely produced by both validated subtraction examples and the
+   final concatenation.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>PUZZLE</code> - correct (2026-07-13 04:12 CST).</li>
+<li>Incorrect count: 0.</li>
+</ul>
+<h2>Stopping rule</h2>
+<p>Solved. No further submissions.</p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="056-RkaAJFgi.html"><span>← 上一份日志</span><strong>【星谜002】ReReRebus</strong></a><a class="sequence-link next" href="058-m0fr8Uar.html"><span>下一份日志 →</span><strong>【星谜004】Made in Russia</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>【星谜003】你图片带括号 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

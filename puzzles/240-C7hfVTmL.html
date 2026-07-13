@@ -3,46 +3,62 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="纵横字咪（C7hfVTmL）的独立题解与验证。">
+  <meta name="description" content="纵横字咪（C7hfVTmL）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>纵横字咪 · PuzzleCat 题解</title>
+  <title>纵横字咪 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>240</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>240 / 289</span><code>C7hfVTmL</code></div>
-        <h1>纵横字咪</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>FELICETTE</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/C7hfVTmL" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>猫主题英文填字共有六横七竖，九个红格分别画 1–9 个点，点数表示抽取顺序。</p>
-<h3>我的解法</h3>
-<p>交叉填入 <code>NYANCAT、PRIMORDIALPOUCH、CLOWDER、SPHINX、MANEKINEKO、MIAO</code> 等猫相关词。红格按行看到的点数次序为 <code>4,9,8,7,6,3,1,5,2</code>，按点数 1–9 重排对应字母，得到 <code>FELICETTE</code>。</p>
-<h3>验证</h3>
-<p>Félicette 是第一只进入太空的猫，回扣全题主题；<code>FELICETTE</code> 提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="239-4O19OF2B.html"><span>← 上一题</span><strong>粉色</strong></a><a class="sequence-link next" href="241-KowXEjGS.html"><span>下一题 →</span><strong>编程</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 纵横字咪</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>240</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">240 / 289</span><code>C7hfVTmL</code></div>
+      <h1>纵横字咪</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/C7hfVTmL" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/240-C7hfVTmL.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>C7hfVTmL - 纵横字咪</h1>
+<p>Owner: <code>chat2-root-20260712</code></p>
+<h2>Observations</h2>
+<ul>
+<li>FPA puzzle; solved only from the archived image and local grid transcription.</li>
+<li>Grid has six across and seven down cat-themed English entries.</li>
+<li>Nine red cells contain unique pip counts 1 through 9; pip count gives extraction order.</li>
+<li>Secure fills/crossings include <code>NYANCAT</code>, <code>PRIMORDIALPOUCH</code>, <code>CLOWDER</code>, <code>SPHINX</code>,
+  <code>MANEKINEKO</code>, and <code>MIAO</code>.</li>
+</ul>
+<h2>Reasoning</h2>
+<ul>
+<li>Red cells in row-major order have pip values <code>4,9,8,7,6,3,1,5,2</code>.</li>
+<li>Reordering their crossword letters by pip values 1-9 produces <code>FELICETTE</code>.</li>
+<li>Félicette was the first cat launched into space, confirming the cat theme.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ul>
+<li><code>FELICETTE</code> - complete ordered extraction and thematic confirmation.</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>FELICETTE</code> - correct (<code>0 / 20</code> incorrect).</li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Resolve correct if <code>FELICETTE</code> is accepted.</li>
+</ul>
+<p>Resolved <code>correct</code> with answer <code>FELICETTE</code>.</p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="239-4O19OF2B.html"><span>← 上一份日志</span><strong>粉色</strong></a><a class="sequence-link next" href="241-KowXEjGS.html"><span>下一份日志 →</span><strong>编程</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>纵横字咪 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

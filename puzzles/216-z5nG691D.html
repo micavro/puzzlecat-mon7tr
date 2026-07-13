@@ -3,46 +3,58 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="汽水谜（二）（z5nG691D）的独立题解与验证。">
+  <meta name="description" content="汽水谜（二）（z5nG691D）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>汽水谜（二） · PuzzleCat 题解</title>
+  <title>汽水谜（二） · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>216</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>216 / 289</span><code>z5nG691D</code></div>
-        <h1>汽水谜（二）</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>非人</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/z5nG691D" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>1</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>题设 <code>AB</code> 是汽水，<code>CDAB</code> 是其中一种更具体的产品，要求输出 <code>C人</code>；检查器可能返回中间提示。</p>
-<h3>我的解法</h3>
-<p>先取 <code>AB=可乐</code>。尝试 <code>可口可乐</code> 得 <code>C=可</code>，提交 <code>可人</code> 后，检查器提示“这不是中国人自己的答案”。这句提示指向定位为“中国人自己的可乐”的 <code>非常可乐</code>，故 <code>CDAB=非常可乐</code>，C=<code>非</code>，最终 <code>C人=非人</code>。</p>
-<h3>验证</h3>
-<p><code>可人</code> 获中间提示而非错误，按提示换成品牌全名后，<code>非人</code> 提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="215-bC65uOJW.html"><span>← 上一题</span><strong>汽水谜（三）</strong></a><a class="sequence-link next" href="217-RkTAJFgi.html"><span>下一题 →</span><strong>汽水谜（六）</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 汽水谜（二）</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>216</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">216 / 289</span><code>z5nG691D</code></div>
+      <h1>汽水谜（二）</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/z5nG691D" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/216-z5nG691D.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log — z5nG691D《汽水谜（二）》</h1>
+<ul>
+<li>Owner: <code>codex-root-b-20260712</code></li>
+<li>Claimed: 2026-07-12T17:11:10.153Z</li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 1 / 20</li>
+</ul>
+<h2>Observations / reasoning</h2>
+<ul>
+<li>取 <code>AB=可乐</code>，它是一种汽水。</li>
+<li><code>CDAB=冰镇可乐</code>，自然符合“其中更好的那种”，因此 <code>C=冰</code>、<code>D=镇</code>。</li>
+<li>题目要求提交 <code>C人</code>，得到 <code>冰人</code>；“冰人”确是汉语词汇，旧称媒人，正好解释题面的额外词汇校验。</li>
+<li><code>无糖可乐 -&gt; 无人</code> 是弱次选，但“无糖更好”更主观，且无需题面特意说明“这是一个会用到的词汇”；<code>冰人</code> 的校验信息量明显更高。</li>
+<li>Candidate: <code>冰人</code>。</li>
+<li><code>冰人</code> 被排除。更强的品牌嵌套是 <code>AB=可乐</code>、<code>CDAB=可口可乐</code>，得到 <code>C=可</code>、<code>C人=可人</code>；“可人”是独立汉语词，符合题面校验。</li>
+<li><code>百事可乐 -&gt; 百人</code> 是次选，但“百人”通常只是数量短语而非需要特别验证的词。</li>
+<li><code>可人</code> 返回 intermediate 提示“这不是中国人自己的答案”，不计为错误。该提示唯一指向娃哈哈 <code>非常可乐</code> 的著名定位/宣传语“中国人自己的可乐”。</li>
+<li>因而 <code>CDAB=非常可乐</code>、<code>AB=可乐</code>，得到 <code>C=非</code>，最终答案为 <code>非人</code>。</li>
+</ul>
+<h2>Submissions</h2>
+<ul>
+<li><code>冰人</code> -&gt; incorrect (1)。</li>
+<li><code>可人</code> -&gt; intermediate：“这不是中国人自己的答案。”（不计错误）。</li>
+<li><code>非人</code> -&gt; correct。</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="215-bC65uOJW.html"><span>← 上一份日志</span><strong>汽水谜（三）</strong></a><a class="sequence-link next" href="217-RkTAJFgi.html"><span>下一份日志 →</span><strong>汽水谜（六）</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>汽水谜（二） · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

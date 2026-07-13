@@ -3,46 +3,70 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="火柴人推箱子（1IuaRpKD）的独立题解与验证。">
+  <meta name="description" content="火柴人推箱子（1IuaRpKD）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>火柴人推箱子 · PuzzleCat 题解</title>
+  <title>火柴人推箱子 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>223</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>223 / 289</span><code>1IuaRpKD</code></div>
-        <h1>火柴人推箱子</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>BOXES</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/1IuaRpKD" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>火柴人把一个 4×4 的十六字母箱堆推向阶梯状坑地，需要模拟所有箱子的落位。</p>
-<h3>我的解法</h3>
-<p>按从左向右推动并让最右/最低的箱子依次落入台阶凹槽，最终把落定后的字母按从左到右、从上到下读，得到句子 <code>THE ANSWER IS BOXES</code>。初始十六字母的多重集也恰好等于该句去空格后的字母多重集。</p>
-<h3>验证</h3>
-<p>终态直接给出答案，字母计数提供独立校验；<code>BOXES</code> correct。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="222-1BzaRpKD.html"><span>← 上一题</span><strong>漫游</strong></a><a class="sequence-link next" href="224-xebD8t6h.html"><span>下一题 →</span><strong>熊不是黑白的</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 火柴人推箱子</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>223</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">223 / 289</span><code>1IuaRpKD</code></div>
+      <h1>火柴人推箱子</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/1IuaRpKD" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/223-1IuaRpKD.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: 1IuaRpKD</h1>
+<h2>Coordination</h2>
+<ul>
+<li>Owner: <code>codex-sub-c-20260712</code></li>
+<li>Title: <code>火柴人推箱子</code></li>
+<li>Incorrect submissions: 0</li>
+<li>Status: solved</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>The puzzle is an image of a stick figure pushing a 4x4 block of sixteen lettered boxes toward a stepped pit.</li>
+<li>Initial grid:</li>
+</ul>
+<pre><code class="language-text">W S I O
+B X A H
+E S E E
+S N R T
+</code></pre>
+<ul>
+<li>Wrong answers have no cooldown.</li>
+</ul>
+<h2>Reasoning</h2>
+<p>Simulate the stick figure pushing all sixteen boxes from left to right. As the stack passes the stepped terrain, the lowest/rightmost available boxes fall into the successive depressions.</p>
+<p>After all boxes settle, read the resulting arrangement from left to right and top to bottom. It spells:</p>
+<pre><code class="language-text">THE ANSWER IS BOXES
+</code></pre>
+<p>The initial letter multiset independently confirms this result exactly: it contains the letters of <code>THEANSWERISBOXES</code>, including three <code>E</code>s and three <code>S</code>s.</p>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>BOXES</code> - explicitly instructed by the settled-box message.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>BOXES</code> -&gt; correct.</li>
+</ul>
+<h2>Final answer</h2>
+<p><code>BOXES</code></p></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="222-1BzaRpKD.html"><span>← 上一份日志</span><strong>漫游</strong></a><a class="sequence-link next" href="224-xebD8t6h.html"><span>下一份日志 →</span><strong>熊不是黑白的</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>火柴人推箱子 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

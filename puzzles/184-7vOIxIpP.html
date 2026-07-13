@@ -3,46 +3,113 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="文化造纸（7vOIxIpP）的独立题解与验证。">
+  <meta name="description" content="文化造纸（7vOIxIpP）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>文化造纸 · PuzzleCat 题解</title>
+  <title>文化造纸 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>184</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>184 / 289</span><code>7vOIxIpP</code></div>
-        <h1>文化造纸</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>诣</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/7vOIxIpP" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>五名学生的编号用于索引各自引用诗句的篇名；标题和 flavor 都故意写“文化造纸”。</p>
-<h3>我的解法</h3>
-<p>辨认篇名并按学生数字取字：<code>答…</code> 第 1 字得答，<code>青玉案·元夕</code> 第 3 字得案，<code>破阵子·为陈同甫赋壮词以寄之</code> 第 4 字得为，<code>金错刀行</code> 第 2 字得错，<code>送别得书字</code> 第 5 字得字。串成指令 <code>答案为错字</code>，题中错字就是“文化造纸”的“纸”。提交“纸”后站点要求改成正确汉字，于是把词改为“文化造诣”，提交 <code>诣</code>。</p>
-<h3>验证</h3>
-<p>五次索引形成完整指令；中间反馈确认“纸”定位无误，改正后的 <code>诣</code> 正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="183-ADITwX1Q.html"><span>← 上一题</span><strong>数独谜题</strong></a><a class="sequence-link next" href="185-BvqEpJHi.html"><span>下一题 →</span><strong>文字游戏</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 文化造纸</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>184</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">184 / 289</span><code>7vOIxIpP</code></div>
+      <h1>文化造纸</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/7vOIxIpP" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/184-7vOIxIpP.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: 文化造纸 (<code>7vOIxIpP</code>)</h1>
+<ul>
+<li>Owner: <code>codex-sub-w-20260713</code></li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0</li>
+<li>Stop condition: accepted answer, evidence no longer distinguishes candidates (<code>cannot_do</code>), or 20 incorrect submissions.</li>
+</ul>
+<h2>FPA compliance</h2>
+<ul>
+<li>Solved from the archived page plus ordinary public lookup of poem provenance only.</li>
+<li>No existing puzzle answer, solution write-up, or公众号解析 was searched for or used.</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Flavor says every student receives a <code>量身定制</code> question and notes that <code>中间答案</code> were added.</li>
+<li>Each response is a quotation from a named poem. The student's numeral indexes the poem title; retaining the displayed row order gives a sentence.</li>
+<li>Confirmed intermediate titles/extractions:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Student</th>
+<th>Verse source / intermediate title</th>
+<th style="text-align: right;">Index</th>
+<th>Letter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>丁一</td>
+<td>a title beginning with <code>答…</code> (the exact quoted line is obscure, but index 1 is fixed)</td>
+<td style="text-align: right;">1</td>
+<td>答</td>
+</tr>
+<tr>
+<td>张三</td>
+<td><code>青玉案·元夕</code></td>
+<td style="text-align: right;">3</td>
+<td>案</td>
+</tr>
+<tr>
+<td>李四</td>
+<td><code>破阵子·为陈同甫赋壮词以寄之</code></td>
+<td style="text-align: right;">4</td>
+<td>为</td>
+</tr>
+<tr>
+<td>牛二</td>
+<td><code>金错刀行</code></td>
+<td style="text-align: right;">2</td>
+<td>错</td>
+</tr>
+<tr>
+<td>王五</td>
+<td><code>送别得书字</code></td>
+<td style="text-align: right;">5</td>
+<td>字</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>This spells the explicit instruction <code>答案为错字</code>.</li>
+<li>The conspicuous wrong character is <code>纸</code> in both the title and flavor phrase <code>文化造纸</code>; the normal expression is <code>文化造诣</code>, so <code>纸</code> is the exact 错字.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>纸</code> — exact wrong character identified by the extracted instruction; overwhelming confidence.</li>
+<li><code>诣</code> — the correction, but the instruction requests the 错字 rather than the correct replacement.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>纸</code> — intermediate verdict: <code>请提交正确汉字以证明你的文化造纸。</code> This confirms the extracted wrong character and explicitly requests its correction; it does not count as incorrect.</li>
+<li>Next exact candidate: <code>诣</code>, which corrects <code>文化造纸</code> to <code>文化造诣</code>.</li>
+<li><code>诣</code> — correct (<code>恭喜你，回答正确！</code>).</li>
+</ul>
+<h2>Resolution</h2>
+<ul>
+<li>Correct answer: <code>诣</code>.</li>
+<li>Incorrect count: 0 (the <code>纸</code> response was an explicit intermediate verdict, not an incorrect verdict).</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="183-ADITwX1Q.html"><span>← 上一份日志</span><strong>数独谜题</strong></a><a class="sequence-link next" href="185-BvqEpJHi.html"><span>下一份日志 →</span><strong>文字游戏</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>文化造纸 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

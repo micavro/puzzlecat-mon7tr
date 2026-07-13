@@ -3,46 +3,71 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="启动（hv41SWQP）的独立题解与验证。">
+  <meta name="description" content="启动（hv41SWQP）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>启动 · PuzzleCat 题解</title>
+  <title>启动 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>124</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>124 / 289</span><code>hv41SWQP</code></div>
-        <h1>启动</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>当日</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/hv41SWQP" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>2</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>开关图标配门、山、狗形成例句；底部是单人/万人、关/开与两个编号色块。</p>
-<h3>我的解法</h3>
-<p>上方分别是 <code>开门见山</code>、<code>关门打狗</code>。底部完整句为 <code>一夫当关，万夫莫开</code>，所以编号缺字先是 <code>当、莫</code>。但第二格只高亮 <code>莫</code> 的中层；将 <code>莫</code> 竖向拆为 <code>艹/日/大</code>，取中层得 <code>日</code>。编号 1 取整字 <code>当</code>，编号 2 取部件 <code>日</code>，答案 <code>当日</code>。</p>
-<h3>验证</h3>
-<p><code>当莫</code> 与完整谚语均判错；解释高亮层后 <code>当日</code> 正确，共 2 次错误。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="123-F1Myul5g.html"><span>← 上一题</span><strong>吃什么</strong></a><a class="sequence-link next" href="125-mJYr8Uar.html"><span>下一题 →</span><strong>和同开珎</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 启动</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>124</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">124 / 289</span><code>hv41SWQP</code></div>
+      <h1>启动</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/hv41SWQP" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/124-hv41SWQP.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log</h1>
+<ul>
+<li>Owner: <code>recover-w3-20260712</code></li>
+<li>Puzzle: <code>hv41SWQP</code></li>
+<li>Title: 启动</li>
+<li>Incorrect submissions: 2 / 20</li>
+<li>Status: correct</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>The puzzle consists only of one image.</li>
+<li>The green and red power icons denote 开 and 关 respectively.</li>
+<li>The shared gate/door icon denotes 门. The two examples therefore read 开门见山 and 关门打狗: an eye/seeing icon plus mountains gives 见山, while a fist/striking icon plus dog gives 打狗.</li>
+<li>The bottom row has a single person/running-man pictogram, a yellow slot numbered 1, and the red 关 icon; after the comma it has the same person multiplied by 10000, a yellow slot numbered 2, and the green 开 icon.</li>
+</ul>
+<h2>Reasoning</h2>
+<ul>
+<li>The unique familiar expression matching those fixed pieces is <code>一夫当关，万夫莫开</code>.</li>
+<li>Thus the person icon supplies 夫 (single occurrence preceded by the understood 一), the multiplied person supplies 万夫, and the two numbered yellow slots are <code>当</code> and <code>莫</code> in order.</li>
+<li>The checker rejected both direct concatenation <code>当莫</code> and the full expression. The crucial remaining visual distinction is that slot 1 is a single yellow square, while slot 2 is only the middle yellow band of a three-part vertical box.</li>
+<li>Decompose the second missing character <code>莫</code> vertically as <code>艹 / 日 / 大</code>. Its highlighted middle band is therefore <code>日</code>. Slot 1 takes the whole missing character <code>当</code>; numbered extraction gives <code>当日</code>, a normal Chinese word. This accounts for every part of the otherwise unexplained slot geometry.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>当日</code> — slot 1 is 当; highlighted middle component of slot-2 character 莫 is 日.</li>
+<li><code>一夫当关万夫莫开</code> — completed expression; rejected by the checker.</li>
+<li><code>当莫</code> — direct numbered-slot extraction; rejected by the checker.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>当莫</code> — incorrect (2026-07-12 23:59 CST). This falsifies direct concatenation of the two missing characters.</li>
+<li><code>一夫当关万夫莫开</code> — incorrect (2026-07-13 00:01 CST). The completed proverb is only an intermediate.</li>
+<li><code>当日</code> — correct (2026-07-13 00:03 CST).</li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Reached a correct verdict after 2 incorrect submissions. Final answer: <code>当日</code>.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="123-F1Myul5g.html"><span>← 上一份日志</span><strong>吃什么</strong></a><a class="sequence-link next" href="125-mJYr8Uar.html"><span>下一份日志 →</span><strong>和同开珎</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>启动 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

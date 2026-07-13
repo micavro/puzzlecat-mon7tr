@@ -3,46 +3,65 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="课文两景（TkqKhwRH）的独立题解与验证。">
+  <meta name="description" content="课文两景（TkqKhwRH）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>课文两景 · PuzzleCat 题解</title>
+  <title>课文两景 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>265</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>265 / 289</span><code>TkqKhwRH</code></div>
-        <h1>课文两景</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>水龙</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/TkqKhwRH" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>两行彩条表示拼音字母，黑色记号表示声调，相同颜色代表相同字母；题目分别提示五年级和四年级课文景物。</p>
-<h3>我的解法</h3>
-<p>按颜色重复和声调，上行解为 <code>shuǐ lián dòng</code>，即《猴王出世》中的水帘洞；下行解为 <code>shuāng lóng dòng</code>，即《记金华的双龙洞》中的双龙洞。编号 1 位于“水”，编号 2 位于“龙”。</p>
-<h3>验证</h3>
-<p>两处景物与年级提示吻合，共同的“洞”也与同色框对应；按编号取出 <code>水龙</code>，提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="264-Mm7xAs7n.html"><span>← 上一题</span><strong>读法错误</strong></a><a class="sequence-link next" href="266-9AlWHnxJ.html"><span>下一题 →</span><strong>负负得……</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 课文两景</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>265</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">265 / 289</span><code>TkqKhwRH</code></div>
+      <h1>课文两景</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/TkqKhwRH" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/265-TkqKhwRH.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: 课文两景</h1>
+<ul>
+<li>Puzzle ID: <code>TkqKhwRH</code></li>
+<li>Owner: <code>codex-sub-b-20260712</code></li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>The image contains two rows of three colored-bar groups. The black marks over individual bars are the four Mandarin tone marks, so each group represents a pinyin syllable; equal colors represent equal letters.</li>
+<li>Upper row patterns decode as <code>shuǐ lián dòng</code>:</li>
+<li><code>shuǐ</code> and the lower row's six-letter first syllable share <code>shu</code>.</li>
+<li><code>lián</code> shares its initial with lower <code>lóng</code>.</li>
+<li><code>dòng</code> is identical in both rows.</li>
+<li>This gives <code>水帘洞</code>, a scene in the fifth-grade People's Education Press text <code>猴王出世</code>, matching the stated membership in 五年级课文.</li>
+<li>Lower row decodes as <code>shuāng lóng dòng</code>, giving <code>双龙洞</code>, from the fourth-grade text <code>记金华的双龙洞</code>, matching 四年级课文.</li>
+<li>The boxes align under the three decoded characters. Label <code>1</code> is under <code>水</code>; label <code>2</code> is under <code>龙</code>; the cyan boxes mark the shared <code>洞</code>. Reading labels 1 then 2 extracts <code>水龙</code>.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>水龙</code> - strong and mechanically extracted from the two numbered character positions.</li>
+<li><code>水帘洞双龙洞</code> - the two decoded scenes, but the numbered boxes explicitly indicate a shorter extraction.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>水龙</code> - correct at <code>2026-07-12T20:08:28Z</code>; extracted from the numbered positions in <code>水帘洞</code> and <code>双龙洞</code>.</li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Submit only the numbered extraction first.</li>
+<li>Stop after 20 incorrect submissions, or classify <code>cannot_do</code> earlier if later evidence cannot distinguish candidates.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="264-Mm7xAs7n.html"><span>← 上一份日志</span><strong>读法错误</strong></a><a class="sequence-link next" href="266-9AlWHnxJ.html"><span>下一份日志 →</span><strong>负负得……</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>课文两景 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

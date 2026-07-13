@@ -3,46 +3,75 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="古老迷宫游戏（y1Ezg7XA）的独立题解与验证。">
+  <meta name="description" content="古老迷宫游戏（y1Ezg7XA）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>古老迷宫游戏 · PuzzleCat 题解</title>
+  <title>古老迷宫游戏 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>121</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>121 / 289</span><code>y1Ezg7XA</code></div>
-        <h1>古老迷宫游戏</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>UNFOLD</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/y1Ezg7XA" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>六行第一人称迷宫视角符号，各配一个 3×3 点阵的起点和朝向；首行示范走出 U 形路线。</p>
-<h3>我的解法</h3>
-<p>把每个大符号视为老式迷宫中的前方/左右通路状态：每次先前进一步，再按所见通道保持方向、左转、右转或掉头。首行从向下开始得到 <code>D,D,R,R,U,U</code>，正好走到星标。对其余五行应用同一规则，轨迹在点阵上依次画出 <code>U、N、F、O、L、D</code>。</p>
-<h3>验证</h3>
-<p>首行示范验证移动约定，六行共同拼成 <code>UNFOLD</code>；提交 correct。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="120-Ys8hZAop.html"><span>← 上一题</span><strong>叠叠叠叠叠词</strong></a><a class="sequence-link next" href="122-GrbeioVN.html"><span>下一题 →</span><strong>只需枚举</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 古老迷宫游戏</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>121</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">121 / 289</span><code>y1Ezg7XA</code></div>
+      <h1>古老迷宫游戏</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/y1Ezg7XA" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/121-y1Ezg7XA.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve Log: y1Ezg7XA</h1>
+<ul>
+<li>Title: <code>古老迷宫游戏</code></li>
+<li>Owner: <code>recover-root-20260712</code></li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>The single image contains six rows of large geometric symbols and six corresponding 3x3 dot grids.</li>
+<li>Each dot grid supplies a runner position and initial direction; the first also shows an example U-shaped route ending at a star.</li>
+<li>The six symbol-row lengths are approximately 6, 8, 5, 8, 5, and 6.</li>
+<li>Symbols are built from a central square or an open hourglass plus four diagonal arms. Arms may be connected to the center or detached.</li>
+<li>Strong working model: each symbol represents a local maze state or relative turn. Simulating each row from its supplied start state should trace one output glyph on the 3x3 dots, likely yielding a six-character answer.</li>
+</ul>
+<h2>Mechanism</h2>
+<ul>
+<li>The large symbols are first-person perspective views from an early maze game.</li>
+<li>For every view, advance one grid edge in the current heading, then apply the view at the newly reached point:</li>
+<li>uninterrupted corridor: keep heading;</li>
+<li>gap on the left/right before a front wall: turn left/right;</li>
+<li>boxed dead end: reverse or terminate as shown;</li>
+<li>explicit arrows disambiguate junction choices.</li>
+<li>The first row validates the convention: starting downward, the six views give <code>D,D,R,R,U,U</code>, exactly the supplied U-shaped route to the star.</li>
+<li>Applying the same rule to all six rows traces block letters <code>U N F O L D</code>. The third row uses explicit right-turn and U-turn marks and retraces the middle arm to form <code>F</code>.</li>
+</ul>
+<h2>Candidate</h2>
+<ul>
+<li><code>UNFOLD</code></li>
+<li>Confidence: 0.95</li>
+</ul>
+<h2>Result</h2>
+<ul>
+<li>Submitted <code>UNFOLD</code>.</li>
+<li>Verdict: correct.</li>
+<li>Incorrect submissions: 0.</li>
+</ul>
+<h2>Guardrails</h2>
+<ul>
+<li>Do not submit game-title guesses until one rule explains all six rows and extracted glyphs.</li>
+<li>Use only <code>npm run work -- submit recover-root-20260712 y1Ezg7XA "&lt;ANSWER&gt;"</code> for submissions.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="120-Ys8hZAop.html"><span>← 上一份日志</span><strong>叠叠叠叠叠词</strong></a><a class="sequence-link next" href="122-GrbeioVN.html"><span>下一份日志 →</span><strong>只需枚举</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>古老迷宫游戏 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

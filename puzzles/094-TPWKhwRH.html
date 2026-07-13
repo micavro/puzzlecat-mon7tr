@@ -3,46 +3,70 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="以小见大（TPWKhwRH）的独立题解与验证。">
+  <meta name="description" content="以小见大（TPWKhwRH）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>以小见大 · PuzzleCat 题解</title>
+  <title>以小见大 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>094</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>094 / 289</span><code>TPWKhwRH</code></div>
-        <h1>以小见大</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>BETWEEN</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/TPWKhwRH" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>七组词语各指向一篇熟悉的中文课文，括号是“提取位/课题拼音字母总数”。</p>
-<h3>我的解法</h3>
-<p>例如“马褂/蹒跚”指《背影》，<code>BEIYING</code> 第 1 字母是 B；“抑扬顿挫/深恶痛疾”指《藤野先生》，<code>TENGYEXIANSHENG</code> 第 2 字母是 E；“薄雪/粉色”指《济南的冬天》，第 7 字母是 E；“幸运/愧怍”指《老王》，第 6 字母是 N。其余课题同样按拼音长度和索引补出 E、T、W，七字母依次为 <code>BETWEEN</code>。</p>
-<h3>验证</h3>
-<p>多个课题的拼音长度与索引可独立核对，合并结果唯一；<code>BETWEEN</code> 提交正确。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="093-fIqYBRMr.html"><span>← 上一题</span><strong>人越多越好，鱼越切越少</strong></a><a class="sequence-link next" href="095-JumgoAEX.html"><span>下一题 →</span><strong>以德芙人</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 以小见大</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>094</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">094 / 289</span><code>TPWKhwRH</code></div>
+      <h1>以小见大</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/TPWKhwRH" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/094-TPWKhwRH.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>TPWKhwRH 以小见大 — solve log</h1>
+<ul>
+<li>Owner: <code>codex-sub-g-20260712</code></li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 0</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>Warning: on this Windows workspace, puzzle ID <code>TPWKhwRH</code> case-collides with a different archived puzzle <code>TpwKhwRH</code>; the retained old submission directories belong to that other puzzle and were ignored.</li>
+<li>Each word pair identifies a familiar Chinese-language textbook article in which both words occur. Parentheses are <code>index / pinyin-letter-count</code>: romanize the article title without tones/spaces, verify the denominator, and take the indexed Latin letter.</li>
+<li>Confirmed anchors:
+  1. <code>马褂 / 蹒跚</code> → 《背影》 → <code>BEIYING</code> (7), take 1 = <code>B</code>.
+  5. <code>抑扬顿挫 / 深恶痛疾</code> → 《藤野先生》 → <code>TENGYEXIANSHENG</code> (15), take 2 = <code>E</code>.
+  6. <code>薄雪 / 粉色</code> → 《济南的冬天》 → <code>JINANDEDONGTIAN</code> (15), take 7 = <code>E</code>.
+  7. <code>幸运 / 愧怍</code> → 《老王》 → <code>LAOWANG</code> (7), take 6 = <code>N</code>.</li>
+<li>The other three titles are constrained by their vocabulary and pinyin counts to yield positions 2=<code>E</code>, 3=<code>T</code>, 4=<code>W</code>. Together all seven extractions read <code>BETWEEN</code>; the four independently confirmed titles fix the pattern <code>B???EEN</code>, while denominators and source recognition validate the remaining fill.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>BETWEEN</code> — seven-letter extraction from the seven article-title pinyin strings; four source/title calculations independently confirmed exactly.</li>
+<li>No competing English completion fits the confirmed <code>B???EEN</code> and the remaining indexed pinyin letters.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>BETWEEN</code> — correct (HTTP 200, 2026-07-12T12:13:43.770Z).</li>
+</ul>
+<h2>Resolution</h2>
+<ul>
+<li>Final answer: <code>BETWEEN</code></li>
+<li>Incorrect count: 0</li>
+<li>Outcome: <code>correct</code></li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Require a reproducible visual/text extraction before submission.</li>
+<li>End as <code>correct</code>, evidentially exhausted <code>cannot_do</code>, or <code>wrong_20</code> after exactly 20 incorrect submissions.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="093-fIqYBRMr.html"><span>← 上一份日志</span><strong>人越多越好，鱼越切越少</strong></a><a class="sequence-link next" href="095-JumgoAEX.html"><span>下一份日志 →</span><strong>以德芙人</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>以小见大 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

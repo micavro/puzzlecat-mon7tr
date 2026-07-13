@@ -3,46 +3,82 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="【鼠鼠谜】我兜（Gs6beioV）的独立题解与验证。">
+  <meta name="description" content="【鼠鼠谜】我兜（Gs6beioV）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>【鼠鼠谜】我兜 · PuzzleCat 题解</title>
+  <title>【鼠鼠谜】我兜 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>064</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>064 / 289</span><code>Gs6beioV</code></div>
-        <h1>【鼠鼠谜】我兜</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>ANGLE</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/Gs6beioV" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>0</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>仿 Wordle 的四行猜词是 <code>SHRUG、VIBES、MONTH、MAJOR</code>，分别只有 G、E、N、A 为黄色，其他字母为灰色；风味提到“奇怪的形状”。</p>
-<h3>我的解法</h3>
-<p>黄色字说明答案含 G/E/N/A，但 G 不在第 5 位、E 不在第 4 位、N 不在第 3 位、A 不在第 2 位；灰字均排除。普通候选中 <code>ANGLE</code> 与 <code>GLEAN</code> 均可过位置限制，但“形状”直接提示 angle。<code>ANGLE</code> 的 A1 N2 G3 L4 E5 也让四个黄色字都恰好错位。</p>
-<h3>验证</h3>
-<p>本地日志没有该工作者的提交动作，但 batch 清单与本地正确状态确认答案为 <code>ANGLE</code>；Wordle 约束和风味能一致区分候选。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="063-jmKZrexE.html"><span>← 上一题</span><strong>【鼠鼠谜】动物朋友</strong></a><a class="sequence-link next" href="065-fLUYBRMr.html"><span>下一题 →</span><strong>【鼠鼠谜】源自自然</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 【鼠鼠谜】我兜</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>064</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">064 / 289</span><code>Gs6beioV</code></div>
+      <h1>【鼠鼠谜】我兜</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/Gs6beioV" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/064-Gs6beioV.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: Gs6beioV - 【鼠鼠谜】我兜</h1>
+<h2>Status</h2>
+<ul>
+<li>Worker: <code>lane-a-20260712</code></li>
+<li>Incorrect submissions: 0</li>
+<li>Current state: candidate established; no submission made by this worker</li>
+</ul>
+<h2>Evidence and transcription</h2>
+<ul>
+<li>Flavor text: <code>好奇怪的形状……</code></li>
+<li>The image imitates an English five-letter Wordle board. Four completed rows are:</li>
+<li><code>SHRUG</code>, with only <code>G</code> yellow in column 5.</li>
+<li><code>VIBES</code>, with only <code>E</code> yellow in column 4.</li>
+<li><code>MONTH</code>, with only <code>N</code> yellow in column 3.</li>
+<li><code>MAJOR</code>, with only <code>A</code> yellow in column 2.</li>
+<li>Thus the highlighted diagonal, read top to bottom, is <code>GENA</code>.</li>
+<li>The answer row is displayed as five green question marks, followed by <code>You Won!</code>.</li>
+</ul>
+<h2>Wordle constraints</h2>
+<ul>
+<li>Required letters: <code>G</code>, <code>E</code>, <code>N</code>, <code>A</code>.</li>
+<li>Forbidden placements: <code>G</code> at 5, <code>E</code> at 4, <code>N</code> at 3, <code>A</code> at 2.</li>
+<li>Gray letters excluded (assuming ordinary Wordle rules): <code>S H R U V I B M O T J</code>.</li>
+<li>Both <code>ANGLE</code> and <code>GLEAN</code> contain all four required letters, violate none of their forbidden placements, and add the previously untested <code>L</code>.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>ANGLE</code> - high confidence (about 95%). It exactly satisfies every displayed Wordle constraint, and the flavor text's explicit reference to a strange <code>形状</code> (shape) is a direct semantic clue for an angle. Its letter positions are <code>A1 N2 G3 L4 E5</code>, so each displayed yellow letter is present but displaced as required.</li>
+<li><code>GLEAN</code> - low confidence (about 4%). It is the other ordinary English anagram satisfying the same feedback (<code>G1 L2 E3 A4 N5</code>), but unlike <code>ANGLE</code> it has no convincing connection to the flavor text. A possible meta-reading of "glean the highlighted letters" is much weaker than the direct shape clue.</li>
+<li>Rare dictionary forms (<code>AGENA</code>, <code>AGEND</code>, <code>AGENE</code>, <code>ENAGE</code>, <code>GEYAN</code>) - negligible combined confidence. These occur in a broad alphabetical word list but are not plausible intended answers and receive no flavor support.</li>
+</ol>
+<h2>Candidate enumeration and disambiguation</h2>
+<ul>
+<li>Filtering <code>tmp/words_alpha.txt</code> for five-letter entries containing <code>A E G N</code>, excluding every gray letter, and enforcing the four yellow-position constraints produced: <code>agena</code>, <code>agend</code>, <code>agene</code>, <code>angle</code>, <code>enage</code>, <code>geyan</code>, <code>glean</code>.</li>
+<li>Of these, only <code>ANGLE</code> and <code>GLEAN</code> are ordinary likely answer words.</li>
+<li>The title <code>我兜</code> appears to be a loose phonetic joke on Wordle and establishes the interface/rules; it does not materially distinguish the anagrams.</li>
+<li>The flavor <code>好奇怪的形状……</code> supplies that distinction: <code>ANGLE</code> is directly a property/feature of a shape.</li>
+</ul>
+<h2>Final recommendation</h2>
+<ul>
+<li>Candidate: <code>ANGLE</code></li>
+<li>Mechanism: apply ordinary Wordle yellow/gray constraints, then use the shape-related flavor text to distinguish the two common anagrammatic fits.</li>
+<li>Confidence: high, approximately 95%.</li>
+<li>Incorrect count: 0.</li>
+</ul>
+<h2>Submission history</h2>
+<ul>
+<li>None.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="063-jmKZrexE.html"><span>← 上一份日志</span><strong>【鼠鼠谜】动物朋友</strong></a><a class="sequence-link next" href="065-fLUYBRMr.html"><span>下一份日志 →</span><strong>【鼠鼠谜】源自自然</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>【鼠鼠谜】我兜 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>

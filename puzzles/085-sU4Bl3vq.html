@@ -3,46 +3,74 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="中专说唱高手（sU4Bl3vq）的独立题解与验证。">
+  <meta name="description" content="中专说唱高手（sU4Bl3vq）的原始 solve-log.md。">
   <meta name="theme-color" content="#f5f1e8">
-  <title>中专说唱高手 · PuzzleCat 题解</title>
+  <title>中专说唱高手 · Solve Log</title>
   <link rel="stylesheet" href="../assets/styles.css">
 </head>
 
-<body class="detail-page">
+<body class="detail-page" id="top">
   <header class="topbar">
-  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat 独立题解</span></a>
+  <a class="brand" href="../index.html"><span class="cat-mark">PC</span><span>PuzzleCat Solve Logs</span></a>
   <div class="top-actions">
     <a class="github-link" href="https://github.com/micavro/puzzlecat-mon7tr" target="_blank" rel="noreferrer">GitHub</a>
     <button class="icon-button" id="themeButton" aria-label="切换深浅色">◐</button>
   </div>
 </header>
-  <main class="detail-main">
-    <nav class="breadcrumb"><a href="../index.html">题解全集</a><span>/</span><span>085</span></nav>
-    <article class="solution-document">
-      <header class="detail-hero">
-        <div class="detail-kicker"><span>085 / 289</span><code>sU4Bl3vq</code></div>
-        <h1>中专说唱高手</h1>
-        <div class="detail-actions">
-          <div class="answer-panel"><span>最终答案</span><strong>HIPHOP</strong></div>
-          <a class="source-button" href="https://puzzle.cat/puzzles/sU4Bl3vq" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 <span>↗</span></a>
-        </div>
-        <dl class="local-metadata">
-          <div><dt>本地结果</dt><dd>correct</dd></div>
-          <div><dt>错误提交</dt><dd>4</dd></div>
-          <div><dt>整理依据</dt><dd>题面归档、solve-log、提交记录</dd></div>
-        </dl>
-      </header>
-      <div class="detail-content"><h3>题面要点</h3>
-<p>六行说唱文字各通过故意错读一个多音字来形成双押；每行去标点后恰有 26 个汉字。</p>
-<h3>我的解法</h3>
-<p>六个被故意改读的字分别落在各行第 <code>8,9,16,8,15,16</code> 位。例如“角色”把角读 jiǎo、“说唱”把说读 shuì、“太差”把差读 chāi。将位置按 A1Z26 转字母即 <code>H I P H O P</code>。双押、多音字等只是机制描述，真正答案来自位置抽取。</p>
-<h3>验证</h3>
-<p><code>双押、多音字、叶韵、强行押韵</code> 均被拒，<code>HIPHOP</code> 获 correct；六行位置也精确闭合。</p></div>
-    </article>
-    <nav class="sequence-nav"><a class="sequence-link previous" href="084-Ca5fVTmL.html"><span>← 上一题</span><strong>两面包夹芝士</strong></a><a class="sequence-link next" href="086-C1bfVTmL.html"><span>下一题 →</span><strong>中国Cry??ic（二）</strong></a></nav>
-    <div class="back-index"><a href="../index.html">查看全部 289 道题目</a></div>
-    <footer><p>PuzzleCat 独立题解 · 中专说唱高手</p><a href="#top">返回顶部 ↑</a></footer>
+  <main class="detail-main log-detail-main">
+    <nav class="breadcrumb"><a href="../index.html">全部日志</a><span>/</span><span>085</span></nav>
+    <header class="log-page-header">
+      <div><span class="log-sequence">085 / 289</span><code>sU4Bl3vq</code></div>
+      <h1>中专说唱高手</h1>
+      <div class="log-toolbar">
+        <a href="https://puzzle.cat/puzzles/sU4Bl3vq" target="_blank" rel="noreferrer">打开 PuzzleCat 原题 ↗</a>
+        <a href="../source/solve-logs/085-sU4Bl3vq.md">查看原始 Markdown</a>
+      </div>
+    </header>
+    <article class="solve-log-document"><h1>Solve log: 中专说唱高手</h1>
+<ul>
+<li>Puzzle ID: <code>sU4Bl3vq</code></li>
+<li>Owner: <code>codex-sub-b-20260712</code></li>
+<li>Status: correct</li>
+<li>Incorrect submissions: 4</li>
+</ul>
+<h2>Observations</h2>
+<ul>
+<li>The flavor and six lines each end with two disyllabic expressions that only become full rhymes if one polyphonic character is deliberately given another reading.</li>
+<li>Flavor: <code>病毒</code> (bing du) / <code>应和</code>; reading <code>和</code> as <code>hu</code> instead of contextual <code>he</code> gives matching <code>ing/u</code> finals.</li>
+<li>The six body pairs are:
+  1. <code>角色</code> / <code>小测</code>: read <code>角</code> as <code>jiao</code> rather than <code>jue</code> -&gt; <code>iao/e</code> matches <code>xiao/ce</code>.
+  2. <code>说唱</code> / <code>最棒</code>: read <code>说</code> as <code>shui</code> rather than <code>shuo</code> -&gt; <code>ui/ang</code> matches <code>zui/bang</code>.
+  3. <code>太差</code> / <code>快开</code>: read <code>差</code> as <code>chai</code> rather than <code>cha</code> -&gt; both syllables rhyme on <code>ai</code>.
+  4. <code>睡觉</code> / <code>贝爷</code>: read <code>觉</code> as <code>jue</code> rather than <code>jiao</code> -&gt; <code>ui/ue</code> matches the near-rhyme <code>bei/ye</code>.
+  5. <code>得到</code> / <code>嘴炮</code>: read <code>得</code> as <code>dei</code> rather than <code>de</code> -&gt; <code>ei/ao</code> matches <code>zui/pao</code>.
+  6. <code>明了</code> / <code>赢的</code>: read <code>了</code> as <code>le</code> rather than <code>liao</code> -&gt; <code>ing/e</code> matches <code>ying/de</code>.</li>
+<li>Each altered pair rhymes on two successive syllables. In rap terminology this is <code>双押</code>; the title's vocational-school joke explains the knowingly incorrect readings.</li>
+<li>Removing each line's comma and full stop leaves exactly 26 Chinese characters. The six deliberately misread polyphonic characters occur at 1-based positions <code>8, 9, 16, 8, 15, 16</code>. Reading these as A1Z26 yields <code>H I P H O P</code>.</li>
+</ul>
+<h2>Candidate ranking</h2>
+<ol>
+<li><code>HIPHOP</code> - fully extracted. Six 26-character lines plus highlighted/misread positions give <code>8-9-16-8-15-16</code>, hence <code>HIPHOP</code> by A1Z26; it also matches the rap theme.</li>
+<li><code>强行押韵</code> / <code>强行双押</code> - mechanism description only; the client timed out after the server accepted the former, which was incorrect.</li>
+<li><code>叶韵</code> / <code>叶音</code> - exact historical term for temporarily changing a reading to rhyme, but rejected.</li>
+<li><code>双押</code> and <code>多音字</code> - result and tool respectively; both rejected.</li>
+</ol>
+<h2>Submissions</h2>
+<ul>
+<li><code>双押</code> - incorrect at <code>2026-07-12T19:37:14Z</code>; the checker rejects the rap-term description alone.</li>
+<li><code>多音字</code> - incorrect at <code>2026-07-12T19:40:17Z</code>; confirmed by the archived second submission (omitted from the earlier log).</li>
+<li><code>叶韵</code> - incorrect at <code>2026-07-12T19:53:40Z</code>; despite matching the dictionary definition, it is not the intended answer.</li>
+<li><code>强行押韵</code> - incorrect at <code>2026-07-12T19:57:47Z</code>; the submit client timed out, but the later authoritative attempt history confirms the server recorded it.</li>
+<li><code>HIPHOP</code> - correct at <code>2026-07-12T20:00:14Z</code>; extracted from highlighted positions <code>8,9,16,8,15,16</code> in the six 26-character lines.</li>
+</ul>
+<h2>Stopping criteria</h2>
+<ul>
+<li>Submit only a candidate supported by the full text mechanism.</li>
+<li>Stop after 20 incorrect submissions, or classify <code>cannot_do</code> earlier if evidence cannot distinguish candidates.</li>
+</ul></article>
+    <nav class="sequence-nav"><a class="sequence-link previous" href="084-Ca5fVTmL.html"><span>← 上一份日志</span><strong>两面包夹芝士</strong></a><a class="sequence-link next" href="086-C1bfVTmL.html"><span>下一份日志 →</span><strong>中国Cry??ic（二）</strong></a></nav>
+    <div class="back-index"><a href="../index.html">返回全部 289 份日志</a></div>
+    <footer><p>中专说唱高手 · solve-log.md</p><a href="#top">返回顶部 ↑</a></footer>
   </main>
   <script src="../assets/app.js"></script>
 </body>
